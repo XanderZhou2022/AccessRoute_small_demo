@@ -1,0 +1,50 @@
+[
+  {
+    "sceneId": "hysan-place",
+    "status": "ok",
+    "distanceM": 143.43099999999995,
+    "segments": [
+      {
+        "type": "floor",
+        "distanceM": 51.6
+      },
+      {
+        "type": "transition",
+        "facilityId": "hysan-place-lift-a",
+        "distanceM": 5.299999999999999
+      },
+      {
+        "type": "floor",
+        "distanceM": 38.29600000000001
+      },
+      {
+        "type": "outdoor",
+        "distanceM": 48.235
+      }
+    ]
+  },
+  {
+    "sceneId": "popcorn-2",
+    "status": "ok",
+    "distanceM": 512.4100000000012,
+    "segments": [
+      {
+        "type": "floor",
+        "distanceM": 172.76399999999992
+      },
+      {
+        "type": "transition",
+        "facilityId": "popcorn-2-lift-a",
+        "distanceM": 8.7
+      },
+      {
+        "type": "floor",
+        "distanceM": 165.046
+      },
+      {
+        "type": "outdoor",
+        "distanceM": 165.9
+      }
+    ]
+  }
+]

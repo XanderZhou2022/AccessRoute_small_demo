@@ -1,0 +1,39 @@
+{
+  "name": "accessroute-hk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --import tsx scripts/dev.ts",
+    "dev:frontend": "vite --config frontend/vite.config.ts",
+    "dev:backend": "tsx watch backend/server.ts",
+    "build": "node --import tsx scripts/sync-data.ts && tsc --noEmit && vite build --config frontend/vite.config.ts",
+    "start": "node --import tsx backend/server.ts",
+    "test": "vitest run",
+    "check": "npm test && npm run build",
+    "data:sync": "node --import tsx scripts/sync-data.ts",
+    "format": "prettier --write frontend/src shared backend scripts/*.ts tests"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "maplibre-gl": "^5.6.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/supertest": "^6.0.0",
+    "@vitejs/plugin-react": "^4.5.0",
+    "prettier": "^3.9.9",
+    "supertest": "^7.1.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0",
+    "vite": "^6.3.0",
+    "vitest": "^3.2.0"
+  }
+}

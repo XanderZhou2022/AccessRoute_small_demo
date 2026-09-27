@@ -1,0 +1,16 @@
+
+> accessroute-hk@0.1.0 build
+> node --import tsx scripts/sync-data.ts && tsc --noEmit && vite build --config frontend/vite.config.ts
+
+vite v6.4.3 building for production...
+transforming...
+✓ 1601 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                          0.61 kB │ gzip:   0.40 kB
+dist/assets/index-tLxSD5E7.css          21.17 kB │ gzip:   5.15 kB
+dist/assets/MacroMap-B-YMMjus.css       69.94 kB │ gzip:  10.11 kB
+dist/assets/MacroMap-COdNPVhs.js         3.61 kB │ gzip:   1.79 kB
+dist/assets/index-BEwPNYbT.js          325.36 kB │ gzip:  97.05 kB
+dist/assets/maplibre-gl-BInht45H.js  1,055.60 kB │ gzip: 283.96 kB
+✓ built in 2.15s

@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-27",
+  "productionUrl": "http://127.0.0.1:8787/",
+  "productionConsoleErrors": [],
+  "checks": {
+    "completeJourney": true,
+    "liftRerouteAtCurrentSegment": true,
+    "bothLiftsClosedNoRoute": true,
+    "strictUnknownNoRoute": true,
+    "backendProvider": true,
+    "backendEventPersistsAcrossReload": true,
+    "providerPreferencePersistsAcrossReload": true,
+    "mobileWidth": 390,
+    "mobileScrollWidth": 390,
+    "mobileLiftTransition": true,
+    "officialLogoVisible": true
+  },
+  "notForced": [
+    "WebGL failure",
+    "external network disconnection"
+  ],
+  "screenshots": [
+    "desktop-overview.png",
+    "mobile-390.png",
+    "mobile-transition.png",
+    "production-overview.png"
+  ]
+}

@@ -1,0 +1,7 @@
+venueId,name,levels,units,openings,amenities,liftPoints,nearestStation,straightLineM,networkAdvertised,score
+5bb79500-645d-4089-b5bc-5a02cfeed057,Hysan Place,48,2525,2354,2235,332,Causeway Bay Station,15,False,60
+7c697c97-720f-4f4a-9fa3-fdb6bcd008db,Maritime square,36,2363,2779,2620,133,Tsing Yi Station,20,False,60
+87a12555-5f85-4e4f-b7a2-afdb703fe7e3,PopCorn 1,11,4113,3272,3535,184,Tseung Kwan O Station,66,False,60
+ad3ff090-6b6b-4796-ae07-612d8825ff5b,PopCorn 2,12,1418,1461,1420,70,Tseung Kwan O Station,215,False,60
+1542e14e-cf0a-468c-91b7-f9b48efc90f2,1881 Heritage,10,370,325,118,6,Tsim Sha Tsui Station,336,False,46
+50b9489d-1a84-40f7-84ce-2488e61e4f0f,Telford Plaza,11,1280,1124,0,0,Kowloon Bay Station,143,False,30

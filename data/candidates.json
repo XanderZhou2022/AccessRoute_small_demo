@@ -1,0 +1,80 @@
+[
+  {
+    "venueId": "5bb79500-645d-4089-b5bc-5a02cfeed057",
+    "name": "Hysan Place",
+    "levels": 48,
+    "units": 2525,
+    "openings": 2354,
+    "amenities": 2235,
+    "liftPoints": 332,
+    "nearestStation": "Causeway Bay Station",
+    "straightLineM": 15,
+    "networkAdvertised": "False",
+    "score": 60
+  },
+  {
+    "venueId": "7c697c97-720f-4f4a-9fa3-fdb6bcd008db",
+    "name": "Maritime square",
+    "levels": 36,
+    "units": 2363,
+    "openings": 2779,
+    "amenities": 2620,
+    "liftPoints": 133,
+    "nearestStation": "Tsing Yi Station",
+    "straightLineM": 20,
+    "networkAdvertised": "False",
+    "score": 60
+  },
+  {
+    "venueId": "87a12555-5f85-4e4f-b7a2-afdb703fe7e3",
+    "name": "PopCorn 1",
+    "levels": 11,
+    "units": 4113,
+    "openings": 3272,
+    "amenities": 3535,
+    "liftPoints": 184,
+    "nearestStation": "Tseung Kwan O Station",
+    "straightLineM": 66,
+    "networkAdvertised": "False",
+    "score": 60
+  },
+  {
+    "venueId": "ad3ff090-6b6b-4796-ae07-612d8825ff5b",
+    "name": "PopCorn 2",
+    "levels": 12,
+    "units": 1418,
+    "openings": 1461,
+    "amenities": 1420,
+    "liftPoints": 70,
+    "nearestStation": "Tseung Kwan O Station",
+    "straightLineM": 215,
+    "networkAdvertised": "False",
+    "score": 60
+  },
+  {
+    "venueId": "1542e14e-cf0a-468c-91b7-f9b48efc90f2",
+    "name": "1881 Heritage",
+    "levels": 10,
+    "units": 370,
+    "openings": 325,
+    "amenities": 118,
+    "liftPoints": 6,
+    "nearestStation": "Tsim Sha Tsui Station",
+    "straightLineM": 336,
+    "networkAdvertised": "False",
+    "score": 46
+  },
+  {
+    "venueId": "50b9489d-1a84-40f7-84ce-2488e61e4f0f",
+    "name": "Telford Plaza",
+    "levels": 11,
+    "units": 1280,
+    "openings": 1124,
+    "amenities": 0,
+    "liftPoints": 0,
+    "nearestStation": "Kowloon Bay Station",
+    "straightLineM": 143,
+    "networkAdvertised": "False",
+    "score": 30
+  }
+]

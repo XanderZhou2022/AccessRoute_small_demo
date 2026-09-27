@@ -1,0 +1,18 @@
+node_modules/
+.venv/
+frontend/dist/
+frontend/public/data/
+.env
+*.log
+data/runtime/
+__pycache__/
+.DS_Store
+
+# Local credentials and downloaded reference pages (may contain sample keys/cookies)
+.env.*
+!.env.example
+data/raw/*.html
+data/raw/**/*.headers
+data/raw/*.headers
+*.pem
+*.key
