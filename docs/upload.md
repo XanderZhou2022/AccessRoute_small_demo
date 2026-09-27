@@ -6,7 +6,9 @@
 
 不提交 node_modules、Python 虛擬環境、前端構建副本、運行時事件、環境私密設定、下載的參考 HTML 和原始 HTTP headers。後兩項可能包含範例 API key 或臨時 Cookie，僅在本機保留；來源 URL 與原始資料雜湊仍保存在 data/raw/requests.jsonl。
 
-## 上傳
+源碼已上傳 main；Pages 已發布：https://xanderzhou2022.github.io/AccessRoute_small_demo/
+
+## 後續上傳
 
 先檢查遠端，若為空倉庫：
 

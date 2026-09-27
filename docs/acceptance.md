@@ -1,6 +1,6 @@
 # 驗收報告
 
-驗收日期：2026-09-27（香港時間）。本地開發及正式構建均已完成；目標倉庫已指定為 XanderZhou2022/AccessRoute_small_demo；Pages 尚未發布。
+驗收日期：2026-09-27（香港時間）。本地開發及正式構建均已完成；目標倉庫已指定為 XanderZhou2022/AccessRoute_small_demo；Pages 已發布：https://xanderzhou2022.github.io/AccessRoute_small_demo/。
 
 ## 可直接驗收
 
@@ -26,7 +26,7 @@
 | 後端事件持久化                                | 寫入後刷新仍為停用；測試驗證新 app 實例重讀及並行寫入                       |
 | 桌面 / 手機                                   | 390px 手機，DOM scrollWidth=clientWidth=390，無横向溢出；電梯卡片及按鈕可用 |
 | 正式構建 / TypeScript                         | 已通過；docs/qa/check-output.txt                                            |
-| GitHub Pages 公開網址                         | **未發布**：目標倉庫已指定；workflow 已交付，尚未執行 Pages 部署                       |
+| GitHub Pages 公開網址                         | **已發布**：[線上演示](https://xanderzhou2022.github.io/AccessRoute_small_demo/)；Actions 測試、構建及部署成功                       |
 
 ## 自動化結果
 
@@ -63,3 +63,7 @@
 優先實地核實入口與電梯服務，將有證據的通行属性逐邊升級；再考慮更多 Scene Package、官方設施事件 provider、交通規劃 provider 和定位。先補證據，不應為了讓嚴格模式有路而把 unknown 改成 yes。
 
 最終正式服務 `http://127.0.0.1:8787/` 已成功載入，獨立瀏覽器頁面的 error log 為空。前後端已用最終代碼重新啟動；本次測試產生的電梯停用事件均已解除。
+
+## Pages 上線驗證
+
+2026-09-27：部署工作流 [36295560644](https://github.com/XanderZhou2022/AccessRoute_small_demo/actions/runs/36295560644) 成功。線上實測兩個場景載入、656 m 路線預覽、立體地圖與開始導航後的 1/F 樓層圖及下一步按鈕正常。Pages 使用靜態資料，無 Express 後端；演示事件在頁面記憶體處理。

@@ -2,6 +2,8 @@
 
 香港首末段無障礙導航研究演示。包含獨立前端、可運行後端、可追溯官方原始資料及可插拔路由核心。
 
+**線上演示：[開啟 AccessRoute HK](https://xanderzhou2022.github.io/AccessRoute_small_demo/)**
+
 ## 本機啟動與驗收
 
 已安裝依賴的這台電腦，在本目錄執行：
@@ -99,7 +101,7 @@ npm run format        # 源碼格式化，不改 raw data
 
 目標倉庫：[XanderZhou2022/AccessRoute_small_demo](https://github.com/XanderZhou2022/AccessRoute_small_demo)。
 
-GitHub Pages 尚未發布。在倉庫 Settings → Pages 將 Source 設為 GitHub Actions，再手動運行 `Deploy static demo to GitHub Pages`。workflow 會運行測試、構建並只發布 `frontend/dist/`；只上傳源碼不會自動發布網站。Pages 使用靜態資料，Express 後端需另外運行。
+GitHub Pages 已發布，Source 已設為 GitHub Actions。後續更新時，先推送代碼，再在 Actions 手動運行 `Deploy static demo to GitHub Pages`。workflow 會運行測試、構建並只發布 `frontend/dist/`；只上傳源碼不會自動發布網站。Pages 使用靜態資料，Express 後端需另外運行。
 
 提交範圍與上傳步驟見 [docs/upload.md](docs/upload.md)。
 
