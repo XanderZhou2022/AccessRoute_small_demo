@@ -23,7 +23,7 @@ except ImportError:
 # ⚙️ 1. QwenCloud / DashScope 官方 API 配置中心
 # =========================================================================
 # 生產環境：優先讀取環境變數，或填入真實 API Key
-RAW_API_KEY = "sk-ws-H.DHYDMLI.r5mB.MEYCIQDL9B8qHqD2UhXbBcguAej5iStAhoEf_TbGL_Wjpgk1MQIhAMaNmAONy1ghHsSnjcf6CGbHKQrqqIhHTbaRiIyInqjA"
+RAW_API_KEY = "API_KEY"  # 替換為真實金鑰，或使用環境變數 DASHSCOPE_API_KEY
 
 if not RAW_API_KEY:
     print("\n" + "!" * 60)
