@@ -136,6 +136,9 @@ export const eventSchema = z
 export const contextSchema = z.object({
   profile: z.enum(['wheelchair', 'elderly', 'stroller']),
   rain: z.boolean().default(false),
+  avoidStairs: z.boolean().optional(),
+  avoidSteepSlopes: z.boolean().optional(),
+  preferCoveredShelter: z.boolean().optional(),
   strictAccessibility: z.boolean().default(false),
   now: z.string().datetime({ offset: true }),
   events: z.array(eventSchema).default([]),

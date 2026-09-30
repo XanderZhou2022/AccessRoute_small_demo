@@ -16,3 +16,7 @@ data/raw/**/*.headers
 data/raw/*.headers
 *.pem
 *.key
+
+# Generated integration handoff assets
+frontend/public/genai-integration.md
+frontend/public/genai-examples/

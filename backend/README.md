@@ -57,3 +57,7 @@ npm run dev
 前端 HTTP 模式通過 API 加載場景和存取事件；路由仍使用共用核心在瀏覽器即時計算。`POST /api/route` 提供相同服務供外部客戶端或未來遠程路由 provider 使用。此版本不輪詢其他客戶端的事件；外部更改後刷新可讀取。
 
 不包含生產鑑權、多人同步或公開寫入；如需公開完整後端，可在可信 Node 主機運行只讀服務，將前端 `/api` 反向代理到該服務，再增設正式事件寫入鑑權。
+
+## GenAI 結果校驗
+
+新增 `POST /api/genai/validate`，驗證四個 Agent JSON 及場景引用，返回 `{status:"validated",applied:false,result}`。不儲存、不控制瀏覽器；上下文與路段時效由前端 bridge 校驗。詳見 [接入手冊](../docs/genai-integration.md)。

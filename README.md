@@ -65,6 +65,15 @@ docs/                  架構、API 發現、選址、可視化選擇、驗收�
 
 `frontend/public/data/` 是 `data/scenes/` 的構建副本，請勿手工修改。`npm run dev` 和 `npm run build` 會自動同步。任務書 PDF 不包含在版本庫內。
 
+## GenAI 同事接入（新增）
+
+四個 Agent 已預留統一結果契約與瀏覽器接入口。頁面頂部「GenAI 接入」可載入示例 JSON，直接測試偏好、路障改道、室內起點校準與粵語指引。模型、GPS 採集、STT/TTS 由同事實作。
+
+- [完整接入操作手冊](docs/genai-integration.md)：端口、字段、四個例子、JavaScript / Python / curl、錯誤碼、發布步驟。
+- [JSON 示例目錄](examples/genai/)；`shared/genai/contracts.ts` 為契約來源。
+- 本機新增 `POST /api/genai/validate` 僅做校驗；Pages 使用 `window.accessrouteGenAI.submit()` 更新本頁導航。
+- 新版 Pages 產物已可構建，由項目擁有者自行 push 和手動部署。
+
 ## 已實現
 
 - 兩個真實場景的官方樓層、單元、開口與設施圖層；場景間公共交通段以統一 Leg 契約示意。

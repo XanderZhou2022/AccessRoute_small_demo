@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "context_id": "replace-with-live-context-id",
+  "scene_id": "hysan-place",
+  "request_id": "4505bfb0-29fb-4984-aba8-4698c426ec84",
+  "agent": "obstacle",
+  "payload": {
+    "event_id": "lift-example",
+    "has_obstacle": true,
+    "barrier_type": "broken_lift",
+    "location_sign": "Lift A（聯調示例）",
+    "is_indoor": true,
+    "target": {
+      "facility_id": "hysan-place-lift-a"
+    },
+    "confidence": 0.95,
+    "valid_from": "2026-09-29T17:04:19.126Z",
+    "valid_until": "2026-09-29T18:04:19.126Z"
+  }
+}

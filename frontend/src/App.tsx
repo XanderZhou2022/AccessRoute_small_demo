@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, lazy, Suspense } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, lazy, Suspense } from 'react';
 import {
   ArrowRight,
   ArrowUpDown,
@@ -41,6 +41,16 @@ import {
 import { route } from '../../shared/routing/route';
 import { segmentRoute } from '../../shared/journey/segment';
 import { eventIsActive } from '../../shared/routing/policies';
+import { GenAIConsole, type Receipt } from './components/GenAIConsole';
+import {
+  validateResult,
+  obstacleEvent,
+  examples,
+  IntegrationError,
+  type Preferences,
+  type IntegrationContext,
+} from '../../shared/genai/contracts';
+import { ZodError } from 'zod';
 import { FloorMap } from './renderers/FloorMap';
 const MacroMap = lazy(() => import('./renderers/MacroMap'));
 const profiles: { id: Profile; name: string; en: string; icon: typeof Accessibility }[] = [
@@ -49,6 +59,15 @@ const profiles: { id: Profile; name: string; en: string; icon: typeof Accessibil
   { id: 'stroller', name: '嬰兒車', en: 'Stroller', icon: Baby },
 ];
 export default function App() {
+  const [aiPreferences, setAiPreferences] = useState<Preferences | null>(null);
+  const [guidance, setGuidance] = useState<{
+    contextId: string;
+    text: string;
+    audioUrl?: string;
+  } | null>(null);
+  const acceptedRequests = useRef(new Set<string>());
+  const applying = useRef(false);
+  const liveContextId = useRef('');
   const [provider, setProvider] = useState<'static' | 'http'>(() => {
     try {
       const saved = localStorage.getItem('accessroute-provider');
@@ -119,8 +138,17 @@ export default function App() {
 
   const selected = choice.map((id) => scenes.find((s) => s.manifest.sceneId === id));
   const ctx: RoutingContext = useMemo(
-    () => ({ profile, rain, strictAccessibility: strict, events, now: clock }),
-    [profile, rain, strict, events, clock],
+    () => ({
+      profile,
+      rain,
+      strictAccessibility: strict,
+      events,
+      now: clock,
+      avoidStairs: aiPreferences?.avoid_stairs,
+      avoidSteepSlopes: aiPreferences?.avoid_steep_slopes,
+      preferCoveredShelter: aiPreferences?.prefer_covered_shelter,
+    }),
+    [profile, rain, strict, events, clock, aiPreferences],
   );
   const legs: NavigationLeg[] = useMemo(
     () =>
@@ -173,6 +201,11 @@ export default function App() {
     .filter((e) => e.type === 'facility_closed' && eventIsActive(e, clock))
     .map((e) => e.target.facilityId!)
     .filter(Boolean);
+  const aiClosed = events
+    .filter(
+      (e) => e.id.startsWith('genai-') && e.type === 'facility_closed' && eventIsActive(e, clock),
+    )
+    .map((e) => e.target.facilityId);
   const noRoute =
     !complete && legs.slice(legIndex === 0 ? 0 : 1).some((l) => l.route.status === 'no_route');
   const total = legs.reduce((v, l) => v + (l.route.status === 'ok' ? l.route.distanceM : 0), 0);
@@ -280,6 +313,125 @@ export default function App() {
     setChoice(next);
     reset();
   }
+  const contextId = useMemo(
+    () => crypto.randomUUID(),
+    [
+      scenes,
+      choice,
+      profile,
+      rain,
+      strict,
+      events,
+      origins,
+      legIndex,
+      currentSegmentIndex,
+      started,
+      complete,
+      aiPreferences,
+      clock,
+    ],
+  );
+  const aiContext: IntegrationContext | null =
+    scene && leg
+      ? {
+          version: '1.0',
+          context_id: contextId,
+          scene_id: scene.manifest.sceneId,
+          phase: complete
+            ? 'complete'
+            : legIndex === 1
+              ? 'transit'
+              : started
+                ? 'navigation'
+                : 'planning',
+          profile,
+          preferences: aiPreferences,
+          current_node_id: segment?.nodeIds[0] || leg.from,
+          destination_node_id: leg.to,
+          segment: segment || null,
+          levels: scene.manifest.levels,
+          facilities: scene.graph.facilities,
+        }
+      : null;
+  function applyAgentResult(input: unknown): Receipt {
+    try {
+      if (!scene || !aiContext || loading || error)
+        throw new IntegrationError('NOT_READY', '場景尚未載入');
+      const r = validateResult(input, scene);
+      if (acceptedRequests.current.has(r.request_id))
+        throw new IntegrationError('DUPLICATE_REQUEST', 'request_id 已使用，請勿重複套用');
+      if (applying.current)
+        throw new IntegrationError('BUSY', '上一筆結果更新中，請在下一個畫面更新後重試');
+      if (r.context_id !== contextId || contextId !== liveContextId.current)
+        throw new IntegrationError('STALE_CONTEXT', '導航已改變，請重新取得上下文');
+      if (aiContext.phase === 'complete' || aiContext.phase === 'transit')
+        throw new IntegrationError('INVALID_PHASE', '請於規劃或兩端步行導航階段接入');
+      if (r.agent === 'preferences') {
+        anchor();
+        setAiPreferences(r.payload);
+        setProfile(
+          r.payload.mobility_type === 'manual_wheelchair' ? 'wheelchair' : r.payload.mobility_type,
+        );
+      } else if (r.agent === 'obstacle') {
+        anchor();
+        const event = obstacleEvent(r);
+        setEvents((old) => [...old.filter((e) => e.id !== event.id), event]);
+      } else if (r.agent === 'localization') {
+        if (!r.payload.is_indoor)
+          return {
+            status: 'ignored',
+            request_id: r.request_id,
+            message: '室外定位留給 GPS provider；目前未接入真實 GPS，不移動導航起點。',
+          };
+        setOrigins((old) => ({ ...old, [String(currentNav)]: r.payload.map_db_node_id! }));
+        setCurrentSegmentIndex(0);
+        setInspectLevel(r.payload.level_id!);
+        setView('floor');
+      } else {
+        if (!segment || leg.route.status !== 'ok' || r.payload.segment_id !== segment.id)
+          throw new IntegrationError('STALE_SEGMENT', '指引必須對應目前可行路段');
+        setGuidance({ contextId, text: r.payload.text, audioUrl: r.payload.audio_url });
+      }
+      acceptedRequests.current.add(r.request_id);
+      applying.current = true;
+      setNotice('已接收 GenAI ' + r.agent + ' 結果（本頁演示）。');
+      return {
+        status: 'applied',
+        request_id: r.request_id,
+        message: '結果已套用；導航將按目前資料更新。',
+      };
+    } catch (e) {
+      return {
+        status: 'rejected',
+        code:
+          e instanceof IntegrationError
+            ? e.code
+            : e instanceof ZodError
+              ? 'INVALID_PAYLOAD'
+              : 'INTEGRATION_ERROR',
+        message: e instanceof Error ? e.message : String(e),
+      };
+    }
+  }
+  useLayoutEffect(() => {
+    applying.current = false;
+    liveContextId.current = contextId;
+    if (!aiContext || !scene || loading || error) {
+      delete window.accessrouteGenAI;
+      return;
+    }
+    window.accessrouteGenAI = {
+      version: '1.0',
+      getContext: () => structuredClone(aiContext),
+      getScene: () => structuredClone(scene),
+      getExamples: () => examples(aiContext, scene),
+      submit: applyAgentResult,
+    };
+    return () => {
+      liveContextId.current = '';
+      delete window.accessrouteGenAI;
+    };
+  });
   if (loading)
     return (
       <main className="loading">
@@ -367,6 +519,31 @@ export default function App() {
           </span>
         </div>
       </header>
+      {aiContext && (
+        <GenAIConsole
+          context={aiContext}
+          samples={examples(aiContext, scene)}
+          apply={applyAgentResult}
+          clear={() => {
+            anchor();
+            setAiPreferences(null);
+            setGuidance(null);
+            setEvents((old) => old.filter((e) => !e.id.startsWith('genai-')));
+            setNotice('已清除本頁 GenAI 結果；目前出行類型保留，可手動切換。');
+          }}
+        />
+      )}
+      {guidance?.contextId === contextId && (
+        <aside className="genai-guidance" aria-live="polite">
+          <strong>粵語導航指引</strong>
+          <p>{guidance.text}</p>
+          {guidance.audioUrl && aiPreferences?.tts_selection !== 'text_only' && (
+            <audio key={guidance.audioUrl} controls src={guidance.audioUrl}>
+              瀏覽器不支援音訊播放
+            </audio>
+          )}
+        </aside>
+      )}
       {details ? (
         <main className="info-page">
           <button className="text-button" onClick={() => setDetails(false)}>
@@ -609,11 +786,15 @@ export default function App() {
                           {f.label}
                         </span>
                         <button
-                          disabled={busy}
+                          disabled={busy || aiClosed.includes(f.id)}
                           className={closed.includes(f.id) ? 'restore' : 'close-lift'}
                           onClick={() => toggleLift(f.id)}
                         >
-                          {closed.includes(f.id) ? '恢復服務' : '模擬停用'}
+                          {aiClosed.includes(f.id)
+                            ? 'GenAI 停用（接入口解除）'
+                            : closed.includes(f.id)
+                              ? '恢復服務'
+                              : '模擬停用'}
                         </button>
                       </div>
                     ))}

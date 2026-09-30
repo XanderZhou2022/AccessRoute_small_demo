@@ -1671,3 +1671,66 @@ button {
   height: 14px;
   object-fit: contain;
 }
+
+.genai-console,
+.genai-guidance {
+  margin: 12px 24px;
+  padding: 16px 20px;
+  border: 1px solid #b6d4cb;
+  background: #f3faf7;
+  border-radius: 12px;
+  min-width: 0;
+}
+.genai-console summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+.genai-console p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.genai-console a {
+  color: #17614c;
+  text-decoration: underline;
+}
+.genai-console textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 8px 0 12px;
+  padding: 12px;
+  font: 13px/1.5 monospace;
+  border: 1px solid #a7bab4;
+  border-radius: 8px;
+  resize: vertical;
+}
+.genai-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.genai-actions button {
+  padding: 10px;
+  border: 1px solid #a7bab4;
+  border-radius: 8px;
+  background: white;
+}
+.genai-console pre {
+  max-height: 320px;
+  overflow: auto;
+  font-size: 12px;
+}
+.genai-console > details {
+  margin-top: 16px;
+}
+.genai-guidance audio {
+  max-width: 100%;
+}
+@media (max-width: 600px) {
+  .genai-console,
+  .genai-guidance {
+    margin: 10px;
+    padding: 12px;
+  }
+}

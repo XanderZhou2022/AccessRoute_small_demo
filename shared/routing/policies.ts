@@ -17,13 +17,17 @@ export function eventIsActive(e: DynamicEvent, now: string) {
 export const accessibilityPolicy: RoutingPolicyPlugin = {
   id: 'accessibility',
   evaluate(e, c) {
-    if (c.profile !== 'elderly' && ['stairs', 'escalator'].includes(e.kind))
+    if ((c.profile !== 'elderly' || c.avoidStairs) && ['stairs', 'escalator'].includes(e.kind))
       return { blocked: true, reasonCode: 'STEP_FREE_REQUIRED' };
     if (e.wheelchair === 'no' && c.profile === 'wheelchair')
       return { blocked: true, reasonCode: 'NOT_WHEELCHAIR_ACCESSIBLE' };
     if (c.strictAccessibility && e.wheelchair === 'unknown')
       return { blocked: true, reasonCode: 'ACCESSIBILITY_UNVERIFIED' };
-    if (c.profile === 'wheelchair' && e.slope !== undefined && Math.abs(e.slope) > 0.0833)
+    if (
+      (c.profile === 'wheelchair' || c.avoidSteepSlopes) &&
+      e.slope !== undefined &&
+      Math.abs(e.slope) > 0.0833
+    )
       return { blocked: true, reasonCode: 'SLOPE_LIMIT' };
     const penalty =
       (e.wheelchair === 'unknown' ? 20 : 0) +
@@ -39,8 +43,14 @@ export const weatherPolicy: RoutingPolicyPlugin = {
   id: 'weather',
   evaluate(e, c) {
     return {
-      penalty: c.rain && !e.indoor && !e.sheltered ? e.distanceM * 2 : 0,
-      reasonCode: c.rain && !e.indoor && !e.sheltered ? 'RAIN_EXPOSURE' : undefined,
+      penalty:
+        (c.rain || c.preferCoveredShelter) && !e.indoor && !e.sheltered ? e.distanceM * 2 : 0,
+      reasonCode:
+        (c.rain || c.preferCoveredShelter) && !e.indoor && !e.sheltered
+          ? c.rain
+            ? 'RAIN_EXPOSURE'
+            : 'UNCOVERED_EXPOSURE'
+          : undefined,
     };
   },
 };

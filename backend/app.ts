@@ -1,4 +1,5 @@
 import express from 'express';
+import { validateResult, resultSchema, IntegrationError } from '../shared/genai/contracts';
 import { readFile, mkdir, writeFile, rename } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -83,6 +84,11 @@ export function createApp(
     res.json(manifests);
   });
   app.get('/api/scenes/:id', async (req, res) => res.json(await load(String(req.params.id))));
+  app.post('/api/genai/validate', async (req, res) => {
+    const input = resultSchema.parse(req.body);
+    const result = validateResult(input, await load(input.scene_id));
+    res.json({ status: 'validated', applied: false, result });
+  });
   app.post('/api/route', async (req, res) => {
     const input = z
       .object({ sceneId: z.string(), from: z.string(), to: z.string(), context: contextSchema })
@@ -144,12 +150,22 @@ export function createApp(
   app.use(
     (err: Error, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
       const status =
-        err instanceof ZodError
+        err instanceof ZodError || err instanceof IntegrationError
           ? 400
           : (err as NodeJS.ErrnoException).code === 'ENOENT'
             ? 404
             : (err as Error & { status?: number }).status || 500;
-      res.status(status).json({ error: status === 500 ? 'Internal server error' : err.message });
+      res
+        .status(status)
+        .json({
+          error: status === 500 ? 'Internal server error' : err.message,
+          code:
+            err instanceof IntegrationError
+              ? err.code
+              : err instanceof ZodError
+                ? 'INVALID_PAYLOAD'
+                : undefined,
+        });
     },
   );
   return app;
