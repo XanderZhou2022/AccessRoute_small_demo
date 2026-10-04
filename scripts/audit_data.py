@@ -7,7 +7,7 @@ logs=[json.loads(s) for s in (RAW/'requests.jsonl').read_text().splitlines()]
 byfile={s['file'].removeprefix('data/raw/'):s for s in logs}
 rows=[]
 for p in sorted(RAW.rglob('*')):
- if not p.is_file() or p.suffix not in ['.json','.csv']:continue
+ if not p.is_file() or p.suffix not in ['.json','.csv','.geojson','.xml']:continue
  name=str(p.relative_to(RAW));log=byfile.get(name,{})
  if p.parent!=RAW and name not in byfile:known[name]=wfs(p.stem,p.parent.name)
  rows.append({'file':str(p.relative_to(ROOT)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'url':log.get('url',known.get(name)),'downloadedAt':log.get('retrievedAt',datetime.datetime.fromtimestamp(p.stat().st_mtime,datetime.timezone.utc).isoformat()),'timestampEvidence':'request-log' if log else 'local-file-mtime','httpStatus':log.get('httpStatus'),'headersFile':str(pathlib.Path(str(p)+'.headers').relative_to(ROOT)) if pathlib.Path(str(p)+'.headers').exists() else None})

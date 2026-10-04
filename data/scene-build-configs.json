@@ -1,0 +1,123 @@
+[
+  {
+    "id": "hysan-place",
+    "venue": "5bb79500-645d-4089-b5bc-5a02cfeed057",
+    "station": "Causeway Bay Station",
+    "stationZh": "銅鑼灣站",
+    "nameZh": "希慎廣場",
+    "levels": [
+      "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+      "ba047eef-2b62-4561-932a-25c1a1e16fb3"
+    ]
+  },
+  {
+    "id": "popcorn-2",
+    "venue": "ad3ff090-6b6b-4796-ae07-612d8825ff5b",
+    "station": "Tseung Kwan O Station",
+    "stationZh": "將軍澳站",
+    "nameZh": "PopCorn 2",
+    "levels": [
+      "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "8401071c-4ba8-4ea2-a76c-db683a88c80a"
+    ]
+  },
+  {
+    "id": "shek-kip-mei-services",
+    "venue": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+    "station": "Shek Kip Mei Station",
+    "stationZh": "石硤尾鐵路站",
+    "nameZh": "石硤尾邨服務設施大樓",
+    "levels": [
+      "dc269231-91d9-4c8b-8427-a31f996715ca",
+      "012c4a74-a042-481b-ada0-80b739a5bf63"
+    ]
+  },
+  {
+    "id": "cheung-sha-wan-government",
+    "venue": "bd9576da-e2d9-47ff-9ab1-447a54ddff47",
+    "station": "Sham Shui Po Station",
+    "stationZh": "深水埗鐵路站",
+    "nameZh": "長沙灣政府合署",
+    "levels": [
+      "216adbc9-b1fc-4a3c-98f1-2c35ca686816",
+      "efa3b69e-2bed-4508-bd74-461aeaadd2a4"
+    ]
+  },
+  {
+    "id": "sha-tin-government",
+    "venue": "13bf925f-387d-4559-a5c1-db10e9981fea",
+    "station": "Sha Tin Station",
+    "stationZh": "沙田鐵路站",
+    "nameZh": "沙田政府合署",
+    "levels": [
+      "5b37b74c-8cdb-4ebb-afa2-5fd3fb907619",
+      "c00ca2db-d066-41b9-b71b-f857caef58de"
+    ]
+  },
+  {
+    "id": "north-point-government",
+    "venue": "b6fb3eae-9bcf-40f0-9eed-8871f50aa9f9",
+    "station": "Quarry Bay Station",
+    "stationZh": "鰂魚涌鐵路站",
+    "nameZh": "北角政府合署",
+    "levels": [
+      "03af05fc-2ef9-4f2b-9da9-00f91fe4ab73",
+      "c4051241-90bc-433d-9007-0a1362e9c593"
+    ]
+  },
+  {
+    "id": "pei-ho-market",
+    "venue": "61f55315-a44b-47ed-9201-7da2e5bcf1c1",
+    "station": "Sham Shui Po Station",
+    "stationZh": "深水埗鐵路站",
+    "nameZh": "北河街市政大廈",
+    "levels": [
+      "ea7e7b10-672d-47ce-85d8-b01a89185e00",
+      "391de1b0-4624-4df0-b67b-1aedef9b2aa5"
+    ]
+  },
+  {
+    "id": "java-road-market",
+    "venue": "6f2c1899-c5f1-4f42-8415-b18ae840b57a",
+    "station": "North Point Station",
+    "stationZh": "北角鐵路站",
+    "nameZh": "渣華道市政大廈",
+    "levels": [
+      "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "c87a78b8-6eaf-4a89-bdca-146145005890"
+    ]
+  },
+  {
+    "id": "kowloon-city-market",
+    "venue": "2b9f5d77-6a27-4dc3-bbc8-2c98e25fdb48",
+    "station": "Sung Wong Toi Station",
+    "stationZh": "宋皇臺鐵路站",
+    "nameZh": "九龍城市政大廈",
+    "levels": [
+      "902f0d3f-92ed-4e9b-b763-76a107a9f7e0",
+      "59388cb2-b045-4ef9-8ce3-98dd7c877b17"
+    ]
+  },
+  {
+    "id": "tai-po-market",
+    "venue": "7abc627a-9f72-4547-a021-f6dcb814138c",
+    "station": "Tai Po Market Station",
+    "stationZh": "大埔墟鐵路站",
+    "nameZh": "大埔墟街市及熟食中心",
+    "levels": [
+      "7b7942d1-29a9-4f5f-929f-4c21cc329f49",
+      "0b551810-02a6-4a6b-a5e7-0a8819e2f38d"
+    ]
+  },
+  {
+    "id": "kwai-hing-government",
+    "venue": "1652598f-c2c2-458c-951f-64366586a5e1",
+    "station": "Kwai Hing Station",
+    "stationZh": "葵興鐵路站",
+    "nameZh": "葵興政府合署",
+    "levels": [
+      "3e2f7405-4ca9-42d2-8e83-27023edb9046",
+      "d1fad80f-bce1-4637-9d2b-7bf42880d551"
+    ]
+  }
+]

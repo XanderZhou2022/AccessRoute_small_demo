@@ -6,6 +6,8 @@ await rm(dest + '/scenes', { recursive: true, force: true });
 await cp(fileURLToPath(new URL('../data/scenes', import.meta.url)), dest + '/scenes', {
   recursive: true,
 });
+await cp(new URL('../data/demo/', import.meta.url), new URL('../frontend/public/data/demo/', import.meta.url), { recursive: true });
+await cp(new URL('../data/knowledge/', import.meta.url), new URL('../frontend/public/data/knowledge/', import.meta.url), { recursive: true });
 
 await cp(
   new URL('../docs/genai-integration.md', import.meta.url),

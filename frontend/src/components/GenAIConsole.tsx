@@ -22,10 +22,8 @@ export function GenAIConsole({
   const labels = ['1 · 出行偏好', '2 · 電梯路障', '3 · 室內定位', '4 · 粵語指引'];
   return (
     <details className="genai-console">
-      <summary>GenAI 接入 · 四個 Agent 聯調</summary>
-      <p>
-        此面板接收 Agent 結果並更新本頁導航，未連接 Qwen。示例為模擬資料；刷新頁面會清除接入狀態。
-      </p>
+      <summary>開發者聯調 · JSON 結果</summary>
+      <p>此面板可手動測試結果契約。示例為模擬資料；智能導航助手會呼叫後端 workflow。</p>
       <a href={import.meta.env.BASE_URL + 'genai-integration.md'} target="_blank" rel="noreferrer">
         開啟同事接入手冊（含端口、JSON 與呼叫例子）
       </a>

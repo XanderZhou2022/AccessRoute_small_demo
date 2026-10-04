@@ -26,3 +26,7 @@ npm run data:sync
 - Lift A / B 是演示標籤；元資料記錄兩層官方 amenity IDs，不是官方設備編號。
 
 兩個場景包原始 JSON / GeoJSON 使用緊湊格式以減少體積；schema、來源及 manifest 可直接讀取。每次構建由根目錄資料複製到前端，沒有兩份互相獨立的資料源。
+
+## 2026-10-04 擴充
+
+正式註冊表現有 12 個場景。新增官方三維行人路網位於 `pedestrian/`，全樓層 POI 索引位於 `poi/`，完整度與缺口見 `location-catalog.json`。不要將 POI 候選索引視作已核實視覺地標。詳見 `../docs/location-expansion.md`。

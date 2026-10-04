@@ -15,6 +15,7 @@ npm run dev
 | GET  | `/api/health`     | 健康狀態、版本、事件寫入狀態                  |
 | GET  | `/api/scenes`     | SceneManifest 陣列                            |
 | GET  | `/api/scenes/:id` | 完整且驗證後的 Scene                          |
+| GET  | `/api/knowledge/:sceneId?q=名稱&level=樓層ID` | 尋路知識庫與文字候選，不呼叫模型 |
 | POST | `/api/route`      | 規劃路線及分段                                |
 | GET  | `/api/events`     | 讀取所有演示事件，包含已解除事件              |
 | POST | `/api/events`     | 依事件 ID 新增 / 取代；`status=resolved` 解除 |
@@ -61,3 +62,9 @@ npm run dev
 ## GenAI 結果校驗
 
 新增 `POST /api/genai/validate`，驗證四個 Agent JSON 及場景引用，返回 `{status:"validated",applied:false,result}`。不儲存、不控制瀏覽器；上下文與路段時效由前端 bridge 校驗。詳見 [接入手冊](../docs/genai-integration.md)。
+
+## GenAI workflow 與分層
+
+四套 workflow 位於 `backend/workflows/`，HTTP 路由位於 `backend/api/genai.ts`，模型 transport 位於 `backend/providers/qwen.ts`。地圖 HTTP 路由位於 `backend/api/map.ts`，場景與事件讀寫位於 `backend/repositories/`。`app.ts` 只組裝依賴與中介層。
+
+詳見 [GenAI API 手冊](../docs/genai-integration.md)和 [架構](../docs/genai-architecture.md)。`createApp({model, speech, landmarkRoot})` 可注入測試或其他供應商適配器。

@@ -17,22 +17,55 @@ export function eventIsActive(e: DynamicEvent, now: string) {
 export const accessibilityPolicy: RoutingPolicyPlugin = {
   id: 'accessibility',
   evaluate(e, c) {
-    if ((c.profile !== 'elderly' || c.avoidStairs) && ['stairs', 'escalator'].includes(e.kind))
+    const wheelchair = c.profile === 'wheelchair';
+    const defaultStepFree = ['wheelchair', 'stroller', 'heavy_luggage'].includes(c.profile);
+    const stairsAllowed =
+      !wheelchair &&
+      (c.allowStairs ?? (c.avoidStairs === false || !defaultStepFree)) &&
+      !c.avoidStairs;
+    const escalatorsAllowed =
+      !wheelchair && (c.allowEscalators ?? (!defaultStepFree && !c.avoidStairs));
+    if ((e.kind === 'stairs' && !stairsAllowed) || (e.kind === 'escalator' && !escalatorsAllowed))
       return { blocked: true, reasonCode: 'STEP_FREE_REQUIRED' };
-    if (e.wheelchair === 'no' && c.profile === 'wheelchair')
+    if (c.avoidLifts && e.kind === 'lift') return { blocked: true, reasonCode: 'LIFT_AVOIDED' };
+    if (e.wheelchair === 'no' && wheelchair)
       return { blocked: true, reasonCode: 'NOT_WHEELCHAIR_ACCESSIBLE' };
     if (c.strictAccessibility && e.wheelchair === 'unknown')
       return { blocked: true, reasonCode: 'ACCESSIBILITY_UNVERIFIED' };
-    if (
-      (c.profile === 'wheelchair' || c.avoidSteepSlopes) &&
-      e.slope !== undefined &&
-      Math.abs(e.slope) > 0.0833
-    )
+    const maxSlope =
+      c.maxSlope ?? (wheelchair || defaultStepFree || c.avoidSteepSlopes ? 0.0833 : Infinity);
+    if (e.slope !== undefined && Math.abs(e.slope) > maxSlope)
       return { blocked: true, reasonCode: 'SLOPE_LIMIT' };
+    if (c.minWidthM !== undefined && e.widthM !== undefined && e.widthM < c.minWidthM)
+      return { blocked: true, reasonCode: 'WIDTH_LIMIT' };
+    if (
+      c.maxStepsPerFlight !== undefined &&
+      e.kind === 'stairs' &&
+      (e.stepCount ?? Infinity) > c.maxStepsPerFlight
+    )
+      return { blocked: true, reasonCode: 'STEP_LIMIT' };
+    if (
+      c.strictAccessibility &&
+      ((c.minWidthM !== undefined && e.widthM === undefined) ||
+        (c.maxSlope !== undefined &&
+          ['ramp', 'outdoor', 'bridge'].includes(e.kind) &&
+          e.slope === undefined))
+    )
+      return { blocked: true, reasonCode: 'DIMENSIONS_UNVERIFIED' };
+    if (
+      (e.openFrom && Date.parse(c.now) < Date.parse(e.openFrom)) ||
+      (e.openUntil && Date.parse(c.now) >= Date.parse(e.openUntil))
+    )
+      return { blocked: true, reasonCode: 'OUTSIDE_OPENING_HOURS' };
+    const effort = c.objective === 'least_effort' ? 4 : 1;
     const penalty =
-      (e.wheelchair === 'unknown' ? 20 : 0) +
-      (e.kind === 'stairs' ? 180 : 0) +
-      (e.kind === 'lift' ? 12 : 0);
+      c.objective === 'shortest'
+        ? 0
+        : (e.wheelchair === 'unknown' ? 20 : 0) +
+          (e.kind === 'stairs' ? (c.profile === 'walking' ? 25 : 180) * effort : 0) +
+          (e.kind === 'escalator' ? 8 * effort : 0) +
+          (e.kind === 'lift' ? 12 : 0) +
+          Math.abs(e.slope ?? 0) * e.distanceM * (c.profile === 'walking' ? 2 : 12) * effort;
     return {
       penalty,
       reasonCode: e.wheelchair === 'unknown' ? 'ACCESSIBILITY_UNVERIFIED' : undefined,
@@ -44,7 +77,12 @@ export const weatherPolicy: RoutingPolicyPlugin = {
   evaluate(e, c) {
     return {
       penalty:
-        (c.rain || c.preferCoveredShelter) && !e.indoor && !e.sheltered ? e.distanceM * 2 : 0,
+        c.objective !== 'shortest' &&
+        (c.rain || c.preferCoveredShelter) &&
+        !e.indoor &&
+        !e.sheltered
+          ? e.distanceM * 2
+          : 0,
       reasonCode:
         (c.rain || c.preferCoveredShelter) && !e.indoor && !e.sheltered
           ? c.rain
@@ -57,6 +95,7 @@ export const weatherPolicy: RoutingPolicyPlugin = {
 export const eventPolicy: RoutingPolicyPlugin = {
   id: 'events',
   evaluate(e, c) {
+    let penalty = 0;
     for (const event of c.events) {
       if (!eventIsActive(event, c.now)) continue;
       const match =
@@ -65,9 +104,11 @@ export const eventPolicy: RoutingPolicyPlugin = {
       if (!match) continue;
       if (event.type === 'facility_closed' || event.type === 'construction')
         return { blocked: true, reasonCode: 'FACILITY_CLOSED' };
-      if (event.type === 'crowding') return { penalty: 50, reasonCode: 'CROWDING' };
+      if (event.type === 'custom' && event.metadata?.blocked === true)
+        return { blocked: true, reasonCode: 'CUSTOM_CLOSURE' };
+      if (event.type === 'crowding' && c.objective !== 'shortest') penalty += 50;
     }
-    return {};
+    return penalty ? { penalty, reasonCode: 'CROWDING' } : {};
   },
 };
 export const defaultPolicies = [accessibilityPolicy, eventPolicy, weatherPolicy];

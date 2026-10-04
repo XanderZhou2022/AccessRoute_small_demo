@@ -49,3 +49,11 @@ The third-scene contract test creates a structurally independent fixture, valida
 ## Upgrade paths
 
 A remote SceneDataProvider may replace static loading without changing graph types. A remote EventProvider can fetch authenticated official / crowd events later. A future TransitProvider can replace the abstract card. True positioning should update segment progress through its own adapter. Production persistence, authentication, weather and multimodal extraction remain separate integrations.
+
+## 地圖與多 Agent 流程
+
+新版將 HTTP API、外部模型供應商、單一角色 agent、地圖檢索和 workflow 組合分開。四套流程、候選確認與匹配分數見 [GenAI 架構](genai-architecture.md)，接口契約見 [接入手冊](genai-integration.md)。
+
+## Twelve-location data expansion (2026-10-04)
+
+`data/scenes/index.json` now registers twelve scenes. Eleven use official floor/unit geometry; Kowloon Tong uses the official 3D pedestrian network, with indoor centreline views explicitly distinguished from room polygons. Routing/domain contracts are unchanged. Acquisition preserves full building layers, bounded pedestrian graphs and POI candidates separately from compact demo graphs. See `location-expansion.md` and `data/location-catalog.json` for measured coverage and remaining hospital/landmark gaps.

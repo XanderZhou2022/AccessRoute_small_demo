@@ -1,7 +1,19 @@
 venueId,name,levels,units,openings,amenities,liftPoints,nearestStation,straightLineM,networkAdvertised,score
+bd9576da-e2d9-47ff-9ab1-447a54ddff47,Cheung Sha Wan Government Offices,29,1886,345,221,180,Sham Shui Po Station,231,False,60
+5a8bfe7d-bfd8-4a4d-bc61-e0a431abf6a3,Fa Yuen Street Municipal Services Building,17,524,278,119,67,Mong Kok Station,189,False,60
 5bb79500-645d-4089-b5bc-5a02cfeed057,Hysan Place,48,2525,2354,2235,332,Causeway Bay Station,15,False,60
+1652598f-c2c2-458c-951f-64366586a5e1,Kwai Hing Government Offices,15,813,74,88,40,Kwai Hing Station,28,False,60
 7c697c97-720f-4f4a-9fa3-fdb6bcd008db,Maritime square,36,2363,2779,2620,133,Tsing Yi Station,20,False,60
+b6fb3eae-9bcf-40f0-9eed-8871f50aa9f9,North Point Government Offices,32,1746,426,380,219,Quarry Bay Station,395,False,60
+61f55315-a44b-47ed-9201-7da2e5bcf1c1,Pei Ho Street Municipal Services Building,11,436,243,85,36,Sham Shui Po Station,214,False,60
 87a12555-5f85-4e4f-b7a2-afdb703fe7e3,PopCorn 1,11,4113,3272,3535,184,Tseung Kwan O Station,66,False,60
 ad3ff090-6b6b-4796-ae07-612d8825ff5b,PopCorn 2,12,1418,1461,1420,70,Tseung Kwan O Station,215,False,60
+468dc65e-e6fd-4312-9925-59016a938d36,Sai Ying Pun Community Complex,15,624,136,105,45,Sai Ying Pun Station,173,False,60
+13bf925f-387d-4559-a5c1-db10e9981fea,Sha Tin Government Offices,28,1599,450,422,162,Sha Tin Station,360,False,60
+0409d24b-80aa-4de5-adc5-ab0aa2864176,Shek Kip Mei Estate Ancillary Facilities Block,9,102,121,56,32,Shek Kip Mei Station,231,False,60
+7abc627a-9f72-4547-a021-f6dcb814138c,Tai Po Hui Market and Cooked Food Centre,16,1547,1203,668,57,Tai Po Market Station,456,False,60
+6f2c1899-c5f1-4f42-8415-b18ae840b57a,Java Road Municipal Services Building,28,546,346,143,16,North Point Station,174,False,56
+2b9f5d77-6a27-4dc3-bbc8-2c98e25fdb48,Kowloon City Municipal Services Building,6,314,242,64,8,Sung Wong Toi Station,371,False,48
+97390be8-174d-47a0-b013-f04a7276e15d,Pak Tin Community Complex,7,219,86,26,8,Shek Kip Mei Station,536,False,48
 1542e14e-cf0a-468c-91b7-f9b48efc90f2,1881 Heritage,10,370,325,118,6,Tsim Sha Tsui Station,336,False,46
 50b9489d-1a84-40f7-84ce-2488e61e4f0f,Telford Plaza,11,1280,1124,0,0,Kowloon Bay Station,143,False,30

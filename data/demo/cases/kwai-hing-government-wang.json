@@ -1,0 +1,4603 @@
+{
+  "id": "kwai-hing-government-wang",
+  "title": "王先生 Mr Wang · 葵興政府合署 → 希慎廣場",
+  "person": "王先生 Mr Wang",
+  "purpose": "赴目的地附近的預約門診；示範到建築公共走廊，門診入口不在地圖內",
+  "origin_scene_id": "kwai-hing-government",
+  "destination_scene_id": "hysan-place",
+  "tags": [
+    "manual_wheelchair",
+    "rain",
+    "facility_fault",
+    "localization"
+  ],
+  "narrative": "王先生 Mr Wang使用手動輪椅，不能走樓梯；今天下雨，要從葵興政府合署出發。途中遇到設施故障，改道後利用店舖或設施名稱確認位置，最後前往希慎廣場。",
+  "initial_state": {
+    "policy_mode": "distance_only",
+    "scene_id": "kwai-hing-government",
+    "current_node_id": "d1fad80f-10-13",
+    "destination_node_id": "kwai-hing-government-station",
+    "preferences": null,
+    "guidance": "",
+    "routing": {
+      "profile": "elderly",
+      "rain": false,
+      "strictAccessibility": false,
+      "now": "2026-10-04T09:00:00.000Z",
+      "events": []
+    }
+  },
+  "destination_route": {
+    "result": {
+      "status": "ok",
+      "nodeIds": [
+        "hysan-place-station",
+        "hysan-place-doorway",
+        "a4e20e16-0--6",
+        "a4e20e16-0--5",
+        "a4e20e16--1--4",
+        "a4e20e16--1--3",
+        "a4e20e16--1--2",
+        "a4e20e16--1--1",
+        "a4e20e16--1-0",
+        "a4e20e16--1-1",
+        "a4e20e16--1-2",
+        "a4e20e16--1-3",
+        "a4e20e16--1-4",
+        "a4e20e16--1-5",
+        "a4e20e16--1-6",
+        "a4e20e16--1-7",
+        "a4e20e16--1-8",
+        "a4e20e16--1-9",
+        "a4e20e16--1-10",
+        "a4e20e16--2-11",
+        "a4e20e16--3-12",
+        "a4e20e16--4-12",
+        "a4e20e16--5-13",
+        "a4e20e16--6-14",
+        "a3a5bc3e-f461-444e-8e4a-f63489cc7f2a",
+        "8887c3eb-f74a-40b1-9f77-0edf09786e93",
+        "ba047eef--6-14",
+        "ba047eef--5-14",
+        "ba047eef--4-15",
+        "ba047eef--3-15",
+        "ba047eef--2-14",
+        "ba047eef--1-13",
+        "ba047eef--1-12",
+        "ba047eef--1-11",
+        "ba047eef--1-10",
+        "ba047eef--1-9",
+        "ba047eef--1-8",
+        "ba047eef--1-7",
+        "ba047eef--2-6",
+        "ba047eef--2-5",
+        "ba047eef--2-4",
+        "ba047eef--2-3",
+        "ba047eef--1-2",
+        "ba047eef-0-1",
+        "ba047eef-1-0",
+        "ba047eef-2--1",
+        "ba047eef-3--2",
+        "ba047eef-4--2",
+        "ba047eef-5--2",
+        "ba047eef-6--3",
+        "ba047eef-7--4",
+        "ba047eef-8--5",
+        "ba047eef-9--6"
+      ],
+      "edgeIds": [
+        "demo-e-1522-covered",
+        "e-1521",
+        "e-778",
+        "e-744",
+        "e-743",
+        "e-745",
+        "e-748",
+        "e-751",
+        "e-755",
+        "e-759",
+        "e-761",
+        "e-763",
+        "e-764",
+        "e-765",
+        "e-766",
+        "e-767",
+        "e-768",
+        "e-769",
+        "e-733",
+        "e-671",
+        "e-661",
+        "e-654",
+        "e-645",
+        "e-1513",
+        "e-1520",
+        "e-1517",
+        "e-989",
+        "e-1009",
+        "e-1027",
+        "e-1053",
+        "e-1099",
+        "e-1142",
+        "e-1138",
+        "e-1135",
+        "e-1132",
+        "e-1131",
+        "e-1130",
+        "e-1081",
+        "e-1078",
+        "e-1076",
+        "e-1072",
+        "e-1074",
+        "e-1127",
+        "e-1173",
+        "e-1207",
+        "e-1236",
+        "e-1267",
+        "e-1308",
+        "e-1352",
+        "e-1394",
+        "e-1420",
+        "e-1435"
+      ],
+      "distanceM": 157.90149999999994,
+      "cost": 1209.9015,
+      "reasonCodes": [
+        "ACCESSIBILITY_UNVERIFIED",
+        "RAIN_EXPOSURE"
+      ],
+      "warnings": [
+        "ACCESSIBILITY_UNVERIFIED",
+        "DEMO_CONNECTION"
+      ],
+      "metrics": {
+        "exposedM": 0,
+        "outdoorM": 62.7055,
+        "indoorM": 95.19600000000003,
+        "shelteredM": 157.9014999999999,
+        "estimatedDurationS": 222.2852083333335,
+        "ascentM": 5.299999999999999,
+        "descentM": 0,
+        "stairs": 0,
+        "transitions": {
+          "lift": 1
+        }
+      }
+    },
+    "segments": [
+      {
+        "id": "segment-0",
+        "sceneId": "hysan-place",
+        "type": "outdoor",
+        "nodeIds": [
+          "hysan-place-station",
+          "hysan-place-doorway",
+          "a4e20e16-0--6"
+        ],
+        "edgeIds": [
+          "demo-e-1522-covered",
+          "e-1521"
+        ],
+        "geometry": [
+          [
+            114.18411088,
+            22.27992087
+          ],
+          [
+            114.18394886,
+            22.2798844735
+          ],
+          [
+            114.18378684,
+            22.279608077
+          ],
+          [
+            114.18378684,
+            22.279608077
+          ]
+        ],
+        "distanceM": 62.7055
+      },
+      {
+        "id": "segment-1",
+        "sceneId": "hysan-place",
+        "type": "floor",
+        "venueId": "5bb79500-645d-4089-b5bc-5a02cfeed057",
+        "levelId": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+        "nodeIds": [
+          "a4e20e16-0--6",
+          "a4e20e16-0--5",
+          "a4e20e16--1--4",
+          "a4e20e16--1--3",
+          "a4e20e16--1--2",
+          "a4e20e16--1--1",
+          "a4e20e16--1-0",
+          "a4e20e16--1-1",
+          "a4e20e16--1-2",
+          "a4e20e16--1-3",
+          "a4e20e16--1-4",
+          "a4e20e16--1-5",
+          "a4e20e16--1-6",
+          "a4e20e16--1-7",
+          "a4e20e16--1-8",
+          "a4e20e16--1-9",
+          "a4e20e16--1-10",
+          "a4e20e16--2-11",
+          "a4e20e16--3-12",
+          "a4e20e16--4-12",
+          "a4e20e16--5-13",
+          "a4e20e16--6-14",
+          "a3a5bc3e-f461-444e-8e4a-f63489cc7f2a"
+        ],
+        "edgeIds": [
+          "e-778",
+          "e-744",
+          "e-743",
+          "e-745",
+          "e-748",
+          "e-751",
+          "e-755",
+          "e-759",
+          "e-761",
+          "e-763",
+          "e-764",
+          "e-765",
+          "e-766",
+          "e-767",
+          "e-768",
+          "e-769",
+          "e-733",
+          "e-671",
+          "e-661",
+          "e-654",
+          "e-645",
+          "e-1513"
+        ],
+        "geometry": [
+          [
+            114.18378684,
+            22.279608077
+          ],
+          [
+            114.18378684,
+            22.27962245
+          ],
+          [
+            114.183771307,
+            22.279636823
+          ],
+          [
+            114.183771307,
+            22.279651196
+          ],
+          [
+            114.183771307,
+            22.279665569
+          ],
+          [
+            114.183771307,
+            22.279679942
+          ],
+          [
+            114.183771307,
+            22.279694315
+          ],
+          [
+            114.183771307,
+            22.279708688
+          ],
+          [
+            114.183771307,
+            22.279723061
+          ],
+          [
+            114.183771307,
+            22.279737434
+          ],
+          [
+            114.183771307,
+            22.279751807
+          ],
+          [
+            114.183771307,
+            22.27976618
+          ],
+          [
+            114.183771307,
+            22.279780553
+          ],
+          [
+            114.183771307,
+            22.279794926
+          ],
+          [
+            114.183771307,
+            22.279809299
+          ],
+          [
+            114.183771307,
+            22.279823672
+          ],
+          [
+            114.183771307,
+            22.279838045
+          ],
+          [
+            114.183755775,
+            22.279852418
+          ],
+          [
+            114.183740242,
+            22.279866791
+          ],
+          [
+            114.18372471,
+            22.279866791
+          ],
+          [
+            114.183709177,
+            22.279881164
+          ],
+          [
+            114.183693645,
+            22.279895537
+          ],
+          [
+            114.18368036,
+            22.27989718
+          ]
+        ],
+        "distanceM": 38.29600000000001
+      },
+      {
+        "id": "segment-2",
+        "sceneId": "hysan-place",
+        "type": "transition",
+        "venueId": "5bb79500-645d-4089-b5bc-5a02cfeed057",
+        "nodeIds": [
+          "a3a5bc3e-f461-444e-8e4a-f63489cc7f2a",
+          "8887c3eb-f74a-40b1-9f77-0edf09786e93"
+        ],
+        "edgeIds": [
+          "e-1520"
+        ],
+        "geometry": [
+          [
+            114.18368036,
+            22.27989718
+          ],
+          [
+            114.18368036,
+            22.27989718
+          ]
+        ],
+        "distanceM": 5.299999999999999,
+        "facilityId": "hysan-place-lift-a",
+        "mode": "lift",
+        "fromLevel": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+        "toLevel": "ba047eef-2b62-4561-932a-25c1a1e16fb3"
+      },
+      {
+        "id": "segment-3",
+        "sceneId": "hysan-place",
+        "type": "floor",
+        "venueId": "5bb79500-645d-4089-b5bc-5a02cfeed057",
+        "levelId": "ba047eef-2b62-4561-932a-25c1a1e16fb3",
+        "nodeIds": [
+          "8887c3eb-f74a-40b1-9f77-0edf09786e93",
+          "ba047eef--6-14",
+          "ba047eef--5-14",
+          "ba047eef--4-15",
+          "ba047eef--3-15",
+          "ba047eef--2-14",
+          "ba047eef--1-13",
+          "ba047eef--1-12",
+          "ba047eef--1-11",
+          "ba047eef--1-10",
+          "ba047eef--1-9",
+          "ba047eef--1-8",
+          "ba047eef--1-7",
+          "ba047eef--2-6",
+          "ba047eef--2-5",
+          "ba047eef--2-4",
+          "ba047eef--2-3",
+          "ba047eef--1-2",
+          "ba047eef-0-1",
+          "ba047eef-1-0",
+          "ba047eef-2--1",
+          "ba047eef-3--2",
+          "ba047eef-4--2",
+          "ba047eef-5--2",
+          "ba047eef-6--3",
+          "ba047eef-7--4",
+          "ba047eef-8--5",
+          "ba047eef-9--6"
+        ],
+        "edgeIds": [
+          "e-1517",
+          "e-989",
+          "e-1009",
+          "e-1027",
+          "e-1053",
+          "e-1099",
+          "e-1142",
+          "e-1138",
+          "e-1135",
+          "e-1132",
+          "e-1131",
+          "e-1130",
+          "e-1081",
+          "e-1078",
+          "e-1076",
+          "e-1072",
+          "e-1074",
+          "e-1127",
+          "e-1173",
+          "e-1207",
+          "e-1236",
+          "e-1267",
+          "e-1308",
+          "e-1352",
+          "e-1394",
+          "e-1420",
+          "e-1435"
+        ],
+        "geometry": [
+          [
+            114.18368036,
+            22.27989718
+          ],
+          [
+            114.183693645,
+            22.279895537
+          ],
+          [
+            114.183709177,
+            22.279895537
+          ],
+          [
+            114.18372471,
+            22.27990991
+          ],
+          [
+            114.183740242,
+            22.27990991
+          ],
+          [
+            114.183755775,
+            22.279895537
+          ],
+          [
+            114.183771307,
+            22.279881164
+          ],
+          [
+            114.183771307,
+            22.279866791
+          ],
+          [
+            114.183771307,
+            22.279852418
+          ],
+          [
+            114.183771307,
+            22.279838045
+          ],
+          [
+            114.183771307,
+            22.279823672
+          ],
+          [
+            114.183771307,
+            22.279809299
+          ],
+          [
+            114.183771307,
+            22.279794926
+          ],
+          [
+            114.183755775,
+            22.279780553
+          ],
+          [
+            114.183755775,
+            22.27976618
+          ],
+          [
+            114.183755775,
+            22.279751807
+          ],
+          [
+            114.183755775,
+            22.279737434
+          ],
+          [
+            114.183771307,
+            22.279723061
+          ],
+          [
+            114.18378684,
+            22.279708688
+          ],
+          [
+            114.183802373,
+            22.279694315
+          ],
+          [
+            114.183817905,
+            22.279679942
+          ],
+          [
+            114.183833438,
+            22.279665569
+          ],
+          [
+            114.18384897,
+            22.279665569
+          ],
+          [
+            114.183864503,
+            22.279665569
+          ],
+          [
+            114.183880035,
+            22.279651196
+          ],
+          [
+            114.183895568,
+            22.279636823
+          ],
+          [
+            114.183911101,
+            22.27962245
+          ],
+          [
+            114.183926633,
+            22.279608077
+          ]
+        ],
+        "distanceM": 51.599999999999994
+      }
+    ],
+    "exposed_m": 0,
+    "facilities": [
+      "hysan-place-lift-a"
+    ]
+  },
+  "steps": [
+    {
+      "agent_records": [
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "d1fad80f-10-13",
+            "to": "kwai-hing-government-station",
+            "routing": {
+              "profile": "elderly",
+              "rain": false,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": []
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 121.07826044565245,
+            "exposed_m": 89.05526044565246,
+            "facilities": [
+              "demo-kwai-hing-government-stairs"
+            ],
+            "route_changed": false
+          }
+        }
+      ],
+      "id": "start",
+      "title": "人物與原路線",
+      "utterance": "王先生 Mr Wang要從葵興政府合署前往希慎廣場。",
+      "explanation": "赴目的地附近的預約門診；示範到建築公共走廊，門診入口不在地圖內。先展示未加入個人需求的原路線。",
+      "context": {
+        "context_id": "kwai-hing-government-wang-0",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "d1fad80f-10-13",
+        "destination_node_id": "kwai-hing-government-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "elderly",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": []
+        },
+        "preferences": null,
+        "segment_id": "segment-0"
+      },
+      "response": null,
+      "state": {
+        "policy_mode": "distance_only",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "d1fad80f-10-13",
+        "destination_node_id": "kwai-hing-government-station",
+        "preferences": null,
+        "guidance": "",
+        "routing": {
+          "profile": "elderly",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": []
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "d1fad80f-10-13",
+            "d1fad80f-10-12",
+            "d1fad80f-11-11",
+            "d1fad80f-12-10",
+            "d1fad80f-12-9",
+            "d1fad80f-13-8",
+            "d1fad80f-14-7",
+            "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+            "30acbccc-30ff-4a16-92f0-cfab4f38353f",
+            "3e2f7405-15-7",
+            "3e2f7405-15-8",
+            "3e2f7405-15-9",
+            "3e2f7405-15-10",
+            "3e2f7405-15-11",
+            "3e2f7405-15-12",
+            "3e2f7405-15-13",
+            "3e2f7405-15-14",
+            "3e2f7405-16-15",
+            "kwai-hing-government-doorway",
+            "ped-9fe6fef7d204df9452f7",
+            "ped-77bcb8f21c17abb2fcf6",
+            "ped-836941d39230b65059b8",
+            "ped-a436bf0289c9ae714c49",
+            "ped-ee3302d9d72e065561ce",
+            "ped-a6648818334408993e0b",
+            "ped-4cce593dbfc09d0c2a7d",
+            "ped-855bac34d0b0fcc8b898",
+            "ped-2cf15b8a26043d64ad93",
+            "ped-514532f397165dc7079e",
+            "kwai-hing-government-station"
+          ],
+          "edgeIds": [
+            "e-227",
+            "e-229",
+            "e-258",
+            "e-281",
+            "e-283",
+            "e-313",
+            "e-415",
+            "demo-kwai-hing-government-stairs-edge",
+            "e-412",
+            "e-110",
+            "e-114",
+            "e-118",
+            "e-122",
+            "e-126",
+            "e-130",
+            "e-134",
+            "e-139",
+            "e-420",
+            "official-endpoint-snap-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-4",
+            "ped-e-8",
+            "ped-e-5",
+            "ped-e-6",
+            "ped-e-7",
+            "ped-e-0",
+            "ped-e-1",
+            "official-endpoint-snap-1"
+          ],
+          "distanceM": 121.07826044565245,
+          "cost": 121.07826044565248,
+          "reasonCodes": [],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 89.05526044565246,
+            "outdoorM": 89.05526044565246,
+            "indoorM": 32.02300000000001,
+            "shelteredM": 32.02300000000001,
+            "estimatedDurationS": 179.14751492236067,
+            "ascentM": 0,
+            "descentM": 8.650000000000002,
+            "stairs": 0,
+            "transitions": {
+              "stairs": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kwai-hing-government",
+            "type": "floor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "levelId": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "nodeIds": [
+              "d1fad80f-10-13",
+              "d1fad80f-10-12",
+              "d1fad80f-11-11",
+              "d1fad80f-12-10",
+              "d1fad80f-12-9",
+              "d1fad80f-13-8",
+              "d1fad80f-14-7",
+              "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce"
+            ],
+            "edgeIds": [
+              "e-227",
+              "e-229",
+              "e-258",
+              "e-281",
+              "e-283",
+              "e-313",
+              "e-415"
+            ],
+            "geometry": [
+              [
+                114.131752929,
+                22.363230809
+              ],
+              [
+                114.131752929,
+                22.363216436
+              ],
+              [
+                114.13176847,
+                22.363202063
+              ],
+              [
+                114.131784012,
+                22.36318769
+              ],
+              [
+                114.131784012,
+                22.363173317
+              ],
+              [
+                114.131799554,
+                22.363158944
+              ],
+              [
+                114.131815096,
+                22.363144571
+              ],
+              [
+                114.13182084,
+                22.36313953
+              ]
+            ],
+            "distanceM": 13.066999999999998
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kwai-hing-government",
+            "type": "transition",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+              "30acbccc-30ff-4a16-92f0-cfab4f38353f"
+            ],
+            "edgeIds": [
+              "demo-kwai-hing-government-stairs-edge"
+            ],
+            "geometry": [
+              [
+                114.13182084,
+                22.36313953
+              ],
+              [
+                114.13182073,
+                22.36313945
+              ]
+            ],
+            "distanceM": 4.325000000000001,
+            "facilityId": "demo-kwai-hing-government-stairs",
+            "mode": "stairs",
+            "fromLevel": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "toLevel": "3e2f7405-4ca9-42d2-8e83-27023edb9046"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kwai-hing-government",
+            "type": "floor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "levelId": "3e2f7405-4ca9-42d2-8e83-27023edb9046",
+            "nodeIds": [
+              "30acbccc-30ff-4a16-92f0-cfab4f38353f",
+              "3e2f7405-15-7",
+              "3e2f7405-15-8",
+              "3e2f7405-15-9",
+              "3e2f7405-15-10",
+              "3e2f7405-15-11",
+              "3e2f7405-15-12",
+              "3e2f7405-15-13",
+              "3e2f7405-15-14",
+              "3e2f7405-16-15"
+            ],
+            "edgeIds": [
+              "e-412",
+              "e-110",
+              "e-114",
+              "e-118",
+              "e-122",
+              "e-126",
+              "e-130",
+              "e-134",
+              "e-139"
+            ],
+            "geometry": [
+              [
+                114.13182073,
+                22.36313945
+              ],
+              [
+                114.131830638,
+                22.363144571
+              ],
+              [
+                114.131830638,
+                22.363158944
+              ],
+              [
+                114.131830638,
+                22.363173317
+              ],
+              [
+                114.131830638,
+                22.36318769
+              ],
+              [
+                114.131830638,
+                22.363202063
+              ],
+              [
+                114.131830638,
+                22.363216436
+              ],
+              [
+                114.131830638,
+                22.363230809
+              ],
+              [
+                114.131830638,
+                22.363245182
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ]
+            ],
+            "distanceM": 14.630999999999998
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "kwai-hing-government",
+            "type": "outdoor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "3e2f7405-16-15",
+              "kwai-hing-government-doorway",
+              "ped-9fe6fef7d204df9452f7",
+              "ped-77bcb8f21c17abb2fcf6",
+              "ped-836941d39230b65059b8",
+              "ped-a436bf0289c9ae714c49",
+              "ped-ee3302d9d72e065561ce",
+              "ped-a6648818334408993e0b",
+              "ped-4cce593dbfc09d0c2a7d",
+              "ped-855bac34d0b0fcc8b898",
+              "ped-2cf15b8a26043d64ad93",
+              "ped-514532f397165dc7079e",
+              "kwai-hing-government-station"
+            ],
+            "edgeIds": [
+              "e-420",
+              "official-endpoint-snap-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-4",
+              "ped-e-8",
+              "ped-e-5",
+              "ped-e-6",
+              "ped-e-7",
+              "ped-e-0",
+              "ped-e-1",
+              "official-endpoint-snap-1"
+            ],
+            "geometry": [
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.1317324610321,
+                22.36327510536629
+              ],
+              [
+                114.131688157962,
+                22.36335917460271
+              ],
+              [
+                114.13168137206704,
+                22.363372052071362
+              ],
+              [
+                114.1316720883213,
+                22.36337503046427
+              ],
+              [
+                114.13161663053125,
+                22.363392821410013
+              ],
+              [
+                114.13159394429266,
+                22.36340233507105
+              ],
+              [
+                114.13155342794278,
+                22.363419325548197
+              ],
+              [
+                114.13151667159265,
+                22.36344922171412
+              ],
+              [
+                114.13150409316357,
+                22.363459452507488
+              ],
+              [
+                114.13149456477342,
+                22.363471328615994
+              ],
+              [
+                114.13147017072718,
+                22.36350173394321
+              ],
+              [
+                114.1314488478524,
+                22.363552438982705
+              ],
+              [
+                114.13144597662351,
+                22.363559266171485
+              ],
+              [
+                114.13144394878731,
+                22.36356408881611
+              ],
+              [
+                114.13143159718273,
+                22.363629313869076
+              ],
+              [
+                114.13143358852841,
+                22.363695134444008
+              ],
+              [
+                114.13128533000008,
+                22.363743570000054
+              ]
+            ],
+            "distanceM": 89.05526044565246
+          }
+        ],
+        "exposed_m": 89.05526044565246,
+        "facilities": [
+          "demo-kwai-hing-government-stairs"
+        ]
+      },
+      "media_ids": [
+        "kwai-hing-government-wang-start-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": false
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "出行意圖 agent",
+          "source": "example_library",
+          "input": {
+            "description": "我使用手動輪椅，不能走樓梯，請幫我規劃。"
+          },
+          "output": {
+            "mobility_type": "manual_wheelchair",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": false,
+            "tts_selection": "text_only"
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "d1fad80f-10-13",
+            "to": "kwai-hing-government-station",
+            "routing": {
+              "profile": "wheelchair",
+              "rain": false,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": false
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 125.40326044565245,
+            "exposed_m": 89.05526044565246,
+            "facilities": [
+              "kwai-hing-government-lift-a"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "preferences",
+      "title": "解析出行需求",
+      "utterance": "我使用手動輪椅，不能走樓梯，請幫我規劃。",
+      "explanation": "意圖結果更新出行類型、避樓梯及陡坡條件，再用現有地圖重新求路。",
+      "context": {
+        "context_id": "kwai-hing-government-wang-1",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "d1fad80f-10-13",
+        "destination_node_id": "kwai-hing-government-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "elderly",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": []
+        },
+        "preferences": null,
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "preferences",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "kwai-hing-government-wang-preferences-1",
+          "context_id": "kwai-hing-government-wang-1",
+          "scene_id": "kwai-hing-government",
+          "agent": "preferences",
+          "payload": {
+            "mobility_type": "manual_wheelchair",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": false,
+            "tts_selection": "text_only"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-preferences",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "意圖結果更新出行類型、避樓梯及陡坡條件，再用現有地圖重新求路。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "d1fad80f-10-13",
+        "destination_node_id": "kwai-hing-government-station",
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": false,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": false
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "d1fad80f-10-13",
+            "d1fad80f-11-12",
+            "d1fad80f-12-11",
+            "d1fad80f-13-10",
+            "d1fad80f-13-9",
+            "d1fad80f-13-8",
+            "d1fad80f-14-7",
+            "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+            "30acbccc-30ff-4a16-92f0-cfab4f38353f",
+            "3e2f7405-15-7",
+            "3e2f7405-15-8",
+            "3e2f7405-15-9",
+            "3e2f7405-15-10",
+            "3e2f7405-15-11",
+            "3e2f7405-15-12",
+            "3e2f7405-15-13",
+            "3e2f7405-15-14",
+            "3e2f7405-16-15",
+            "kwai-hing-government-doorway",
+            "ped-9fe6fef7d204df9452f7",
+            "ped-77bcb8f21c17abb2fcf6",
+            "ped-836941d39230b65059b8",
+            "ped-a436bf0289c9ae714c49",
+            "ped-ee3302d9d72e065561ce",
+            "ped-a6648818334408993e0b",
+            "ped-4cce593dbfc09d0c2a7d",
+            "ped-855bac34d0b0fcc8b898",
+            "ped-2cf15b8a26043d64ad93",
+            "ped-514532f397165dc7079e",
+            "kwai-hing-government-station"
+          ],
+          "edgeIds": [
+            "e-231",
+            "e-262",
+            "e-291",
+            "e-315",
+            "e-311",
+            "e-313",
+            "e-415",
+            "e-419",
+            "e-412",
+            "e-110",
+            "e-114",
+            "e-118",
+            "e-122",
+            "e-126",
+            "e-130",
+            "e-134",
+            "e-139",
+            "e-420",
+            "official-endpoint-snap-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-4",
+            "ped-e-8",
+            "ped-e-5",
+            "ped-e-6",
+            "ped-e-7",
+            "ped-e-0",
+            "ped-e-1",
+            "official-endpoint-snap-1"
+          ],
+          "distanceM": 125.40326044565245,
+          "cost": 724.7560156115966,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 89.05526044565246,
+            "outdoorM": 89.05526044565246,
+            "indoorM": 36.348000000000006,
+            "shelteredM": 36.348000000000006,
+            "estimatedDurationS": 179.70824222373227,
+            "ascentM": 0,
+            "descentM": 8.650000000000002,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kwai-hing-government",
+            "type": "floor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "levelId": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "nodeIds": [
+              "d1fad80f-10-13",
+              "d1fad80f-11-12",
+              "d1fad80f-12-11",
+              "d1fad80f-13-10",
+              "d1fad80f-13-9",
+              "d1fad80f-13-8",
+              "d1fad80f-14-7",
+              "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce"
+            ],
+            "edgeIds": [
+              "e-231",
+              "e-262",
+              "e-291",
+              "e-315",
+              "e-311",
+              "e-313",
+              "e-415"
+            ],
+            "geometry": [
+              [
+                114.131752929,
+                22.363230809
+              ],
+              [
+                114.13176847,
+                22.363216436
+              ],
+              [
+                114.131784012,
+                22.363202063
+              ],
+              [
+                114.131799554,
+                22.36318769
+              ],
+              [
+                114.131799554,
+                22.363173317
+              ],
+              [
+                114.131799554,
+                22.363158944
+              ],
+              [
+                114.131815096,
+                22.363144571
+              ],
+              [
+                114.13182084,
+                22.36313953
+              ]
+            ],
+            "distanceM": 13.066999999999998
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kwai-hing-government",
+            "type": "transition",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+              "30acbccc-30ff-4a16-92f0-cfab4f38353f"
+            ],
+            "edgeIds": [
+              "e-419"
+            ],
+            "geometry": [
+              [
+                114.13182084,
+                22.36313953
+              ],
+              [
+                114.13182073,
+                22.36313945
+              ]
+            ],
+            "distanceM": 8.650000000000002,
+            "facilityId": "kwai-hing-government-lift-a",
+            "mode": "lift",
+            "fromLevel": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "toLevel": "3e2f7405-4ca9-42d2-8e83-27023edb9046"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kwai-hing-government",
+            "type": "floor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "levelId": "3e2f7405-4ca9-42d2-8e83-27023edb9046",
+            "nodeIds": [
+              "30acbccc-30ff-4a16-92f0-cfab4f38353f",
+              "3e2f7405-15-7",
+              "3e2f7405-15-8",
+              "3e2f7405-15-9",
+              "3e2f7405-15-10",
+              "3e2f7405-15-11",
+              "3e2f7405-15-12",
+              "3e2f7405-15-13",
+              "3e2f7405-15-14",
+              "3e2f7405-16-15"
+            ],
+            "edgeIds": [
+              "e-412",
+              "e-110",
+              "e-114",
+              "e-118",
+              "e-122",
+              "e-126",
+              "e-130",
+              "e-134",
+              "e-139"
+            ],
+            "geometry": [
+              [
+                114.13182073,
+                22.36313945
+              ],
+              [
+                114.131830638,
+                22.363144571
+              ],
+              [
+                114.131830638,
+                22.363158944
+              ],
+              [
+                114.131830638,
+                22.363173317
+              ],
+              [
+                114.131830638,
+                22.36318769
+              ],
+              [
+                114.131830638,
+                22.363202063
+              ],
+              [
+                114.131830638,
+                22.363216436
+              ],
+              [
+                114.131830638,
+                22.363230809
+              ],
+              [
+                114.131830638,
+                22.363245182
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ]
+            ],
+            "distanceM": 14.630999999999998
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "kwai-hing-government",
+            "type": "outdoor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "3e2f7405-16-15",
+              "kwai-hing-government-doorway",
+              "ped-9fe6fef7d204df9452f7",
+              "ped-77bcb8f21c17abb2fcf6",
+              "ped-836941d39230b65059b8",
+              "ped-a436bf0289c9ae714c49",
+              "ped-ee3302d9d72e065561ce",
+              "ped-a6648818334408993e0b",
+              "ped-4cce593dbfc09d0c2a7d",
+              "ped-855bac34d0b0fcc8b898",
+              "ped-2cf15b8a26043d64ad93",
+              "ped-514532f397165dc7079e",
+              "kwai-hing-government-station"
+            ],
+            "edgeIds": [
+              "e-420",
+              "official-endpoint-snap-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-4",
+              "ped-e-8",
+              "ped-e-5",
+              "ped-e-6",
+              "ped-e-7",
+              "ped-e-0",
+              "ped-e-1",
+              "official-endpoint-snap-1"
+            ],
+            "geometry": [
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.1317324610321,
+                22.36327510536629
+              ],
+              [
+                114.131688157962,
+                22.36335917460271
+              ],
+              [
+                114.13168137206704,
+                22.363372052071362
+              ],
+              [
+                114.1316720883213,
+                22.36337503046427
+              ],
+              [
+                114.13161663053125,
+                22.363392821410013
+              ],
+              [
+                114.13159394429266,
+                22.36340233507105
+              ],
+              [
+                114.13155342794278,
+                22.363419325548197
+              ],
+              [
+                114.13151667159265,
+                22.36344922171412
+              ],
+              [
+                114.13150409316357,
+                22.363459452507488
+              ],
+              [
+                114.13149456477342,
+                22.363471328615994
+              ],
+              [
+                114.13147017072718,
+                22.36350173394321
+              ],
+              [
+                114.1314488478524,
+                22.363552438982705
+              ],
+              [
+                114.13144597662351,
+                22.363559266171485
+              ],
+              [
+                114.13144394878731,
+                22.36356408881611
+              ],
+              [
+                114.13143159718273,
+                22.363629313869076
+              ],
+              [
+                114.13143358852841,
+                22.363695134444008
+              ],
+              [
+                114.13128533000008,
+                22.363743570000054
+              ]
+            ],
+            "distanceM": 89.05526044565246
+          }
+        ],
+        "exposed_m": 89.05526044565246,
+        "facilities": [
+          "kwai-hing-government-lift-a"
+        ]
+      },
+      "media_ids": [
+        "kwai-hing-government-wang-preferences-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "出行意圖 agent",
+          "source": "example_library",
+          "input": {
+            "description": "現在下雨了，我想盡量在室內或有蓋地方行。"
+          },
+          "output": {
+            "mobility_type": "manual_wheelchair",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": true,
+            "tts_selection": "text_only"
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "d1fad80f-10-13",
+            "to": "kwai-hing-government-station",
+            "routing": {
+              "profile": "wheelchair",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 140.041406722025,
+            "exposed_m": 72.84021087074883,
+            "facilities": [
+              "kwai-hing-government-lift-a"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "rain",
+      "title": "下雨與有蓋偏好",
+      "utterance": "現在下雨了，我想盡量在室內或有蓋地方行。",
+      "explanation": "天氣來自演示情境；意圖結果加入有蓋偏好。比較露天距離，若現有圖沒有更好的替代線，保留原路。",
+      "context": {
+        "context_id": "kwai-hing-government-wang-2",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "d1fad80f-10-13",
+        "destination_node_id": "kwai-hing-government-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": false
+        },
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": false,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "preferences",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "kwai-hing-government-wang-preferences-2",
+          "context_id": "kwai-hing-government-wang-2",
+          "scene_id": "kwai-hing-government",
+          "agent": "preferences",
+          "payload": {
+            "mobility_type": "manual_wheelchair",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": true,
+            "tts_selection": "text_only"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-preferences",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "天氣來自演示情境；意圖結果加入有蓋偏好。比較露天距離，若現有圖沒有更好的替代線，保留原路。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "d1fad80f-10-13",
+        "destination_node_id": "kwai-hing-government-station",
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "d1fad80f-10-13",
+            "d1fad80f-11-12",
+            "d1fad80f-12-11",
+            "d1fad80f-13-10",
+            "d1fad80f-13-9",
+            "d1fad80f-13-8",
+            "d1fad80f-14-7",
+            "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+            "30acbccc-30ff-4a16-92f0-cfab4f38353f",
+            "3e2f7405-15-7",
+            "3e2f7405-15-8",
+            "3e2f7405-15-9",
+            "3e2f7405-15-10",
+            "3e2f7405-15-11",
+            "3e2f7405-15-12",
+            "3e2f7405-15-13",
+            "3e2f7405-15-14",
+            "3e2f7405-16-15",
+            "kwai-hing-government-doorway",
+            "ped-9fe6fef7d204df9452f7",
+            "ped-77bcb8f21c17abb2fcf6",
+            "ped-836941d39230b65059b8",
+            "ped-a436bf0289c9ae714c49",
+            "ped-ee3302d9d72e065561ce",
+            "ped-a6648818334408993e0b",
+            "ped-4cce593dbfc09d0c2a7d",
+            "ped-855bac34d0b0fcc8b898",
+            "ped-2cf15b8a26043d64ad93",
+            "ped-514532f397165dc7079e",
+            "kwai-hing-government-station"
+          ],
+          "edgeIds": [
+            "e-231",
+            "e-262",
+            "e-291",
+            "e-315",
+            "e-311",
+            "e-313",
+            "e-415",
+            "e-419",
+            "e-412",
+            "e-110",
+            "e-114",
+            "e-118",
+            "e-122",
+            "e-126",
+            "e-130",
+            "e-134",
+            "e-139",
+            "e-420",
+            "official-endpoint-snap-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-4",
+            "ped-e-8",
+            "ped-e-5",
+            "ped-e-6",
+            "ped-e-7",
+            "ped-e-0",
+            "ped-e-1",
+            "demo-official-endpoint-snap-1-covered"
+          ],
+          "distanceM": 140.041406722025,
+          "cost": 885.0745836294668,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 72.84021087074883,
+            "outdoorM": 103.69340672202499,
+            "indoorM": 36.348000000000006,
+            "shelteredM": 67.20119585127617,
+            "estimatedDurationS": 198.00592506919793,
+            "ascentM": 0,
+            "descentM": 8.650000000000002,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kwai-hing-government",
+            "type": "floor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "levelId": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "nodeIds": [
+              "d1fad80f-10-13",
+              "d1fad80f-11-12",
+              "d1fad80f-12-11",
+              "d1fad80f-13-10",
+              "d1fad80f-13-9",
+              "d1fad80f-13-8",
+              "d1fad80f-14-7",
+              "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce"
+            ],
+            "edgeIds": [
+              "e-231",
+              "e-262",
+              "e-291",
+              "e-315",
+              "e-311",
+              "e-313",
+              "e-415"
+            ],
+            "geometry": [
+              [
+                114.131752929,
+                22.363230809
+              ],
+              [
+                114.13176847,
+                22.363216436
+              ],
+              [
+                114.131784012,
+                22.363202063
+              ],
+              [
+                114.131799554,
+                22.36318769
+              ],
+              [
+                114.131799554,
+                22.363173317
+              ],
+              [
+                114.131799554,
+                22.363158944
+              ],
+              [
+                114.131815096,
+                22.363144571
+              ],
+              [
+                114.13182084,
+                22.36313953
+              ]
+            ],
+            "distanceM": 13.066999999999998
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kwai-hing-government",
+            "type": "transition",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+              "30acbccc-30ff-4a16-92f0-cfab4f38353f"
+            ],
+            "edgeIds": [
+              "e-419"
+            ],
+            "geometry": [
+              [
+                114.13182084,
+                22.36313953
+              ],
+              [
+                114.13182073,
+                22.36313945
+              ]
+            ],
+            "distanceM": 8.650000000000002,
+            "facilityId": "kwai-hing-government-lift-a",
+            "mode": "lift",
+            "fromLevel": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "toLevel": "3e2f7405-4ca9-42d2-8e83-27023edb9046"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kwai-hing-government",
+            "type": "floor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "levelId": "3e2f7405-4ca9-42d2-8e83-27023edb9046",
+            "nodeIds": [
+              "30acbccc-30ff-4a16-92f0-cfab4f38353f",
+              "3e2f7405-15-7",
+              "3e2f7405-15-8",
+              "3e2f7405-15-9",
+              "3e2f7405-15-10",
+              "3e2f7405-15-11",
+              "3e2f7405-15-12",
+              "3e2f7405-15-13",
+              "3e2f7405-15-14",
+              "3e2f7405-16-15"
+            ],
+            "edgeIds": [
+              "e-412",
+              "e-110",
+              "e-114",
+              "e-118",
+              "e-122",
+              "e-126",
+              "e-130",
+              "e-134",
+              "e-139"
+            ],
+            "geometry": [
+              [
+                114.13182073,
+                22.36313945
+              ],
+              [
+                114.131830638,
+                22.363144571
+              ],
+              [
+                114.131830638,
+                22.363158944
+              ],
+              [
+                114.131830638,
+                22.363173317
+              ],
+              [
+                114.131830638,
+                22.36318769
+              ],
+              [
+                114.131830638,
+                22.363202063
+              ],
+              [
+                114.131830638,
+                22.363216436
+              ],
+              [
+                114.131830638,
+                22.363230809
+              ],
+              [
+                114.131830638,
+                22.363245182
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ]
+            ],
+            "distanceM": 14.630999999999998
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "kwai-hing-government",
+            "type": "outdoor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "3e2f7405-16-15",
+              "kwai-hing-government-doorway",
+              "ped-9fe6fef7d204df9452f7",
+              "ped-77bcb8f21c17abb2fcf6",
+              "ped-836941d39230b65059b8",
+              "ped-a436bf0289c9ae714c49",
+              "ped-ee3302d9d72e065561ce",
+              "ped-a6648818334408993e0b",
+              "ped-4cce593dbfc09d0c2a7d",
+              "ped-855bac34d0b0fcc8b898",
+              "ped-2cf15b8a26043d64ad93",
+              "ped-514532f397165dc7079e",
+              "kwai-hing-government-station"
+            ],
+            "edgeIds": [
+              "e-420",
+              "official-endpoint-snap-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-4",
+              "ped-e-8",
+              "ped-e-5",
+              "ped-e-6",
+              "ped-e-7",
+              "ped-e-0",
+              "ped-e-1",
+              "demo-official-endpoint-snap-1-covered"
+            ],
+            "geometry": [
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.1317324610321,
+                22.36327510536629
+              ],
+              [
+                114.131688157962,
+                22.36335917460271
+              ],
+              [
+                114.13168137206704,
+                22.363372052071362
+              ],
+              [
+                114.1316720883213,
+                22.36337503046427
+              ],
+              [
+                114.13161663053125,
+                22.363392821410013
+              ],
+              [
+                114.13159394429266,
+                22.36340233507105
+              ],
+              [
+                114.13155342794278,
+                22.363419325548197
+              ],
+              [
+                114.13151667159265,
+                22.36344922171412
+              ],
+              [
+                114.13150409316357,
+                22.363459452507488
+              ],
+              [
+                114.13149456477342,
+                22.363471328615994
+              ],
+              [
+                114.13147017072718,
+                22.36350173394321
+              ],
+              [
+                114.1314488478524,
+                22.363552438982705
+              ],
+              [
+                114.13144597662351,
+                22.363559266171485
+              ],
+              [
+                114.13144394878731,
+                22.36356408881611
+              ],
+              [
+                114.13143159718273,
+                22.363629313869076
+              ],
+              [
+                114.13143358852841,
+                22.363695134444008
+              ],
+              [
+                114.13135945926425,
+                22.36383935222203
+              ],
+              [
+                114.13128533000008,
+                22.363743570000054
+              ]
+            ],
+            "distanceM": 103.69340672202499
+          }
+        ],
+        "exposed_m": 72.84021087074883,
+        "facilities": [
+          "kwai-hing-government-lift-a"
+        ]
+      },
+      "media_ids": [
+        "kwai-hing-government-wang-rain-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "VLM 路障觀察 agent",
+          "source": "example_library",
+          "input": {
+            "notice": "Lift A顯示維修中，不能使用。"
+          },
+          "output": {
+            "has_obstacle": true,
+            "type": "broken_lift",
+            "evidence": "Lift A 維修中（演示情境）",
+            "confidence": 0.95
+          }
+        },
+        {
+          "agent": "地圖設施匹配 agent",
+          "source": "example_library",
+          "input": {
+            "scene_id": "kwai-hing-government",
+            "notice": "Lift A顯示維修中，不能使用。"
+          },
+          "output": {
+            "target": {
+              "facility_id": "kwai-hing-government-lift-a"
+            },
+            "match_method": "user_confirmed",
+            "confidence": 0.95
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "d1fad80f-10-13",
+            "to": "kwai-hing-government-station",
+            "routing": {
+              "profile": "wheelchair",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "kwai-hing-government-lift-a"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "kwai-hing-government-wang-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "Lift A 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 144.59940672202498,
+            "exposed_m": 72.84021087074883,
+            "facilities": [
+              "kwai-hing-government-lift-b"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "fault",
+      "title": "報告設施故障與改道",
+      "utterance": "Lift A顯示維修中，不能使用。",
+      "explanation": "將演示故障對應到 Lift A 的 facility ID，封閉後重新規劃替代線。",
+      "context": {
+        "context_id": "kwai-hing-government-wang-3",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "d1fad80f-10-13",
+        "destination_node_id": "kwai-hing-government-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "obstacle",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "kwai-hing-government-wang-obstacle-3",
+          "context_id": "kwai-hing-government-wang-3",
+          "scene_id": "kwai-hing-government",
+          "agent": "obstacle",
+          "payload": {
+            "event_id": "kwai-hing-government-wang-fault",
+            "has_obstacle": true,
+            "barrier_type": "broken_lift",
+            "location_sign": "Lift A 維修中（演示情境）",
+            "is_indoor": true,
+            "target": {
+              "facility_id": "kwai-hing-government-lift-a"
+            },
+            "confidence": 0.95,
+            "match_method": "user_confirmed",
+            "valid_from": "2026-10-04T09:00:00.000Z",
+            "valid_until": "2026-10-04T11:00:00.000Z"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-obstacle",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "將演示故障對應到 Lift A 的 facility ID，封閉後重新規劃替代線。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "d1fad80f-10-13",
+        "destination_node_id": "kwai-hing-government-station",
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kwai-hing-government-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kwai-hing-government-wang-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "d1fad80f-10-13",
+            "d1fad80f-11-12",
+            "d1fad80f-12-11",
+            "d1fad80f-13-10",
+            "d1fad80f-13-9",
+            "d1fad80f-13-8",
+            "d1fad80f-13-7",
+            "d1fad80f-14-6",
+            "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+            "28dd2b3f-5764-4541-82bf-90fe01c61a79",
+            "3e2f7405-15-6",
+            "3e2f7405-15-7",
+            "3e2f7405-15-8",
+            "3e2f7405-15-9",
+            "3e2f7405-15-10",
+            "3e2f7405-15-11",
+            "3e2f7405-15-12",
+            "3e2f7405-15-13",
+            "3e2f7405-15-14",
+            "3e2f7405-16-15",
+            "kwai-hing-government-doorway",
+            "ped-9fe6fef7d204df9452f7",
+            "ped-77bcb8f21c17abb2fcf6",
+            "ped-836941d39230b65059b8",
+            "ped-a436bf0289c9ae714c49",
+            "ped-ee3302d9d72e065561ce",
+            "ped-a6648818334408993e0b",
+            "ped-4cce593dbfc09d0c2a7d",
+            "ped-855bac34d0b0fcc8b898",
+            "ped-2cf15b8a26043d64ad93",
+            "ped-514532f397165dc7079e",
+            "kwai-hing-government-station"
+          ],
+          "edgeIds": [
+            "e-231",
+            "e-262",
+            "e-291",
+            "e-315",
+            "e-311",
+            "e-307",
+            "e-309",
+            "e-408",
+            "e-410",
+            "e-405",
+            "e-106",
+            "e-110",
+            "e-114",
+            "e-118",
+            "e-122",
+            "e-126",
+            "e-130",
+            "e-134",
+            "e-139",
+            "e-420",
+            "official-endpoint-snap-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-4",
+            "ped-e-8",
+            "ped-e-5",
+            "ped-e-6",
+            "ped-e-7",
+            "ped-e-0",
+            "ped-e-1",
+            "demo-official-endpoint-snap-1-covered"
+          ],
+          "distanceM": 144.59940672202498,
+          "cost": 929.6325836294668,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 72.84021087074883,
+            "outdoorM": 103.69340672202499,
+            "indoorM": 40.906000000000006,
+            "shelteredM": 71.75919585127616,
+            "estimatedDurationS": 203.7034250691979,
+            "ascentM": 0,
+            "descentM": 8.650000000000002,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kwai-hing-government",
+            "type": "floor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "levelId": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "nodeIds": [
+              "d1fad80f-10-13",
+              "d1fad80f-11-12",
+              "d1fad80f-12-11",
+              "d1fad80f-13-10",
+              "d1fad80f-13-9",
+              "d1fad80f-13-8",
+              "d1fad80f-13-7",
+              "d1fad80f-14-6",
+              "b5daf1f0-404f-4de6-abc5-b1f1533762e7"
+            ],
+            "edgeIds": [
+              "e-231",
+              "e-262",
+              "e-291",
+              "e-315",
+              "e-311",
+              "e-307",
+              "e-309",
+              "e-408"
+            ],
+            "geometry": [
+              [
+                114.131752929,
+                22.363230809
+              ],
+              [
+                114.13176847,
+                22.363216436
+              ],
+              [
+                114.131784012,
+                22.363202063
+              ],
+              [
+                114.131799554,
+                22.36318769
+              ],
+              [
+                114.131799554,
+                22.363173317
+              ],
+              [
+                114.131799554,
+                22.363158944
+              ],
+              [
+                114.131799554,
+                22.363144571
+              ],
+              [
+                114.131815096,
+                22.363130198
+              ],
+              [
+                114.13181982,
+                22.36311671
+              ]
+            ],
+            "distanceM": 15.429999999999998
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kwai-hing-government",
+            "type": "transition",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+              "28dd2b3f-5764-4541-82bf-90fe01c61a79"
+            ],
+            "edgeIds": [
+              "e-410"
+            ],
+            "geometry": [
+              [
+                114.13181982,
+                22.36311671
+              ],
+              [
+                114.13181997,
+                22.36311781
+              ]
+            ],
+            "distanceM": 8.650000000000002,
+            "facilityId": "kwai-hing-government-lift-b",
+            "mode": "lift",
+            "fromLevel": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "toLevel": "3e2f7405-4ca9-42d2-8e83-27023edb9046"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kwai-hing-government",
+            "type": "floor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "levelId": "3e2f7405-4ca9-42d2-8e83-27023edb9046",
+            "nodeIds": [
+              "28dd2b3f-5764-4541-82bf-90fe01c61a79",
+              "3e2f7405-15-6",
+              "3e2f7405-15-7",
+              "3e2f7405-15-8",
+              "3e2f7405-15-9",
+              "3e2f7405-15-10",
+              "3e2f7405-15-11",
+              "3e2f7405-15-12",
+              "3e2f7405-15-13",
+              "3e2f7405-15-14",
+              "3e2f7405-16-15"
+            ],
+            "edgeIds": [
+              "e-405",
+              "e-106",
+              "e-110",
+              "e-114",
+              "e-118",
+              "e-122",
+              "e-126",
+              "e-130",
+              "e-134",
+              "e-139"
+            ],
+            "geometry": [
+              [
+                114.13181997,
+                22.36311781
+              ],
+              [
+                114.131830638,
+                22.363130198
+              ],
+              [
+                114.131830638,
+                22.363144571
+              ],
+              [
+                114.131830638,
+                22.363158944
+              ],
+              [
+                114.131830638,
+                22.363173317
+              ],
+              [
+                114.131830638,
+                22.36318769
+              ],
+              [
+                114.131830638,
+                22.363202063
+              ],
+              [
+                114.131830638,
+                22.363216436
+              ],
+              [
+                114.131830638,
+                22.363230809
+              ],
+              [
+                114.131830638,
+                22.363245182
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ]
+            ],
+            "distanceM": 16.826
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "kwai-hing-government",
+            "type": "outdoor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "3e2f7405-16-15",
+              "kwai-hing-government-doorway",
+              "ped-9fe6fef7d204df9452f7",
+              "ped-77bcb8f21c17abb2fcf6",
+              "ped-836941d39230b65059b8",
+              "ped-a436bf0289c9ae714c49",
+              "ped-ee3302d9d72e065561ce",
+              "ped-a6648818334408993e0b",
+              "ped-4cce593dbfc09d0c2a7d",
+              "ped-855bac34d0b0fcc8b898",
+              "ped-2cf15b8a26043d64ad93",
+              "ped-514532f397165dc7079e",
+              "kwai-hing-government-station"
+            ],
+            "edgeIds": [
+              "e-420",
+              "official-endpoint-snap-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-4",
+              "ped-e-8",
+              "ped-e-5",
+              "ped-e-6",
+              "ped-e-7",
+              "ped-e-0",
+              "ped-e-1",
+              "demo-official-endpoint-snap-1-covered"
+            ],
+            "geometry": [
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.1317324610321,
+                22.36327510536629
+              ],
+              [
+                114.131688157962,
+                22.36335917460271
+              ],
+              [
+                114.13168137206704,
+                22.363372052071362
+              ],
+              [
+                114.1316720883213,
+                22.36337503046427
+              ],
+              [
+                114.13161663053125,
+                22.363392821410013
+              ],
+              [
+                114.13159394429266,
+                22.36340233507105
+              ],
+              [
+                114.13155342794278,
+                22.363419325548197
+              ],
+              [
+                114.13151667159265,
+                22.36344922171412
+              ],
+              [
+                114.13150409316357,
+                22.363459452507488
+              ],
+              [
+                114.13149456477342,
+                22.363471328615994
+              ],
+              [
+                114.13147017072718,
+                22.36350173394321
+              ],
+              [
+                114.1314488478524,
+                22.363552438982705
+              ],
+              [
+                114.13144597662351,
+                22.363559266171485
+              ],
+              [
+                114.13144394878731,
+                22.36356408881611
+              ],
+              [
+                114.13143159718273,
+                22.363629313869076
+              ],
+              [
+                114.13143358852841,
+                22.363695134444008
+              ],
+              [
+                114.13135945926425,
+                22.36383935222203
+              ],
+              [
+                114.13128533000008,
+                22.363743570000054
+              ]
+            ],
+            "distanceM": 103.69340672202499
+          }
+        ],
+        "exposed_m": 72.84021087074883,
+        "facilities": [
+          "kwai-hing-government-lift-b"
+        ]
+      },
+      "media_ids": [
+        "kwai-hing-government-wang-fault-view",
+        "kwai-hing-government-wang-fault-sign"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "VLM／描述觀察 agent",
+          "source": "example_library",
+          "input": {
+            "description": "我好像走錯了，旁邊看到「Lift B」和 2/F 樓層標誌。"
+          },
+          "output": {
+            "names": [
+              "Lift B"
+            ],
+            "text": [
+              "Lift B"
+            ],
+            "objects": [],
+            "floor_label": "2/F",
+            "confidence": 0.85
+          }
+        },
+        {
+          "agent": "附近知識檢索",
+          "source": "computed",
+          "input": {
+            "query": "Lift B",
+            "level_id": "d1fad80f-bce1-4637-9d2b-7bf42880d551"
+          },
+          "output": [
+            {
+              "id": "facility:kwai-hing-government-lift-b:b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+              "scene_id": "kwai-hing-government",
+              "names": [
+                "Lift B"
+              ],
+              "category": "lift",
+              "level_id": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+              "lon": 114.13181982,
+              "lat": 22.36311671,
+              "node_id": "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+              "association": "approximate",
+              "association_distance_m": 0,
+              "source": "data/scenes/kwai-hing-government/graph.json",
+              "media_ids": []
+            },
+            {
+              "id": "facility:kwai-hing-government-lift-a:c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+              "scene_id": "kwai-hing-government",
+              "names": [
+                "Lift A"
+              ],
+              "category": "lift",
+              "level_id": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+              "lon": 114.13182084,
+              "lat": 22.36313953,
+              "node_id": "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+              "association": "approximate",
+              "association_distance_m": 0,
+              "source": "data/scenes/kwai-hing-government/graph.json",
+              "media_ids": []
+            }
+          ]
+        },
+        {
+          "agent": "地圖匹配 agent＋使用者確認",
+          "source": "example_library",
+          "input": {
+            "query": "Lift B",
+            "candidates": [
+              "facility:kwai-hing-government-lift-b:b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+              "facility:kwai-hing-government-lift-a:c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce"
+            ]
+          },
+          "output": {
+            "is_indoor": true,
+            "status": "matched",
+            "map_db_node_id": "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+            "level_id": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "anchor_names": [
+              "Lift B"
+            ],
+            "direction_hint": "已確認的同層公共通道候選",
+            "confidence": 0.85,
+            "match_method": "user_confirmed"
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+            "to": "kwai-hing-government-station",
+            "routing": {
+              "profile": "wheelchair",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "kwai-hing-government-lift-a"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "kwai-hing-government-wang-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "Lift A 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 129.16940672202497,
+            "exposed_m": 72.84021087074883,
+            "facilities": [
+              "kwai-hing-government-lift-b"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "localization",
+      "title": "迷路後用照片／描述找位置",
+      "utterance": "我好像走錯了，旁邊看到「Lift B」和 2/F 樓層標誌。",
+      "explanation": "用設施名稱和樓層縮小範圍；本例使用者確認圖上的候選，重新求剩餘路線。",
+      "context": {
+        "context_id": "kwai-hing-government-wang-4",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "d1fad80f-10-13",
+        "destination_node_id": "kwai-hing-government-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kwai-hing-government-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kwai-hing-government-wang-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "localization",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "kwai-hing-government-wang-localization-4",
+          "context_id": "kwai-hing-government-wang-4",
+          "scene_id": "kwai-hing-government",
+          "agent": "localization",
+          "payload": {
+            "is_indoor": true,
+            "status": "matched",
+            "map_db_node_id": "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+            "level_id": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "anchor_names": [
+              "Lift B"
+            ],
+            "direction_hint": "已確認的同層公共通道候選",
+            "confidence": 0.85,
+            "match_method": "user_confirmed"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-observation",
+            "summary": "例子庫提供照片／周圍描述中的名稱線索"
+          },
+          {
+            "step": "map-retrieval",
+            "summary": "從官方 POI、同層公共節點與當前路線取候選"
+          },
+          {
+            "step": "user-confirmed-match",
+            "summary": "本例由使用者確認候選位置，分數是預設演示分數"
+          }
+        ],
+        "message": "用設施名稱和樓層縮小範圍；本例使用者確認圖上的候選，重新求剩餘路線。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+        "destination_node_id": "kwai-hing-government-station",
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kwai-hing-government-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kwai-hing-government-wang-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+            "28dd2b3f-5764-4541-82bf-90fe01c61a79",
+            "3e2f7405-15-6",
+            "3e2f7405-15-7",
+            "3e2f7405-15-8",
+            "3e2f7405-15-9",
+            "3e2f7405-15-10",
+            "3e2f7405-15-11",
+            "3e2f7405-15-12",
+            "3e2f7405-15-13",
+            "3e2f7405-15-14",
+            "3e2f7405-16-15",
+            "kwai-hing-government-doorway",
+            "ped-9fe6fef7d204df9452f7",
+            "ped-77bcb8f21c17abb2fcf6",
+            "ped-836941d39230b65059b8",
+            "ped-a436bf0289c9ae714c49",
+            "ped-ee3302d9d72e065561ce",
+            "ped-a6648818334408993e0b",
+            "ped-4cce593dbfc09d0c2a7d",
+            "ped-855bac34d0b0fcc8b898",
+            "ped-2cf15b8a26043d64ad93",
+            "ped-514532f397165dc7079e",
+            "kwai-hing-government-station"
+          ],
+          "edgeIds": [
+            "e-410",
+            "e-405",
+            "e-106",
+            "e-110",
+            "e-114",
+            "e-118",
+            "e-122",
+            "e-126",
+            "e-130",
+            "e-134",
+            "e-139",
+            "e-420",
+            "official-endpoint-snap-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-4",
+            "ped-e-8",
+            "ped-e-5",
+            "ped-e-6",
+            "ped-e-7",
+            "ped-e-0",
+            "ped-e-1",
+            "demo-official-endpoint-snap-1-covered"
+          ],
+          "distanceM": 129.16940672202497,
+          "cost": 754.2025836294667,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 72.84021087074883,
+            "outdoorM": 103.69340672202499,
+            "indoorM": 25.476000000000006,
+            "shelteredM": 56.32919585127616,
+            "estimatedDurationS": 184.41592506919793,
+            "ascentM": 0,
+            "descentM": 8.650000000000002,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kwai-hing-government",
+            "type": "transition",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+              "28dd2b3f-5764-4541-82bf-90fe01c61a79"
+            ],
+            "edgeIds": [
+              "e-410"
+            ],
+            "geometry": [
+              [
+                114.13181982,
+                22.36311671
+              ],
+              [
+                114.13181997,
+                22.36311781
+              ]
+            ],
+            "distanceM": 8.650000000000002,
+            "facilityId": "kwai-hing-government-lift-b",
+            "mode": "lift",
+            "fromLevel": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "toLevel": "3e2f7405-4ca9-42d2-8e83-27023edb9046"
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kwai-hing-government",
+            "type": "floor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "levelId": "3e2f7405-4ca9-42d2-8e83-27023edb9046",
+            "nodeIds": [
+              "28dd2b3f-5764-4541-82bf-90fe01c61a79",
+              "3e2f7405-15-6",
+              "3e2f7405-15-7",
+              "3e2f7405-15-8",
+              "3e2f7405-15-9",
+              "3e2f7405-15-10",
+              "3e2f7405-15-11",
+              "3e2f7405-15-12",
+              "3e2f7405-15-13",
+              "3e2f7405-15-14",
+              "3e2f7405-16-15"
+            ],
+            "edgeIds": [
+              "e-405",
+              "e-106",
+              "e-110",
+              "e-114",
+              "e-118",
+              "e-122",
+              "e-126",
+              "e-130",
+              "e-134",
+              "e-139"
+            ],
+            "geometry": [
+              [
+                114.13181997,
+                22.36311781
+              ],
+              [
+                114.131830638,
+                22.363130198
+              ],
+              [
+                114.131830638,
+                22.363144571
+              ],
+              [
+                114.131830638,
+                22.363158944
+              ],
+              [
+                114.131830638,
+                22.363173317
+              ],
+              [
+                114.131830638,
+                22.36318769
+              ],
+              [
+                114.131830638,
+                22.363202063
+              ],
+              [
+                114.131830638,
+                22.363216436
+              ],
+              [
+                114.131830638,
+                22.363230809
+              ],
+              [
+                114.131830638,
+                22.363245182
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ]
+            ],
+            "distanceM": 16.826
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kwai-hing-government",
+            "type": "outdoor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "3e2f7405-16-15",
+              "kwai-hing-government-doorway",
+              "ped-9fe6fef7d204df9452f7",
+              "ped-77bcb8f21c17abb2fcf6",
+              "ped-836941d39230b65059b8",
+              "ped-a436bf0289c9ae714c49",
+              "ped-ee3302d9d72e065561ce",
+              "ped-a6648818334408993e0b",
+              "ped-4cce593dbfc09d0c2a7d",
+              "ped-855bac34d0b0fcc8b898",
+              "ped-2cf15b8a26043d64ad93",
+              "ped-514532f397165dc7079e",
+              "kwai-hing-government-station"
+            ],
+            "edgeIds": [
+              "e-420",
+              "official-endpoint-snap-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-4",
+              "ped-e-8",
+              "ped-e-5",
+              "ped-e-6",
+              "ped-e-7",
+              "ped-e-0",
+              "ped-e-1",
+              "demo-official-endpoint-snap-1-covered"
+            ],
+            "geometry": [
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.1317324610321,
+                22.36327510536629
+              ],
+              [
+                114.131688157962,
+                22.36335917460271
+              ],
+              [
+                114.13168137206704,
+                22.363372052071362
+              ],
+              [
+                114.1316720883213,
+                22.36337503046427
+              ],
+              [
+                114.13161663053125,
+                22.363392821410013
+              ],
+              [
+                114.13159394429266,
+                22.36340233507105
+              ],
+              [
+                114.13155342794278,
+                22.363419325548197
+              ],
+              [
+                114.13151667159265,
+                22.36344922171412
+              ],
+              [
+                114.13150409316357,
+                22.363459452507488
+              ],
+              [
+                114.13149456477342,
+                22.363471328615994
+              ],
+              [
+                114.13147017072718,
+                22.36350173394321
+              ],
+              [
+                114.1314488478524,
+                22.363552438982705
+              ],
+              [
+                114.13144597662351,
+                22.363559266171485
+              ],
+              [
+                114.13144394878731,
+                22.36356408881611
+              ],
+              [
+                114.13143159718273,
+                22.363629313869076
+              ],
+              [
+                114.13143358852841,
+                22.363695134444008
+              ],
+              [
+                114.13135945926425,
+                22.36383935222203
+              ],
+              [
+                114.13128533000008,
+                22.363743570000054
+              ]
+            ],
+            "distanceM": 103.69340672202499
+          }
+        ],
+        "exposed_m": 72.84021087074883,
+        "facilities": [
+          "kwai-hing-government-lift-b"
+        ]
+      },
+      "media_ids": [
+        "kwai-hing-government-photo",
+        "kwai-hing-government-wang-localization-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "粵語表述 agent",
+          "source": "example_library",
+          "input": {
+            "segment": {
+              "id": "segment-0",
+              "sceneId": "kwai-hing-government",
+              "type": "transition",
+              "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+              "nodeIds": [
+                "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+                "28dd2b3f-5764-4541-82bf-90fe01c61a79"
+              ],
+              "edgeIds": [
+                "e-410"
+              ],
+              "geometry": [
+                [
+                  114.13181982,
+                  22.36311671
+                ],
+                [
+                  114.13181997,
+                  22.36311781
+                ]
+              ],
+              "distanceM": 8.650000000000002,
+              "facilityId": "kwai-hing-government-lift-b",
+              "mode": "lift",
+              "fromLevel": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+              "toLevel": "3e2f7405-4ca9-42d2-8e83-27023edb9046"
+            }
+          },
+          "output": {
+            "text": "請搭升降機去G/F。",
+            "speech": {
+              "mode": "browser",
+              "language": "zh-HK",
+              "selection": "text_only"
+            }
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+            "to": "kwai-hing-government-station",
+            "routing": {
+              "profile": "wheelchair",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "kwai-hing-government-lift-a"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "kwai-hing-government-wang-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "Lift A 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 129.16940672202497,
+            "exposed_m": 72.84021087074883,
+            "facilities": [
+              "kwai-hing-government-lift-b"
+            ],
+            "route_changed": false
+          }
+        }
+      ],
+      "id": "guidance",
+      "title": "生成下一段導航指引",
+      "utterance": "請告訴我下一步怎麼走。",
+      "explanation": "由重新規劃後的第一路段生成預設粵語句子，語音服務與文字生成分開。",
+      "context": {
+        "context_id": "kwai-hing-government-wang-5",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+        "destination_node_id": "kwai-hing-government-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kwai-hing-government-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kwai-hing-government-wang-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "guidance",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "kwai-hing-government-wang-guidance-5",
+          "context_id": "kwai-hing-government-wang-5",
+          "scene_id": "kwai-hing-government",
+          "agent": "guidance",
+          "payload": {
+            "segment_id": "segment-0",
+            "text": "請搭升降機去G/F。"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-guidance",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "由重新規劃後的第一路段生成預設粵語句子，語音服務與文字生成分開。",
+        "speech": {
+          "mode": "browser",
+          "language": "zh-HK",
+          "selection": "text_only"
+        }
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+        "destination_node_id": "kwai-hing-government-station",
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "請搭升降機去G/F。",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kwai-hing-government-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kwai-hing-government-wang-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+            "28dd2b3f-5764-4541-82bf-90fe01c61a79",
+            "3e2f7405-15-6",
+            "3e2f7405-15-7",
+            "3e2f7405-15-8",
+            "3e2f7405-15-9",
+            "3e2f7405-15-10",
+            "3e2f7405-15-11",
+            "3e2f7405-15-12",
+            "3e2f7405-15-13",
+            "3e2f7405-15-14",
+            "3e2f7405-16-15",
+            "kwai-hing-government-doorway",
+            "ped-9fe6fef7d204df9452f7",
+            "ped-77bcb8f21c17abb2fcf6",
+            "ped-836941d39230b65059b8",
+            "ped-a436bf0289c9ae714c49",
+            "ped-ee3302d9d72e065561ce",
+            "ped-a6648818334408993e0b",
+            "ped-4cce593dbfc09d0c2a7d",
+            "ped-855bac34d0b0fcc8b898",
+            "ped-2cf15b8a26043d64ad93",
+            "ped-514532f397165dc7079e",
+            "kwai-hing-government-station"
+          ],
+          "edgeIds": [
+            "e-410",
+            "e-405",
+            "e-106",
+            "e-110",
+            "e-114",
+            "e-118",
+            "e-122",
+            "e-126",
+            "e-130",
+            "e-134",
+            "e-139",
+            "e-420",
+            "official-endpoint-snap-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-4",
+            "ped-e-8",
+            "ped-e-5",
+            "ped-e-6",
+            "ped-e-7",
+            "ped-e-0",
+            "ped-e-1",
+            "demo-official-endpoint-snap-1-covered"
+          ],
+          "distanceM": 129.16940672202497,
+          "cost": 754.2025836294667,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 72.84021087074883,
+            "outdoorM": 103.69340672202499,
+            "indoorM": 25.476000000000006,
+            "shelteredM": 56.32919585127616,
+            "estimatedDurationS": 184.41592506919793,
+            "ascentM": 0,
+            "descentM": 8.650000000000002,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kwai-hing-government",
+            "type": "transition",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+              "28dd2b3f-5764-4541-82bf-90fe01c61a79"
+            ],
+            "edgeIds": [
+              "e-410"
+            ],
+            "geometry": [
+              [
+                114.13181982,
+                22.36311671
+              ],
+              [
+                114.13181997,
+                22.36311781
+              ]
+            ],
+            "distanceM": 8.650000000000002,
+            "facilityId": "kwai-hing-government-lift-b",
+            "mode": "lift",
+            "fromLevel": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+            "toLevel": "3e2f7405-4ca9-42d2-8e83-27023edb9046"
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kwai-hing-government",
+            "type": "floor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "levelId": "3e2f7405-4ca9-42d2-8e83-27023edb9046",
+            "nodeIds": [
+              "28dd2b3f-5764-4541-82bf-90fe01c61a79",
+              "3e2f7405-15-6",
+              "3e2f7405-15-7",
+              "3e2f7405-15-8",
+              "3e2f7405-15-9",
+              "3e2f7405-15-10",
+              "3e2f7405-15-11",
+              "3e2f7405-15-12",
+              "3e2f7405-15-13",
+              "3e2f7405-15-14",
+              "3e2f7405-16-15"
+            ],
+            "edgeIds": [
+              "e-405",
+              "e-106",
+              "e-110",
+              "e-114",
+              "e-118",
+              "e-122",
+              "e-126",
+              "e-130",
+              "e-134",
+              "e-139"
+            ],
+            "geometry": [
+              [
+                114.13181997,
+                22.36311781
+              ],
+              [
+                114.131830638,
+                22.363130198
+              ],
+              [
+                114.131830638,
+                22.363144571
+              ],
+              [
+                114.131830638,
+                22.363158944
+              ],
+              [
+                114.131830638,
+                22.363173317
+              ],
+              [
+                114.131830638,
+                22.36318769
+              ],
+              [
+                114.131830638,
+                22.363202063
+              ],
+              [
+                114.131830638,
+                22.363216436
+              ],
+              [
+                114.131830638,
+                22.363230809
+              ],
+              [
+                114.131830638,
+                22.363245182
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ]
+            ],
+            "distanceM": 16.826
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kwai-hing-government",
+            "type": "outdoor",
+            "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+            "nodeIds": [
+              "3e2f7405-16-15",
+              "kwai-hing-government-doorway",
+              "ped-9fe6fef7d204df9452f7",
+              "ped-77bcb8f21c17abb2fcf6",
+              "ped-836941d39230b65059b8",
+              "ped-a436bf0289c9ae714c49",
+              "ped-ee3302d9d72e065561ce",
+              "ped-a6648818334408993e0b",
+              "ped-4cce593dbfc09d0c2a7d",
+              "ped-855bac34d0b0fcc8b898",
+              "ped-2cf15b8a26043d64ad93",
+              "ped-514532f397165dc7079e",
+              "kwai-hing-government-station"
+            ],
+            "edgeIds": [
+              "e-420",
+              "official-endpoint-snap-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-4",
+              "ped-e-8",
+              "ped-e-5",
+              "ped-e-6",
+              "ped-e-7",
+              "ped-e-0",
+              "ped-e-1",
+              "demo-official-endpoint-snap-1-covered"
+            ],
+            "geometry": [
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.13184618,
+                22.363259555
+              ],
+              [
+                114.1317324610321,
+                22.36327510536629
+              ],
+              [
+                114.131688157962,
+                22.36335917460271
+              ],
+              [
+                114.13168137206704,
+                22.363372052071362
+              ],
+              [
+                114.1316720883213,
+                22.36337503046427
+              ],
+              [
+                114.13161663053125,
+                22.363392821410013
+              ],
+              [
+                114.13159394429266,
+                22.36340233507105
+              ],
+              [
+                114.13155342794278,
+                22.363419325548197
+              ],
+              [
+                114.13151667159265,
+                22.36344922171412
+              ],
+              [
+                114.13150409316357,
+                22.363459452507488
+              ],
+              [
+                114.13149456477342,
+                22.363471328615994
+              ],
+              [
+                114.13147017072718,
+                22.36350173394321
+              ],
+              [
+                114.1314488478524,
+                22.363552438982705
+              ],
+              [
+                114.13144597662351,
+                22.363559266171485
+              ],
+              [
+                114.13144394878731,
+                22.36356408881611
+              ],
+              [
+                114.13143159718273,
+                22.363629313869076
+              ],
+              [
+                114.13143358852841,
+                22.363695134444008
+              ],
+              [
+                114.13135945926425,
+                22.36383935222203
+              ],
+              [
+                114.13128533000008,
+                22.363743570000054
+              ]
+            ],
+            "distanceM": 103.69340672202499
+          }
+        ],
+        "exposed_m": 72.84021087074883,
+        "facilities": [
+          "kwai-hing-government-lift-b"
+        ]
+      },
+      "media_ids": [
+        "kwai-hing-government-wang-guidance-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": false
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "hysan-place-station",
+            "to": "ba047eef-9--6",
+            "routing": {
+              "profile": "wheelchair",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "kwai-hing-government-lift-a"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "kwai-hing-government-wang-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "Lift A 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 157.90149999999994,
+            "exposed_m": 0,
+            "facilities": [
+              "hysan-place-lift-a"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "transfer",
+      "title": "接駁到目的建築",
+      "utterance": "我已到葵興鐵路站接駁點，接下來到銅鑼灣站。",
+      "explanation": "兩端步行路線已備好；中間公共交通是接駁敘事，沒有虛構班次或站間導航。",
+      "context": {
+        "context_id": "kwai-hing-government-wang-6",
+        "scene_id": "kwai-hing-government",
+        "current_node_id": "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+        "destination_node_id": "kwai-hing-government-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kwai-hing-government-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kwai-hing-government-wang-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": null,
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "hysan-place",
+        "current_node_id": "hysan-place-station",
+        "destination_node_id": "ba047eef-9--6",
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kwai-hing-government-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kwai-hing-government-wang-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "hysan-place-station",
+            "hysan-place-doorway",
+            "a4e20e16-0--6",
+            "a4e20e16-0--5",
+            "a4e20e16--1--4",
+            "a4e20e16--1--3",
+            "a4e20e16--1--2",
+            "a4e20e16--1--1",
+            "a4e20e16--1-0",
+            "a4e20e16--1-1",
+            "a4e20e16--1-2",
+            "a4e20e16--1-3",
+            "a4e20e16--1-4",
+            "a4e20e16--1-5",
+            "a4e20e16--1-6",
+            "a4e20e16--1-7",
+            "a4e20e16--1-8",
+            "a4e20e16--1-9",
+            "a4e20e16--1-10",
+            "a4e20e16--2-11",
+            "a4e20e16--3-12",
+            "a4e20e16--4-12",
+            "a4e20e16--5-13",
+            "a4e20e16--6-14",
+            "a3a5bc3e-f461-444e-8e4a-f63489cc7f2a",
+            "8887c3eb-f74a-40b1-9f77-0edf09786e93",
+            "ba047eef--6-14",
+            "ba047eef--5-14",
+            "ba047eef--4-15",
+            "ba047eef--3-15",
+            "ba047eef--2-14",
+            "ba047eef--1-13",
+            "ba047eef--1-12",
+            "ba047eef--1-11",
+            "ba047eef--1-10",
+            "ba047eef--1-9",
+            "ba047eef--1-8",
+            "ba047eef--1-7",
+            "ba047eef--2-6",
+            "ba047eef--2-5",
+            "ba047eef--2-4",
+            "ba047eef--2-3",
+            "ba047eef--1-2",
+            "ba047eef-0-1",
+            "ba047eef-1-0",
+            "ba047eef-2--1",
+            "ba047eef-3--2",
+            "ba047eef-4--2",
+            "ba047eef-5--2",
+            "ba047eef-6--3",
+            "ba047eef-7--4",
+            "ba047eef-8--5",
+            "ba047eef-9--6"
+          ],
+          "edgeIds": [
+            "demo-e-1522-covered",
+            "e-1521",
+            "e-778",
+            "e-744",
+            "e-743",
+            "e-745",
+            "e-748",
+            "e-751",
+            "e-755",
+            "e-759",
+            "e-761",
+            "e-763",
+            "e-764",
+            "e-765",
+            "e-766",
+            "e-767",
+            "e-768",
+            "e-769",
+            "e-733",
+            "e-671",
+            "e-661",
+            "e-654",
+            "e-645",
+            "e-1513",
+            "e-1520",
+            "e-1517",
+            "e-989",
+            "e-1009",
+            "e-1027",
+            "e-1053",
+            "e-1099",
+            "e-1142",
+            "e-1138",
+            "e-1135",
+            "e-1132",
+            "e-1131",
+            "e-1130",
+            "e-1081",
+            "e-1078",
+            "e-1076",
+            "e-1072",
+            "e-1074",
+            "e-1127",
+            "e-1173",
+            "e-1207",
+            "e-1236",
+            "e-1267",
+            "e-1308",
+            "e-1352",
+            "e-1394",
+            "e-1420",
+            "e-1435"
+          ],
+          "distanceM": 157.90149999999994,
+          "cost": 1209.9015,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "DEMO_CONNECTION"
+          ],
+          "metrics": {
+            "exposedM": 0,
+            "outdoorM": 62.7055,
+            "indoorM": 95.19600000000003,
+            "shelteredM": 157.9014999999999,
+            "estimatedDurationS": 222.2852083333335,
+            "ascentM": 5.299999999999999,
+            "descentM": 0,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "hysan-place",
+            "type": "outdoor",
+            "nodeIds": [
+              "hysan-place-station",
+              "hysan-place-doorway",
+              "a4e20e16-0--6"
+            ],
+            "edgeIds": [
+              "demo-e-1522-covered",
+              "e-1521"
+            ],
+            "geometry": [
+              [
+                114.18411088,
+                22.27992087
+              ],
+              [
+                114.18394886,
+                22.2798844735
+              ],
+              [
+                114.18378684,
+                22.279608077
+              ],
+              [
+                114.18378684,
+                22.279608077
+              ]
+            ],
+            "distanceM": 62.7055
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "hysan-place",
+            "type": "floor",
+            "venueId": "5bb79500-645d-4089-b5bc-5a02cfeed057",
+            "levelId": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+            "nodeIds": [
+              "a4e20e16-0--6",
+              "a4e20e16-0--5",
+              "a4e20e16--1--4",
+              "a4e20e16--1--3",
+              "a4e20e16--1--2",
+              "a4e20e16--1--1",
+              "a4e20e16--1-0",
+              "a4e20e16--1-1",
+              "a4e20e16--1-2",
+              "a4e20e16--1-3",
+              "a4e20e16--1-4",
+              "a4e20e16--1-5",
+              "a4e20e16--1-6",
+              "a4e20e16--1-7",
+              "a4e20e16--1-8",
+              "a4e20e16--1-9",
+              "a4e20e16--1-10",
+              "a4e20e16--2-11",
+              "a4e20e16--3-12",
+              "a4e20e16--4-12",
+              "a4e20e16--5-13",
+              "a4e20e16--6-14",
+              "a3a5bc3e-f461-444e-8e4a-f63489cc7f2a"
+            ],
+            "edgeIds": [
+              "e-778",
+              "e-744",
+              "e-743",
+              "e-745",
+              "e-748",
+              "e-751",
+              "e-755",
+              "e-759",
+              "e-761",
+              "e-763",
+              "e-764",
+              "e-765",
+              "e-766",
+              "e-767",
+              "e-768",
+              "e-769",
+              "e-733",
+              "e-671",
+              "e-661",
+              "e-654",
+              "e-645",
+              "e-1513"
+            ],
+            "geometry": [
+              [
+                114.18378684,
+                22.279608077
+              ],
+              [
+                114.18378684,
+                22.27962245
+              ],
+              [
+                114.183771307,
+                22.279636823
+              ],
+              [
+                114.183771307,
+                22.279651196
+              ],
+              [
+                114.183771307,
+                22.279665569
+              ],
+              [
+                114.183771307,
+                22.279679942
+              ],
+              [
+                114.183771307,
+                22.279694315
+              ],
+              [
+                114.183771307,
+                22.279708688
+              ],
+              [
+                114.183771307,
+                22.279723061
+              ],
+              [
+                114.183771307,
+                22.279737434
+              ],
+              [
+                114.183771307,
+                22.279751807
+              ],
+              [
+                114.183771307,
+                22.27976618
+              ],
+              [
+                114.183771307,
+                22.279780553
+              ],
+              [
+                114.183771307,
+                22.279794926
+              ],
+              [
+                114.183771307,
+                22.279809299
+              ],
+              [
+                114.183771307,
+                22.279823672
+              ],
+              [
+                114.183771307,
+                22.279838045
+              ],
+              [
+                114.183755775,
+                22.279852418
+              ],
+              [
+                114.183740242,
+                22.279866791
+              ],
+              [
+                114.18372471,
+                22.279866791
+              ],
+              [
+                114.183709177,
+                22.279881164
+              ],
+              [
+                114.183693645,
+                22.279895537
+              ],
+              [
+                114.18368036,
+                22.27989718
+              ]
+            ],
+            "distanceM": 38.29600000000001
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "hysan-place",
+            "type": "transition",
+            "venueId": "5bb79500-645d-4089-b5bc-5a02cfeed057",
+            "nodeIds": [
+              "a3a5bc3e-f461-444e-8e4a-f63489cc7f2a",
+              "8887c3eb-f74a-40b1-9f77-0edf09786e93"
+            ],
+            "edgeIds": [
+              "e-1520"
+            ],
+            "geometry": [
+              [
+                114.18368036,
+                22.27989718
+              ],
+              [
+                114.18368036,
+                22.27989718
+              ]
+            ],
+            "distanceM": 5.299999999999999,
+            "facilityId": "hysan-place-lift-a",
+            "mode": "lift",
+            "fromLevel": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+            "toLevel": "ba047eef-2b62-4561-932a-25c1a1e16fb3"
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "hysan-place",
+            "type": "floor",
+            "venueId": "5bb79500-645d-4089-b5bc-5a02cfeed057",
+            "levelId": "ba047eef-2b62-4561-932a-25c1a1e16fb3",
+            "nodeIds": [
+              "8887c3eb-f74a-40b1-9f77-0edf09786e93",
+              "ba047eef--6-14",
+              "ba047eef--5-14",
+              "ba047eef--4-15",
+              "ba047eef--3-15",
+              "ba047eef--2-14",
+              "ba047eef--1-13",
+              "ba047eef--1-12",
+              "ba047eef--1-11",
+              "ba047eef--1-10",
+              "ba047eef--1-9",
+              "ba047eef--1-8",
+              "ba047eef--1-7",
+              "ba047eef--2-6",
+              "ba047eef--2-5",
+              "ba047eef--2-4",
+              "ba047eef--2-3",
+              "ba047eef--1-2",
+              "ba047eef-0-1",
+              "ba047eef-1-0",
+              "ba047eef-2--1",
+              "ba047eef-3--2",
+              "ba047eef-4--2",
+              "ba047eef-5--2",
+              "ba047eef-6--3",
+              "ba047eef-7--4",
+              "ba047eef-8--5",
+              "ba047eef-9--6"
+            ],
+            "edgeIds": [
+              "e-1517",
+              "e-989",
+              "e-1009",
+              "e-1027",
+              "e-1053",
+              "e-1099",
+              "e-1142",
+              "e-1138",
+              "e-1135",
+              "e-1132",
+              "e-1131",
+              "e-1130",
+              "e-1081",
+              "e-1078",
+              "e-1076",
+              "e-1072",
+              "e-1074",
+              "e-1127",
+              "e-1173",
+              "e-1207",
+              "e-1236",
+              "e-1267",
+              "e-1308",
+              "e-1352",
+              "e-1394",
+              "e-1420",
+              "e-1435"
+            ],
+            "geometry": [
+              [
+                114.18368036,
+                22.27989718
+              ],
+              [
+                114.183693645,
+                22.279895537
+              ],
+              [
+                114.183709177,
+                22.279895537
+              ],
+              [
+                114.18372471,
+                22.27990991
+              ],
+              [
+                114.183740242,
+                22.27990991
+              ],
+              [
+                114.183755775,
+                22.279895537
+              ],
+              [
+                114.183771307,
+                22.279881164
+              ],
+              [
+                114.183771307,
+                22.279866791
+              ],
+              [
+                114.183771307,
+                22.279852418
+              ],
+              [
+                114.183771307,
+                22.279838045
+              ],
+              [
+                114.183771307,
+                22.279823672
+              ],
+              [
+                114.183771307,
+                22.279809299
+              ],
+              [
+                114.183771307,
+                22.279794926
+              ],
+              [
+                114.183755775,
+                22.279780553
+              ],
+              [
+                114.183755775,
+                22.27976618
+              ],
+              [
+                114.183755775,
+                22.279751807
+              ],
+              [
+                114.183755775,
+                22.279737434
+              ],
+              [
+                114.183771307,
+                22.279723061
+              ],
+              [
+                114.18378684,
+                22.279708688
+              ],
+              [
+                114.183802373,
+                22.279694315
+              ],
+              [
+                114.183817905,
+                22.279679942
+              ],
+              [
+                114.183833438,
+                22.279665569
+              ],
+              [
+                114.18384897,
+                22.279665569
+              ],
+              [
+                114.183864503,
+                22.279665569
+              ],
+              [
+                114.183880035,
+                22.279651196
+              ],
+              [
+                114.183895568,
+                22.279636823
+              ],
+              [
+                114.183911101,
+                22.27962245
+              ],
+              [
+                114.183926633,
+                22.279608077
+              ]
+            ],
+            "distanceM": 51.599999999999994
+          }
+        ],
+        "exposed_m": 0,
+        "facilities": [
+          "hysan-place-lift-a"
+        ]
+      },
+      "media_ids": [
+        "hysan-place-photo",
+        "hysan-place-apple-front",
+        "kwai-hing-government-wang-transfer-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "ba047eef-9--6",
+            "to": "ba047eef-9--6",
+            "routing": {
+              "profile": "wheelchair",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "kwai-hing-government-lift-a"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "kwai-hing-government-wang-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "Lift A 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 0,
+            "exposed_m": 0,
+            "facilities": [],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "arrival",
+      "title": "完成剩餘步行與到達",
+      "utterance": "我跟著路線到達希慎廣場的公共走廊會合點。",
+      "explanation": "赴目的地附近的預約門診；示範到建築公共走廊，門診入口不在地圖內。剩餘步行完成；到達節點與目的節點相同。",
+      "context": {
+        "context_id": "kwai-hing-government-wang-7",
+        "scene_id": "hysan-place",
+        "current_node_id": "hysan-place-station",
+        "destination_node_id": "ba047eef-9--6",
+        "phase": "planning",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kwai-hing-government-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kwai-hing-government-wang-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": null,
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "hysan-place",
+        "current_node_id": "ba047eef-9--6",
+        "destination_node_id": "ba047eef-9--6",
+        "preferences": {
+          "mobility_type": "manual_wheelchair",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "已到達目的地會合點。",
+        "routing": {
+          "profile": "wheelchair",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kwai-hing-government-kwai-hing-government-wang-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kwai-hing-government-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kwai-hing-government-wang-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "ba047eef-9--6"
+          ],
+          "edgeIds": [],
+          "distanceM": 0,
+          "cost": 0,
+          "reasonCodes": [],
+          "warnings": [],
+          "metrics": {
+            "exposedM": 0,
+            "outdoorM": 0,
+            "indoorM": 0,
+            "shelteredM": 0,
+            "estimatedDurationS": 0,
+            "ascentM": 0,
+            "descentM": 0,
+            "stairs": 0,
+            "transitions": {}
+          }
+        },
+        "segments": [],
+        "exposed_m": 0,
+        "facilities": []
+      },
+      "media_ids": [
+        "kwai-hing-government-wang-arrival-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    }
+  ]
+}

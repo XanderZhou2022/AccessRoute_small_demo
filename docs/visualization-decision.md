@@ -9,3 +9,7 @@ Macro map renders route output and official nearby venue polygons. Floor map ren
 If WebGL or the map import fails, MacroMap uses the local SVG schematic fallback. Indoor rendering and routing remain independent. Map face includes the Lands Department logo and source copyright. Keyboard focus, responsive layouts, 44px main actions, readable controls and reduced-motion styles are included.
 
 Final visual inspection must cover desktop overview, floor transition and narrow mobile view. Evidence and limits are recorded in `docs/acceptance.md`.
+
+## Floor-aware route presentation (2026-10-04)
+
+The overview projects routes onto the building context. Each floor uses a stable colour shared with the floor view; outdoor connectors are slate and footbridges blue. Orange callouts give the vertical transport mode, travel direction, and source/target floors. Endpoint markers name the local start and end, including station names, instead of using A/B or M. The ordered route cards provide distance and colour keys and let users inspect floors without advancing simulated navigation. Actual transitions determine the displayed device and up/down direction; the presentation does not introduce stairs into a step-free route.

@@ -1,0 +1,68 @@
+{
+  "cases": 48,
+  "per_scene": [
+    {
+      "scene_id": "hysan-place",
+      "cases": 4,
+      "knowledge": 119
+    },
+    {
+      "scene_id": "popcorn-2",
+      "cases": 4,
+      "knowledge": 58
+    },
+    {
+      "scene_id": "kowloon-tong-festival-walk",
+      "cases": 4,
+      "knowledge": 15
+    },
+    {
+      "scene_id": "shek-kip-mei-services",
+      "cases": 4,
+      "knowledge": 5
+    },
+    {
+      "scene_id": "cheung-sha-wan-government",
+      "cases": 4,
+      "knowledge": 4
+    },
+    {
+      "scene_id": "sha-tin-government",
+      "cases": 4,
+      "knowledge": 6
+    },
+    {
+      "scene_id": "north-point-government",
+      "cases": 4,
+      "knowledge": 9
+    },
+    {
+      "scene_id": "pei-ho-market",
+      "cases": 4,
+      "knowledge": 25
+    },
+    {
+      "scene_id": "java-road-market",
+      "cases": 4,
+      "knowledge": 202
+    },
+    {
+      "scene_id": "kowloon-city-market",
+      "cases": 4,
+      "knowledge": 5
+    },
+    {
+      "scene_id": "tai-po-market",
+      "cases": 4,
+      "knowledge": 44
+    },
+    {
+      "scene_id": "kwai-hing-government",
+      "cases": 4,
+      "knowledge": 4
+    }
+  ],
+  "changed_preferences": 48,
+  "changed_rain": 44,
+  "changed_fault": 48
+}

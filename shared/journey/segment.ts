@@ -18,7 +18,7 @@ export function segmentRoute(graph: MobilityGraph, result: RouteResult): RouteSe
           ? 'bridge'
           : 'floor';
     let geom =
-      e.geometry ||
+      e.geometry?.map(([lon, lat]) => [lon, lat] as [number, number]) ||
       ([
         [a.lon, a.lat],
         [b.lon, b.lat],

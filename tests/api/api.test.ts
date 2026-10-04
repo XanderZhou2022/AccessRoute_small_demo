@@ -8,7 +8,8 @@ it('health, scenes and route API return actual contracts', async () => {
   const app = createApp();
   await request(app).get('/api/health').expect(200);
   const list = await request(app).get('/api/scenes').expect(200);
-  expect(list.body).toHaveLength(2);
+  expect(list.body).toHaveLength(12);
+  expect(new Set(list.body.map((s: any) => s.sceneId)).size).toBe(12);
   const s = scene('hysan-place');
   const r = await request(app)
     .post('/api/route')

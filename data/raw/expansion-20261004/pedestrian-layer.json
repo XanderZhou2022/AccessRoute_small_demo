@@ -1,0 +1,998 @@
+{
+ "currentVersion": 10.91,
+ "cimVersion": "2.9.0",
+ "id": 0,
+ "name": "PedestrianRoute",
+ "type": "Feature Layer",
+ "parentLayer": null,
+ "defaultVisibility": true,
+ "minScale": 0,
+ "maxScale": 0,
+ "canScaleSymbols": false,
+ "geometryType": "esriGeometryPolyline",
+ "description": "",
+ "copyrightText": "",
+ "editFieldsInfo": null,
+ "ownershipBasedAccessControlForFeatures": null,
+ "syncCanReturnChanges": false,
+ "relationships": [],
+ "isDataVersioned": false,
+ "isDataArchived": false,
+ "infoInEstimates": [
+  "extent",
+  "count"
+ ],
+ "isDataBranchVersioned": false,
+ "isDataReplicaTracked": false,
+ "isCoGoEnabled": false,
+ "supportsRollbackOnFailureParameter": true,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportsValidateSQL": true,
+ "supportsCoordinatesQuantization": true,
+ "supportsQuantizationEditMode": true,
+ "supportsCalculate": true,
+ "supportsASyncCalculate": true,
+ "supportsDatumTransformation": true,
+ "advancedQueryCapabilities": {
+  "supportsPagination": true,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDistance": true,
+  "supportsReturningQueryExtent": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsQueryWithResultType": true,
+  "supportsReturningGeometryCentroid": false,
+  "supportsSqlExpression": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsQueryAnalytic": false
+ },
+ "advancedEditingCapabilities": {
+  "supportedSqlFormatsInCalculate": [
+   "standard"
+  ],
+  "supportsAsyncApplyEdits": true
+ },
+ "hasGeometryProperties": true,
+ "geometryProperties": {
+  "shapeLengthFieldName": "Shape__Length",
+  "units": "esriMeters"
+ },
+ "hasMetadata": true,
+ "extent": {
+  "xmin": 801891.3622000003,
+  "ymin": 801995.7317999993,
+  "xmax": 863457.2503000004,
+  "ymax": 846086.5933999997,
+  "spatialReference": {
+   "wkid": 102140,
+   "latestWkid": 2326,
+   "xyTolerance": 0.001,
+   "zTolerance": 0.001,
+   "mTolerance": 0.001,
+   "falseX": -4786700,
+   "falseY": -11651800,
+   "xyUnits": 10000,
+   "falseZ": -100000,
+   "zUnits": 10000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "sourceSpatialReference": {
+  "wkid": 102140,
+  "latestWkid": 2326,
+  "vcsWkid": 5738,
+  "latestVcsWkid": 5738,
+  "xyTolerance": 0.001,
+  "zTolerance": 0.001,
+  "mTolerance": 0.001,
+  "falseX": -4786700,
+  "falseY": -11651800,
+  "xyUnits": 10000,
+  "falseZ": -100000,
+  "zUnits": 10000,
+  "falseM": -100000,
+  "mUnits": 10000
+ },
+ "sourceHeightModelInfo": {
+  "heightModel": "gravity_related_height",
+  "vertCRS": "Hong_Kong_Principal_Datum",
+  "heightUnit": "meter"
+ },
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "symbol": {
+    "type": "esriSLS",
+    "style": "esriSLSSolid",
+    "color": [
+     44,
+     105,
+     153,
+     255
+    ],
+    "width": 1
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "hasM": false,
+ "hasZ": true,
+ "enableZDefaults": false,
+ "supportsVCSProjection": true,
+ "allowGeometryUpdates": false,
+ "allowTrueCurvesUpdates": false,
+ "onlyAllowTrueCurveUpdatesByTrueCurveClients": false,
+ "hasAttachments": false,
+ "supportsApplyEditsWithGlobalIds": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "objectIdField": "OBJECTID",
+ "globalIdField": "",
+ "displayField": "AliasNameEN",
+ "typeIdField": "",
+ "subtypeField": "",
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null,
+   "editable": false,
+   "nullable": false,
+   "defaultValue": null,
+   "modelName": "OBJECTID"
+  },
+  {
+   "name": "PedestrianRouteID",
+   "type": "esriFieldTypeInteger",
+   "alias": "PedestrianRouteID",
+   "domain": null,
+   "editable": true,
+   "nullable": false,
+   "defaultValue": null,
+   "modelName": "PedestrianRouteID"
+  },
+  {
+   "name": "Location",
+   "type": "esriFieldTypeInteger",
+   "alias": "Location",
+   "domain": {
+    "type": "codedValue",
+    "name": "dPedLocation",
+    "description": "Indicator to define the location of the network segment (i.e. outdoor or indoor)",
+    "codedValues": [
+     {
+      "name": "Outdoor",
+      "code": 1
+     },
+     {
+      "name": "Indoor",
+      "code": 2
+     },
+     {
+      "name": "Paid",
+      "code": 3
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   },
+   "editable": true,
+   "nullable": false,
+   "defaultValue": 1,
+   "modelName": "Location"
+  },
+  {
+   "name": "FeatureType",
+   "type": "esriFieldTypeInteger",
+   "alias": "FeatureType",
+   "domain": {
+    "type": "codedValue",
+    "name": "dPedFeatureType",
+    "description": "List of different type of the network segment (i.e. footway, ramp, staircase, etc\u2026)",
+    "codedValues": [
+     {
+      "name": "Footway",
+      "code": 1
+     },
+     {
+      "name": "Footbridge",
+      "code": 2
+     },
+     {
+      "name": "Subway",
+      "code": 4
+     },
+     {
+      "name": "Service Lane",
+      "code": 5
+     },
+     {
+      "name": "Traffic Island",
+      "code": 6
+     },
+     {
+      "name": "RunIn",
+      "code": 7
+     },
+     {
+      "name": "Escalator",
+      "code": 8
+     },
+     {
+      "name": "Travelator",
+      "code": 9
+     },
+     {
+      "name": "Lift",
+      "code": 10
+     },
+     {
+      "name": "Ramp",
+      "code": 11
+     },
+     {
+      "name": "Staircase",
+      "code": 12
+     },
+     {
+      "name": "Stairlift",
+      "code": 13
+     },
+     {
+      "name": "Other",
+      "code": 14
+     },
+     {
+      "name": "M_Footway",
+      "code": 15
+     },
+     {
+      "name": "M_Escalator",
+      "code": 16
+     },
+     {
+      "name": "M_Travelator",
+      "code": 17
+     },
+     {
+      "name": "M_Lift",
+      "code": 18
+     },
+     {
+      "name": "M_Ramp",
+      "code": 19
+     },
+     {
+      "name": "M_Staircase",
+      "code": 20
+     },
+     {
+      "name": "M_Stairlift",
+      "code": 21
+     },
+     {
+      "name": "M_Others",
+      "code": 22
+     },
+     {
+      "name": "Generalized Walkway inside Park",
+      "code": 23
+     },
+     {
+      "name": "Footpath",
+      "code": 24
+     },
+     {
+      "name": "Village",
+      "code": 25
+     },
+     {
+      "name": "Track",
+      "code": 26
+     },
+     {
+      "name": "Crossing - Signalized",
+      "code": 30
+     },
+     {
+      "name": "Crossing - Zebra",
+      "code": 31
+     },
+     {
+      "name": "Crossing - Cautionary",
+      "code": 32
+     },
+     {
+      "name": "Crossing - Others",
+      "code": 33
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   },
+   "editable": true,
+   "nullable": false,
+   "defaultValue": null,
+   "modelName": "FeatureType"
+  },
+  {
+   "name": "AliasNameEN",
+   "type": "esriFieldTypeString",
+   "alias": "AliasNameEN",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 255,
+   "defaultValue": null,
+   "modelName": "AliasNameEN"
+  },
+  {
+   "name": "AliasNameTC",
+   "type": "esriFieldTypeString",
+   "alias": "AliasNameTC",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 255,
+   "defaultValue": null,
+   "modelName": "AliasNameTC"
+  },
+  {
+   "name": "CrossingFeature",
+   "type": "esriFieldTypeInteger",
+   "alias": "CrossingFeature",
+   "domain": {
+    "type": "codedValue",
+    "name": "dPedCrossingFeature",
+    "description": "List of different type of crossing feature(s) across a road crossing",
+    "codedValues": [
+     {
+      "name": "Road",
+      "code": 1
+     },
+     {
+      "name": "Tramway",
+      "code": 2
+     },
+     {
+      "name": "LightRail",
+      "code": 3
+     },
+     {
+      "name": "BicycleTrack",
+      "code": 4
+     },
+     {
+      "name": "PublicTransportInterchange",
+      "code": 5
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   },
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "CrossingFeature"
+  },
+  {
+   "name": "WeatherProof",
+   "type": "esriFieldTypeInteger",
+   "alias": "WeatherProof",
+   "domain": {
+    "type": "codedValue",
+    "name": "dPedCover",
+    "description": "Indicator to define whether the network segment is under cover or not",
+    "codedValues": [
+     {
+      "name": "Covered",
+      "code": 1
+     },
+     {
+      "name": "NonCovered",
+      "code": 2
+     },
+     {
+      "name": "Unclassified",
+      "code": 3
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   },
+   "editable": true,
+   "nullable": false,
+   "defaultValue": 1,
+   "modelName": "WeatherProof"
+  },
+  {
+   "name": "WheelchairBarrier",
+   "type": "esriFieldTypeInteger",
+   "alias": "WheelchairBarrier",
+   "domain": {
+    "type": "codedValue",
+    "name": "dPedWheelchairBarrier",
+    "description": "Indicator to define whether the network segment is suitable for mobility aided users",
+    "codedValues": [
+     {
+      "name": "True",
+      "code": 1
+     },
+     {
+      "name": "False",
+      "code": 2
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   },
+   "editable": true,
+   "nullable": false,
+   "defaultValue": 2,
+   "modelName": "WheelchairBarrier"
+  },
+  {
+   "name": "WheelchairAccess",
+   "type": "esriFieldTypeInteger",
+   "alias": "WheelchairAccess",
+   "domain": {
+    "type": "codedValue",
+    "name": "dPedWheelchairAccess",
+    "description": "Indicator to define whether a network segment which is connected to public facilities / buildings / sites is also an accessible entrance or not",
+    "codedValues": [
+     {
+      "name": "True",
+      "code": 1
+     },
+     {
+      "name": "False",
+      "code": 2
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   },
+   "editable": true,
+   "nullable": false,
+   "defaultValue": 1,
+   "modelName": "WheelchairAccess"
+  },
+  {
+   "name": "ObstaclesType",
+   "type": "esriFieldTypeInteger",
+   "alias": "ObstaclesType",
+   "domain": {
+    "type": "codedValue",
+    "name": "dObstaclesType",
+    "description": "Type of obstacle on a network segment that might hinder passage for mobility aided user",
+    "codedValues": [
+     {
+      "name": "Accessible",
+      "code": 1
+     },
+     {
+      "name": "BridgePier",
+      "code": 2
+     },
+     {
+      "name": "BusStop",
+      "code": 3
+     },
+     {
+      "name": "FireHydrant",
+      "code": 4
+     },
+     {
+      "name": "LightPole",
+      "code": 5
+     },
+     {
+      "name": "RoadSign",
+      "code": 6
+     },
+     {
+      "name": "TrafficLight",
+      "code": 7
+     },
+     {
+      "name": "TrafficSign",
+      "code": 8
+     },
+     {
+      "name": "SignPole",
+      "code": 9
+     },
+     {
+      "name": "Bollard",
+      "code": 10
+     },
+     {
+      "name": "Tree",
+      "code": 11
+     },
+     {
+      "name": "ElectricBox",
+      "code": 12
+     },
+     {
+      "name": "ParkingMeter",
+      "code": 13
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   },
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "ObstaclesType"
+  },
+  {
+   "name": "Gradient",
+   "type": "esriFieldTypeDouble",
+   "alias": "Gradient",
+   "domain": null,
+   "editable": true,
+   "nullable": false,
+   "defaultValue": null,
+   "modelName": "Gradient"
+  },
+  {
+   "name": "Direction",
+   "type": "esriFieldTypeInteger",
+   "alias": "Direction",
+   "domain": {
+    "type": "codedValue",
+    "name": "dDirection",
+    "description": "Indictor to define the direction for Escalator, M_Escalator, Travelator, M_Travelator",
+    "codedValues": [
+     {
+      "name": "One Way Forward",
+      "code": 1
+     },
+     {
+      "name": "One Way Backward",
+      "code": -1
+     },
+     {
+      "name": "Both Ways",
+      "code": 0
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   },
+   "editable": true,
+   "nullable": false,
+   "defaultValue": 0,
+   "modelName": "Direction"
+  },
+  {
+   "name": "PositionCertainty",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "PositionCertainty",
+   "domain": {
+    "type": "codedValue",
+    "name": "dPedPositionCertainty",
+    "description": "Boolean indicator to define the position certainty of the segment within Country Park and Rural Village Area.",
+    "codedValues": [
+     {
+      "name": "Uncertain",
+      "code": 0
+     },
+     {
+      "name": "Certain",
+      "code": 1
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDefaultValue"
+   },
+   "editable": true,
+   "nullable": true,
+   "defaultValue": 1,
+   "modelName": "PositionCertainty"
+  },
+  {
+   "name": "Enabled",
+   "type": "esriFieldTypeInteger",
+   "alias": "Enabled",
+   "domain": {
+    "type": "codedValue",
+    "name": "dPedEnabled",
+    "description": "Boolean indicator to define whether the network segment is ready and enabled for pedestrian access",
+    "codedValues": [
+     {
+      "name": "True",
+      "code": 1
+     },
+     {
+      "name": "False",
+      "code": 2
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDefaultValue"
+   },
+   "editable": true,
+   "nullable": false,
+   "defaultValue": 1,
+   "modelName": "Enabled"
+  },
+  {
+   "name": "DataSource",
+   "type": "esriFieldTypeInteger",
+   "alias": "DataSource",
+   "domain": {
+    "type": "codedValue",
+    "name": "dPedDataSource",
+    "description": "Data source of the feature",
+    "codedValues": [
+     {
+      "name": "iB1000",
+      "code": 1
+     },
+     {
+      "name": "3DSpatialData",
+      "code": 2
+     },
+     {
+      "name": "DAP",
+      "code": 3
+     },
+     {
+      "name": "MMS",
+      "code": 4
+     },
+     {
+      "name": "TD",
+      "code": 5
+     },
+     {
+      "name": "AFCD",
+      "code": 6
+     },
+     {
+      "name": "HyD",
+      "code": 7
+     },
+     {
+      "name": "AsBuilt",
+      "code": 8
+     },
+     {
+      "name": "Proposal",
+      "code": 9
+     },
+     {
+      "name": "FieldChecking",
+      "code": 10
+     },
+     {
+      "name": "Estimation",
+      "code": 11
+     },
+     {
+      "name": "Other",
+      "code": 12
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   },
+   "editable": true,
+   "nullable": false,
+   "defaultValue": 1,
+   "modelName": "DataSource"
+  },
+  {
+   "name": "LevelSource",
+   "type": "esriFieldTypeInteger",
+   "alias": "LevelSource",
+   "domain": {
+    "type": "codedValue",
+    "name": "dPedLevelSource",
+    "description": "Source of the level information for the network segment",
+    "codedValues": [
+     {
+      "name": "iB1000",
+      "code": 1
+     },
+     {
+      "name": "3DSpatialData",
+      "code": 2
+     },
+     {
+      "name": "Photo",
+      "code": 3
+     },
+     {
+      "name": "MMS",
+      "code": 4
+     },
+     {
+      "name": "LiDAR",
+      "code": 5
+     },
+     {
+      "name": "TD",
+      "code": 6
+     },
+     {
+      "name": "AsBuilt",
+      "code": 7
+     },
+     {
+      "name": "Proposal",
+      "code": 8
+     },
+     {
+      "name": "FieldChecking",
+      "code": 9
+     },
+     {
+      "name": "Estimation",
+      "code": 10
+     },
+     {
+      "name": "Other",
+      "code": 11
+     },
+     {
+      "name": "CEDD",
+      "code": 12
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   },
+   "editable": true,
+   "nullable": false,
+   "defaultValue": 2,
+   "modelName": "LevelSource"
+  },
+  {
+   "name": "StreetNameEN",
+   "type": "esriFieldTypeString",
+   "alias": "StreetNameEN",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 100,
+   "defaultValue": null,
+   "modelName": "StreetNameEN"
+  },
+  {
+   "name": "StreetNameTC",
+   "type": "esriFieldTypeString",
+   "alias": "StreetNameTC",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "length": 100,
+   "defaultValue": null,
+   "modelName": "StreetNameTC"
+  },
+  {
+   "name": "ST_CODE",
+   "type": "esriFieldTypeInteger",
+   "alias": "ST_CODE",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "ST_CODE"
+  },
+  {
+   "name": "FloorID",
+   "type": "esriFieldTypeInteger",
+   "alias": "FloorID",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "FloorID"
+  },
+  {
+   "name": "BuildingID_1",
+   "type": "esriFieldTypeInteger",
+   "alias": "BuildingID_1",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "BuildingID_1"
+  },
+  {
+   "name": "BuildingID_2",
+   "type": "esriFieldTypeInteger",
+   "alias": "BuildingID_2",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "BuildingID_2"
+  },
+  {
+   "name": "SiteID",
+   "type": "esriFieldTypeInteger",
+   "alias": "SiteID",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "SiteID"
+  },
+  {
+   "name": "TerminalID",
+   "type": "esriFieldTypeInteger",
+   "alias": "TerminalID",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "TerminalID"
+  },
+  {
+   "name": "AccessTimeID",
+   "type": "esriFieldTypeInteger",
+   "alias": "AccessTimeID",
+   "domain": null,
+   "editable": true,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "AccessTimeID"
+  },
+  {
+   "name": "CreationDate",
+   "type": "esriFieldTypeDate",
+   "alias": "CreationDate",
+   "domain": null,
+   "editable": true,
+   "nullable": false,
+   "length": 8,
+   "defaultValue": null,
+   "modelName": "CreationDate"
+  },
+  {
+   "name": "ModifiedBy",
+   "type": "esriFieldTypeString",
+   "alias": "ModifiedBy",
+   "domain": null,
+   "editable": true,
+   "nullable": false,
+   "length": 255,
+   "defaultValue": null,
+   "modelName": "ModifiedBy"
+  },
+  {
+   "name": "LastAmendmentDate",
+   "type": "esriFieldTypeDate",
+   "alias": "LastAmendmentDate",
+   "domain": null,
+   "editable": true,
+   "nullable": false,
+   "length": 8,
+   "defaultValue": null,
+   "modelName": "LastAmendmentDate"
+  },
+  {
+   "name": "Shape__Length",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape_Length",
+   "domain": null,
+   "editable": false,
+   "nullable": true,
+   "defaultValue": null,
+   "modelName": "Shape_Length"
+  }
+ ],
+ "geometryField": {
+  "name": "Shape",
+  "type": "esriFieldTypeGeometry",
+  "alias": "Shape",
+  "domain": null,
+  "editable": false,
+  "nullable": true,
+  "defaultValue": null,
+  "modelName": "Shape"
+ },
+ "indexes": [
+  {
+   "name": "FDO_OBJECTID",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "FDO_Shape",
+   "fields": "Shape",
+   "isAscending": true,
+   "isUnique": false,
+   "description": ""
+  }
+ ],
+ "datesInUnknownTimezone": false,
+ "dateFieldsTimeReference": {
+  "timeZone": "China Standard Time",
+  "respectsDaylightSaving": false
+ },
+ "preferredTimeReference": null,
+ "types": [],
+ "templates": [
+  {
+   "name": "PedestrianRoute",
+   "description": "",
+   "prototype": {
+    "attributes": {
+     "LastAmendmentDate": -2209161600000,
+     "ModifiedBy": " ",
+     "PedestrianRouteID": 0,
+     "Location": 1,
+     "FeatureType": 0,
+     "AliasNameEN": null,
+     "AliasNameTC": null,
+     "CrossingFeature": null,
+     "WeatherProof": 1,
+     "WheelchairBarrier": 2,
+     "WheelchairAccess": 1,
+     "ObstaclesType": null,
+     "Gradient": 0,
+     "Direction": 0,
+     "PositionCertainty": 1,
+     "Enabled": 1,
+     "DataSource": 1,
+     "LevelSource": 2,
+     "StreetNameEN": null,
+     "StreetNameTC": null,
+     "ST_CODE": null,
+     "FloorID": null,
+     "BuildingID_1": null,
+     "BuildingID_2": null,
+     "SiteID": null,
+     "TerminalID": null,
+     "AccessTimeID": null,
+     "CreationDate": -2209161600000
+    }
+   },
+   "drawingTool": "esriFeatureEditToolLine"
+  }
+ ],
+ "maxRecordCount": 3000,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "supportedExportFormats": "sqlite,filegdb",
+ "capabilities": "Query",
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "standardMaxRecordCount": 8000,
+ "tileMaxRecordCount": 4000,
+ "standardMaxRecordCountNoGeometry": 32000,
+ "maxRecordCountFactor": 1,
+ "serviceItemId": "81ef3d66d6ab456eb411eb0c6bf5b849"
+}

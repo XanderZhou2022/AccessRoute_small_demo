@@ -1,5 +1,9 @@
+import { existsSync } from 'node:fs';
+import { loadEnvFile } from 'node:process';
 import { createApp } from './app';
 import { fileURLToPath } from 'node:url';
+const envFile = fileURLToPath(new URL('../.env', import.meta.url));
+if (existsSync(envFile)) loadEnvFile(envFile);
 const port = Number(process.env.PORT || 8787),
   host = process.env.HOST || '127.0.0.1';
 const app = createApp({

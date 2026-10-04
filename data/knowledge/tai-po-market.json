@@ -1,0 +1,711 @@
+{
+  "version": "1.0",
+  "scene_id": "tai-po-market",
+  "records": [
+    {
+      "id": "poi:509fc85f-8254-4e53-98ee-b298d41ae821",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16635913000005,
+      "lat": 22.446131210000033,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:77858ce3-e114-4b44-bb83-bb4375a103af",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16632613000002,
+      "lat": 22.446145960000024,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:bfa6655a-2353-4fe2-96c6-811671edeb4d",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16626964000011,
+      "lat": 22.44617123000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f2c2f2a8-32d2-4d85-bb0b-bdec188d7dd7",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16623686000003,
+      "lat": 22.44618545000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0ce0b004-fb1a-4270-ac5d-ba16757553bd",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.1661799200001,
+      "lat": 22.446209450000026,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:804fb5fa-a548-4c70-9a1e-87343a67051b",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16614733000006,
+      "lat": 22.446224690000065,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1f9624e5-f638-4f6a-a756-ba06901f47bb",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.1662416900001,
+      "lat": 22.44637707000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f32ae110-c701-45ee-a193-25534ba54fc1",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16620959000011,
+      "lat": 22.446389810000028,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5135a6be-a0bf-4306-9db3-c254519c600d",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16617656000005,
+      "lat": 22.446405060000075,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:12c4babc-12c8-477c-ba97-8d823ecdaba0",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16614474000005,
+      "lat": 22.446344090000025,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:12d3f295-d9f3-42c1-966c-2fdcc15f00fa",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.1661773400001,
+      "lat": 22.446329020000064,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f0295c89-06ad-4f06-9ac3-38b781fa561b",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16620968000007,
+      "lat": 22.446314980000068,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:8f03190a-ccd2-4c03-b630-19c2b9e43189",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16632249000008,
+      "lat": 22.44633901000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:bcbe1d7d-ccc0-4c96-8e3f-2c536fd77cfc",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16635581000003,
+      "lat": 22.446323310000025,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:65b258ab-7100-4875-8e23-33d3f28c55c6",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16638736000004,
+      "lat": 22.446309690000078,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:237cab46-a314-46db-8bd3-e9c031f46728",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16641995000009,
+      "lat": 22.44629501000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1ad082b2-880f-44d6-b18b-329a70606c86",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.1665005100001,
+      "lat": 22.446260110000026,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1e860670-aef2-479e-b594-4f7b58c9f44f",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16653327000006,
+      "lat": 22.44624545000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:bf820447-852e-4511-aed5-ed948f3f16de",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16656569000008,
+      "lat": 22.44623095000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:78c485fc-c4dd-4869-8ea8-4718b0923768",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16659983000011,
+      "lat": 22.446216780000043,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:69e71868-0efd-4bdd-b988-7d3458790d6a",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16665544000011,
+      "lat": 22.446190810000076,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:fb84be38-2da1-4c52-883f-6198518ba967",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16662501000008,
+      "lat": 22.44612938000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:2ae04e6b-af97-4e19-b816-bc3056b8d13e",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.1662909900001,
+      "lat": 22.446278610000036,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:2754392a-6caa-4c00-9e9e-066dc62ffc02",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16632402000005,
+      "lat": 22.446264120000023,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a2d8ec8f-20cc-4710-bcd4-9ca28291a04c",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16635621000012,
+      "lat": 22.44624956000007,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:904d67d1-29e7-4a65-930e-7ead9ac45e43",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.1663885700001,
+      "lat": 22.446235440000066,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1a1335bf-c5da-4440-8fc7-15278b0772d1",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16646894000007,
+      "lat": 22.446199070000034,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e6622f4f-7e09-4143-9a22-77da8b4b6a35",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16650152000011,
+      "lat": 22.446185050000054,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c99ed793-2339-4889-9c61-835d94ce9aab",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16653426000005,
+      "lat": 22.446169960000077,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:23b3b1be-c039-4466-9834-2981258fcf1b",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16656797000007,
+      "lat": 22.446155820000058,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a1823f1e-9b4a-4cdf-af88-2937f0ac8165",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16667325000003,
+      "lat": 22.44629512000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e5844296-2242-4da7-9553-fea2315e43e7",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16663575000007,
+      "lat": 22.446312720000037,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:416f8602-1bd2-4ed8-983e-84a5d28bb89c",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.1661872300001,
+      "lat": 22.44651515000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9bcc18ad-1809-40a5-ba41-eddc51dd0ff6",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16621896000004,
+      "lat": 22.446500420000064,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:077c5f98-b256-456b-8b38-90f80fdb6426",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.1663100500001,
+      "lat": 22.446460220000063,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:cf97f680-d2fb-40ee-bdf2-78ffa11a2d32",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.1662766500001,
+      "lat": 22.446475450000037,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c9ac35ee-5cf4-4cd2-ad06-e5b20690e775",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16645614000004,
+      "lat": 22.446394590000068,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4a19230e-f4e7-47b8-87bf-e039bcbe8bef",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.1664893200001,
+      "lat": 22.44637972000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:7048cc30-1163-4b57-9c77-197c95895a70",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16654554000002,
+      "lat": 22.446354720000045,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1f7185dc-e47a-4580-983c-302afaf50ee3",
+      "scene_id": "tai-po-market",
+      "names": [
+        "RESTAURANT"
+      ],
+      "category": "restaurant",
+      "level_id": "7e15ff6c-1cff-47cf-ad52-6c0996b12a6e",
+      "lon": 114.16657921000001,
+      "lat": 22.446339050000063,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/7abc627a-9f72-4547-a021-f6dcb814138c/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:tai-po-market-lift-a:2779f380-7751-42d7-952d-5acc282ab030",
+      "scene_id": "tai-po-market",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "7b7942d1-29a9-4f5f-929f-4c21cc329f49",
+      "lon": 114.16644237,
+      "lat": 22.44648753,
+      "node_id": "2779f380-7751-42d7-952d-5acc282ab030",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/tai-po-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:tai-po-market-lift-a:b6bbd68f-ce81-4262-abfa-ed3484cb2309",
+      "scene_id": "tai-po-market",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "0b551810-02a6-4a6b-a5e7-0a8819e2f38d",
+      "lon": 114.16644237,
+      "lat": 22.44648753,
+      "node_id": "b6bbd68f-ce81-4262-abfa-ed3484cb2309",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/tai-po-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:tai-po-market-lift-b:21fc3b0e-7b9e-4f9c-bf6c-0160c032059e",
+      "scene_id": "tai-po-market",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "7b7942d1-29a9-4f5f-929f-4c21cc329f49",
+      "lon": 114.16679843,
+      "lat": 22.44583804,
+      "node_id": "21fc3b0e-7b9e-4f9c-bf6c-0160c032059e",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/tai-po-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:tai-po-market-lift-b:0bc7b364-87fb-43fa-b4eb-6239fa2e1595",
+      "scene_id": "tai-po-market",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "0b551810-02a6-4a6b-a5e7-0a8819e2f38d",
+      "lon": 114.16679843,
+      "lat": 22.44583804,
+      "node_id": "0bc7b364-87fb-43fa-b4eb-6239fa2e1595",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/tai-po-market/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

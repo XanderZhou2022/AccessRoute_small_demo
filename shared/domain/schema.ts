@@ -8,7 +8,7 @@ export const nodeSchema = z.object({
   lon: z.number().min(-180).max(180),
   lat: z.number().min(-90).max(90),
   z: z.number().finite().optional(),
-  kind: z.enum(['entrance', 'junction', 'lift', 'stairs', 'stop', 'poi']),
+  kind: z.enum(['entrance', 'junction', 'lift', 'stairs', 'ramp', 'escalator', 'stop', 'poi']),
   facilityId: id.optional(),
   label: z.string().optional(),
   sourceRef: z.string().optional(),
@@ -25,6 +25,12 @@ export const edgeSchema = z.object({
   wheelchair: z.enum(['yes', 'no', 'unknown']).default('unknown'),
   slope: z.number().finite().optional(),
   surface: z.string().optional(),
+  widthM: z.number().positive().optional(),
+  stepCount: z.number().int().nonnegative().optional(),
+  durationS: z.number().nonnegative().optional(),
+  waitS: z.number().nonnegative().optional(),
+  openFrom: z.string().datetime({ offset: true }).optional(),
+  openUntil: z.string().datetime({ offset: true }).optional(),
   facilityId: id.optional(),
   geometry: z
     .array(z.tuple([z.number(), z.number()]))
@@ -45,7 +51,7 @@ export const graphSchema = z
         z.object({
           id,
           label: z.string(),
-          kind: z.enum(['lift', 'stairs', 'ramp']),
+          kind: z.enum(['lift', 'stairs', 'ramp', 'escalator']),
           sourceRefs: z.array(z.string()).default([]),
         }),
       )
@@ -134,8 +140,19 @@ export const eventSchema = z
     'validUntil must follow validFrom',
   );
 export const contextSchema = z.object({
-  profile: z.enum(['wheelchair', 'elderly', 'stroller']),
+  profile: z.enum(['walking', 'wheelchair', 'elderly', 'stroller', 'heavy_luggage']),
   rain: z.boolean().default(false),
+  objective: z
+    .enum(['balanced', 'shortest', 'sheltered', 'indoor', 'least_effort', 'fastest'])
+    .optional(),
+  graphMode: z.enum(['base', 'scenario']).optional(),
+  allowStairs: z.boolean().optional(),
+  allowEscalators: z.boolean().optional(),
+  avoidLifts: z.boolean().optional(),
+  maxSlope: z.number().nonnegative().optional(),
+  minWidthM: z.number().positive().optional(),
+  maxStepsPerFlight: z.number().int().nonnegative().optional(),
+  walkingSpeedMps: z.number().positive().optional(),
   avoidStairs: z.boolean().optional(),
   avoidSteepSlopes: z.boolean().optional(),
   preferCoveredShelter: z.boolean().optional(),
@@ -176,6 +193,17 @@ export type RouteResult =
       cost: number;
       reasonCodes: string[];
       warnings: string[];
+      metrics?: {
+        exposedM: number;
+        outdoorM: number;
+        indoorM: number;
+        shelteredM: number;
+        estimatedDurationS: number;
+        ascentM: number;
+        descentM: number;
+        stairs: number;
+        transitions: Record<string, number>;
+      };
     }
   | { status: 'no_route'; reasonCodes: string[]; warnings: string[] };
 export type RouteSegment = {

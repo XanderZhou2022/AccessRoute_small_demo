@@ -1,0 +1,1 @@
+{"source": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637211194312_35158/FeatureServer/0", "bbox": [114.15676982986565, 22.327984477007096, 114.16542672813442, 22.335334584055385], "expectedCount": 1464, "receivedCount": 1464, "selection": "Graph extent plus 350 m margin; spatial intersection"}

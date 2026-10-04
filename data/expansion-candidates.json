@@ -1,0 +1,422 @@
+[
+  {
+    "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+    "name": "Shek Kip Mei Estate Ancillary Facilities Block",
+    "nameZh": "石硤尾邨服務設施大樓",
+    "district": "SHAM SHUI PO DISTRICT",
+    "station": "Shek Kip Mei Station",
+    "stationId": "e41c97ec-85f5-4338-9ee0-87ca1d102d16",
+    "counts": {
+      "level_polygon": {
+        "returned": 9,
+        "total": 9,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 102,
+        "total": 102,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 121,
+        "total": 121,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 56,
+        "total": 56,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 1,
+        "total": 1,
+        "complete": true
+      }
+    }
+  },
+  {
+    "venueId": "bd9576da-e2d9-47ff-9ab1-447a54ddff47",
+    "name": "Cheung Sha Wan Government Offices",
+    "nameZh": "長沙灣政府合署",
+    "district": "SHAM SHUI PO DISTRICT",
+    "station": "Sham Shui Po Station",
+    "stationId": "058fd3b2-9bcf-48dd-b641-8c2465739e0e",
+    "counts": {
+      "level_polygon": {
+        "returned": 29,
+        "total": 29,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 1886,
+        "total": 1886,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 345,
+        "total": 345,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 221,
+        "total": 221,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 1,
+        "total": 1,
+        "complete": true
+      }
+    }
+  },
+  {
+    "venueId": "13bf925f-387d-4559-a5c1-db10e9981fea",
+    "name": "Sha Tin Government Offices",
+    "nameZh": "沙田政府合署",
+    "district": "SHA TIN DISTRICT",
+    "station": "Sha Tin Station",
+    "stationId": "1aaf245e-3643-49f4-b56f-4461026ee8d7",
+    "counts": {
+      "level_polygon": {
+        "returned": 28,
+        "total": 28,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 1599,
+        "total": 1599,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 450,
+        "total": 450,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 422,
+        "total": 422,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 0,
+        "total": 0,
+        "complete": true
+      }
+    }
+  },
+  {
+    "venueId": "b6fb3eae-9bcf-40f0-9eed-8871f50aa9f9",
+    "name": "North Point Government Offices",
+    "nameZh": "北角政府合署",
+    "district": "EASTERN DISTRICT",
+    "station": "Quarry Bay Station",
+    "stationId": "c9912e53-b334-40dc-beba-b5ac7530f2ba",
+    "counts": {
+      "level_polygon": {
+        "returned": 32,
+        "total": 32,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 1746,
+        "total": 1746,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 426,
+        "total": 426,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 380,
+        "total": 380,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 5,
+        "total": 5,
+        "complete": true
+      }
+    }
+  },
+  {
+    "venueId": "61f55315-a44b-47ed-9201-7da2e5bcf1c1",
+    "name": "Pei Ho Street Municipal Services Building",
+    "nameZh": "北河街市政大廈",
+    "district": "SHAM SHUI PO DISTRICT",
+    "station": "Sham Shui Po Station",
+    "stationId": "058fd3b2-9bcf-48dd-b641-8c2465739e0e",
+    "counts": {
+      "level_polygon": {
+        "returned": 11,
+        "total": 11,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 436,
+        "total": 436,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 243,
+        "total": 243,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 85,
+        "total": 85,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 45,
+        "total": 45,
+        "complete": true
+      }
+    }
+  },
+  {
+    "venueId": "6f2c1899-c5f1-4f42-8415-b18ae840b57a",
+    "name": "Java Road Municipal Services Building",
+    "nameZh": "渣華道市政大廈",
+    "district": "EASTERN DISTRICT",
+    "station": "North Point Station",
+    "stationId": "95dc7e53-be42-4fe2-b345-31836a016345",
+    "counts": {
+      "level_polygon": {
+        "returned": 28,
+        "total": 28,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 546,
+        "total": 546,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 346,
+        "total": 346,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 143,
+        "total": 143,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 198,
+        "total": 198,
+        "complete": true
+      }
+    }
+  },
+  {
+    "venueId": "2b9f5d77-6a27-4dc3-bbc8-2c98e25fdb48",
+    "name": "Kowloon City Municipal Services Building",
+    "nameZh": "九龍城市政大廈",
+    "district": "KOWLOON CITY DISTRICT",
+    "station": "Sung Wong Toi Station",
+    "stationId": "d47477e8-81bb-4400-943a-e2541261bf4b",
+    "counts": {
+      "level_polygon": {
+        "returned": 6,
+        "total": 6,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 314,
+        "total": 314,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 242,
+        "total": 242,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 64,
+        "total": 64,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 62,
+        "total": 62,
+        "complete": true
+      }
+    }
+  },
+  {
+    "venueId": "468dc65e-e6fd-4312-9925-59016a938d36",
+    "name": "Sai Ying Pun Community Complex",
+    "nameZh": "西營盤社區綜合大樓",
+    "district": "CENTRAL & WESTERN DISTRICT",
+    "station": "Sai Ying Pun Station",
+    "stationId": "cda69869-c3be-42f3-8fb4-a7cbb2fe97f5",
+    "counts": {
+      "level_polygon": {
+        "returned": 15,
+        "total": 15,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 624,
+        "total": 624,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 136,
+        "total": 136,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 105,
+        "total": 105,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 1,
+        "total": 1,
+        "complete": true
+      }
+    }
+  },
+  {
+    "venueId": "97390be8-174d-47a0-b013-f04a7276e15d",
+    "name": "Pak Tin Community Complex",
+    "nameZh": "白田社區綜合大樓",
+    "district": "SHAM SHUI PO DISTRICT",
+    "station": "Shek Kip Mei Station",
+    "stationId": "e41c97ec-85f5-4338-9ee0-87ca1d102d16",
+    "counts": {
+      "level_polygon": {
+        "returned": 7,
+        "total": 7,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 219,
+        "total": 219,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 86,
+        "total": 86,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 26,
+        "total": 26,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 1,
+        "total": 1,
+        "complete": true
+      }
+    }
+  },
+  {
+    "venueId": "7abc627a-9f72-4547-a021-f6dcb814138c",
+    "name": "Tai Po Hui Market and Cooked Food Centre",
+    "nameZh": "大埔墟街市及熟食中心",
+    "district": "TAI PO DISTRICT",
+    "station": "Tai Po Market Station",
+    "stationId": "b44cf139-5938-408b-af48-649dfd09694e",
+    "counts": {
+      "level_polygon": {
+        "returned": 16,
+        "total": 16,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 1547,
+        "total": 1547,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 1203,
+        "total": 1203,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 668,
+        "total": 668,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 317,
+        "total": 317,
+        "complete": true
+      }
+    }
+  },
+  {
+    "venueId": "1652598f-c2c2-458c-951f-64366586a5e1",
+    "name": "Kwai Hing Government Offices",
+    "nameZh": "葵興政府合署",
+    "district": "KWAI TSING DISTRICT",
+    "station": "Kwai Hing Station",
+    "stationId": "c660346a-064e-42d4-8501-7bb5cd7e893f",
+    "counts": {
+      "level_polygon": {
+        "returned": 15,
+        "total": 15,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 813,
+        "total": 813,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 74,
+        "total": 74,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 88,
+        "total": 88,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 3,
+        "total": 3,
+        "complete": true
+      }
+    }
+  },
+  {
+    "venueId": "5a8bfe7d-bfd8-4a4d-bc61-e0a431abf6a3",
+    "name": "Fa Yuen Street Municipal Services Building",
+    "nameZh": "花園街市政大廈",
+    "district": "YAU TSIM MONG DISTRICT",
+    "station": "Mong Kok Station",
+    "stationId": "f0b802fd-28b0-40e3-abff-62090becf0d4",
+    "counts": {
+      "level_polygon": {
+        "returned": 17,
+        "total": 17,
+        "complete": true
+      },
+      "unit_polygon": {
+        "returned": 524,
+        "total": 524,
+        "complete": true
+      },
+      "opening_line": {
+        "returned": 278,
+        "total": 278,
+        "complete": true
+      },
+      "amenity_point": {
+        "returned": 119,
+        "total": 119,
+        "complete": true
+      },
+      "occupant_point": {
+        "returned": 49,
+        "total": 49,
+        "complete": true
+      }
+    }
+  }
+]

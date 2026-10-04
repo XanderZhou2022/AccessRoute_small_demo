@@ -1,0 +1,1511 @@
+[
+  {
+    "scene_id": "hysan-place",
+    "edges": [
+      {
+        "id": "demo-hysan-place-stairs-edge",
+        "from": "a3a5bc3e-f461-444e-8e4a-f63489cc7f2a",
+        "to": "8887c3eb-f74a-40b1-9f77-0edf09786e93",
+        "distanceM": 2.6499999999999995,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-hysan-place-stairs",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-1520-ramp-edge",
+        "from": "a3a5bc3e-f461-444e-8e4a-f63489cc7f2a",
+        "to": "8887c3eb-f74a-40b1-9f77-0edf09786e93",
+        "distanceM": 105.99999999999997,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-e-1520-ramp",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "slope": 0.05,
+        "widthM": 1.5,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-1520-escalator-edge",
+        "from": "a3a5bc3e-f461-444e-8e4a-f63489cc7f2a",
+        "to": "8887c3eb-f74a-40b1-9f77-0edf09786e93",
+        "distanceM": 10.599999999999998,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-e-1520-escalator",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "widthM": 0.8,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-1522-covered",
+        "from": "hysan-place-doorway",
+        "to": "hysan-place-station",
+        "distanceM": 62.7055,
+        "kind": "outdoor",
+        "bidirectional": true,
+        "indoor": false,
+        "wheelchair": "unknown",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "sheltered": true,
+        "geometry": [
+          [
+            114.18378684,
+            22.279608077
+          ],
+          [
+            114.18394886,
+            22.2798844735
+          ],
+          [
+            114.18411088,
+            22.27992087
+          ]
+        ],
+        "tags": {
+          "demo_assumption": true
+        }
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-hysan-place-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-1520-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-1520-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。",
+      "其中一段露天接駁存在較長的有蓋替代通道；有蓋與幾何繞行是演示假設，未經現場核實。"
+    ]
+  },
+  {
+    "scene_id": "popcorn-2",
+    "edges": [
+      {
+        "id": "demo-popcorn-2-stairs-edge",
+        "from": "e65fc251-4e34-4eda-9e37-406a46289854",
+        "to": "3ed4fbd3-8907-49ed-bf9b-26e2b13a1e97",
+        "distanceM": 4.35,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-popcorn-2-stairs",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-6305-ramp-edge",
+        "from": "e65fc251-4e34-4eda-9e37-406a46289854",
+        "to": "3ed4fbd3-8907-49ed-bf9b-26e2b13a1e97",
+        "distanceM": 173.99999999999997,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-e-6305-ramp",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "slope": 0.05,
+        "widthM": 1.5,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-6305-escalator-edge",
+        "from": "e65fc251-4e34-4eda-9e37-406a46289854",
+        "to": "3ed4fbd3-8907-49ed-bf9b-26e2b13a1e97",
+        "distanceM": 17.4,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-e-6305-escalator",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "widthM": 0.8,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-6307-covered",
+        "from": "popcorn-2-doorway",
+        "to": "popcorn-2-station",
+        "distanceM": 215.67000000000002,
+        "kind": "outdoor",
+        "bidirectional": true,
+        "indoor": false,
+        "wheelchair": "unknown",
+        "geometry": [
+          [
+            114.261825632,
+            22.30784493
+          ],
+          [
+            114.261290926,
+            22.307835965
+          ],
+          [
+            114.26075622,
+            22.307587
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        },
+        "sheltered": true
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-popcorn-2-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-6305-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-6305-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。",
+      "其中一段露天接駁存在較長的有蓋替代通道；有蓋與幾何繞行是演示假設，未經現場核實。"
+    ]
+  },
+  {
+    "scene_id": "kowloon-tong-festival-walk",
+    "edges": [
+      {
+        "id": "demo-kowloon-tong-festival-walk-stairs-edge",
+        "from": "ped-0b38d7d0672238cd4924",
+        "to": "ped-e1ebde95e9b028b11f70",
+        "distanceM": 3.3755,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "sheltered": true,
+        "wheelchair": "no",
+        "facilityId": "demo-kowloon-tong-festival-walk-stairs",
+        "geometry": [
+          [
+            114.17454745509187,
+            22.337418642870468
+          ],
+          [
+            114.17454831419205,
+            22.337417929467193
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-ped-e-1090-ramp-edge",
+        "from": "ped-0b38d7d0672238cd4924",
+        "to": "ped-e1ebde95e9b028b11f70",
+        "distanceM": 208.70000000000005,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "sheltered": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-ped-e-1090-ramp",
+        "geometry": [
+          [
+            114.17454745509187,
+            22.337418642870468
+          ],
+          [
+            114.17454831419205,
+            22.337417929467193
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        },
+        "slope": 0.05,
+        "widthM": 1.5
+      },
+      {
+        "id": "demo-ped-e-1090-escalator-edge",
+        "from": "ped-0b38d7d0672238cd4924",
+        "to": "ped-e1ebde95e9b028b11f70",
+        "distanceM": 13.502,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "sheltered": true,
+        "wheelchair": "no",
+        "facilityId": "demo-ped-e-1090-escalator",
+        "geometry": [
+          [
+            114.17454745509187,
+            22.337418642870468
+          ],
+          [
+            114.17454831419205,
+            22.337417929467193
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        },
+        "widthM": 0.8
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-kowloon-tong-festival-walk-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-ped-e-1090-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-ped-e-1090-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。"
+    ]
+  },
+  {
+    "scene_id": "shek-kip-mei-services",
+    "edges": [
+      {
+        "id": "demo-shek-kip-mei-services-stairs-edge",
+        "from": "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+        "to": "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+        "distanceM": 2.6500000000000004,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-shek-kip-mei-services-stairs",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-203-ramp-edge",
+        "from": "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+        "to": "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+        "distanceM": 106.00000000000001,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-e-203-ramp",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "slope": 0.05,
+        "widthM": 1.5,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-203-escalator-edge",
+        "from": "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+        "to": "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+        "distanceM": 10.600000000000001,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-e-203-escalator",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "widthM": 0.8,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-ped-e-4-covered",
+        "from": "ped-0bd6c84e93261b101e35",
+        "to": "ped-e71a1e9f21fa4be48daf",
+        "distanceM": 140.61528,
+        "kind": "outdoor",
+        "bidirectional": true,
+        "indoor": false,
+        "sheltered": true,
+        "wheelchair": "unknown",
+        "slope": 0.04335283,
+        "geometry": [
+          [
+            114.16771175967365,
+            22.33185752898741
+          ],
+          [
+            114.1681807997741,
+            22.33179889075428
+          ],
+          [
+            114.16864983987456,
+            22.33150025252115
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-shek-kip-mei-services-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-203-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-203-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。",
+      "其中一段露天接駁存在較長的有蓋替代通道；有蓋與幾何繞行是演示假設，未經現場核實。"
+    ]
+  },
+  {
+    "scene_id": "cheung-sha-wan-government",
+    "edges": [
+      {
+        "id": "demo-cheung-sha-wan-government-stairs-edge",
+        "from": "32c888a6-1f7c-4615-a9ec-85bc81a4c206",
+        "to": "c8f068b6-c852-4447-965e-69106a461bb1",
+        "distanceM": 1.7749999999999995,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-cheung-sha-wan-government-stairs",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-1435-ramp-edge",
+        "from": "32c888a6-1f7c-4615-a9ec-85bc81a4c206",
+        "to": "c8f068b6-c852-4447-965e-69106a461bb1",
+        "distanceM": 70.99999999999997,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-e-1435-ramp",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "slope": 0.05,
+        "widthM": 1.5,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-1435-escalator-edge",
+        "from": "32c888a6-1f7c-4615-a9ec-85bc81a4c206",
+        "to": "c8f068b6-c852-4447-965e-69106a461bb1",
+        "distanceM": 7.099999999999998,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-e-1435-escalator",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "widthM": 0.8,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-ped-e-18-covered",
+        "from": "ped-3be0278ae7033b24acd9",
+        "to": "ped-12b7628a65e1487aed25",
+        "distanceM": 29.035037055122853,
+        "kind": "outdoor",
+        "bidirectional": true,
+        "indoor": false,
+        "sheltered": true,
+        "wheelchair": "unknown",
+        "slope": 0.0022889,
+        "geometry": [
+          [
+            114.16075358249451,
+            22.3317715299223
+          ],
+          [
+            114.16070092686704,
+            22.331933498819367
+          ],
+          [
+            114.16064827123958,
+            22.331855467716437
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-cheung-sha-wan-government-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-1435-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-1435-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。",
+      "其中一段露天接駁存在較長的有蓋替代通道；有蓋與幾何繞行是演示假設，未經現場核實。"
+    ]
+  },
+  {
+    "scene_id": "sha-tin-government",
+    "edges": [
+      {
+        "id": "demo-sha-tin-government-stairs-edge",
+        "from": "85f53e0b-217d-4405-9154-62298bad7fc4",
+        "to": "f3f6a2cc-156a-4954-bd39-fac53004561a",
+        "distanceM": 3.5,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-sha-tin-government-stairs",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-882-ramp-edge",
+        "from": "85f53e0b-217d-4405-9154-62298bad7fc4",
+        "to": "f3f6a2cc-156a-4954-bd39-fac53004561a",
+        "distanceM": 140,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-e-882-ramp",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "slope": 0.05,
+        "widthM": 1.5,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-882-escalator-edge",
+        "from": "85f53e0b-217d-4405-9154-62298bad7fc4",
+        "to": "f3f6a2cc-156a-4954-bd39-fac53004561a",
+        "distanceM": 14,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-e-882-escalator",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "widthM": 0.8,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-ped-e-29-ramp-edge",
+        "from": "ped-078a210fee19db77b9d6",
+        "to": "ped-9ba3b1c071dcd82ab5d3",
+        "distanceM": 111.26,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "sheltered": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-ped-e-29-ramp",
+        "geometry": [
+          [
+            114.18737916841428,
+            22.383242510587234
+          ],
+          [
+            114.18737409423187,
+            22.38323583465189
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        },
+        "slope": 0.05,
+        "widthM": 1.5
+      },
+      {
+        "id": "demo-ped-e-29-escalator-edge",
+        "from": "ped-078a210fee19db77b9d6",
+        "to": "ped-9ba3b1c071dcd82ab5d3",
+        "distanceM": 11.273,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "sheltered": true,
+        "wheelchair": "no",
+        "facilityId": "demo-ped-e-29-escalator",
+        "geometry": [
+          [
+            114.18737916841428,
+            22.383242510587234
+          ],
+          [
+            114.18737409423187,
+            22.38323583465189
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        },
+        "widthM": 0.8
+      },
+      {
+        "id": "demo-ped-e-17-covered",
+        "from": "ped-8b7e839affb5325af3f1",
+        "to": "ped-91b8941cbc824889af81",
+        "distanceM": 75.12817,
+        "kind": "outdoor",
+        "bidirectional": true,
+        "indoor": false,
+        "sheltered": true,
+        "wheelchair": "unknown",
+        "slope": 0.0014375,
+        "geometry": [
+          [
+            114.18720838971214,
+            22.38523176058079
+          ],
+          [
+            114.1874640551635,
+            22.3852684841811
+          ],
+          [
+            114.18771972061488,
+            22.38506520778141
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-sha-tin-government-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-882-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-882-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-ped-e-29-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-ped-e-29-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。",
+      "其中一段露天接駁存在較長的有蓋替代通道；有蓋與幾何繞行是演示假設，未經現場核實。"
+    ]
+  },
+  {
+    "scene_id": "north-point-government",
+    "edges": [
+      {
+        "id": "demo-north-point-government-stairs-edge",
+        "from": "8568228a-6503-429b-8723-31d7c23981c1",
+        "to": "a3e55bd8-d409-4828-a239-8ab44a7c296d",
+        "distanceM": 1.9250000000000003,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-north-point-government-stairs",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-1220-ramp-edge",
+        "from": "8568228a-6503-429b-8723-31d7c23981c1",
+        "to": "a3e55bd8-d409-4828-a239-8ab44a7c296d",
+        "distanceM": 77,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-e-1220-ramp",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "slope": 0.05,
+        "widthM": 1.5,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-1220-escalator-edge",
+        "from": "8568228a-6503-429b-8723-31d7c23981c1",
+        "to": "a3e55bd8-d409-4828-a239-8ab44a7c296d",
+        "distanceM": 7.700000000000001,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-e-1220-escalator",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "widthM": 0.8,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-ped-e-19-covered",
+        "from": "ped-5c4b9759752fefa89014",
+        "to": "ped-cbad1d9f431ea496b7e1",
+        "distanceM": 33.42924,
+        "kind": "outdoor",
+        "bidirectional": true,
+        "indoor": false,
+        "sheltered": true,
+        "wheelchair": "unknown",
+        "slope": 0.00262165,
+        "geometry": [
+          [
+            114.20737283217653,
+            22.29215651388635
+          ],
+          [
+            114.2073329372787,
+            22.292167072479472
+          ],
+          [
+            114.20729304238084,
+            22.291937631072596
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-north-point-government-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-1220-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-1220-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。",
+      "其中一段露天接駁存在較長的有蓋替代通道；有蓋與幾何繞行是演示假設，未經現場核實。"
+    ]
+  },
+  {
+    "scene_id": "pei-ho-market",
+    "edges": [
+      {
+        "id": "demo-pei-ho-market-stairs-edge",
+        "from": "c8330dcb-66ab-4809-91f7-ea623a427fd0",
+        "to": "3d2a5cfb-5e1a-40ea-957c-ace5397f73aa",
+        "distanceM": 3.5,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-pei-ho-market-stairs",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-3259-ramp-edge",
+        "from": "c8330dcb-66ab-4809-91f7-ea623a427fd0",
+        "to": "3d2a5cfb-5e1a-40ea-957c-ace5397f73aa",
+        "distanceM": 140,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-e-3259-ramp",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "slope": 0.05,
+        "widthM": 1.5,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-3259-escalator-edge",
+        "from": "c8330dcb-66ab-4809-91f7-ea623a427fd0",
+        "to": "3d2a5cfb-5e1a-40ea-957c-ace5397f73aa",
+        "distanceM": 14,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-e-3259-escalator",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "widthM": 0.8,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-ped-e-1-covered",
+        "from": "ped-5a87f609ef9051778c25",
+        "to": "ped-fdcffedd3de1452ea86c",
+        "distanceM": 47.76772,
+        "kind": "outdoor",
+        "bidirectional": true,
+        "indoor": false,
+        "sheltered": true,
+        "wheelchair": "unknown",
+        "slope": 0.00014459,
+        "geometry": [
+          [
+            114.1605261768737,
+            22.329407679292263
+          ],
+          [
+            114.16066271076639,
+            22.329421477901565
+          ],
+          [
+            114.16079924465907,
+            22.32919527651087
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-pei-ho-market-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-3259-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-3259-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。",
+      "其中一段露天接駁存在較長的有蓋替代通道；有蓋與幾何繞行是演示假設，未經現場核實。"
+    ]
+  },
+  {
+    "scene_id": "java-road-market",
+    "edges": [
+      {
+        "id": "demo-java-road-market-stairs-edge",
+        "from": "a7668e5f-6100-41c8-8752-05f71b0b49e1",
+        "to": "30e799d0-284b-4654-b064-70b20cddf260",
+        "distanceM": 3,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-java-road-market-stairs",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-1602-ramp-edge",
+        "from": "a7668e5f-6100-41c8-8752-05f71b0b49e1",
+        "to": "30e799d0-284b-4654-b064-70b20cddf260",
+        "distanceM": 120,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-e-1602-ramp",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "slope": 0.05,
+        "widthM": 1.5,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-1602-escalator-edge",
+        "from": "a7668e5f-6100-41c8-8752-05f71b0b49e1",
+        "to": "30e799d0-284b-4654-b064-70b20cddf260",
+        "distanceM": 12,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-e-1602-escalator",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "widthM": 0.8,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-ped-e-3-covered",
+        "from": "ped-006f968a697a3b108176",
+        "to": "ped-db23ed6b173a7fc4eaa6",
+        "distanceM": 48.32165,
+        "kind": "outdoor",
+        "bidirectional": true,
+        "indoor": false,
+        "sheltered": true,
+        "wheelchair": "unknown",
+        "slope": 0.00090106,
+        "geometry": [
+          [
+            114.19960979139726,
+            22.292125783781916
+          ],
+          [
+            114.19978628964837,
+            22.292280473438137
+          ],
+          [
+            114.19996278789948,
+            22.292195163094355
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-java-road-market-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-1602-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-1602-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。",
+      "其中一段露天接駁存在較長的有蓋替代通道；有蓋與幾何繞行是演示假設，未經現場核實。"
+    ]
+  },
+  {
+    "scene_id": "kowloon-city-market",
+    "edges": [
+      {
+        "id": "demo-kowloon-city-market-stairs-edge",
+        "from": "9c7b385f-97aa-48d4-9981-afe834e18919",
+        "to": "dcfe2513-7696-4968-afa7-a056591a94a6",
+        "distanceM": 2.25,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-kowloon-city-market-stairs",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-5472-ramp-edge",
+        "from": "9c7b385f-97aa-48d4-9981-afe834e18919",
+        "to": "dcfe2513-7696-4968-afa7-a056591a94a6",
+        "distanceM": 90,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-e-5472-ramp",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "slope": 0.05,
+        "widthM": 1.5,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-5472-escalator-edge",
+        "from": "9c7b385f-97aa-48d4-9981-afe834e18919",
+        "to": "dcfe2513-7696-4968-afa7-a056591a94a6",
+        "distanceM": 9,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-e-5472-escalator",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "widthM": 0.8,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-ped-e-22-covered",
+        "from": "ped-75dddc980f8307d920b4",
+        "to": "ped-a33ad812850600f8b722",
+        "distanceM": 52.41431,
+        "kind": "outdoor",
+        "bidirectional": true,
+        "indoor": false,
+        "sheltered": true,
+        "wheelchair": "unknown",
+        "slope": 0.00407908,
+        "geometry": [
+          [
+            114.18922467467735,
+            22.32942157229014
+          ],
+          [
+            114.18921756507956,
+            22.329360599038313
+          ],
+          [
+            114.18921045548178,
+            22.329059625786492
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-kowloon-city-market-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-5472-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-5472-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。",
+      "其中一段露天接駁存在較長的有蓋替代通道；有蓋與幾何繞行是演示假設，未經現場核實。"
+    ]
+  },
+  {
+    "scene_id": "tai-po-market",
+    "edges": [
+      {
+        "id": "demo-tai-po-market-stairs-edge",
+        "from": "2779f380-7751-42d7-952d-5acc282ab030",
+        "to": "b6bbd68f-ce81-4262-abfa-ed3484cb2309",
+        "distanceM": 3.05,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-tai-po-market-stairs",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-6587-ramp-edge",
+        "from": "2779f380-7751-42d7-952d-5acc282ab030",
+        "to": "b6bbd68f-ce81-4262-abfa-ed3484cb2309",
+        "distanceM": 121.99999999999999,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-e-6587-ramp",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "slope": 0.05,
+        "widthM": 1.5,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-6587-escalator-edge",
+        "from": "2779f380-7751-42d7-952d-5acc282ab030",
+        "to": "b6bbd68f-ce81-4262-abfa-ed3484cb2309",
+        "distanceM": 12.2,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-e-6587-escalator",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "widthM": 0.8,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-ped-e-6-covered",
+        "from": "ped-361c32e7526257f60957",
+        "to": "ped-c8baa155f6fae2bd1a57",
+        "distanceM": 109.04348,
+        "kind": "outdoor",
+        "bidirectional": true,
+        "indoor": false,
+        "sheltered": true,
+        "wheelchair": "unknown",
+        "slope": 0.00923579,
+        "geometry": [
+          [
+            114.16698490744508,
+            22.444128960303043
+          ],
+          [
+            114.16678188181928,
+            22.44456180506882
+          ],
+          [
+            114.16657885619345,
+            22.444754649834593
+          ]
+        ],
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-tai-po-market-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-6587-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-6587-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。",
+      "其中一段露天接駁存在較長的有蓋替代通道；有蓋與幾何繞行是演示假設，未經現場核實。"
+    ]
+  },
+  {
+    "scene_id": "kwai-hing-government",
+    "edges": [
+      {
+        "id": "demo-kwai-hing-government-stairs-edge",
+        "from": "30acbccc-30ff-4a16-92f0-cfab4f38353f",
+        "to": "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+        "distanceM": 4.325000000000001,
+        "kind": "stairs",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-kwai-hing-government-stairs",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-419-ramp-edge",
+        "from": "30acbccc-30ff-4a16-92f0-cfab4f38353f",
+        "to": "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+        "distanceM": 173.00000000000003,
+        "kind": "ramp",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "yes",
+        "facilityId": "demo-e-419-ramp",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "slope": 0.05,
+        "widthM": 1.5,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-e-419-escalator-edge",
+        "from": "30acbccc-30ff-4a16-92f0-cfab4f38353f",
+        "to": "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+        "distanceM": 17.300000000000004,
+        "kind": "escalator",
+        "bidirectional": true,
+        "indoor": true,
+        "wheelchair": "no",
+        "facilityId": "demo-e-419-escalator",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "widthM": 0.8,
+        "sheltered": true,
+        "tags": {
+          "demo_assumption": true
+        }
+      },
+      {
+        "id": "demo-official-endpoint-snap-1-covered",
+        "from": "ped-514532f397165dc7079e",
+        "to": "kwai-hing-government-station",
+        "distanceM": 30.853195851276155,
+        "kind": "outdoor",
+        "bidirectional": true,
+        "indoor": false,
+        "wheelchair": "unknown",
+        "provenance": "manual/demo augmentation",
+        "sourceRef": "scripted-demo-assumption",
+        "tags": {
+          "demo_assumption": true
+        },
+        "sheltered": true,
+        "geometry": [
+          [
+            114.13143358852841,
+            22.363695134444008
+          ],
+          [
+            114.13135945926425,
+            22.36383935222203
+          ],
+          [
+            114.13128533000008,
+            22.363743570000054
+          ]
+        ]
+      }
+    ],
+    "facilities": [
+      {
+        "id": "demo-kwai-hing-government-stairs",
+        "label": "演示樓梯捷徑",
+        "kind": "stairs",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-419-ramp",
+        "label": "演示緩坡通道",
+        "kind": "ramp",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      },
+      {
+        "id": "demo-e-419-escalator",
+        "label": "演示扶手電梯",
+        "kind": "escalator",
+        "sourceRefs": [
+          "scripted-demo-assumption"
+        ]
+      }
+    ],
+    "assumptions": [
+      "同一組跨樓層節點有一條較短的樓梯捷徑；僅用於比較原始最短距離和無台階規劃。",
+      "跨層替代設施包含 5% 緩坡及扶手電梯，按通行能力選擇；設施存在、坡度及門寬為演示場景設定。",
+      "其中一段露天接駁存在較長的有蓋替代通道；有蓋與幾何繞行是演示假設，未經現場核實。"
+    ]
+  }
+]

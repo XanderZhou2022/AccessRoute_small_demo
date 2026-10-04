@@ -11,8 +11,22 @@ const gps = z
   .strict();
 export const preferenceSchema = z
   .object({
-    mobility_type: z.enum(['wheelchair', 'manual_wheelchair', 'elderly', 'stroller']),
+    mobility_type: z.enum([
+      'walking',
+      'wheelchair',
+      'manual_wheelchair',
+      'elderly',
+      'stroller',
+      'heavy_luggage',
+    ]),
     avoid_stairs: z.boolean(),
+    allow_escalators: z.boolean().optional(),
+    avoid_lifts: z.boolean().optional(),
+    route_objective: z
+      .enum(['balanced', 'shortest', 'sheltered', 'indoor', 'least_effort', 'fastest'])
+      .optional(),
+    max_slope: z.number().nonnegative().optional(),
+    min_width_m: z.number().positive().optional(),
     avoid_steep_slopes: z.boolean(),
     prefer_covered_shelter: z.boolean(),
     tts_selection: z.enum(['cantonese_female', 'cantonese_male', 'text_only']),
@@ -28,7 +42,14 @@ export const resultSchema = z.discriminatedUnion('agent', [
         .object({
           event_id: id,
           has_obstacle: z.boolean(),
-          barrier_type: z.enum(['broken_lift', 'stairs_only', 'puddle', 'construction', 'none']),
+          barrier_type: z.enum([
+            'broken_lift',
+            'facility_closed',
+            'stairs_only',
+            'puddle',
+            'construction',
+            'none',
+          ]),
           location_sign: z.string().max(500),
           is_indoor: z.boolean(),
           gps: gps.optional(),
@@ -43,6 +64,7 @@ export const resultSchema = z.discriminatedUnion('agent', [
               'Choose exactly one target: facility_id or edge_ids',
             ),
           confidence: z.number().min(0).max(1),
+          match_method: z.enum(['map_evidence', 'user_confirmed']).optional(),
           valid_from: z.string().datetime({ offset: true }),
           valid_until: z.string().datetime({ offset: true }),
         })
@@ -62,6 +84,7 @@ export const resultSchema = z.discriminatedUnion('agent', [
           anchor_names: z.array(z.string().min(1).max(200)).max(20),
           direction_hint: z.string().max(500),
           confidence: z.number().min(0).max(1),
+          match_method: z.enum(['map_evidence', 'user_confirmed']).optional(),
           gps: gps.optional(),
         })
         .strict(),
@@ -115,7 +138,7 @@ export function validateResult(input: unknown, scene: Scene): AgentResult {
       fail('valid_until must follow valid_from');
     if (p.has_obstacle === (p.barrier_type === 'none'))
       fail('has_obstacle and barrier_type disagree');
-    if (p.confidence < 0.8)
+    if (p.confidence < 0.8 && p.match_method !== 'user_confirmed')
       throw new IntegrationError('LOW_CONFIDENCE', 'Obstacle confidence must be at least 0.8');
     if (p.target.facility_id && !scene.graph.facilities.some((f) => f.id === p.target.facility_id))
       fail('Unknown facility_id');
@@ -126,12 +149,24 @@ export function validateResult(input: unknown, scene: Scene): AgentResult {
       !scene.graph.facilities.some((f) => f.id === p.target.facility_id && f.kind === 'lift')
     )
       fail('broken_lift requires a lift facility_id');
+    if (p.barrier_type === 'facility_closed' && !p.target.facility_id)
+      fail('facility_closed requires a facility_id');
   }
   if (r.agent === 'localization') {
     const p = r.payload;
     if (!p.is_indoor) {
-      if (p.status !== 'outdoor_use_gps_directly' || p.map_db_node_id || p.level_id)
-        fail('Outdoor result must not contain an indoor match');
+      if (p.status === 'outdoor_use_gps_directly') {
+        if (p.map_db_node_id || p.level_id) fail('GPS-only result must not contain a map match');
+      } else {
+        const node = scene.graph.nodes.find((n) => n.id === p.map_db_node_id);
+        if (!node || node.levelId || p.level_id)
+          fail('Outdoor map match requires a known outdoor node');
+        if (p.confidence < 0.8 && p.match_method !== 'user_confirmed')
+          throw new IntegrationError(
+            'LOW_CONFIDENCE',
+            'Localization confidence must be at least 0.8',
+          );
+      }
     } else {
       const node = scene.graph.nodes.find((n) => n.id === p.map_db_node_id);
       if (
@@ -142,7 +177,7 @@ export function validateResult(input: unknown, scene: Scene): AgentResult {
         !p.anchor_names.length
       )
         fail('Indoor match requires known node, matching level_id and anchor_names');
-      if (p.confidence < 0.8)
+      if (p.confidence < 0.8 && p.match_method !== 'user_confirmed')
         throw new IntegrationError(
           'LOW_CONFIDENCE',
           'Localization confidence must be at least 0.8',
@@ -167,6 +202,7 @@ export function obstacleEvent(r: Extract<AgentResult, { agent: 'obstacle' }>): D
       request_id: r.request_id,
       barrier_type: p.barrier_type,
       location_sign: p.location_sign,
+      match_method: p.match_method,
     },
   };
 }
