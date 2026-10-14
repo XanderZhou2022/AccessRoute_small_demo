@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#e9efe8" />
+    <title>配對旅程控制 · AccessRoute</title>
+    <link rel="stylesheet" href="./map-demo.css" />
+    <script src="./map-demo.js" defer></script>
+  </head>
+  <body data-screen="operator">
+    <a class="skip-link" href="#operator-title">略過頁首，前往主要內容</a>
+    <main class="screen">
+      <iframe
+        class="map-frame"
+        data-map-frame
+        src="../?mapOnly=1&amp;route=sheltered&amp;profile=wheelchair&amp;origin=popcorn-2&amp;destination=kowloon-tong-festival-walk&amp;view=popcorn-2"
+        title="配對旅程操作員地圖"
+        loading="eager"
+      ></iframe>
+      <header class="map-topbar">
+        <a href="./navigation.html" class="round-control" aria-label="返回手機導航頁">‹</a>
+        <span class="search-pill" aria-hidden="true">配對旅程控制</span>
+      </header>
+      <section class="map-sheet operator-page" aria-labelledby="operator-title">
+        <button
+          class="sheet-handle"
+          type="button"
+          aria-label="收合操作員卡"
+          aria-expanded="true"
+          data-sheet-handle
+        >
+          <span aria-hidden="true"></span>
+        </button>
+        <span class="sheet-kicker">配對旅程</span>
+        <h1 id="operator-title" tabindex="-1">旅程控制</h1>
+        <p>輸入手機導航頁提供的 session ID。連線後，已到達步驟及等候／繼續狀態會即時同步。</p>
+        <form data-operator-connect>
+          <label class="field-label" for="operator-session">行程 session ID</label>
+          <input id="operator-session" name="session" data-operator-session required />
+          <button class="primary-action" type="submit">連接行程</button>
+        </form>
+        <p data-operator-status role="status" aria-live="polite">尚未連接行程。</p>
+        <section data-operator-state hidden aria-live="polite">
+          <h2>目前行程狀態</h2>
+          <dl>
+            <dt>行程</dt>
+            <dd data-operator-trip></dd>
+            <dt>狀態</dt>
+            <dd data-operator-journey-status></dd>
+            <dt>目前位置</dt>
+            <dd data-operator-position></dd>
+            <dt>目前步驟</dt>
+            <dd data-operator-step></dd>
+          </dl>
+          <label class="field-label" for="operator-share-link">分享此控制頁</label>
+          <input id="operator-share-link" data-operator-share-link readonly />
+          <button type="button" class="secondary-action" data-operator-copy>複製連結</button>
+          <div class="operator-actions">
+            <button type="button" class="secondary-action" data-operator-command="advance">
+              前進一步
+            </button>
+            <button type="button" class="secondary-action" data-operator-command="waiting">
+              設為等候中
+            </button>
+            <button type="button" class="secondary-action" data-operator-command="navigating">
+              恢復導航
+            </button>
+          </div>
+          <section class="operator-facility" aria-labelledby="operator-facility-title">
+            <h3 id="operator-facility-title">設施狀態與改道</h3>
+            <label class="field-label" for="operator-facility-scene">場景</label>
+            <select id="operator-facility-scene" data-operator-facility-scene></select>
+            <label class="field-label" for="operator-facility">設施</label>
+            <select id="operator-facility" data-operator-facility></select>
+            <div class="operator-actions">
+              <button type="button" class="secondary-action" data-operator-facility-status="active">
+                標示故障並改道
+              </button>
+              <button type="button" class="secondary-action" data-operator-facility-status="resolved">
+                標示已恢復並重算
+              </button>
+            </div>
+            <p data-operator-route-status role="status" aria-live="polite"></p>
+          </section>
+          <p class="service-note">
+            此本機操作頁尚未提供登入或角色權限，只能在可信任的本機示範使用。設施狀態只影響此行程，不能替代真實場地通報。
+          </p>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

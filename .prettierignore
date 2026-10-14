@@ -1,0 +1,7 @@
+data/
+frontend/public/data/
+frontend/public/landsd-logo.svg
+frontend/dist/
+node_modules/
+.venv/
+package-lock.json

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#e9efe8" />
+    <title>設定旅程 · AccessRoute 地圖示範</title>
+    <link rel="stylesheet" href="./map-demo.css" />
+    <script src="./map-demo.js" defer></script>
+  </head>
+  <body data-screen="plan">
+    <a class="skip-link" href="#plan-title">略過地圖，前往主要內容</a>
+    <main class="screen">
+      <iframe
+        class="map-frame"
+        data-map-frame
+        src="../?mapOnly=1&amp;route=sheltered&amp;profile=wheelchair&amp;weather=sunny"
+        title="AccessRoute 原版 3D 建築地圖"
+        loading="eager"
+      ></iframe>
+      <header class="map-topbar">
+        <a class="round-control" href="../?demo=1" aria-label="返回示範首頁">‹</a>
+        <button class="round-control accessibility-trigger" type="button" data-accessibility-open aria-expanded="false" aria-controls="accessibility-panel" aria-label="顯示與操作設定">Aa</button>
+        <button
+          class="search-pill search-trigger"
+          type="button"
+          data-search-open
+          aria-haspopup="dialog"
+          aria-controls="search-dialog"
+        >
+          ⌕ <span data-origin-summary>希慎廣場</span><span aria-hidden="true">→</span>
+          <span data-destination-summary>銅鑼灣站</span>
+        </button>
+      </header>
+      <dialog
+        class="search-dialog"
+        id="search-dialog"
+        data-search-dialog
+        aria-labelledby="search-title"
+      >
+        <form data-search-form>
+          <h2 id="search-title">選擇出發地和目的地</h2>
+          <label class="field-label" for="search-origin">
+            出發地
+            <select
+              id="search-origin"
+              name="origin"
+              data-search-origin
+              aria-describedby="search-error"
+              autofocus
+            >
+              <option value="cheung-sha-wan-government">長沙灣政府合署</option>
+              <option value="hysan-place">希慎廣場</option>
+              <option value="java-road-market">渣華道市政大廈</option>
+              <option value="kowloon-city-market">九龍城市政大廈</option>
+              <option value="kwai-hing-government">葵興政府合署</option>
+              <option value="north-point-government">北角政府合署</option>
+              <option value="pei-ho-market">北河街市政大廈</option>
+              <option value="popcorn-2">PopCorn 2</option>
+              <option value="sha-tin-government">沙田政府合署</option>
+              <option value="shek-kip-mei-services">石硤尾邨服務設施大樓</option>
+              <option value="tai-po-market">大埔墟街市及熟食中心</option>
+              <option value="kowloon-tong-festival-walk">又一城・九龍塘站天橋</option>
+            </select>
+          </label>
+          <label class="field-label" for="search-destination">
+            目的地
+            <select
+              id="search-destination"
+              name="destination"
+              data-search-destination
+              aria-describedby="search-error"
+            >
+              <option value="cheung-sha-wan-government">長沙灣政府合署</option>
+              <option value="hysan-place">希慎廣場</option>
+              <option value="java-road-market">渣華道市政大廈</option>
+              <option value="kowloon-city-market">九龍城市政大廈</option>
+              <option value="kwai-hing-government">葵興政府合署</option>
+              <option value="north-point-government">北角政府合署</option>
+              <option value="pei-ho-market">北河街市政大廈</option>
+              <option value="popcorn-2">PopCorn 2</option>
+              <option value="sha-tin-government">沙田政府合署</option>
+              <option value="shek-kip-mei-services">石硤尾邨服務設施大樓</option>
+              <option value="tai-po-market">大埔墟街市及熟食中心</option>
+              <option value="kowloon-tong-festival-walk">又一城・九龍塘站天橋</option>
+            </select>
+          </label>
+          <button class="secondary-action" type="button" data-search-voice>
+            以廣東話語音輸入地點
+          </button>
+          <p class="inline-status" data-search-voice-status role="status" aria-live="polite">
+            按下按鈕後才會啟動麥克風；辨識結果可在上方選單修改。
+          </p>
+          <p
+            id="search-error"
+            class="inline-status"
+            data-search-error
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          ></p>
+          <div class="search-dialog-actions">
+            <button class="secondary-action" type="button" data-search-cancel>取消</button>
+            <button class="primary-action" type="submit">套用</button>
+          </div>
+        </form>
+      </dialog>
+      <section class="map-sheet" data-compact="true" aria-labelledby="plan-title">
+        <button
+          class="sheet-handle"
+          type="button"
+          aria-label="收合資訊卡"
+          aria-expanded="true"
+          data-sheet-handle
+        >
+          <span class="sheet-handle-grip" aria-hidden="true"></span>
+          <span class="sheet-handle-label" data-sheet-toggle-label>收合卡片</span>
+        </button>
+        <h1 id="plan-title" tabindex="-1">前往哪裡？</h1>
+        <p class="weather-summary" data-weather-summary role="status" aria-live="polite">
+          正在讀取香港天文台天氣…
+        </p>
+        <form id="plan-form" data-plan-form>
+          <details class="option-group" open>
+            <summary class="secondary-action">
+              出行需要：<span data-profile-summary>輪椅・避開樓梯</span>
+            </summary>
+            <fieldset class="profile-options">
+              <legend class="field-label">選擇最適合你的出行方式</legend>
+              <div class="chip-row">
+                <button
+                  class="choice-chip"
+                  type="button"
+                  data-profile="wheelchair"
+                  aria-pressed="true"
+                >
+                  輪椅
+                </button>
+                <button
+                  class="choice-chip"
+                  type="button"
+                  data-profile="stroller"
+                  aria-pressed="false"
+                >
+                  嬰兒車
+                </button>
+                <button
+                  class="choice-chip"
+                  type="button"
+                  data-profile="heavy_luggage"
+                  aria-pressed="false"
+                >
+                  <svg class="choice-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <rect x="4" y="7" width="16" height="14" rx="2" />
+                    <path d="M9 7V5a3 3 0 0 1 6 0v2M8 11v6M12 11v6M16 11v6M8 21v1M16 21v1" />
+                  </svg>
+                  重行李
+                </button>
+                <button
+                  class="choice-chip"
+                  type="button"
+                  data-profile="elderly"
+                  aria-pressed="false"
+                >
+                  長者
+                </button>
+                <button
+                  class="choice-chip"
+                  type="button"
+                  data-profile="walking"
+                  aria-pressed="false"
+                >
+                  步行
+                </button>
+              </div>
+            </fieldset>
+          </details>
+          <section class="voice-input-panel" aria-labelledby="voice-input-title">
+            <h2 id="voice-input-title">用語音描述需要</h2>
+            <p class="service-note">
+              你可以用廣東話或普通話描述輪椅、樓梯、坡度或有蓋路線需要；停止錄音後可交給 Qwen 分析。
+            </p>
+            <label class="field-label" for="voice-needs">
+              出行需要描述
+              <textarea
+                id="voice-needs"
+                data-voice-needs
+                rows="3"
+                maxlength="4000"
+                placeholder="例如：我坐輪椅，想避開樓梯，下雨時盡量走有蓋通道。"
+              ></textarea>
+            </label>
+            <div class="voice-input-actions">
+              <button class="secondary-action" type="button" data-voice-start>
+                開始語音輸入
+              </button>
+              <button class="secondary-action" type="button" data-voice-analyze disabled>
+                用 Qwen 分析需要
+              </button>
+            </div>
+            <p class="inline-status" data-voice-status role="status" aria-live="polite">
+              可直接輸入文字，或按「開始語音輸入」。
+            </p>
+          </section>
+          <details class="option-group weather-options" data-weather-debug hidden>
+            <summary class="secondary-action">天氣詳情與定位</summary>
+            <label class="field-label" for="weather">
+              路線天氣偏好（可手動覆寫自動建議）
+              <select id="weather" data-weather-choice>
+                <option value="sunny">晴天</option>
+                <option value="rain">雨天・偏好有蓋</option>
+                <option value="heat">高溫・偏好室內</option>
+              </select>
+            </label>
+            <p class="service-note">
+              天氣來自香港天文台。若伺服器提供香港 IP
+              約略位置，會用於選擇附近觀測站；估算可能不準確，託管平台可能按其政策處理連線
+              IP。亦可選擇
+              GPS；座標只用於本次查詢、不會保存。天氣只調整路線建議排序，不覆蓋通行條件。
+            </p>
+            <button class="secondary-action" type="button" data-weather-refresh>
+              重新讀取香港天文台天氣
+            </button>
+            <button class="secondary-action" type="button" data-weather-location>
+              允許 GPS 讀取附近天氣
+            </button>
+            <p class="service-note" data-weather-location-status role="status" aria-live="polite">
+              只會在你按下按鈕並允許定位後使用位置；座標只用於本次天氣查詢，不會保存。
+            </p>
+          </details>
+          <a class="secondary-action" href="./preferences.html">無障礙偏好設定</a>
+          <p class="inline-status" data-status role="status" aria-live="polite"></p>
+        </form>
+      </section>
+      <button class="primary-action route-submit-dock" type="submit" form="plan-form">
+        搜尋路線
+      </button>
+      <button class="floating-action" type="button" data-help-open aria-label="需要協助">?</button>
+      <dialog class="help-dialog" data-help-dialog aria-labelledby="help-title">
+        <section class="help-card">
+          <button
+            class="help-close"
+            type="button"
+            data-help-close
+            aria-label="關閉協助卡"
+            autofocus
+          >
+            ×
+          </button>
+          <span class="sheet-kicker">旅程協助</span>
+          <h2 id="help-title">你需要什麼協助？</h2>
+          <details>
+            <summary class="secondary-action">設施無法使用</summary>
+            <form data-report-form>
+              <label class="field-label" for="facility-photo">
+                拍攝或選擇故障照片（JPEG、PNG 或 WebP，最多 6 MB）
+                <input
+                  id="facility-photo"
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  capture="environment"
+                  data-report-photo
+                  required
+                />
+              </label>
+              <label class="field-label" for="facility-description">
+                故障線索（可選）
+                <textarea
+                  id="facility-description"
+                  data-report-description
+                  rows="2"
+                  maxlength="1000"
+                  placeholder="例如：Lift A 顯示暫停服務"
+                ></textarea>
+              </label>
+              <button class="secondary-action" type="button" data-report-voice-start>
+                語音輸入故障線索
+              </button>
+              <p class="inline-status" data-report-voice-status role="status" aria-live="polite">
+                可選：按下按鈕以語音轉文字描述設施問題。
+              </p>
+              <img class="help-photo-preview" data-report-preview alt="待辨識的設施照片" hidden />
+              <label class="consent-label">
+                <input type="checkbox" data-report-consent />
+                我同意將照片和 GPS 位置傳送至已設定的 AI 辨識服務，以確認附近故障設施。
+              </label>
+              <button class="secondary-action" type="button" data-report-location>
+                分享目前 GPS 位置
+              </button>
+              <p class="inline-status" data-report-location-status aria-live="polite">
+                尚未取得位置；按鈕會向瀏覽器要求定位權限。
+              </p>
+              <button class="primary-action" type="submit" data-report-submit disabled>
+                以照片和 GPS 辨識
+              </button>
+              <div data-report-results aria-live="polite"></div>
+            </form>
+          </details>
+          <details>
+            <summary class="secondary-action">我迷路了</summary>
+            <form data-localization-form>
+              <label class="field-label" for="location-photo">
+                拍攝或選擇附近地標照片（JPEG、PNG 或 WebP，最多 6 MB）
+                <input
+                  id="location-photo"
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  capture="environment"
+                  data-localization-photo
+                  required
+                />
+              </label>
+              <img
+                class="help-photo-preview"
+                data-localization-preview
+                alt="待確認位置的地標照片"
+                hidden
+              />
+              <label class="field-label" for="location-description">
+                地標線索（可選）
+                <textarea
+                  id="location-description"
+                  data-localization-description
+                  rows="2"
+                  maxlength="1000"
+                  placeholder="例如：我在 A-1 Bakery 旁，店號 LG1-51"
+                ></textarea>
+              </label>
+              <button class="secondary-action" type="button" data-localization-voice-start>
+                語音輸入地標線索
+              </button>
+              <p
+                class="inline-status"
+                data-localization-voice-status
+                role="status"
+                aria-live="polite"
+              >
+                可選：按下按鈕以語音轉文字描述地標。
+              </p>
+              <label class="consent-label">
+                <input type="checkbox" data-localization-consent />
+                我同意將照片、已取得的 GPS 位置及上述線索（如有）傳送至已設定的 AI 辨識服務。
+              </label>
+              <button class="secondary-action" type="button" data-localization-location>
+                分享目前 GPS 位置（可選）
+              </button>
+              <p class="inline-status" data-localization-location-status aria-live="polite">
+                GPS 非必須；可先用照片和地標線索定位。
+              </p>
+              <button class="primary-action" type="submit" data-localization-submit disabled>
+                以照片定位
+              </button>
+              <div data-localization-results aria-live="polite"></div>
+            </form>
+          </details>
+          <p class="inline-status" data-status role="status" aria-live="polite" aria-atomic="true">
+            照片、GPS 和線索只會在同意並提交後傳送；GPS 需要瀏覽器授權。
+          </p>
+        </section>
+      </dialog>
+    </main>
+  </body>
+</html>

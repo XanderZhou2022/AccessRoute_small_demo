@@ -1,0 +1,1937 @@
+{
+  "snapshotDate": "2026-10-04",
+  "sceneCount": 12,
+  "localRouteChecks": 72,
+  "orderedJourneyCount": 132,
+  "allLocalRoutesPass": true,
+  "scenes": [
+    {
+      "sceneId": "hysan-place",
+      "name": "希慎廣場",
+      "station": "銅鑼灣站",
+      "nodes": 512,
+      "edges": 1523,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 143.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 143.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 143.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 143.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 143.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 143.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "popcorn-2",
+      "name": "PopCorn 2",
+      "station": "將軍澳站",
+      "nodes": 2081,
+      "edges": 6308,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 512.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 512.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 512.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 512.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 512.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 512.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "kowloon-tong-festival-walk",
+      "name": "又一城・九龍塘站天橋",
+      "station": "九龍塘站",
+      "nodes": 1179,
+      "edges": 1263,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 281.3,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor",
+            "bridge"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 281.3,
+          "segments": [
+            "bridge",
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 281.3,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor",
+            "bridge"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 281.3,
+          "segments": [
+            "bridge",
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 281.3,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor",
+            "bridge"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 281.3,
+          "segments": [
+            "bridge",
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "shek-kip-mei-services",
+      "name": "石硤尾邨服務設施大樓",
+      "station": "石硤尾鐵路站",
+      "nodes": 98,
+      "edges": 240,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 405.7,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 405.7,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 405.7,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 405.7,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 405.7,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 405.7,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "cheung-sha-wan-government",
+      "name": "長沙灣政府合署",
+      "station": "深水埗鐵路站",
+      "nodes": 471,
+      "edges": 1478,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 314.9,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 314.9,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 314.9,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 314.9,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 314.9,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 314.9,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "sha-tin-government",
+      "name": "沙田政府合署",
+      "station": "沙田鐵路站",
+      "nodes": 297,
+      "edges": 919,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 416.1,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor",
+            "transition",
+            "outdoor",
+            "bridge",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 416.1,
+          "segments": [
+            "outdoor",
+            "bridge",
+            "outdoor",
+            "transition",
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 416.1,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor",
+            "transition",
+            "outdoor",
+            "bridge",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 416.1,
+          "segments": [
+            "outdoor",
+            "bridge",
+            "outdoor",
+            "transition",
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 416.1,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor",
+            "transition",
+            "outdoor",
+            "bridge",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 416.1,
+          "segments": [
+            "outdoor",
+            "bridge",
+            "outdoor",
+            "transition",
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "north-point-government",
+      "name": "北角政府合署",
+      "station": "鰂魚涌鐵路站",
+      "nodes": 423,
+      "edges": 1275,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 402.8,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 402.8,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 402.8,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 402.8,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 402.8,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 402.8,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "pei-ho-market",
+      "name": "北河街市政大廈",
+      "station": "深水埗鐵路站",
+      "nodes": 1156,
+      "edges": 3314,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 359.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 359.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 359.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 359.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 359.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 359.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "java-road-market",
+      "name": "渣華道市政大廈",
+      "station": "北角鐵路站",
+      "nodes": 557,
+      "edges": 1613,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 189.8,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 189.8,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 189.8,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 189.8,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 189.8,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 189.8,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "kowloon-city-market",
+      "name": "九龍城市政大廈",
+      "station": "宋皇臺鐵路站",
+      "nodes": 1938,
+      "edges": 5537,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 538.8,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 538.8,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 538.8,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 538.8,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 538.8,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 538.8,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "tai-po-market",
+      "name": "大埔墟街市及熟食中心",
+      "station": "大埔墟鐵路站",
+      "nodes": 2417,
+      "edges": 6637,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 811,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 811,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 811,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 811,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 811,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 811,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "sceneId": "kwai-hing-government",
+      "name": "葵興政府合署",
+      "station": "葵興鐵路站",
+      "nodes": 149,
+      "edges": 432,
+      "checks": [
+        {
+          "profile": "wheelchair",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 125.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "wheelchair",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 125.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 125.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "elderly",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 125.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": false,
+          "status": "ok",
+          "distanceM": 125.4,
+          "segments": [
+            "floor",
+            "transition",
+            "floor",
+            "outdoor"
+          ]
+        },
+        {
+          "profile": "stroller",
+          "reverse": true,
+          "status": "ok",
+          "distanceM": 125.4,
+          "segments": [
+            "outdoor",
+            "floor",
+            "transition",
+            "floor"
+          ]
+        }
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "from": "hysan-place",
+      "to": "popcorn-2",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "hysan-place",
+      "to": "kowloon-tong-festival-walk",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "hysan-place",
+      "to": "shek-kip-mei-services",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "hysan-place",
+      "to": "cheung-sha-wan-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "hysan-place",
+      "to": "sha-tin-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "hysan-place",
+      "to": "north-point-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "hysan-place",
+      "to": "pei-ho-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "hysan-place",
+      "to": "java-road-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "hysan-place",
+      "to": "kowloon-city-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "hysan-place",
+      "to": "tai-po-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "hysan-place",
+      "to": "kwai-hing-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "popcorn-2",
+      "to": "hysan-place",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "popcorn-2",
+      "to": "kowloon-tong-festival-walk",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "popcorn-2",
+      "to": "shek-kip-mei-services",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "popcorn-2",
+      "to": "cheung-sha-wan-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "popcorn-2",
+      "to": "sha-tin-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "popcorn-2",
+      "to": "north-point-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "popcorn-2",
+      "to": "pei-ho-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "popcorn-2",
+      "to": "java-road-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "popcorn-2",
+      "to": "kowloon-city-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "popcorn-2",
+      "to": "tai-po-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "popcorn-2",
+      "to": "kwai-hing-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-tong-festival-walk",
+      "to": "hysan-place",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-tong-festival-walk",
+      "to": "popcorn-2",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-tong-festival-walk",
+      "to": "shek-kip-mei-services",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-tong-festival-walk",
+      "to": "cheung-sha-wan-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-tong-festival-walk",
+      "to": "sha-tin-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-tong-festival-walk",
+      "to": "north-point-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-tong-festival-walk",
+      "to": "pei-ho-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-tong-festival-walk",
+      "to": "java-road-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-tong-festival-walk",
+      "to": "kowloon-city-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-tong-festival-walk",
+      "to": "tai-po-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-tong-festival-walk",
+      "to": "kwai-hing-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "shek-kip-mei-services",
+      "to": "hysan-place",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "shek-kip-mei-services",
+      "to": "popcorn-2",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "shek-kip-mei-services",
+      "to": "kowloon-tong-festival-walk",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "shek-kip-mei-services",
+      "to": "cheung-sha-wan-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "shek-kip-mei-services",
+      "to": "sha-tin-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "shek-kip-mei-services",
+      "to": "north-point-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "shek-kip-mei-services",
+      "to": "pei-ho-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "shek-kip-mei-services",
+      "to": "java-road-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "shek-kip-mei-services",
+      "to": "kowloon-city-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "shek-kip-mei-services",
+      "to": "tai-po-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "shek-kip-mei-services",
+      "to": "kwai-hing-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "cheung-sha-wan-government",
+      "to": "hysan-place",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "cheung-sha-wan-government",
+      "to": "popcorn-2",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "cheung-sha-wan-government",
+      "to": "kowloon-tong-festival-walk",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "cheung-sha-wan-government",
+      "to": "shek-kip-mei-services",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "cheung-sha-wan-government",
+      "to": "sha-tin-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "cheung-sha-wan-government",
+      "to": "north-point-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "cheung-sha-wan-government",
+      "to": "pei-ho-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "cheung-sha-wan-government",
+      "to": "java-road-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "cheung-sha-wan-government",
+      "to": "kowloon-city-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "cheung-sha-wan-government",
+      "to": "tai-po-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "cheung-sha-wan-government",
+      "to": "kwai-hing-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "sha-tin-government",
+      "to": "hysan-place",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "sha-tin-government",
+      "to": "popcorn-2",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "sha-tin-government",
+      "to": "kowloon-tong-festival-walk",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "sha-tin-government",
+      "to": "shek-kip-mei-services",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "sha-tin-government",
+      "to": "cheung-sha-wan-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "sha-tin-government",
+      "to": "north-point-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "sha-tin-government",
+      "to": "pei-ho-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "sha-tin-government",
+      "to": "java-road-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "sha-tin-government",
+      "to": "kowloon-city-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "sha-tin-government",
+      "to": "tai-po-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "sha-tin-government",
+      "to": "kwai-hing-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "north-point-government",
+      "to": "hysan-place",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "north-point-government",
+      "to": "popcorn-2",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "north-point-government",
+      "to": "kowloon-tong-festival-walk",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "north-point-government",
+      "to": "shek-kip-mei-services",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "north-point-government",
+      "to": "cheung-sha-wan-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "north-point-government",
+      "to": "sha-tin-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "north-point-government",
+      "to": "pei-ho-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "north-point-government",
+      "to": "java-road-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "north-point-government",
+      "to": "kowloon-city-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "north-point-government",
+      "to": "tai-po-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "north-point-government",
+      "to": "kwai-hing-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "pei-ho-market",
+      "to": "hysan-place",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "pei-ho-market",
+      "to": "popcorn-2",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "pei-ho-market",
+      "to": "kowloon-tong-festival-walk",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "pei-ho-market",
+      "to": "shek-kip-mei-services",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "pei-ho-market",
+      "to": "cheung-sha-wan-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "pei-ho-market",
+      "to": "sha-tin-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "pei-ho-market",
+      "to": "north-point-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "pei-ho-market",
+      "to": "java-road-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "pei-ho-market",
+      "to": "kowloon-city-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "pei-ho-market",
+      "to": "tai-po-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "pei-ho-market",
+      "to": "kwai-hing-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "java-road-market",
+      "to": "hysan-place",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "java-road-market",
+      "to": "popcorn-2",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "java-road-market",
+      "to": "kowloon-tong-festival-walk",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "java-road-market",
+      "to": "shek-kip-mei-services",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "java-road-market",
+      "to": "cheung-sha-wan-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "java-road-market",
+      "to": "sha-tin-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "java-road-market",
+      "to": "north-point-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "java-road-market",
+      "to": "pei-ho-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "java-road-market",
+      "to": "kowloon-city-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "java-road-market",
+      "to": "tai-po-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "java-road-market",
+      "to": "kwai-hing-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-city-market",
+      "to": "hysan-place",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-city-market",
+      "to": "popcorn-2",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-city-market",
+      "to": "kowloon-tong-festival-walk",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-city-market",
+      "to": "shek-kip-mei-services",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-city-market",
+      "to": "cheung-sha-wan-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-city-market",
+      "to": "sha-tin-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-city-market",
+      "to": "north-point-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-city-market",
+      "to": "pei-ho-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-city-market",
+      "to": "java-road-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-city-market",
+      "to": "tai-po-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kowloon-city-market",
+      "to": "kwai-hing-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "tai-po-market",
+      "to": "hysan-place",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "tai-po-market",
+      "to": "popcorn-2",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "tai-po-market",
+      "to": "kowloon-tong-festival-walk",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "tai-po-market",
+      "to": "shek-kip-mei-services",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "tai-po-market",
+      "to": "cheung-sha-wan-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "tai-po-market",
+      "to": "sha-tin-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "tai-po-market",
+      "to": "north-point-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "tai-po-market",
+      "to": "pei-ho-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "tai-po-market",
+      "to": "java-road-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "tai-po-market",
+      "to": "kowloon-city-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "tai-po-market",
+      "to": "kwai-hing-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kwai-hing-government",
+      "to": "hysan-place",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kwai-hing-government",
+      "to": "popcorn-2",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kwai-hing-government",
+      "to": "kowloon-tong-festival-walk",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kwai-hing-government",
+      "to": "shek-kip-mei-services",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kwai-hing-government",
+      "to": "cheung-sha-wan-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kwai-hing-government",
+      "to": "sha-tin-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kwai-hing-government",
+      "to": "north-point-government",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kwai-hing-government",
+      "to": "pei-ho-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kwai-hing-government",
+      "to": "java-road-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kwai-hing-government",
+      "to": "kowloon-city-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    },
+    {
+      "from": "kwai-hing-government",
+      "to": "tai-po-market",
+      "firstLeg": "ok",
+      "lastLeg": "ok",
+      "transit": "abstract"
+    }
+  ]
+}

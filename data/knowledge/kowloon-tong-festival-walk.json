@@ -1,0 +1,247 @@
+{
+  "version": "1.0",
+  "scene_id": "kowloon-tong-festival-walk",
+  "records": [
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-200008256:ped-923914490309e40e544e",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "升降機 200008256"
+      ],
+      "category": "lift",
+      "level_id": "ped-z-20487",
+      "lon": 114.17915223581686,
+      "lat": 22.336302427143753,
+      "node_id": "ped-923914490309e40e544e",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-200008256:ped-77af4e8e2b1cf62f9071",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "升降機 200008256"
+      ],
+      "category": "lift",
+      "level_id": "ped-z-25225",
+      "lon": 114.17915157176807,
+      "lat": 22.336297559672968,
+      "node_id": "ped-77af4e8e2b1cf62f9071",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-200008267:ped-cd93e0d4c686b07ac3d7",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "升降機 200008267"
+      ],
+      "category": "lift",
+      "level_id": "ped-z-25225",
+      "lon": 114.17886065448069,
+      "lat": 22.33621745243667,
+      "node_id": "ped-cd93e0d4c686b07ac3d7",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-200008267:ped-7d4e3e975b98b229a345",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "升降機 200008267"
+      ],
+      "category": "lift",
+      "level_id": "ped-z-19528",
+      "lon": 114.17886137562594,
+      "lat": 22.336210910678552,
+      "node_id": "ped-7d4e3e975b98b229a345",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-220018509:ped-49cb7cd6077d02b0e2a6",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "又一城升降機 220018509"
+      ],
+      "category": "lift",
+      "level_id": "ped-z-24000",
+      "lon": 114.17451546199908,
+      "lat": 22.337010296084664,
+      "node_id": "ped-49cb7cd6077d02b0e2a6",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-220020677:ped-0fad22d166cbb35035b0",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "又一城升降機 220020677"
+      ],
+      "category": "lift",
+      "level_id": "ped-floor-220000052",
+      "lon": 114.17546055898957,
+      "lat": 22.336672591322092,
+      "node_id": "ped-0fad22d166cbb35035b0",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-220021880:ped-0b38d7d0672238cd4924",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "又一城升降機 220021880"
+      ],
+      "category": "lift",
+      "level_id": "ped-floor-220000040",
+      "lon": 114.17454745509187,
+      "lat": 22.337418642870468,
+      "node_id": "ped-0b38d7d0672238cd4924",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-220021880:ped-323ac9a337a04bba96b0",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "又一城升降機 220021880"
+      ],
+      "category": "lift",
+      "level_id": "ped-floor-220000043",
+      "lon": 114.17454687362061,
+      "lat": 22.337419198242593,
+      "node_id": "ped-323ac9a337a04bba96b0",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-220021881:ped-e1ebde95e9b028b11f70",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "又一城升降機 220021881"
+      ],
+      "category": "lift",
+      "level_id": "ped-floor-220000044",
+      "lon": 114.17454831419205,
+      "lat": 22.337417929467193,
+      "node_id": "ped-e1ebde95e9b028b11f70",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-220021881:ped-d998a42167ff876d0afc",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "又一城升降機 220021881"
+      ],
+      "category": "lift",
+      "level_id": "ped-floor-220000045",
+      "lon": 114.17454900147366,
+      "lat": 22.337417267535756,
+      "node_id": "ped-d998a42167ff876d0afc",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-220021885:ped-ecfb02df394405622f6c",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "又一城升降機 220021885"
+      ],
+      "category": "lift",
+      "level_id": "ped-floor-220000044",
+      "lon": 114.17546402833798,
+      "lat": 22.33667176415071,
+      "node_id": "ped-ecfb02df394405622f6c",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-220021886:ped-9f2c12091942033f60a5",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "又一城升降機 220021886"
+      ],
+      "category": "lift",
+      "level_id": "ped-floor-220000052",
+      "lon": 114.17546231696103,
+      "lat": 22.33667217231827,
+      "node_id": "ped-9f2c12091942033f60a5",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-220021886:ped-2154c3698314d9a9d90b",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "又一城升降機 220021886"
+      ],
+      "category": "lift",
+      "level_id": "ped-floor-220000045",
+      "lon": 114.17546309450665,
+      "lat": 22.336671987198024,
+      "node_id": "ped-2154c3698314d9a9d90b",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-220021909:ped-ff7c7d2a448a8f1cf0f2",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "又一城升降機 220021909"
+      ],
+      "category": "lift",
+      "level_id": "ped-z-26798",
+      "lon": 114.17451515427685,
+      "lat": 22.337010562482217,
+      "node_id": "ped-ff7c7d2a448a8f1cf0f2",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-tong-festival-walk-official-lift-220021909:ped-135e16360685fadfb229",
+      "scene_id": "kowloon-tong-festival-walk",
+      "names": [
+        "又一城升降機 220021909"
+      ],
+      "category": "lift",
+      "level_id": "ped-floor-220000040",
+      "lon": 114.17451488150049,
+      "lat": 22.33701082888029,
+      "node_id": "ped-135e16360685fadfb229",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

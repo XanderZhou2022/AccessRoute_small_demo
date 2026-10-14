@@ -1,0 +1,976 @@
+{
+  "version": "1.0",
+  "scene_id": "popcorn-2",
+  "records": [
+    {
+      "id": "poi:05b4b717-7a46-4d01-b978-617a2fb21fe8",
+      "scene_id": "popcorn-2",
+      "names": [
+        "NAMCO"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26168174000009,
+      "lat": 22.30823264000003,
+      "node_id": "8401071c-9--22",
+      "association": "approximate",
+      "association_distance_m": 4.8,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c9f5973d-3f63-4c48-aac3-eb6c7d540b3b",
+      "scene_id": "popcorn-2",
+      "names": [
+        "Three Little Meow"
+      ],
+      "category": "shopping",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.2616217100001,
+      "lat": 22.308640810000043,
+      "node_id": "fc2a8797-1-8",
+      "association": "approximate",
+      "association_distance_m": 3.05,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9f1f13d0-7965-4c73-ab3e-b49779ed4bd7",
+      "scene_id": "popcorn-2",
+      "names": [
+        "帝醇酒莊",
+        "King's Wine Cellar"
+      ],
+      "category": "shopping",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26164171000005,
+      "lat": 22.308546810000053,
+      "node_id": "fc2a8797-3-2",
+      "association": "approximate",
+      "association_distance_m": 1.88,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:2b349e8b-4930-4b7f-a33a-a6cdafb037c5",
+      "scene_id": "popcorn-2",
+      "names": [
+        "美聯物業",
+        "Midland Realty"
+      ],
+      "category": "shopping",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26129241000001,
+      "lat": 22.308283110000048,
+      "node_id": "fc2a8797--11--17",
+      "association": "approximate",
+      "association_distance_m": 11.73,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:861966d4-7c8a-40b5-aed5-aa426c5f1bcc",
+      "scene_id": "popcorn-2",
+      "names": [
+        "肯德基",
+        "KFC"
+      ],
+      "category": "restaurant",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26138131000005,
+      "lat": 22.308879510000054,
+      "node_id": "fc2a8797--14-27",
+      "association": "approximate",
+      "association_distance_m": 3.93,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "verified_url": "https://www.popcorntko.com.hk/en/dining/bltd1123c2523189cab",
+      "media_ids": [
+        "popcorn-2-photo",
+        "popcorn-2-kfc-front"
+      ]
+    },
+    {
+      "id": "poi:f5c9376f-7b1b-410a-be22-134d263f9bbc",
+      "scene_id": "popcorn-2",
+      "names": [
+        "HKTV Mall"
+      ],
+      "category": "supermarket",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26101681000011,
+      "lat": 22.308925010000053,
+      "node_id": "fc2a8797--35-29",
+      "association": "approximate",
+      "association_distance_m": 2.18,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:2e89b64e-bc13-42a7-ba46-bf589d9cf0bc",
+      "scene_id": "popcorn-2",
+      "names": [
+        "韓剪",
+        "Hanjin"
+      ],
+      "category": "shopping",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26105741000003,
+      "lat": 22.308838610000066,
+      "node_id": "fc2a8797--32-24",
+      "association": "approximate",
+      "association_distance_m": 3.77,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c08153a1-66cd-4502-bb5d-bf352fed760a",
+      "scene_id": "popcorn-2",
+      "names": [
+        "方叔叔重慶老火鍋",
+        "Uncale Fong Hot Pot Restaurant"
+      ],
+      "category": "restaurant",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26152821000005,
+      "lat": 22.307871410000075,
+      "node_id": "fc2a8797--2--41",
+      "association": "approximate",
+      "association_distance_m": 6.89,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:8f3d608b-0d4e-4f4a-9abf-35ab389b1b53",
+      "scene_id": "popcorn-2",
+      "names": [
+        "米線陣",
+        "Mixian Sense"
+      ],
+      "category": "restaurant",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26166451000006,
+      "lat": 22.30800241000003,
+      "node_id": "fc2a8797-9--36",
+      "association": "approximate",
+      "association_distance_m": 5.39,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a9598d3c-7ce4-488b-8ca3-73eb95dc734c",
+      "scene_id": "popcorn-2",
+      "names": [
+        "大家樂",
+        "Café de Coral"
+      ],
+      "category": "restaurant",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.2616002100001,
+      "lat": 22.308104510000078,
+      "node_id": "fc2a8797-5--25",
+      "association": "approximate",
+      "association_distance_m": 8.43,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d105006c-591d-4c2d-87d8-322f0f071de5",
+      "scene_id": "popcorn-2",
+      "names": [
+        "中原地產",
+        "Centaline Property"
+      ],
+      "category": "shopping",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.2612137100001,
+      "lat": 22.308464010000023,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:55cc5973-be51-460c-a516-886a975f12e0",
+      "scene_id": "popcorn-2",
+      "names": [
+        "中原地產",
+        "Centaline Property"
+      ],
+      "category": "shopping",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26125301000002,
+      "lat": 22.30837771000006,
+      "node_id": "fc2a8797--9--11",
+      "association": "approximate",
+      "association_distance_m": 19.03,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6eb5cc44-2aef-4cd6-baaf-a8babbac1e03",
+      "scene_id": "popcorn-2",
+      "names": [
+        "上海姥姥",
+        "Shanghai Lao Lao"
+      ],
+      "category": "restaurant",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26137801000004,
+      "lat": 22.308408110000073,
+      "node_id": "fc2a8797--9--11",
+      "association": "approximate",
+      "association_distance_m": 7.94,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:952dc357-87be-42a2-867d-838c55ff2d05",
+      "scene_id": "popcorn-2",
+      "names": [
+        "利嘉閣",
+        "Ricacorp Properties"
+      ],
+      "category": "travelagent",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26160811000011,
+      "lat": 22.308820310000044,
+      "node_id": "fc2a8797-1-26",
+      "association": "approximate",
+      "association_distance_m": 8.37,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9bad5b96-687b-486c-841a-f75241b84ae2",
+      "scene_id": "popcorn-2",
+      "names": [
+        "牛角日本燒肉專門店",
+        "Gyu-Kaku"
+      ],
+      "category": "restaurant",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26115821000008,
+      "lat": 22.308958810000036,
+      "node_id": "fc2a8797--30-29",
+      "association": "approximate",
+      "association_distance_m": 5.42,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b60f53a1-bd48-4b7b-bb3a-18f2528a1dee",
+      "scene_id": "popcorn-2",
+      "names": [
+        "肯德基",
+        "KFC"
+      ],
+      "category": "restaurant",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26135451000005,
+      "lat": 22.308971910000025,
+      "node_id": "fc2a8797--12-32",
+      "association": "approximate",
+      "association_distance_m": 3.83,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "verified_url": "https://www.popcorntko.com.hk/en/dining/bltd1123c2523189cab",
+      "media_ids": [
+        "popcorn-2-photo",
+        "popcorn-2-kfc-front"
+      ]
+    },
+    {
+      "id": "poi:eeedeb55-805f-4764-b328-4db999faa869",
+      "scene_id": "popcorn-2",
+      "names": [
+        "意粉屋",
+        "The Spaghetti House"
+      ],
+      "category": "restaurant",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26138891000005,
+      "lat": 22.30824381000008,
+      "node_id": "fc2a8797--10--19",
+      "association": "approximate",
+      "association_distance_m": 3.4,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:37c6dae5-201f-4602-9b20-7608d120df7a",
+      "scene_id": "popcorn-2",
+      "names": [
+        "Market Place by Jasons"
+      ],
+      "category": "supermarket",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.2612630100001,
+      "lat": 22.308579310000027,
+      "node_id": "fc2a8797--17-8",
+      "association": "approximate",
+      "association_distance_m": 8.08,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:30069aa1-a993-4fae-9d78-c1a710819ddb",
+      "scene_id": "popcorn-2",
+      "names": [
+        "優品360",
+        "Best Mart 360"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26188783000009,
+      "lat": 22.308500210000034,
+      "node_id": "8401071c-19-1",
+      "association": "approximate",
+      "association_distance_m": 4.17,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ff72a51e-423c-43ff-b2cd-0abb3566d53b",
+      "scene_id": "popcorn-2",
+      "names": [
+        "六福珠寶",
+        "LUKFOOK JEWELLERY"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26177782000002,
+      "lat": 22.308457520000047,
+      "node_id": "8401071c-11--2",
+      "association": "approximate",
+      "association_distance_m": 4.89,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:01265c59-4a39-4185-a204-fdada8104eb9",
+      "scene_id": "popcorn-2",
+      "names": [
+        "豐澤",
+        "Fortress"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26187311000001,
+      "lat": 22.30814804000005,
+      "node_id": "8401071c-12--26",
+      "association": "approximate",
+      "association_distance_m": 11.28,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:908a2b2f-ceb3-4952-b44c-48753513bbf0",
+      "scene_id": "popcorn-2",
+      "names": [
+        "OSIM"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26181981000002,
+      "lat": 22.308196310000028,
+      "node_id": "8401071c-13--22",
+      "association": "approximate",
+      "association_distance_m": 4.29,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9faa21bc-da2d-4191-9e7e-f36b6e642176",
+      "scene_id": "popcorn-2",
+      "names": [
+        "衛訊電訊",
+        "Wilson Communications"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26185357000008,
+      "lat": 22.308284120000053,
+      "node_id": "8401071c-14--17",
+      "association": "approximate",
+      "association_distance_m": 6.14,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c43f7cca-92e0-431c-9742-2402520c724d",
+      "scene_id": "popcorn-2",
+      "names": [
+        "香港電訊",
+        "csl. / HKT / 1010"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26183014000003,
+      "lat": 22.308364760000075,
+      "node_id": "8401071c-12--11",
+      "association": "approximate",
+      "association_distance_m": 6.86,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3b5f10ea-2b03-4862-8cf2-746e34b4af03",
+      "scene_id": "popcorn-2",
+      "names": [
+        "泰雲",
+        "Mekha"
+      ],
+      "category": "restaurant",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26174591000006,
+      "lat": 22.307954410000036,
+      "node_id": "8401071c-9--39",
+      "association": "approximate",
+      "association_distance_m": 3.05,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0b91050c-73d3-4fc7-b67a-06a39bcfebaf",
+      "scene_id": "popcorn-2",
+      "names": [
+        "Mannings Baby"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26148775000001,
+      "lat": 22.307879710000066,
+      "node_id": "8401071c--3--47",
+      "association": "approximate",
+      "association_distance_m": 5.85,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a9a87e3d-89e5-4e71-8bcb-b86cc70e6a73",
+      "scene_id": "popcorn-2",
+      "names": [
+        "謝瑞麟",
+        "TSL Jewellery"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26171609000005,
+      "lat": 22.308586270000035,
+      "node_id": "8401071c-7-3",
+      "association": "approximate",
+      "association_distance_m": 4.01,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:2011fb22-0b4c-4b93-8a53-ba61127960b9",
+      "scene_id": "popcorn-2",
+      "names": [
+        "零食物語",
+        "Okashi Land"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26167376000001,
+      "lat": 22.30866014000003,
+      "node_id": "8401071c-5-8",
+      "association": "approximate",
+      "association_distance_m": 3.37,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3826dd04-b8dc-401f-8abf-80c126e816f6",
+      "scene_id": "popcorn-2",
+      "names": [
+        "ad-lib"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26167556000007,
+      "lat": 22.30871921000005,
+      "node_id": "8401071c-9-15",
+      "association": "approximate",
+      "association_distance_m": 4.65,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a4730305-0473-4449-8748-04ae91f32243",
+      "scene_id": "popcorn-2",
+      "names": [
+        "美康",
+        "Meka"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26165463000007,
+      "lat": 22.308768710000038,
+      "node_id": "8401071c-5-19",
+      "association": "approximate",
+      "association_distance_m": 2.76,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4b036eff-304a-4697-bfa5-b169715d8737",
+      "scene_id": "popcorn-2",
+      "names": [
+        "名果店",
+        "mfs"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26177157000006,
+      "lat": 22.308809420000046,
+      "node_id": "8401071c-11-21",
+      "association": "approximate",
+      "association_distance_m": 2.82,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b763363a-6cdc-4325-9751-3a0e18abdc03",
+      "scene_id": "popcorn-2",
+      "names": [
+        "TONYMOLY"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26145467000003,
+      "lat": 22.308361440000056,
+      "node_id": "8401071c--9--9",
+      "association": "approximate",
+      "association_distance_m": 3.75,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:96406c56-76c9-4507-a959-9bfeb2415ce5",
+      "scene_id": "popcorn-2",
+      "names": [
+        "莎莎",
+        "Sa Sa Cosmetic"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26158204000001,
+      "lat": 22.308389180000063,
+      "node_id": "8401071c--2--11",
+      "association": "approximate",
+      "association_distance_m": 4.76,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:55516e03-4617-4a4f-933b-c13fba74bd72",
+      "scene_id": "popcorn-2",
+      "names": [
+        "莎莎",
+        "Sa Sa Cosmetic"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26168294000001,
+      "lat": 22.30833892000004,
+      "node_id": "8401071c-8--11",
+      "association": "approximate",
+      "association_distance_m": 3.22,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:14e4671a-4cf5-4429-978d-ffed97c3b554",
+      "scene_id": "popcorn-2",
+      "names": [
+        "荳子",
+        "Beans The Backyard"
+      ],
+      "category": "restaurant",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26106011000002,
+      "lat": 22.308994530000064,
+      "node_id": "8401071c--31-30",
+      "association": "approximate",
+      "association_distance_m": 6,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d11f80c5-ce4f-4347-bac4-34b6d0dfa98b",
+      "scene_id": "popcorn-2",
+      "names": [
+        "莆田",
+        "Putien"
+      ],
+      "category": "restaurant",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26120213000002,
+      "lat": 22.308882630000028,
+      "node_id": "8401071c--27-23",
+      "association": "approximate",
+      "association_distance_m": 5.77,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3e91ff99-921d-46f1-82ca-85e47f93816f",
+      "scene_id": "popcorn-2",
+      "names": [
+        "DONQ / Mini One"
+      ],
+      "category": "restaurant",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26172778000011,
+      "lat": 22.308900390000076,
+      "node_id": "8401071c-11-25",
+      "association": "approximate",
+      "association_distance_m": 3.09,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ff971ffe-e873-4151-9f36-b2ed97b8a5e6",
+      "scene_id": "popcorn-2",
+      "names": [
+        "杉養蜂園",
+        "Sugi Bee Garden"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26159571000005,
+      "lat": 22.30886417000005,
+      "node_id": "8401071c-2-22",
+      "association": "approximate",
+      "association_distance_m": 3.31,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d0bcfbf6-e1e1-4d0d-89a1-260beefa2eeb",
+      "scene_id": "popcorn-2",
+      "names": [
+        "Mamma Mia Gelato"
+      ],
+      "category": "restaurant",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26154023000004,
+      "lat": 22.308887880000043,
+      "node_id": "8401071c--3-24",
+      "association": "approximate",
+      "association_distance_m": 2.69,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c67bdf5f-e2b1-4e71-bf9a-c71810b4774f",
+      "scene_id": "popcorn-2",
+      "names": [
+        "康維他",
+        "Comvita"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26123517000008,
+      "lat": 22.30874403000007,
+      "node_id": "8401071c--22-17",
+      "association": "approximate",
+      "association_distance_m": 2.31,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1d74bf92-1549-42f4-a083-3b3ff89b28ae",
+      "scene_id": "popcorn-2",
+      "names": [
+        "微影",
+        "Tiny"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26114916000006,
+      "lat": 22.30877324000005,
+      "node_id": "8401071c--27-19",
+      "association": "approximate",
+      "association_distance_m": 2.42,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:802c53ba-a781-45af-ac18-11cea64bceee",
+      "scene_id": "popcorn-2",
+      "names": [
+        "我想和你無所事事",
+        "Idle Awhile"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26106661000006,
+      "lat": 22.308845430000076,
+      "node_id": "8401071c--32-24",
+      "association": "approximate",
+      "association_distance_m": 2.61,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:eb4d779e-2116-410f-b3c9-9f1688eb2ff2",
+      "scene_id": "popcorn-2",
+      "names": [
+        "莎莎",
+        "Sa Sa Cosmetic"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.2616634100001,
+      "lat": 22.308404410000037,
+      "node_id": "8401071c-7--8",
+      "association": "approximate",
+      "association_distance_m": 2.31,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:511b2db1-c014-4324-8c16-5d7bef3c3dad",
+      "scene_id": "popcorn-2",
+      "names": [
+        "Hair One"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26138104000006,
+      "lat": 22.30902141000007,
+      "node_id": "8401071c--11-35",
+      "association": "approximate",
+      "association_distance_m": 2.6,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3c46866f-5110-4fc7-a568-d694b2283cb2",
+      "scene_id": "popcorn-2",
+      "names": [
+        "ARTĒ Madrid"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26159014000007,
+      "lat": 22.308509580000077,
+      "node_id": "8401071c-1--2",
+      "association": "approximate",
+      "association_distance_m": 2,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:049bf2ea-e349-4457-adbb-833181e7b35e",
+      "scene_id": "popcorn-2",
+      "names": [
+        "MJ Style"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26134816000001,
+      "lat": 22.30832171000003,
+      "node_id": "8401071c--15--11",
+      "association": "approximate",
+      "association_distance_m": 4.54,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:2aafabf9-58c4-41ce-ac8c-f0a4a4a76c28",
+      "scene_id": "popcorn-2",
+      "names": [
+        "Hashtag B"
+      ],
+      "category": "restaurant",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26165681000009,
+      "lat": 22.308015110000042,
+      "node_id": "8401071c-7--35",
+      "association": "approximate",
+      "association_distance_m": 2.99,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d896ab69-5ffc-40e0-af41-2c85cfafa420",
+      "scene_id": "popcorn-2",
+      "names": [
+        "UNIQLO"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.2612951100001,
+      "lat": 22.308587850000038,
+      "node_id": "8401071c--18-17",
+      "association": "approximate",
+      "association_distance_m": 19.68,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c3d87912-b4c8-4300-8261-6e5b367ecc56",
+      "scene_id": "popcorn-2",
+      "names": [
+        "NAMCO"
+      ],
+      "category": "shopping",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26147156000002,
+      "lat": 22.308158590000062,
+      "node_id": "8401071c--1--21",
+      "association": "approximate",
+      "association_distance_m": 11.41,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a8650e0f-19ad-45ac-a3df-92cde01b2c16",
+      "scene_id": "popcorn-2",
+      "names": [
+        "GYMNASIUM"
+      ],
+      "category": "gym",
+      "level_id": "eb0c9ed7-3329-46e3-aced-96971a052310",
+      "lon": 114.26165101000004,
+      "lat": 22.308776480000063,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9a118547-220e-43cd-89f3-61706e80093a",
+      "scene_id": "popcorn-2",
+      "names": [
+        "FITNESS ROOM"
+      ],
+      "category": "gym",
+      "level_id": "eb0c9ed7-3329-46e3-aced-96971a052310",
+      "lon": 114.26182301000006,
+      "lat": 22.308726610000065,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:594c92c6-e14a-4a7d-808b-7fe1e339db0b",
+      "scene_id": "popcorn-2",
+      "names": [
+        "FOOT MASSAGE AREA"
+      ],
+      "category": "shopping",
+      "level_id": "eb0c9ed7-3329-46e3-aced-96971a052310",
+      "lon": 114.26195869000003,
+      "lat": 22.308265860000063,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:29c20df6-2a6b-4012-a5ff-17db9cb95f72",
+      "scene_id": "popcorn-2",
+      "names": [
+        "ESTATE MANAGEMENT OFFICE"
+      ],
+      "category": "communitycenter",
+      "level_id": "5962001c-ea33-431c-bb5e-741a24382aa4",
+      "lon": 114.26176257000009,
+      "lat": 22.308544710000035,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:91c964fd-ba9a-475b-bc2b-e6e27c60f6a0",
+      "scene_id": "popcorn-2",
+      "names": [
+        "RESIDENT'S CLUB HOUSE"
+      ],
+      "category": "communitycenter",
+      "level_id": "5962001c-ea33-431c-bb5e-741a24382aa4",
+      "lon": 114.26151111000001,
+      "lat": 22.30905081000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/ad3ff090-6b6b-4796-ae07-612d8825ff5b/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:popcorn-2-lift-a:e65fc251-4e34-4eda-9e37-406a46289854",
+      "scene_id": "popcorn-2",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26150531,
+      "lat": 22.30914421,
+      "node_id": "e65fc251-4e34-4eda-9e37-406a46289854",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/popcorn-2/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:popcorn-2-lift-a:3ed4fbd3-8907-49ed-bf9b-26e2b13a1e97",
+      "scene_id": "popcorn-2",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26150527,
+      "lat": 22.30914415,
+      "node_id": "3ed4fbd3-8907-49ed-bf9b-26e2b13a1e97",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/popcorn-2/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:popcorn-2-lift-b:162b95c5-6588-4456-bc66-de24cea5b3bb",
+      "scene_id": "popcorn-2",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "fc2a8797-30ca-437c-8853-bccdaeb72d0d",
+      "lon": 114.26153281,
+      "lat": 22.30915371,
+      "node_id": "162b95c5-6588-4456-bc66-de24cea5b3bb",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/popcorn-2/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:popcorn-2-lift-b:09746d26-49c7-445c-a0eb-81d1d0448d76",
+      "scene_id": "popcorn-2",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "8401071c-4ba8-4ea2-a76c-db683a88c80a",
+      "lon": 114.26153278,
+      "lat": 22.30915366,
+      "node_id": "09746d26-49c7-445c-a0eb-81d1d0448d76",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/popcorn-2/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

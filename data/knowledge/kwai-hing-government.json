@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "scene_id": "kwai-hing-government",
+  "records": [
+    {
+      "id": "facility:kwai-hing-government-lift-a:30acbccc-30ff-4a16-92f0-cfab4f38353f",
+      "scene_id": "kwai-hing-government",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "3e2f7405-4ca9-42d2-8e83-27023edb9046",
+      "lon": 114.13182073,
+      "lat": 22.36313945,
+      "node_id": "30acbccc-30ff-4a16-92f0-cfab4f38353f",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kwai-hing-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kwai-hing-government-lift-a:c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+      "scene_id": "kwai-hing-government",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+      "lon": 114.13182084,
+      "lat": 22.36313953,
+      "node_id": "c9467ac0-ccdd-4e54-b0cc-72fe5baa37ce",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kwai-hing-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kwai-hing-government-lift-b:28dd2b3f-5764-4541-82bf-90fe01c61a79",
+      "scene_id": "kwai-hing-government",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "3e2f7405-4ca9-42d2-8e83-27023edb9046",
+      "lon": 114.13181997,
+      "lat": 22.36311781,
+      "node_id": "28dd2b3f-5764-4541-82bf-90fe01c61a79",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kwai-hing-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kwai-hing-government-lift-b:b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+      "scene_id": "kwai-hing-government",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "d1fad80f-bce1-4637-9d2b-7bf42880d551",
+      "lon": 114.13181982,
+      "lat": 22.36311671,
+      "node_id": "b5daf1f0-404f-4de6-abc5-b1f1533762e7",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kwai-hing-government/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

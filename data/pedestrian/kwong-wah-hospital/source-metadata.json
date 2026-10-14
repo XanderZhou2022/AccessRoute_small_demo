@@ -1,0 +1,16 @@
+{
+  "source": "Lands Department CSDI 3D Pedestrian Network",
+  "boundsWGS84": [
+    114.168,
+    22.311,
+    114.175,
+    22.317
+  ],
+  "sourceCount": 2240,
+  "featureCount": 2240,
+  "complete": true,
+  "nullGeometryIds": [],
+  "rawPages": "pedestrian/kwong-wah-hospital",
+  "merge": "Concatenation ordered by OBJECTID; source geometry and properties unchanged",
+  "snapshot": "2026-10-04"
+}

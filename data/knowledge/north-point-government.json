@@ -1,0 +1,152 @@
+{
+  "version": "1.0",
+  "scene_id": "north-point-government",
+  "records": [
+    {
+      "id": "poi:b93236f2-70c4-4a9f-87ff-5e284462d667",
+      "scene_id": "north-point-government",
+      "names": [
+        "Strong Room"
+      ],
+      "category": "gym",
+      "level_id": "c4051241-90bc-433d-9007-0a1362e9c593",
+      "lon": 114.20801785000003,
+      "lat": 22.292174490000036,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/b6fb3eae-9bcf-40f0-9eed-8871f50aa9f9/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f5ade96b-3f45-4698-8a13-c543b96be065",
+      "scene_id": "north-point-government",
+      "names": [
+        "Public Banking Hall"
+      ],
+      "category": "bank",
+      "level_id": "c4051241-90bc-433d-9007-0a1362e9c593",
+      "lon": 114.20815086000005,
+      "lat": 22.292173520000063,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/b6fb3eae-9bcf-40f0-9eed-8871f50aa9f9/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:64e21a1b-711f-4c3f-aaba-624fc2be0cf7",
+      "scene_id": "north-point-government",
+      "names": [
+        "展覽場地",
+        "Exhibition Venue"
+      ],
+      "category": "eventspace",
+      "level_id": "253ea94f-f0b0-4bec-a015-d884d4a949ce",
+      "lon": 114.20848978000004,
+      "lat": 22.292112640000028,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/b6fb3eae-9bcf-40f0-9eed-8871f50aa9f9/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:39581782-5e51-4050-ace4-3cc3ec684a26",
+      "scene_id": "north-point-government",
+      "names": [
+        "Si Booth"
+      ],
+      "category": "eventspace",
+      "level_id": "1dd74354-2b07-4190-83e0-08356a4c7135",
+      "lon": 114.20862743000009,
+      "lat": 22.291994470000077,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/b6fb3eae-9bcf-40f0-9eed-8871f50aa9f9/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:cfb907c6-0102-4fba-88cb-c6058781f8f4",
+      "scene_id": "north-point-government",
+      "names": [
+        "Si Booth"
+      ],
+      "category": "eventspace",
+      "level_id": "1dd74354-2b07-4190-83e0-08356a4c7135",
+      "lon": 114.20863716000008,
+      "lat": 22.292023140000026,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/b6fb3eae-9bcf-40f0-9eed-8871f50aa9f9/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:north-point-government-lift-a:8568228a-6503-429b-8723-31d7c23981c1",
+      "scene_id": "north-point-government",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "03af05fc-2ef9-4f2b-9da9-00f91fe4ab73",
+      "lon": 114.20842189,
+      "lat": 22.29219846,
+      "node_id": "8568228a-6503-429b-8723-31d7c23981c1",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/north-point-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:north-point-government-lift-a:a3e55bd8-d409-4828-a239-8ab44a7c296d",
+      "scene_id": "north-point-government",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "c4051241-90bc-433d-9007-0a1362e9c593",
+      "lon": 114.20842189,
+      "lat": 22.29219846,
+      "node_id": "a3e55bd8-d409-4828-a239-8ab44a7c296d",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/north-point-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:north-point-government-lift-b:a04b32d8-9148-4c88-af9e-fef94ba3492d",
+      "scene_id": "north-point-government",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "03af05fc-2ef9-4f2b-9da9-00f91fe4ab73",
+      "lon": 114.20843086,
+      "lat": 22.29222416,
+      "node_id": "a04b32d8-9148-4c88-af9e-fef94ba3492d",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/north-point-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:north-point-government-lift-b:108cf5f3-ef66-422b-9cb7-13ef0db61d68",
+      "scene_id": "north-point-government",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "c4051241-90bc-433d-9007-0a1362e9c593",
+      "lon": 114.20843086,
+      "lat": 22.29222416,
+      "node_id": "108cf5f3-ef66-422b-9cb7-13ef0db61d68",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/north-point-government/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

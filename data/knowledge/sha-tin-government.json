@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "scene_id": "sha-tin-government",
+  "records": [
+    {
+      "id": "facility:sha-tin-government-lift-a:85f53e0b-217d-4405-9154-62298bad7fc4",
+      "scene_id": "sha-tin-government",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "5b37b74c-8cdb-4ebb-afa2-5fd3fb907619",
+      "lon": 114.18690131,
+      "lat": 22.38551008,
+      "node_id": "85f53e0b-217d-4405-9154-62298bad7fc4",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/sha-tin-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:sha-tin-government-lift-a:f3f6a2cc-156a-4954-bd39-fac53004561a",
+      "scene_id": "sha-tin-government",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "c00ca2db-d066-41b9-b71b-f857caef58de",
+      "lon": 114.18690131,
+      "lat": 22.38551008,
+      "node_id": "f3f6a2cc-156a-4954-bd39-fac53004561a",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/sha-tin-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:sha-tin-government-lift-b:a07ce4f7-5e26-4cde-bfed-393a9d642ac1",
+      "scene_id": "sha-tin-government",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "5b37b74c-8cdb-4ebb-afa2-5fd3fb907619",
+      "lon": 114.18688569,
+      "lat": 22.38542911,
+      "node_id": "a07ce4f7-5e26-4cde-bfed-393a9d642ac1",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/sha-tin-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:sha-tin-government-lift-b:bcd09a6a-36d9-4c45-8206-e167e330b458",
+      "scene_id": "sha-tin-government",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "c00ca2db-d066-41b9-b71b-f857caef58de",
+      "lon": 114.18688581,
+      "lat": 22.38542931,
+      "node_id": "bcd09a6a-36d9-4c45-8206-e167e330b458",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/sha-tin-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:sha-tin-government-official-lift-290054591:ped-078a210fee19db77b9d6",
+      "scene_id": "sha-tin-government",
+      "names": [
+        "升降機 290054591"
+      ],
+      "category": "lift",
+      "level_id": "ped-z-4702",
+      "lon": 114.18737916841428,
+      "lat": 22.383242510587234,
+      "node_id": "ped-078a210fee19db77b9d6",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/sha-tin-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:sha-tin-government-official-lift-290054591:ped-9ba3b1c071dcd82ab5d3",
+      "scene_id": "sha-tin-government",
+      "names": [
+        "升降機 290054591"
+      ],
+      "category": "lift",
+      "level_id": "ped-z-10265",
+      "lon": 114.18737409423187,
+      "lat": 22.38323583465189,
+      "node_id": "ped-9ba3b1c071dcd82ab5d3",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/sha-tin-government/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

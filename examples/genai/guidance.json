@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "context_id": "replace-with-live-context-id",
+  "scene_id": "hysan-place",
+  "request_id": "f0e1b2e7-0123-4f08-9d6d-78866a9e56ba",
+  "agent": "guidance",
+  "payload": {
+    "segment_id": "segment-0",
+    "text": "請跟住畫面標示嘅路線慢慢行，到下一個位置再按「已到達」。"
+  }
+}

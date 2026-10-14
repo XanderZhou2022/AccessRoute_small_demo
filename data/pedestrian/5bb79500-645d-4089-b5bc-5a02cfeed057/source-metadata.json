@@ -1,0 +1,16 @@
+{
+  "source": "Lands Department CSDI 3D Pedestrian Network",
+  "boundsWGS84": [
+    114.18133544000008,
+    22.277412970000032,
+    114.18640296000004,
+    22.281746480000063
+  ],
+  "sourceCount": 1468,
+  "featureCount": 1468,
+  "complete": true,
+  "nullGeometryIds": [],
+  "rawPages": "pedestrian/5bb79500-645d-4089-b5bc-5a02cfeed057",
+  "merge": "Concatenation ordered by OBJECTID; source geometry and properties unchanged",
+  "snapshot": "2026-10-04"
+}

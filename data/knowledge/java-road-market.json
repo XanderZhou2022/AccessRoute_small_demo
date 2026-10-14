@@ -1,0 +1,3239 @@
+{
+  "version": "1.0",
+  "scene_id": "java-road-market",
+  "records": [
+    {
+      "id": "poi:d85358d9-40d7-480a-b030-e50b9eb371bf",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI47"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1991058100001,
+      "lat": 22.29236264000008,
+      "node_id": "c87a78b8--16-1",
+      "association": "approximate",
+      "association_distance_m": 1.8,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b8f2dd8e-c63c-4f66-b46e-d702af8b69c4",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI38"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19886746000009,
+      "lat": 22.292313170000057,
+      "node_id": "c87a78b8--31--2",
+      "association": "approximate",
+      "association_distance_m": 1.45,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ad30004d-33bd-45f5-9989-1b8780f638f4",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI39"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19889419000003,
+      "lat": 22.292318720000026,
+      "node_id": "c87a78b8--30--2",
+      "association": "approximate",
+      "association_distance_m": 1.65,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:51a83014-6733-49be-acb0-945979435d2c",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI40"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19892062000008,
+      "lat": 22.292324190000045,
+      "node_id": "c87a78b8--27--1",
+      "association": "approximate",
+      "association_distance_m": 2.06,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3dd951e2-14be-4de8-adf9-8513d0545657",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI41"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19894699000008,
+      "lat": 22.292329670000072,
+      "node_id": "c87a78b8--27--1",
+      "association": "approximate",
+      "association_distance_m": 1.48,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:17d57c97-0239-4587-8723-3c68eada848c",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI42"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19897362000006,
+      "lat": 22.292335190000074,
+      "node_id": "c87a78b8--25--1",
+      "association": "approximate",
+      "association_distance_m": 1.91,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0d26248f-95b3-4224-9e78-72dd0e78a819",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI43"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19900005000011,
+      "lat": 22.29234069000006,
+      "node_id": "c87a78b8--22-0",
+      "association": "approximate",
+      "association_distance_m": 1.98,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:387fecff-18cf-4846-92e6-989770c5b02e",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI44"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19902648000004,
+      "lat": 22.292346190000046,
+      "node_id": "c87a78b8--21-0",
+      "association": "approximate",
+      "association_distance_m": 1.64,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ffaf1ec2-9e61-475f-a1ce-8ff53cc4e7c5",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI45"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19905300000005,
+      "lat": 22.292351680000024,
+      "node_id": "c87a78b8--20-0",
+      "association": "approximate",
+      "association_distance_m": 2.17,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:81b74a61-5b06-4d32-9b88-2ab87c0bfdb8",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI46"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19907939000007,
+      "lat": 22.29235717000006,
+      "node_id": "c87a78b8--18-1",
+      "association": "approximate",
+      "association_distance_m": 1.13,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:8162414d-7038-4cae-8eb7-d5379a00ff03",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI48"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19913214000007,
+      "lat": 22.29236811000004,
+      "node_id": "c87a78b8--15-1",
+      "association": "approximate",
+      "association_distance_m": 2.43,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:49d2d8c1-de9c-4b7e-8da7-f286d6306101",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI59"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19899111000007,
+      "lat": 22.292272000000025,
+      "node_id": "c87a78b8--24--5",
+      "association": "approximate",
+      "association_distance_m": 1.35,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:8a445642-f596-48eb-a2fb-ce039d00a771",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI52"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19898224000008,
+      "lat": 22.29229102000005,
+      "node_id": "c87a78b8--24--2",
+      "association": "approximate",
+      "association_distance_m": 1.49,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1b512d34-17ba-499e-ae9a-80a58ae2a715",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI49"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1988808100001,
+      "lat": 22.292270090000045,
+      "node_id": "c87a78b8--32--4",
+      "association": "approximate",
+      "association_distance_m": 2.03,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e2214a02-ff6c-4bf5-8e4e-778fb07571ed",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI50"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1989140500001,
+      "lat": 22.29227695000003,
+      "node_id": "c87a78b8--29--3",
+      "association": "approximate",
+      "association_distance_m": 1.51,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3690d700-f1d6-4254-a4b6-1677ec8d7bf3",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI51"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19894736000003,
+      "lat": 22.29228381000007,
+      "node_id": "c87a78b8--26--2",
+      "association": "approximate",
+      "association_distance_m": 2.37,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:46055b32-3245-412e-b149-01b7aa523322",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI55"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1988826700001,
+      "lat": 22.292249500000025,
+      "node_id": "c87a78b8--31--7",
+      "association": "approximate",
+      "association_distance_m": 2.01,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f60fffdb-7d91-452c-a4b0-8ed70456ea34",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI56"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19891016000008,
+      "lat": 22.29225519000005,
+      "node_id": "c87a78b8--28--6",
+      "association": "approximate",
+      "association_distance_m": 1.73,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5e3d0f80-819b-40f7-b798-e3d2742d32f9",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI57"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1989372600001,
+      "lat": 22.29226084000004,
+      "node_id": "c87a78b8--27--6",
+      "association": "approximate",
+      "association_distance_m": 1.62,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:7b801a18-ecf3-4926-beec-72a1583747d1",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI58"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19896394000011,
+      "lat": 22.292266380000058,
+      "node_id": "c87a78b8--25--6",
+      "association": "approximate",
+      "association_distance_m": 2.32,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0931ccd8-fcc2-49d9-9e68-faf6b5ffd6c7",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI67"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1990009000001,
+      "lat": 22.292230550000056,
+      "node_id": "c87a78b8--22--7",
+      "association": "approximate",
+      "association_distance_m": 1.69,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:aa8a223c-2ea5-4919-94f8-90ef3819816c",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI71"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19900103000009,
+      "lat": 22.292210990000058,
+      "node_id": "c87a78b8--23--9",
+      "association": "approximate",
+      "association_distance_m": 0.86,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:529600e9-2fa2-4df1-9f60-04658d7a2023",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI63"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19889263000005,
+      "lat": 22.292207790000077,
+      "node_id": "c87a78b8--30--8",
+      "association": "approximate",
+      "association_distance_m": 1.1,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:50676ea1-7750-471c-8f10-ed8f6a2069c0",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI64"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19892008000011,
+      "lat": 22.29221356000005,
+      "node_id": "c87a78b8--28--7",
+      "association": "approximate",
+      "association_distance_m": 2.09,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3778d9e8-1fba-448d-b0ac-8491f3a4573d",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI65"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19894710000005,
+      "lat": 22.292219230000057,
+      "node_id": "c87a78b8--27--7",
+      "association": "approximate",
+      "association_distance_m": 1.62,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:7f03e348-f363-48e7-80a4-e0a8b85a6134",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI66"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19897376000006,
+      "lat": 22.292224850000025,
+      "node_id": "c87a78b8--25--7",
+      "association": "approximate",
+      "association_distance_m": 0.86,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3aa49f73-27eb-44e4-bf42-8568014a5a0b",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI68"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19889966000005,
+      "lat": 22.292189790000066,
+      "node_id": "c87a78b8--30--11",
+      "association": "approximate",
+      "association_distance_m": 1.83,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:56e0d229-d564-489d-affc-d38c22584bf6",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI69"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19893284000011,
+      "lat": 22.29219672000005,
+      "node_id": "c87a78b8--27--10",
+      "association": "approximate",
+      "association_distance_m": 1.11,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:48c87fc2-c28e-4bea-be2e-8bcb2b6d16ad",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI70"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19896626000002,
+      "lat": 22.29220373000004,
+      "node_id": "c87a78b8--25--10",
+      "association": "approximate",
+      "association_distance_m": 1.71,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d8b919e0-b8b7-48ac-be93-a36a23784db1",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI77"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19901530000004,
+      "lat": 22.29216658000007,
+      "node_id": "c87a78b8--23--11",
+      "association": "approximate",
+      "association_distance_m": 1.66,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6753cff4-6921-4983-a632-4ea222172de9",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI72"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19887480000011,
+      "lat": 22.29213739000005,
+      "node_id": "c87a78b8--32--13",
+      "association": "approximate",
+      "association_distance_m": 1.62,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ae64587a-1aba-4228-b277-69035804cac0",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI73"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19890299000008,
+      "lat": 22.292143250000038,
+      "node_id": "c87a78b8--29--12",
+      "association": "approximate",
+      "association_distance_m": 1.97,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:174d2bcd-d4d3-43d1-879e-52977275b8c8",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI74"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19893114000001,
+      "lat": 22.292149090000066,
+      "node_id": "c87a78b8--28--12",
+      "association": "approximate",
+      "association_distance_m": 1.43,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:88e971fb-5681-4533-8cdc-b823f19055cd",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI75"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1989592000001,
+      "lat": 22.292154930000038,
+      "node_id": "c87a78b8--27--12",
+      "association": "approximate",
+      "association_distance_m": 2.1,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:531aa184-4196-47f8-8df2-274d9d234e54",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI76"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19898721000004,
+      "lat": 22.292160730000035,
+      "node_id": "c87a78b8--24--11",
+      "association": "approximate",
+      "association_distance_m": 1.54,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:af89d094-cc86-4480-8538-d80eeee85876",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI78"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19904315000008,
+      "lat": 22.292172360000052,
+      "node_id": "c87a78b8--20--10",
+      "association": "approximate",
+      "association_distance_m": 1.92,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:7e47c0f0-4a74-4b18-82e4-e678dfe8bdfe",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI54"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19908191000002,
+      "lat": 22.292313180000065,
+      "node_id": "c87a78b8--18-0",
+      "association": "approximate",
+      "association_distance_m": 2.18,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:514af1e9-6adf-4663-992f-1a1ee1401371",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI61"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19906845000003,
+      "lat": 22.292289400000072,
+      "node_id": "c87a78b8--19--4",
+      "association": "approximate",
+      "association_distance_m": 1.65,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:510b1e9d-5069-490d-933f-9e42dbe01c08",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI53"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1990450400001,
+      "lat": 22.29230559000007,
+      "node_id": "c87a78b8--20--1",
+      "association": "approximate",
+      "association_distance_m": 1.45,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0b89c5d8-9e43-4b0f-ad3a-5859838819ae",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI60"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19904381000003,
+      "lat": 22.29228431000007,
+      "node_id": "c87a78b8--20--4",
+      "association": "approximate",
+      "association_distance_m": 1.12,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:24a102ed-be1f-430d-b858-37e9c336adc6",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI62"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19909282000003,
+      "lat": 22.292294420000076,
+      "node_id": "c87a78b8--16--3",
+      "association": "approximate",
+      "association_distance_m": 1.89,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9138f636-6ef4-4ab9-b703-a2108a2573f1",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI81"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19910759000004,
+      "lat": 22.292230440000026,
+      "node_id": "c87a78b8--16--6",
+      "association": "approximate",
+      "association_distance_m": 1.8,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4fe48be2-9dd3-4406-b9ef-89a16a89c5a9",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI79"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19905943000003,
+      "lat": 22.292220390000068,
+      "node_id": "c87a78b8--20--8",
+      "association": "approximate",
+      "association_distance_m": 1.18,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9bd9d009-815b-4732-81bc-bb79951d89ff",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI80"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19908366000004,
+      "lat": 22.292225450000046,
+      "node_id": "c87a78b8--19--7",
+      "association": "approximate",
+      "association_distance_m": 2.17,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9464a419-6f5d-400a-a46c-841a9da5a47d",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI93"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19931596000004,
+      "lat": 22.292265170000064,
+      "node_id": "c87a78b8--3--4",
+      "association": "approximate",
+      "association_distance_m": 1.17,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4719b091-eb9c-4357-902b-cc977d6468b8",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI88"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1991879200001,
+      "lat": 22.29223847000003,
+      "node_id": "c87a78b8--11--6",
+      "association": "approximate",
+      "association_distance_m": 0.88,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a8b25888-b98b-4685-b9ca-88e0308781a3",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI89"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19921499000009,
+      "lat": 22.29224413000003,
+      "node_id": "c87a78b8--9--5",
+      "association": "approximate",
+      "association_distance_m": 1.9,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e2eebf54-fbe1-4879-8550-9a53250fbed2",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI90"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19924004000006,
+      "lat": 22.29224933000006,
+      "node_id": "c87a78b8--8--5",
+      "association": "approximate",
+      "association_distance_m": 1.39,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:63ad8d8a-a919-4624-92dc-4cd971193396",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI91"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19926530000009,
+      "lat": 22.29225462000005,
+      "node_id": "c87a78b8--7--5",
+      "association": "approximate",
+      "association_distance_m": 1.69,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e1819cbb-f589-4e6b-8f8a-3bad98a0b1e6",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI92"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1992906700001,
+      "lat": 22.292259900000033,
+      "node_id": "c87a78b8--4--4",
+      "association": "approximate",
+      "association_distance_m": 1.81,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:7b426d86-ad4f-4ed1-b0ed-66c0f698286b",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI87"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19930896000005,
+      "lat": 22.29233860000005,
+      "node_id": "c87a78b8--2-0",
+      "association": "approximate",
+      "association_distance_m": 2.06,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:abf65332-ec34-4463-9570-d10195508d8a",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI82"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19917384000007,
+      "lat": 22.292310470000075,
+      "node_id": "c87a78b8--11--2",
+      "association": "approximate",
+      "association_distance_m": 1.64,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:eb08013b-e22d-4186-b513-5fc4f731880d",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI83"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19920089000004,
+      "lat": 22.292316090000043,
+      "node_id": "c87a78b8--10--2",
+      "association": "approximate",
+      "association_distance_m": 1.38,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:cc83375b-f6d6-4919-9035-6d5bc68ec06e",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI84"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19922792000011,
+      "lat": 22.292321730000026,
+      "node_id": "c87a78b8--8--2",
+      "association": "approximate",
+      "association_distance_m": 2.1,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ce666693-8d9c-4972-a2da-18b138091e8c",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI85"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19925482000008,
+      "lat": 22.292327310000076,
+      "node_id": "c87a78b8--7--1",
+      "association": "approximate",
+      "association_distance_m": 1.11,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:15681fdd-18ed-4d47-a0e5-87c7f183eb0f",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI86"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19928159000006,
+      "lat": 22.29233289000007,
+      "node_id": "c87a78b8--5--1",
+      "association": "approximate",
+      "association_distance_m": 1.63,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:facee66e-01ad-4238-968d-63d441094674",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI121"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19957537000005,
+      "lat": 22.29241483000004,
+      "node_id": "c87a78b8-14-7",
+      "association": "approximate",
+      "association_distance_m": 2.05,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:43ed12ec-eb9d-461f-a2f7-806fcfe22880",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI137"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19957997000006,
+      "lat": 22.292396230000065,
+      "node_id": "c87a78b8-15-4",
+      "association": "approximate",
+      "association_distance_m": 1.41,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a649e2e9-102a-49af-800c-a59112f09d1b",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI113"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19937707000008,
+      "lat": 22.29237432000008,
+      "node_id": "c87a78b8-1-4",
+      "association": "approximate",
+      "association_distance_m": 1.78,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:62574330-8a74-4e63-892f-2a8b548c034f",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI114"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19940153000005,
+      "lat": 22.292379310000058,
+      "node_id": "c87a78b8-3-4",
+      "association": "approximate",
+      "association_distance_m": 1.27,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:381a25fd-5917-4993-872d-2fdecb82eec7",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI115"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19942513000001,
+      "lat": 22.292384120000065,
+      "node_id": "c87a78b8-3-4",
+      "association": "approximate",
+      "association_distance_m": 2.12,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6c5ab225-8dc3-4cd4-81e4-db4b8eb31103",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI116"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19944852000003,
+      "lat": 22.292388920000064,
+      "node_id": "c87a78b8-6-5",
+      "association": "approximate",
+      "association_distance_m": 1.77,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:2d02e859-aba1-496a-a143-5ab5fa7ceffe",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI117"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19947212000011,
+      "lat": 22.29239373000007,
+      "node_id": "c87a78b8-7-5",
+      "association": "approximate",
+      "association_distance_m": 1.28,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d115d151-cf3f-41c1-9fe0-74648c2c7949",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI118"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19949709000002,
+      "lat": 22.292398840000033,
+      "node_id": "c87a78b8-8-5",
+      "association": "approximate",
+      "association_distance_m": 1.56,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a95feda2-7c95-4885-b6b5-86ce015e6830",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI119"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19952307000005,
+      "lat": 22.29240415000004,
+      "node_id": "c87a78b8-11-6",
+      "association": "approximate",
+      "association_distance_m": 1.78,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c3b7733d-3f0c-4267-ad81-251edb7fa13c",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI120"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19954872000005,
+      "lat": 22.29240937000003,
+      "node_id": "c87a78b8-12-6",
+      "association": "approximate",
+      "association_distance_m": 1.11,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c18036da-9d2a-4c20-80f9-59c08c171d99",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI122"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19960292000007,
+      "lat": 22.292420460000073,
+      "node_id": "c87a78b8-16-7",
+      "association": "approximate",
+      "association_distance_m": 1.5,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:eb4a34a1-ee58-4772-bfe0-607efed74cad",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI129"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19938172000002,
+      "lat": 22.292354980000027,
+      "node_id": "c87a78b8-2-1",
+      "association": "approximate",
+      "association_distance_m": 1.23,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5e3e89e8-1454-4001-b31e-9573159b2b8e",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI130"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19940608000002,
+      "lat": 22.29236007000003,
+      "node_id": "c87a78b8-3-1",
+      "association": "approximate",
+      "association_distance_m": 1.45,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5cf59157-f2ec-4e17-84ff-8f9305008770",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI131"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19942966000008,
+      "lat": 22.292364960000043,
+      "node_id": "c87a78b8-5-1",
+      "association": "approximate",
+      "association_distance_m": 2.12,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3ca8d78f-9556-4498-98be-5da44bf37fca",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI132"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19945307000012,
+      "lat": 22.29236983000004,
+      "node_id": "c87a78b8-6-2",
+      "association": "approximate",
+      "association_distance_m": 0.94,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f4f1e4d9-6c17-4cf7-99d4-ef5b85564aa8",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI133"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19947666000007,
+      "lat": 22.29237474000007,
+      "node_id": "c87a78b8-8-2",
+      "association": "approximate",
+      "association_distance_m": 1.63,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:7a765178-802f-4429-a6b1-3cde64778440",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI134"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19950166000001,
+      "lat": 22.292379950000054,
+      "node_id": "c87a78b8-9-2",
+      "association": "approximate",
+      "association_distance_m": 2.08,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ad12a4c7-d4f5-490d-b21e-cd2ccc264f3b",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI135"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19952759000012,
+      "lat": 22.292385340000067,
+      "node_id": "c87a78b8-11-3",
+      "association": "approximate",
+      "association_distance_m": 1.09,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f9ebf6cc-13e9-4196-aa38-2b4d77c44d18",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI136"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19955324000011,
+      "lat": 22.292390690000047,
+      "node_id": "c87a78b8-13-3",
+      "association": "approximate",
+      "association_distance_m": 1.84,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:63fc7d22-1c36-427f-9ed5-f7f6f21fc3cd",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI138"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19960743000001,
+      "lat": 22.292401980000022,
+      "node_id": "c87a78b8-16-4",
+      "association": "approximate",
+      "association_distance_m": 1.32,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3baab140-7aa6-448d-84c0-734c0b2253b5",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI112"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19978096000011,
+      "lat": 22.292503160000024,
+      "node_id": "c87a78b8-28-12",
+      "association": "approximate",
+      "association_distance_m": 1.35,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:61a81fc0-d1df-4d7c-8230-4d5d42b39148",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI94"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19931912000004,
+      "lat": 22.292407660000038,
+      "node_id": "c87a78b8--3-4",
+      "association": "approximate",
+      "association_distance_m": 2.07,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:600d55db-e709-4c15-b938-82ca6517c30b",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI95"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19934316000001,
+      "lat": 22.292412660000025,
+      "node_id": "c87a78b8--1-5",
+      "association": "approximate",
+      "association_distance_m": 0.91,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1eb281a6-c7fa-4b8a-ac1a-e7551c22af52",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI96"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1993673500001,
+      "lat": 22.292417620000037,
+      "node_id": "c87a78b8-1-5",
+      "association": "approximate",
+      "association_distance_m": 1.63,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b59e9d71-7b8c-4c4f-a7a4-301873826b13",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI97"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19939094000006,
+      "lat": 22.292422530000067,
+      "node_id": "c87a78b8-2-5",
+      "association": "approximate",
+      "association_distance_m": 2.01,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0a557845-e3e6-4a60-8658-3b01a49d8b2d",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI98"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19941444000006,
+      "lat": 22.29242737000004,
+      "node_id": "c87a78b8-4-6",
+      "association": "approximate",
+      "association_distance_m": 1.17,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1ff9cb81-8351-4019-8ce0-7f30010bfdbf",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI99"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19943781000006,
+      "lat": 22.292432210000072,
+      "node_id": "c87a78b8-5-6",
+      "association": "approximate",
+      "association_distance_m": 1.49,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5c28f6c0-3125-45be-aa9e-fa782217fbba",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI100"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19946167,
+      "lat": 22.292437130000053,
+      "node_id": "c87a78b8-7-6",
+      "association": "approximate",
+      "association_distance_m": 2.12,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:01388262-23ff-4b5f-81b3-d2a4d16c1dd6",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI101"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19948689000012,
+      "lat": 22.292442360000052,
+      "node_id": "c87a78b8-8-7",
+      "association": "approximate",
+      "association_distance_m": 1.08,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:54a7bcbe-f07c-477a-8c44-9c1447dacdf3",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI102"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19951282000011,
+      "lat": 22.29244773000005,
+      "node_id": "c87a78b8-10-7",
+      "association": "approximate",
+      "association_distance_m": 1.62,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9ebc7fc2-2aa3-470d-95d9-1cb9086e8f56",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI103"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19953839000004,
+      "lat": 22.292453000000023,
+      "node_id": "c87a78b8-12-7",
+      "association": "approximate",
+      "association_distance_m": 2.31,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:315bb770-1590-42fb-b897-c514f9e6d182",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI104"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19956449000006,
+      "lat": 22.292458400000044,
+      "node_id": "c87a78b8-13-8",
+      "association": "approximate",
+      "association_distance_m": 1.25,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:de9599e0-473c-4325-8af8-94d1c77915b2",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI105"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19959144000006,
+      "lat": 22.292463990000044,
+      "node_id": "c87a78b8-15-8",
+      "association": "approximate",
+      "association_distance_m": 1.82,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:78debb98-203f-4034-aa5f-07f696836b70",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI106"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19961841000008,
+      "lat": 22.292469550000078,
+      "node_id": "c87a78b8-17-9",
+      "association": "approximate",
+      "association_distance_m": 0.97,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:cdb3fb3e-2f22-4ef9-a2c8-c92789018b1c",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI107"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19964514000003,
+      "lat": 22.29247508000003,
+      "node_id": "c87a78b8-18-9",
+      "association": "approximate",
+      "association_distance_m": 1.6,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:943d65c5-b5bc-4b93-b4b2-174347057c28",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI108"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1996720300001,
+      "lat": 22.292480640000065,
+      "node_id": "c87a78b8-20-9",
+      "association": "approximate",
+      "association_distance_m": 2.09,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e8dd5a76-87d3-422e-92a7-f1e5443a3785",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI109"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19969871,
+      "lat": 22.29248615000006,
+      "node_id": "c87a78b8-22-10",
+      "association": "approximate",
+      "association_distance_m": 1.11,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5b18e2fe-70d3-4e63-a696-0ba3f350a757",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI110"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19972564000011,
+      "lat": 22.292491720000044,
+      "node_id": "c87a78b8-24-10",
+      "association": "approximate",
+      "association_distance_m": 1.82,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0ebc40bc-fa89-4ae2-9254-de730f74aa01",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI111"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1997532800001,
+      "lat": 22.292497440000034,
+      "node_id": "c87a78b8-26-11",
+      "association": "approximate",
+      "association_distance_m": 1.24,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f7b9eee5-0223-490c-bf2b-67794de178ce",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI143"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19976795000002,
+      "lat": 22.292434670000034,
+      "node_id": "c87a78b8-26-6",
+      "association": "approximate",
+      "association_distance_m": 1.83,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1db94835-761f-49f2-8e8f-80111d38e6d7",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI127"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19976365000002,
+      "lat": 22.292452980000064,
+      "node_id": "c87a78b8-26-9",
+      "association": "approximate",
+      "association_distance_m": 1.01,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d2aac11b-119e-4eba-be7b-7edc5a11a0da",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI123"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19965492000006,
+      "lat": 22.292430770000067,
+      "node_id": "c87a78b8-18-7",
+      "association": "approximate",
+      "association_distance_m": 1.7,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a951a619-fd29-4f49-ae84-48733399453c",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI124"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19968214000005,
+      "lat": 22.292436330000044,
+      "node_id": "c87a78b8-21-8",
+      "association": "approximate",
+      "association_distance_m": 1.3,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:cd8dfca3-87bb-4913-8a9f-11fd6a6049e6",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI125"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19970898000008,
+      "lat": 22.29244181000007,
+      "node_id": "c87a78b8-22-8",
+      "association": "approximate",
+      "association_distance_m": 1.07,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e1e4b0f1-e775-4a3c-aa85-38afcab14cba",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI126"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1997359500001,
+      "lat": 22.292447320000065,
+      "node_id": "c87a78b8-24-9",
+      "association": "approximate",
+      "association_distance_m": 1.69,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:066205da-9513-466d-a07c-8ac3937f7666",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI128"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19979161000003,
+      "lat": 22.292458690000046,
+      "node_id": "c87a78b8-29-9",
+      "association": "approximate",
+      "association_distance_m": 1.87,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b05993ce-c631-4a3e-87a1-fe8b509f65cd",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI139"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1996591300001,
+      "lat": 22.292412340000055,
+      "node_id": "c87a78b8-20-5",
+      "association": "approximate",
+      "association_distance_m": 1.39,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:89c863e1-65a8-4fff-8258-ab70cdef5f5f",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI140"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19968635000009,
+      "lat": 22.292417940000064,
+      "node_id": "c87a78b8-21-5",
+      "association": "approximate",
+      "association_distance_m": 1.5,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b3f91c5e-5655-4e46-8ea3-fa9ba2020281",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI141"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19971320000002,
+      "lat": 22.292423430000042,
+      "node_id": "c87a78b8-24-6",
+      "association": "approximate",
+      "association_distance_m": 1.98,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:8cd48396-771e-4b9e-b777-a3d6b09907ab",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI142"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19974022000008,
+      "lat": 22.292428980000068,
+      "node_id": "c87a78b8-25-6",
+      "association": "approximate",
+      "association_distance_m": 1.34,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:fa1f9fcf-4b99-4c32-a22f-1b991f2bdf1e",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI144"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19979593000005,
+      "lat": 22.29244041000004,
+      "node_id": "c87a78b8-29-7",
+      "association": "approximate",
+      "association_distance_m": 1.6,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:8bcb7488-5b28-48cb-94fd-e5727597258f",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI149"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19977804000007,
+      "lat": 22.292390800000078,
+      "node_id": "c87a78b8-27-5",
+      "association": "approximate",
+      "association_distance_m": 1.53,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:dc5d9134-db47-4502-bdaa-6603171063eb",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI155"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19978234000007,
+      "lat": 22.292372530000023,
+      "node_id": "c87a78b8-27-2",
+      "association": "approximate",
+      "association_distance_m": 1.3,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f50ce2b4-da7c-4972-ac01-59a803706dbf",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI145"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19966936000003,
+      "lat": 22.292368380000028,
+      "node_id": "c87a78b8-20-3",
+      "association": "approximate",
+      "association_distance_m": 0.82,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:10401056-4cb7-4e9a-a8ac-23f947b04111",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI146"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19969663000006,
+      "lat": 22.292374000000052,
+      "node_id": "c87a78b8-22-4",
+      "association": "approximate",
+      "association_distance_m": 1.84,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:aa91303a-45fb-4496-bdf9-8ed487986780",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI147"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19972344000007,
+      "lat": 22.292379510000046,
+      "node_id": "c87a78b8-23-4",
+      "association": "approximate",
+      "association_distance_m": 1.39,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ece277ce-8deb-4c50-a475-4bbb3101fac4",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI148"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19975031000001,
+      "lat": 22.292385060000072,
+      "node_id": "c87a78b8-24-4",
+      "association": "approximate",
+      "association_distance_m": 1.99,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a3bad89e-5340-423c-a0d2-8aeae53e9f82",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI150"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19980621000002,
+      "lat": 22.292396610000026,
+      "node_id": "c87a78b8-28-5",
+      "association": "approximate",
+      "association_distance_m": 1.54,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6455c99f-4ce2-44e7-a57e-fb0c6ddf7405",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI151"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1996736000001,
+      "lat": 22.29235009000007,
+      "node_id": "c87a78b8-20-0",
+      "association": "approximate",
+      "association_distance_m": 1.98,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:7ab10830-8856-49d8-bbfc-60de757b3f5b",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI152"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.1997008300001,
+      "lat": 22.292355690000022,
+      "node_id": "c87a78b8-22-1",
+      "association": "approximate",
+      "association_distance_m": 0.96,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1c8bdc99-e26a-437c-b453-7b833402d128",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI153"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19972768000002,
+      "lat": 22.292361260000064,
+      "node_id": "c87a78b8-24-1",
+      "association": "approximate",
+      "association_distance_m": 1.64,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5913c5f3-a67d-4592-8b95-11532825930b",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI154"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19975461000001,
+      "lat": 22.292366810000033,
+      "node_id": "c87a78b8-25-1",
+      "association": "approximate",
+      "association_distance_m": 2.32,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:bf5dda26-e471-459b-9fdc-b2546a0b27f4",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI156"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19981043000007,
+      "lat": 22.292378330000076,
+      "node_id": "c87a78b8-30-3",
+      "association": "approximate",
+      "association_distance_m": 1.53,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:73fea521-a15c-4786-9466-3a8f35d45f45",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI162"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19982020000009,
+      "lat": 22.292333690000078,
+      "node_id": "c87a78b8-30-1",
+      "association": "approximate",
+      "association_distance_m": 1.56,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:84a79f3c-6ef6-4e4e-9a45-13c4ea42f8d7",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI157"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19968626000002,
+      "lat": 22.292305940000062,
+      "node_id": "c87a78b8-21--1",
+      "association": "approximate",
+      "association_distance_m": 1.38,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:eb83bf19-1b1c-4001-a7a6-719176029766",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI158"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19971226000007,
+      "lat": 22.292311320000067,
+      "node_id": "c87a78b8-22--1",
+      "association": "approximate",
+      "association_distance_m": 1.42,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:87c8306f-4cff-4538-b33f-fcbbfed84c91",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI159"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19973826000012,
+      "lat": 22.29231672000003,
+      "node_id": "c87a78b8-24-0",
+      "association": "approximate",
+      "association_distance_m": 1.89,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e6c3ab79-0e4c-4a6d-89a7-3a47b1646642",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI160"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19976496000004,
+      "lat": 22.292322230000025,
+      "node_id": "c87a78b8-26-0",
+      "association": "approximate",
+      "association_distance_m": 1.18,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f544457c-95b9-4f3c-a4fb-5e936a491267",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI161"
+      ],
+      "category": "shopping",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19979228000011,
+      "lat": 22.292327920000048,
+      "node_id": "c87a78b8-28-1",
+      "association": "approximate",
+      "association_distance_m": 2.13,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:01008bba-2dce-4cdd-9d75-6d459e379750",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI7"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19886068000005,
+      "lat": 22.292150340000035,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1973abc6-b3eb-4121-8fc7-4c83bfb4cd06",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI1"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19882453000002,
+      "lat": 22.29230436000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d63daff6-b77e-4027-b239-5b6985be8ce7",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI2"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19882961000008,
+      "lat": 22.292282620000037,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f0081f8c-51a0-44cc-96b5-ce8a84039019",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI3"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19883513000002,
+      "lat": 22.29225905000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4c41e3eb-aa5e-491a-8274-041992cc7dea",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI4"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19884120000006,
+      "lat": 22.29223324000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ec444b85-dd40-4c8c-8b13-75ca3989e071",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI5"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19884732000003,
+      "lat": 22.292207510000026,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b482dcf3-e493-4678-9a02-47303392a39c",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI6"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.1988534300001,
+      "lat": 22.292181750000054,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:75eac24e-42f6-4370-b5e4-9b5378ad89c8",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI18"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19890793000002,
+      "lat": 22.292276840000056,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3556788e-ee63-48cf-8dc2-e60838a0fed2",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI8"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19887646000006,
+      "lat": 22.29231525000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:81a69b42-cd1c-466c-8a38-676be9ece2ec",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI16"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19889805000003,
+      "lat": 22.292319750000047,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ac0bcf33-52c7-49ac-a90f-d28bd6c33b37",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI9"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19888153000011,
+      "lat": 22.292293640000025,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b1fc9e62-8224-4f1b-b2c2-67224dcf7d11",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI10"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19888649000006,
+      "lat": 22.292272440000033,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6ba99fa4-16f7-4a3a-8f4e-2fc0c988b08a",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI17"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19890305000001,
+      "lat": 22.29229810000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e328a683-4f66-484f-9267-85256091bda0",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI19"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19891314000006,
+      "lat": 22.29225452000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1118f898-aace-423e-a9e8-04adfd400d70",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI35"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19898693000005,
+      "lat": 22.292270060000078,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9ac500c4-4ded-4ac1-81e1-b2d237ca7472",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI27"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19895875000009,
+      "lat": 22.292264320000072,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3328fbee-cc25-402f-83fe-97b7db955997",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI32"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19897168000011,
+      "lat": 22.292334980000078,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c9764327-c22f-443e-a659-2d4e21a7808e",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI24"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19894331000012,
+      "lat": 22.29232907000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b2fca32d-5135-4a3b-aa12-7d95f9715c64",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI33"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19897687000002,
+      "lat": 22.29231303000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:154b98c4-e2c0-46b2-addd-256c5d64b4c0",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI25"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19894855000007,
+      "lat": 22.292307170000072,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e30601ba-7b62-4890-b689-e15c1d38c711",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI34"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19898175000003,
+      "lat": 22.29229200000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:40977059-7893-4720-a8ea-cb463c6c3b73",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI26"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19895352000003,
+      "lat": 22.292286210000043,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e975e474-a73d-476a-b55c-3cae35eaa149",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI15"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.1989154900001,
+      "lat": 22.292146070000058,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3a4db494-441d-438e-9dc7-2b4fb4911736",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI12"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19890176000001,
+      "lat": 22.292205300000035,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:45d27b8c-3d86-4ca0-8b8e-87dd4b9017f3",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI13"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19890664000002,
+      "lat": 22.292184390000045,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:eb2dcda9-4557-4f13-ae39-fdb8be5c4a07",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI14"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19891107000001,
+      "lat": 22.29216531000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:dddf88af-be26-445f-b3d6-d2d3eb963813",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI20"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.1989233600001,
+      "lat": 22.29220988000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c19f4ead-b749-4451-8628-e95cd98e7bd9",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI21"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19892831000004,
+      "lat": 22.292189000000064,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b67ca4cc-3e7b-4119-944d-558d708f8d39",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI22"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19893281000009,
+      "lat": 22.292169940000065,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a104deb7-f9f1-4156-b018-229e2b1d493c",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI23"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19893733000004,
+      "lat": 22.292150640000045,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:95624450-97e1-4834-87db-1770f9ba3551",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop Sui Mei To Mei1"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.1989994600001,
+      "lat": 22.292215870000064,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9a7118b8-a185-4b1b-aefa-d0350fa7e9f0",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop Sui Mei To Mei2"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19900865000011,
+      "lat": 22.292175730000054,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:73260f16-98ba-4e38-97a8-802c46434176",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI28"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19896850000009,
+      "lat": 22.29221934000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:8cb38e38-fa76-4582-8ba7-30dc15c74321",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI29"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19897334000007,
+      "lat": 22.29219850000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:153d54a8-174e-48aa-952c-47266f56226d",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI30"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19897772000002,
+      "lat": 22.292179520000047,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:fca4d405-5888-4641-bea7-198c0d24ff0c",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI31"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19898220000005,
+      "lat": 22.292160170000045,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f56644b9-b7fa-4746-ac9f-3f3abd00dc1a",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop M1"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19904857000006,
+      "lat": 22.29229348000007,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1dc1e26e-0f8a-490f-acb8-b7b11d104c72",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI36"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19903612000007,
+      "lat": 22.292347480000046,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d48dda9f-f419-48a6-84d5-e910f0efc503",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI37"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19904124000004,
+      "lat": 22.292325600000026,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:93db370b-6d2f-493c-86fa-60717fdf16c7",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop M4"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19906377000007,
+      "lat": 22.292231490000063,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e8847e0a-724d-4d55-8c5d-731905d35d85",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop M5"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19909908000011,
+      "lat": 22.292238790000056,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:34c68642-3b87-4970-be65-32381ae00d40",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop M2"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19908542000007,
+      "lat": 22.292301060000057,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:dcab19c3-5560-4d2b-a6b7-d4cb9fa60429",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop M3"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.1991456500001,
+      "lat": 22.292313410000077,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:8670f97f-ba2a-4faa-a1d9-fe15f5b2ad52",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop F1"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19918121,
+      "lat": 22.292320720000077,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:78d2600c-711d-465e-a7b1-99518dfad9d3",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop F2"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19921623000005,
+      "lat": 22.292327700000044,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0e93ae86-e0b6-4bd0-91f1-3410f568ee96",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop F3"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19925131000002,
+      "lat": 22.292334950000054,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:76734bbc-5f9b-407d-9e2a-5c05128a8522",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop F4"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.1992868000001,
+      "lat": 22.292342450000035,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:49580cf1-acec-4d0f-891c-2c45ec048127",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop P1"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19933966000008,
+      "lat": 22.292394370000068,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a89aed30-c11c-4abc-98f8-828c8c7de9f4",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop P2"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19937965000008,
+      "lat": 22.292402710000033,
+      "node_id": "581c6490-11--3",
+      "association": "approximate",
+      "association_distance_m": 19.93,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a6b26cfb-cc5f-44a9-870c-fd970e50de91",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop P3"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19942234000007,
+      "lat": 22.292411580000078,
+      "node_id": "581c6490-12--2",
+      "association": "approximate",
+      "association_distance_m": 17.43,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:40b08439-8c71-4c74-9547-8b5e98e970c8",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop P6"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19947787000001,
+      "lat": 22.29235114000005,
+      "node_id": "581c6490-11--3",
+      "association": "approximate",
+      "association_distance_m": 8.69,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6d8c8aa2-edd5-4a20-83a5-c3ce7f0d57a5",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop P4"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19939559000011,
+      "lat": 22.29233406000003,
+      "node_id": "581c6490-11--3",
+      "association": "approximate",
+      "association_distance_m": 14.68,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:157c8ae8-2ba1-4515-b7dc-006c91976a56",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop P5"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19943668000008,
+      "lat": 22.292342560000066,
+      "node_id": "581c6490-11--3",
+      "association": "approximate",
+      "association_distance_m": 11.26,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:90c0ed7a-dfd8-420a-bcfc-f804132deff1",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop F8"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19930196000007,
+      "lat": 22.292277600000034,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f4e893a8-1ca7-416f-9833-d9497b187578",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop F5"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19919616000004,
+      "lat": 22.292255750000038,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:21c25af3-8902-46a1-8df9-0becf82a45d5",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop F6"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19923136000011,
+      "lat": 22.29226311000008,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ca43586c-5f8e-4a18-b342-b9673d3e521c",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop F7"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19926653000005,
+      "lat": 22.292270280000025,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:7f3c7710-91d5-4c97-bf05-9e5184ba9133",
+      "scene_id": "java-road-market",
+      "names": [
+        "Shop MI11"
+      ],
+      "category": "shopping",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19889175000003,
+      "lat": 22.29225009000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f470f640-0f76-476f-ace7-a200f85a5251",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 2"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19896438,
+      "lat": 22.292169270000045,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c31ae86c-cc71-48de-8db0-f073df43f6a9",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 1"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19901556000002,
+      "lat": 22.292179830000066,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0c6d52c0-81eb-4832-8452-fccc66900bfc",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 5"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19906874000003,
+      "lat": 22.29228714000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0223a2f7-07e0-4298-808f-6daa15f7949d",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 3"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19893499000011,
+      "lat": 22.29225935000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9a4a3c5e-3c3b-4c05-b18e-04ca42998989",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 4"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19900301000007,
+      "lat": 22.292273710000075,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:fd1625bd-72dc-4828-a951-180da461cc3a",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 6"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19913422000002,
+      "lat": 22.292300730000022,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5c069a4d-3d6b-4711-aa4c-fda368cc2e8e",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 14"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19974462000005,
+      "lat": 22.292339250000055,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5f69d275-886f-4413-9fd9-f726418aa93b",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 15"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19967315000008,
+      "lat": 22.292324360000066,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1b8ebf8d-67d5-48c8-9bfb-cf62ab768b3b",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 7"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.1992690300001,
+      "lat": 22.292330680000077,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3e3a0644-db1b-42f4-9812-b4359eabe693",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 13"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19972485000005,
+      "lat": 22.29242590000007,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:bc4e77dc-4f9f-41df-b41b-8727dcd0a3bc",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 8"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19933736000007,
+      "lat": 22.292345580000074,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e89f41de-cc10-4eb8-aa25-fed56f2dc7d4",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 9"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19941187000006,
+      "lat": 22.29236093000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3aa40287-06ff-45ed-9d39-3e863cdb445d",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 10"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19949319000011,
+      "lat": 22.292377870000053,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:30c9addc-ace1-4270-acd7-66f820e8296a",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 11"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19957067000007,
+      "lat": 22.292393920000052,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a8f61f5e-7701-4f92-83d8-5b701165a42b",
+      "scene_id": "java-road-market",
+      "names": [
+        "Restaurant 12"
+      ],
+      "category": "restaurant",
+      "level_id": "5c54dd4f-9d44-418a-aa47-8efb627a8e5e",
+      "lon": 114.19964773000004,
+      "lat": 22.292409900000052,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/6f2c1899-c5f1-4f42-8415-b18ae840b57a/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:java-road-market-lift-a:a7668e5f-6100-41c8-8752-05f71b0b49e1",
+      "scene_id": "java-road-market",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.19953964,
+      "lat": 22.2922851,
+      "node_id": "a7668e5f-6100-41c8-8752-05f71b0b49e1",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/java-road-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:java-road-market-lift-a:30e799d0-284b-4654-b064-70b20cddf260",
+      "scene_id": "java-road-market",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19954005,
+      "lat": 22.29228418,
+      "node_id": "30e799d0-284b-4654-b064-70b20cddf260",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/java-road-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:java-road-market-lift-b:956174e2-9466-497c-9a59-da78d21fb115",
+      "scene_id": "java-road-market",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "581c6490-1c5b-4ec8-8437-46cfdd169af7",
+      "lon": 114.1995729,
+      "lat": 22.29229209,
+      "node_id": "956174e2-9466-497c-9a59-da78d21fb115",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/java-road-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:java-road-market-lift-b:44589d1d-cd1c-454f-9d79-956433d1e634",
+      "scene_id": "java-road-market",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "c87a78b8-6eaf-4a89-bdca-146145005890",
+      "lon": 114.19957316,
+      "lat": 22.29229105,
+      "node_id": "44589d1d-cd1c-454f-9d79-956433d1e634",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/java-road-market/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

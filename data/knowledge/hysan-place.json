@@ -1,0 +1,1965 @@
+{
+  "version": "1.0",
+  "scene_id": "hysan-place",
+  "records": [
+    {
+      "id": "poi:a7923301-ecd6-4e87-96ad-13a0b459e659",
+      "scene_id": "hysan-place",
+      "names": [
+        "GU"
+      ],
+      "category": "shopping",
+      "level_id": "ba047eef-2b62-4561-932a-25c1a1e16fb3",
+      "lon": 114.18351475000009,
+      "lat": 22.279870920000064,
+      "node_id": "ba047eef--12-15",
+      "association": "approximate",
+      "association_distance_m": 9.83,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:955f135c-0b7d-4fe0-bfdf-5bb5e82a821b",
+      "scene_id": "hysan-place",
+      "names": [
+        "Apple, Causeway Bay"
+      ],
+      "category": "shopping",
+      "level_id": "ba047eef-2b62-4561-932a-25c1a1e16fb3",
+      "lon": 114.18364458000008,
+      "lat": 22.27953351000008,
+      "node_id": "ba047eef--5--5",
+      "association": "approximate",
+      "association_distance_m": 11.92,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "verified_url": "https://www.apple.com/hk/en/retail/causewaybay/",
+      "media_ids": [
+        "hysan-place-photo",
+        "hysan-place-apple-front"
+      ]
+    },
+    {
+      "id": "poi:cb483af9-061c-4ab2-8a8b-b814863120c1",
+      "scene_id": "hysan-place",
+      "names": [
+        "Aesop"
+      ],
+      "category": "shopping",
+      "level_id": "ba047eef-2b62-4561-932a-25c1a1e16fb3",
+      "lon": 114.18379199000003,
+      "lat": 22.279935630000068,
+      "node_id": "ba047eef--1-15",
+      "association": "approximate",
+      "association_distance_m": 3.56,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4b1ab945-2290-4df1-a854-83862fcfc99a",
+      "scene_id": "hysan-place",
+      "names": [
+        "lululemon"
+      ],
+      "category": "shopping",
+      "level_id": "ba047eef-2b62-4561-932a-25c1a1e16fb3",
+      "lon": 114.18408581000006,
+      "lat": 22.279686420000075,
+      "node_id": "ba047eef-13--1",
+      "association": "approximate",
+      "association_distance_m": 10.01,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:7e74fa80-4e87-4d53-b428-d2fd7997c095",
+      "scene_id": "hysan-place",
+      "names": [
+        "Chanel"
+      ],
+      "category": "shopping",
+      "level_id": "ba047eef-2b62-4561-932a-25c1a1e16fb3",
+      "lon": 114.18401337000012,
+      "lat": 22.279849230000025,
+      "node_id": "ba047eef-11-10",
+      "association": "approximate",
+      "association_distance_m": 5.86,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:faff8867-a918-42a5-91fa-8dc6f8f50ddf",
+      "scene_id": "hysan-place",
+      "names": [
+        "Cadillac Bar & Grill"
+      ],
+      "category": "restaurant",
+      "level_id": "34dee53a-ba40-4d33-8b55-7b05fd342749",
+      "lon": 114.1835483100001,
+      "lat": 22.279747460000067,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:cad5479b-803c-4d03-9280-a9fb7e933753",
+      "scene_id": "hysan-place",
+      "names": [
+        "Her Own Words"
+      ],
+      "category": "shopping",
+      "level_id": "34dee53a-ba40-4d33-8b55-7b05fd342749",
+      "lon": 114.18379098000003,
+      "lat": 22.279615530000058,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c34a5f3b-2c3a-415a-bddc-3c440d7bc443",
+      "scene_id": "hysan-place",
+      "names": [
+        "Nail it Tokyo"
+      ],
+      "category": "shopping",
+      "level_id": "34dee53a-ba40-4d33-8b55-7b05fd342749",
+      "lon": 114.18389380000008,
+      "lat": 22.279645000000073,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:cb4c1027-59cc-43de-8f72-9d14236236e3",
+      "scene_id": "hysan-place",
+      "names": [
+        "C.P.U."
+      ],
+      "category": "shopping",
+      "level_id": "34dee53a-ba40-4d33-8b55-7b05fd342749",
+      "lon": 114.18374558000005,
+      "lat": 22.27974578000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:1f6f0c57-0481-4f88-8c41-31659d335f05",
+      "scene_id": "hysan-place",
+      "names": [
+        "工場",
+        "workshop"
+      ],
+      "category": "shopping",
+      "level_id": "34dee53a-ba40-4d33-8b55-7b05fd342749",
+      "lon": 114.18383483000002,
+      "lat": 22.279826910000054,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d3dad532-6c82-472c-8408-f71abb04d33d",
+      "scene_id": "hysan-place",
+      "names": [
+        "Cadillac Bar & Grill"
+      ],
+      "category": "restaurant",
+      "level_id": "34dee53a-ba40-4d33-8b55-7b05fd342749",
+      "lon": 114.18372048000003,
+      "lat": 22.279819590000045,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:34fc1cf3-de62-43e7-9013-e0d82f41c32b",
+      "scene_id": "hysan-place",
+      "names": [
+        "保捷行",
+        "Protrek"
+      ],
+      "category": "shopping",
+      "level_id": "34dee53a-ba40-4d33-8b55-7b05fd342749",
+      "lon": 114.18380143000002,
+      "lat": 22.27991928000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f29c6067-d69a-464d-9653-2466784be77b",
+      "scene_id": "hysan-place",
+      "names": [
+        "髮記",
+        "Hair King"
+      ],
+      "category": "shopping",
+      "level_id": "34dee53a-ba40-4d33-8b55-7b05fd342749",
+      "lon": 114.18394645000001,
+      "lat": 22.279651700000045,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:7e4af85e-6096-4129-b999-c0906598e94a",
+      "scene_id": "hysan-place",
+      "names": [
+        "Home.焙小日子",
+        "Home Baking Day"
+      ],
+      "category": "restaurant",
+      "level_id": "34dee53a-ba40-4d33-8b55-7b05fd342749",
+      "lon": 114.18402950000007,
+      "lat": 22.279727940000043,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b717d98f-e797-476c-89d3-b0345ffd5a63",
+      "scene_id": "hysan-place",
+      "names": [
+        "Hoax"
+      ],
+      "category": "shopping",
+      "level_id": "34dee53a-ba40-4d33-8b55-7b05fd342749",
+      "lon": 114.18396034000011,
+      "lat": 22.279918700000053,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9486b4cb-387a-4a73-81b8-e2f9e889f75f",
+      "scene_id": "hysan-place",
+      "names": [
+        "myEureka"
+      ],
+      "category": "shopping",
+      "level_id": "34dee53a-ba40-4d33-8b55-7b05fd342749",
+      "lon": 114.18394967000006,
+      "lat": 22.27975421000008,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4ae21645-f9f5-402a-8fec-2b6942eba18f",
+      "scene_id": "hysan-place",
+      "names": [
+        "曦活茶",
+        "Heywood Tea"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.18355123000003,
+      "lat": 22.27974768000007,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:91c08d5e-59ba-4150-830d-09d8812ca7a8",
+      "scene_id": "hysan-place",
+      "names": [
+        "張梁記",
+        "Cheung Leung Kee"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.18353550000006,
+      "lat": 22.279650810000078,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b0fde418-d2e4-43df-87d4-da7779e90a7d",
+      "scene_id": "hysan-place",
+      "names": [
+        "SONY"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.1835774000001,
+      "lat": 22.279481480000072,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0065c01a-42ca-4ca6-8d0f-6ea6b1420610",
+      "scene_id": "hysan-place",
+      "names": [
+        "RAINS"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.18367295000007,
+      "lat": 22.27949995000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:869fa6c3-cefc-4fa2-8e01-ecdcffa3c134",
+      "scene_id": "hysan-place",
+      "names": [
+        "Pacific Coffee"
+      ],
+      "category": "restaurant",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.1835821200001,
+      "lat": 22.279908630000023,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:120bcbad-1ddd-4795-8bba-4c6b47f871bf",
+      "scene_id": "hysan-place",
+      "names": [
+        "G-Shock Casio"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.18376998000008,
+      "lat": 22.279922370000065,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f58a137b-7547-4abf-8680-c1b1c000a9d2",
+      "scene_id": "hysan-place",
+      "names": [
+        "Smile Yogurt . Cake . Cookies"
+      ],
+      "category": "restaurant",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.18381798000007,
+      "lat": 22.27989966000007,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:975a64ff-e633-4ee3-9fa7-5ff78099871f",
+      "scene_id": "hysan-place",
+      "names": [
+        "吃茶三千",
+        "Chi Cha San Chen"
+      ],
+      "category": "restaurant",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.18382481000003,
+      "lat": 22.279833040000028,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:325a9e1f-792b-496d-a2a7-1764df9fdb1d",
+      "scene_id": "hysan-place",
+      "names": [
+        "VANS"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.1838218800001,
+      "lat": 22.27976816000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:dd271826-952b-4fa8-abe8-6f72da49ef33",
+      "scene_id": "hysan-place",
+      "names": [
+        "Dr. Martens"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.18378192000011,
+      "lat": 22.279542280000044,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d6fea5b6-ebb6-4eff-aa74-4243035e457e",
+      "scene_id": "hysan-place",
+      "names": [
+        "SUPERGA"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.18371882000008,
+      "lat": 22.279518480000036,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6a45b434-6e0e-46a5-89f2-508cd9b051f6",
+      "scene_id": "hysan-place",
+      "names": [
+        "New Era"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.1838092700001,
+      "lat": 22.27960477000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:546e17a4-bfd4-44b2-8b96-844f8f29f3f4",
+      "scene_id": "hysan-place",
+      "names": [
+        "Dickies"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.18373267000004,
+      "lat": 22.279793090000055,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:453971bd-85e7-4190-bcc2-792035c044bd",
+      "scene_id": "hysan-place",
+      "names": [
+        "DEMK"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.18373540000005,
+      "lat": 22.27983696000007,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:69d1a8be-6f5f-43cd-8c52-cf6be2473d50",
+      "scene_id": "hysan-place",
+      "names": [
+        "HKID Gallery"
+      ],
+      "category": "shopping",
+      "level_id": "60b3b693-98e3-4546-9909-081251658e88",
+      "lon": 114.18351723,
+      "lat": 22.27979029000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ec1056c6-4a0d-4474-a385-21c89b815c81",
+      "scene_id": "hysan-place",
+      "names": [
+        "i.t blue block"
+      ],
+      "category": "shopping",
+      "level_id": "f4434706-c0d9-46d3-ac8a-e8440509837c",
+      "lon": 114.18354217000001,
+      "lat": 22.27988823000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4da2aa40-64d3-4caf-88e9-cd3de1536aee",
+      "scene_id": "hysan-place",
+      "names": [
+        "i.t blue block"
+      ],
+      "category": "shopping",
+      "level_id": "f4434706-c0d9-46d3-ac8a-e8440509837c",
+      "lon": 114.18363381000006,
+      "lat": 22.27968708000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6fac02c9-ef35-461e-8dd8-d0f1d3176fe4",
+      "scene_id": "hysan-place",
+      "names": [
+        "i.t blue block"
+      ],
+      "category": "shopping",
+      "level_id": "f4434706-c0d9-46d3-ac8a-e8440509837c",
+      "lon": 114.1837290200001,
+      "lat": 22.279787030000023,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:113abdf1-93eb-4da8-8332-d9617b637b18",
+      "scene_id": "hysan-place",
+      "names": [
+        "i.t blue block"
+      ],
+      "category": "shopping",
+      "level_id": "f4434706-c0d9-46d3-ac8a-e8440509837c",
+      "lon": 114.1836575100001,
+      "lat": 22.279497340000034,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:71133a0d-cd5b-49df-92f0-1d9d67b052be",
+      "scene_id": "hysan-place",
+      "names": [
+        "阿夫利拉麵",
+        "Afuri"
+      ],
+      "category": "restaurant",
+      "level_id": "f4434706-c0d9-46d3-ac8a-e8440509837c",
+      "lon": 114.18382296000004,
+      "lat": 22.27976805000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:156a52d5-7adc-46af-8de4-7594d7e62bae",
+      "scene_id": "hysan-place",
+      "names": [
+        "J.S. Foodies"
+      ],
+      "category": "restaurant",
+      "level_id": "f4434706-c0d9-46d3-ac8a-e8440509837c",
+      "lon": 114.18380505000005,
+      "lat": 22.279880030000072,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a0ac448c-7325-431c-8170-ecfe7569045f",
+      "scene_id": "hysan-place",
+      "names": [
+        "超級市場",
+        "Supermarket"
+      ],
+      "category": "supermarket",
+      "level_id": "c034c441-b20a-403c-b2f6-487343cd7d53",
+      "lon": 114.18335049000007,
+      "lat": 22.279880710000043,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ebd2819c-77e7-4ac9-955f-9596b5f97334",
+      "scene_id": "hysan-place",
+      "names": [
+        "超級市場",
+        "Supermarket"
+      ],
+      "category": "supermarket",
+      "level_id": "c034c441-b20a-403c-b2f6-487343cd7d53",
+      "lon": 114.18392381000001,
+      "lat": 22.279703790000042,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:523a8f58-3af1-4508-9378-09b2594e0c76",
+      "scene_id": "hysan-place",
+      "names": [
+        "Apple, Causeway Bay"
+      ],
+      "category": "shopping",
+      "level_id": "02d40f8d-8cdc-451f-ab0e-6282b70c07a5",
+      "lon": 114.18363990000012,
+      "lat": 22.279531150000025,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "verified_url": "https://www.apple.com/hk/en/retail/causewaybay/",
+      "media_ids": [
+        "hysan-place-photo",
+        "hysan-place-apple-front"
+      ]
+    },
+    {
+      "id": "poi:d4fda048-909d-46dd-98e1-d82f6740ed8d",
+      "scene_id": "hysan-place",
+      "names": [
+        "PANDORA"
+      ],
+      "category": "shopping",
+      "level_id": "02d40f8d-8cdc-451f-ab0e-6282b70c07a5",
+      "lon": 114.18386938000003,
+      "lat": 22.279605950000075,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:14328459-3a86-4d3b-86d1-facb74877b7a",
+      "scene_id": "hysan-place",
+      "names": [
+        "Hollister"
+      ],
+      "category": "shopping",
+      "level_id": "02d40f8d-8cdc-451f-ab0e-6282b70c07a5",
+      "lon": 114.18372246000001,
+      "lat": 22.279757620000055,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:dbe4a2fb-84d4-47b4-b8dc-928d79cb6626",
+      "scene_id": "hysan-place",
+      "names": [
+        "EVOLCARE"
+      ],
+      "category": "shopping",
+      "level_id": "02d40f8d-8cdc-451f-ab0e-6282b70c07a5",
+      "lon": 114.18394154000009,
+      "lat": 22.279624870000077,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9c4faff7-7044-4838-b834-1cf7e3c0565e",
+      "scene_id": "hysan-place",
+      "names": [
+        "ACCA KAPPA"
+      ],
+      "category": "shopping",
+      "level_id": "02d40f8d-8cdc-451f-ab0e-6282b70c07a5",
+      "lon": 114.18398457,
+      "lat": 22.279644330000053,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ac06e477-fb4d-4ad4-b674-3f37496fc9fc",
+      "scene_id": "hysan-place",
+      "names": [
+        "KK PLUS"
+      ],
+      "category": "shopping",
+      "level_id": "02d40f8d-8cdc-451f-ab0e-6282b70c07a5",
+      "lon": 114.18408709000005,
+      "lat": 22.279670340000052,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:8ee46511-6297-4266-9730-cde49f8ec4e8",
+      "scene_id": "hysan-place",
+      "names": [
+        "BEYORG有機無限",
+        "BEYORG"
+      ],
+      "category": "shopping",
+      "level_id": "02d40f8d-8cdc-451f-ab0e-6282b70c07a5",
+      "lon": 114.18400879000001,
+      "lat": 22.27991263000007,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e9f1257c-3bb2-4cbd-927c-ed61dd9a0ad5",
+      "scene_id": "hysan-place",
+      "names": [
+        "JOYCE Beauty"
+      ],
+      "category": "shopping",
+      "level_id": "02d40f8d-8cdc-451f-ab0e-6282b70c07a5",
+      "lon": 114.18392159000007,
+      "lat": 22.27993859000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:bfc016d0-a9ae-40c4-9f2d-bf190636f8bb",
+      "scene_id": "hysan-place",
+      "names": [
+        "龍島",
+        "Lucullus"
+      ],
+      "category": "shopping",
+      "level_id": "02d40f8d-8cdc-451f-ab0e-6282b70c07a5",
+      "lon": 114.1837616900001,
+      "lat": 22.27994018000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6a25cfdb-fab0-4925-9a35-49fedc1539e0",
+      "scene_id": "hysan-place",
+      "names": [
+        "匯豐銀行自動櫃員機",
+        "HSBC Hysan Place Express Banking"
+      ],
+      "category": "atm",
+      "level_id": "02d40f8d-8cdc-451f-ab0e-6282b70c07a5",
+      "lon": 114.18367735000004,
+      "lat": 22.27995474000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9ba6e260-0f8e-4b2c-b9de-40beb9bd4509",
+      "scene_id": "hysan-place",
+      "names": [
+        "Hollister"
+      ],
+      "category": "shopping",
+      "level_id": "02d40f8d-8cdc-451f-ab0e-6282b70c07a5",
+      "lon": 114.18351705000009,
+      "lat": 22.27983290000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5af812e9-4e74-4525-9847-ba0faea7a12b",
+      "scene_id": "hysan-place",
+      "names": [
+        "TORIO Store"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18354025000008,
+      "lat": 22.279653660000065,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:fc405c27-02df-4877-88cb-1c6827b1098f",
+      "scene_id": "hysan-place",
+      "names": [
+        "LINE FRIENDS POP-UP STORE"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.1835217900001,
+      "lat": 22.279571300000043,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:465bcfbd-7c69-4844-84a5-f4d6bb3ebb46",
+      "scene_id": "hysan-place",
+      "names": [
+        "USAGI ONLINE STORE"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18365770000003,
+      "lat": 22.279491860000064,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:861185c6-4262-48c9-9ae3-47d77bdb5ba2",
+      "scene_id": "hysan-place",
+      "names": [
+        "Gilly Hicks"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18360811000002,
+      "lat": 22.279691590000027,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9eedde89-3b5d-45bb-9618-bc89f9c0c250",
+      "scene_id": "hysan-place",
+      "names": [
+        "Diamanti Per Tutti"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18373195000004,
+      "lat": 22.279748720000043,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:7fa33f7a-6da0-4aa5-9474-82d58c7ef360",
+      "scene_id": "hysan-place",
+      "names": [
+        "LIFETASTIC BISTRO"
+      ],
+      "category": "restaurant",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18369552000001,
+      "lat": 22.27985804000008,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b5cd5cef-baf6-4329-bbae-c62588a53fee",
+      "scene_id": "hysan-place",
+      "names": [
+        "Parisine"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.1837998100001,
+      "lat": 22.27991620000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0bb34dae-91db-4491-a50d-ff5524fdbee6",
+      "scene_id": "hysan-place",
+      "names": [
+        "OLENS"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18385536000005,
+      "lat": 22.27992659000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:96a6189d-5d17-4b54-ab8c-b6ad13e12d87",
+      "scene_id": "hysan-place",
+      "names": [
+        "Les Néréides"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18391072000009,
+      "lat": 22.279931240000053,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:76c9a3ab-3a8b-4ff4-9abc-a015243a5a68",
+      "scene_id": "hysan-place",
+      "names": [
+        "亮視點",
+        "LensCrafters"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18398029000002,
+      "lat": 22.27992910000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:118febd0-0752-463e-9789-6796a87c6216",
+      "scene_id": "hysan-place",
+      "names": [
+        "LIFETASTIC BISTRO"
+      ],
+      "category": "restaurant",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.1838177300001,
+      "lat": 22.27978587000007,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:84387e0c-60e1-4635-9222-cf95fa54c807",
+      "scene_id": "hysan-place",
+      "names": [
+        "INTIQUE"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18378013000006,
+      "lat": 22.279556730000024,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:26e83b26-604f-4878-86a0-b91fe2d4df9d",
+      "scene_id": "hysan-place",
+      "names": [
+        "SNIDEL"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18386949,
+      "lat": 22.27960052000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:10c12fbd-df08-42da-abc6-1595594ae1bd",
+      "scene_id": "hysan-place",
+      "names": [
+        "Beautysaur Organics"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.1839957300001,
+      "lat": 22.279645790000075,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:545b7511-fbe2-4305-a0ad-285be5429014",
+      "scene_id": "hysan-place",
+      "names": [
+        "春水堂",
+        "Chun Shui Tang"
+      ],
+      "category": "restaurant",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18410566000011,
+      "lat": 22.27967932000007,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b14fad04-186f-4539-aa74-5104cdc70108",
+      "scene_id": "hysan-place",
+      "names": [
+        "DIDIER DUBOT"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18366216000004,
+      "lat": 22.279687230000036,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:786c8074-6b7c-45cc-9857-7d35e2ccbf14",
+      "scene_id": "hysan-place",
+      "names": [
+        "春水堂",
+        "Chun Shui Tang"
+      ],
+      "category": "restaurant",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18400440000005,
+      "lat": 22.279783830000042,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:95cfe2f6-6796-4247-84f7-c5db4e72ba37",
+      "scene_id": "hysan-place",
+      "names": [
+        "時間廊",
+        "City Chain"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.1836269900001,
+      "lat": 22.279615290000038,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d6ce837d-1c7b-416d-aad3-0e3ea3a22cb3",
+      "scene_id": "hysan-place",
+      "names": [
+        "Crudo"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.18369791000009,
+      "lat": 22.279597980000062,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:27da20ba-8c59-4ba8-9992-768cdec5cd81",
+      "scene_id": "hysan-place",
+      "names": [
+        "Hollister"
+      ],
+      "category": "shopping",
+      "level_id": "8d74424f-0ed3-44dd-a114-32eb477ef848",
+      "lon": 114.1835818400001,
+      "lat": 22.279783120000047,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:2f9c7071-6579-4c67-9b9d-f1f1739cc664",
+      "scene_id": "hysan-place",
+      "names": [
+        "Rolex - Oriental Watch Co."
+      ],
+      "category": "shopping",
+      "level_id": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+      "lon": 114.18338740000002,
+      "lat": 22.279905430000042,
+      "node_id": "a4e20e16--23-15",
+      "association": "approximate",
+      "association_distance_m": 4.37,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:cb4537b8-94c5-4a85-aef6-2043043a0698",
+      "scene_id": "hysan-place",
+      "names": [
+        "Apple, Causeway Bay"
+      ],
+      "category": "shopping",
+      "level_id": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+      "lon": 114.18365042000005,
+      "lat": 22.27951877000004,
+      "node_id": "a4e20e16--1--5",
+      "association": "approximate",
+      "association_distance_m": 16.96,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "verified_url": "https://www.apple.com/hk/en/retail/causewaybay/",
+      "media_ids": [
+        "hysan-place-photo",
+        "hysan-place-apple-front"
+      ]
+    },
+    {
+      "id": "poi:c932b133-c4b9-407f-a848-9a649a537f56",
+      "scene_id": "hysan-place",
+      "names": [
+        "DFS旗下T廣場美妝世界",
+        "T Galleria Beauty By DFS"
+      ],
+      "category": "shopping",
+      "level_id": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+      "lon": 114.18396053000004,
+      "lat": 22.279761730000075,
+      "node_id": "a4e20e16-9-12",
+      "association": "approximate",
+      "association_distance_m": 12.19,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:0430207a-623f-4175-8811-565f37f48ef7",
+      "scene_id": "hysan-place",
+      "names": [
+        "DFS旗下T廣場美妝世界",
+        "T Galleria Beauty By DFS"
+      ],
+      "category": "shopping",
+      "level_id": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+      "lon": 114.18376910000006,
+      "lat": 22.279935110000054,
+      "node_id": "a4e20e16--4-15",
+      "association": "approximate",
+      "association_distance_m": 5.36,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4e2db184-9667-4289-aa24-2e9eb39d25bd",
+      "scene_id": "hysan-place",
+      "names": [
+        "DFS旗下T廣場美妝世界",
+        "T Galleria Beauty By DFS"
+      ],
+      "category": "shopping",
+      "level_id": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+      "lon": 114.18371609000008,
+      "lat": 22.279784910000046,
+      "node_id": "a4e20e16--2-6",
+      "association": "approximate",
+      "association_distance_m": 4.11,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:46d1e364-e575-418e-bf55-ae8b99b50090",
+      "scene_id": "hysan-place",
+      "names": [
+        "DFS旗下T廣場美妝世界",
+        "T Galleria Beauty By DFS"
+      ],
+      "category": "shopping",
+      "level_id": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+      "lon": 114.18381137000006,
+      "lat": 22.279612580000048,
+      "node_id": "a4e20e16-0--6",
+      "association": "approximate",
+      "association_distance_m": 2.57,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a539a0c9-5a8f-4edc-9eae-424d51335127",
+      "scene_id": "hysan-place",
+      "names": [
+        "誠品書店",
+        "Eslite Bookstore"
+      ],
+      "category": "shopping",
+      "level_id": "30b57fe5-0a86-4718-aa14-85520df5496d",
+      "lon": 114.1840299800001,
+      "lat": 22.279758670000035,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:68b2c6e0-75c7-424d-8ba7-a5e80eff1dc4",
+      "scene_id": "hysan-place",
+      "names": [
+        "HABITŪ"
+      ],
+      "category": "restaurant",
+      "level_id": "30b57fe5-0a86-4718-aa14-85520df5496d",
+      "lon": 114.18370387000004,
+      "lat": 22.27981163000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6750075c-232e-4453-8533-17a9959b0e32",
+      "scene_id": "hysan-place",
+      "names": [
+        "誠品書店",
+        "Eslite Bookstore"
+      ],
+      "category": "shopping",
+      "level_id": "fd2cff8a-92b4-49a2-860f-c13bcc6d489c",
+      "lon": 114.18401775000007,
+      "lat": 22.27979816000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:544fd064-9758-4b17-8305-1158e64833bc",
+      "scene_id": "hysan-place",
+      "names": [
+        "升降機",
+        "Lift"
+      ],
+      "category": "shopping",
+      "level_id": "fb1be9c7-dbf9-434a-b264-cc9fe5dba74e",
+      "lon": 114.18367837000005,
+      "lat": 22.279719270000044,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:d1fd1ece-93d3-470e-8db4-71fe8e854666",
+      "scene_id": "hysan-place",
+      "names": [
+        "誠品書店",
+        "Eslite Bookstore"
+      ],
+      "category": "shopping",
+      "level_id": "fb1be9c7-dbf9-434a-b264-cc9fe5dba74e",
+      "lon": 114.18400622000001,
+      "lat": 22.279796480000073,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:b98a4044-6633-4a13-8c8a-31dc042c1cc6",
+      "scene_id": "hysan-place",
+      "names": [
+        "CoCo壹番屋",
+        "Curry House Coco Ichibanya"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.1837442100001,
+      "lat": 22.279617330000065,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4244c340-bd6c-4ef4-9804-dc43234c8f8d",
+      "scene_id": "hysan-place",
+      "names": [
+        "魚事者",
+        "Fisholic"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18380371,
+      "lat": 22.279881110000076,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:85e30eb3-2699-4848-b29d-ef03bf35dd48",
+      "scene_id": "hysan-place",
+      "names": [
+        "Dining Area"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18399435000003,
+      "lat": 22.279911860000027,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:9b64fd9d-b6b9-41d2-bcea-0d7902fef94d",
+      "scene_id": "hysan-place",
+      "names": [
+        "Dining Area"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18393354000011,
+      "lat": 22.279651560000048,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:73cca02a-86cd-4a37-9cdb-9d5f07a001e2",
+      "scene_id": "hysan-place",
+      "names": [
+        "Chatuchak"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18381910000005,
+      "lat": 22.279662210000026,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:8a29cc4a-c13c-43e4-8251-fd470299a879",
+      "scene_id": "hysan-place",
+      "names": [
+        "Dining Area"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.1840235200001,
+      "lat": 22.27979115000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3dccecb3-c032-4877-9aa6-bd1e6b988bee",
+      "scene_id": "hysan-place",
+      "names": [
+        "丸龜製麵",
+        "Marugame"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18405087000008,
+      "lat": 22.27992536000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4adead5e-5062-4139-ac0d-70123537eb46",
+      "scene_id": "hysan-place",
+      "names": [
+        "花甲年華",
+        "In The Mood For Clam"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18387872000005,
+      "lat": 22.27993710000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:be9ec324-5c69-4f3f-95a3-5e7b81dd66f1",
+      "scene_id": "hysan-place",
+      "names": [
+        "百芳池上便當",
+        "BAI FUNG BENTO"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18374649000009,
+      "lat": 22.279905780000036,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3eb35a5e-6988-4ead-b6a0-3422e7b60f35",
+      "scene_id": "hysan-place",
+      "names": [
+        "Dining Area"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18382542000006,
+      "lat": 22.27991835000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:85c53b69-a5bd-441c-969a-9b318a54650b",
+      "scene_id": "hysan-place",
+      "names": [
+        "PEPPER LUNCH"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18385797000008,
+      "lat": 22.27986027000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:132c63cc-8db5-4b24-993d-78acf93fe87f",
+      "scene_id": "hysan-place",
+      "names": [
+        "越好",
+        "Pho Vietz"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18386005000002,
+      "lat": 22.279687180000053,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ab371e30-acc1-4b13-837d-7c77e7ece064",
+      "scene_id": "hysan-place",
+      "names": [
+        "譚仔三哥米線",
+        "TamJai SamGor MiXian"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18406785000002,
+      "lat": 22.279702410000027,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:323db4ca-8b0d-4efc-8541-2d5029046781",
+      "scene_id": "hysan-place",
+      "names": [
+        "Mos Burger and Mos Cucina"
+      ],
+      "category": "restaurant",
+      "level_id": "ca53fe8e-22d8-433a-ad79-c7b2f805ff69",
+      "lon": 114.18403381000007,
+      "lat": 22.279663520000042,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:78779c6f-afb5-47dd-8fdb-53bddddd4846",
+      "scene_id": "hysan-place",
+      "names": [
+        "何洪記（1946）粥麵專家",
+        "Ho Hung Kee (1946) Congee & Noodle Shop"
+      ],
+      "category": "restaurant",
+      "level_id": "1c8ba0fe-6858-4b43-a8e9-501a4330806d",
+      "lon": 114.18377971000007,
+      "lat": 22.279887750000057,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:99a7872c-0474-4488-91c5-06b26c1361e7",
+      "scene_id": "hysan-place",
+      "names": [
+        "名館",
+        "Ming Bistro"
+      ],
+      "category": "restaurant",
+      "level_id": "1c8ba0fe-6858-4b43-a8e9-501a4330806d",
+      "lon": 114.18379450000009,
+      "lat": 22.279640070000028,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:27bc34c6-dbb2-4e6c-97ba-a33cf156ab43",
+      "scene_id": "hysan-place",
+      "names": [
+        "京林屋",
+        "Kyo Hayashiya"
+      ],
+      "category": "restaurant",
+      "level_id": "1c8ba0fe-6858-4b43-a8e9-501a4330806d",
+      "lon": 114.18402211000011,
+      "lat": 22.279924100000073,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:719cce38-4bad-4383-8ca1-632489e916dc",
+      "scene_id": "hysan-place",
+      "names": [
+        "道頓堀御好燒專門店",
+        "Okonomiyaki Dohtonbori Restaurant"
+      ],
+      "category": "restaurant",
+      "level_id": "1c8ba0fe-6858-4b43-a8e9-501a4330806d",
+      "lon": 114.18397434000008,
+      "lat": 22.27966287000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6b10737b-75fe-4cbc-95c7-80df1a6fc4c5",
+      "scene_id": "hysan-place",
+      "names": [
+        "名代宇奈備長炭燒鰻魚飯專門店",
+        "Nadai Unatoto Charcoal Grilled Eel Specialty"
+      ],
+      "category": "restaurant",
+      "level_id": "1c8ba0fe-6858-4b43-a8e9-501a4330806d",
+      "lon": 114.18405415000007,
+      "lat": 22.27969962000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:74185e27-e6e8-4fc2-bc7c-2a2f51d95b12",
+      "scene_id": "hysan-place",
+      "names": [
+        "姚姚酸菜魚",
+        "YAO YAO"
+      ],
+      "category": "restaurant",
+      "level_id": "efc37ee6-6488-4c00-86b2-ea586a94f37d",
+      "lon": 114.18378981000001,
+      "lat": 22.279649490000054,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5fa186e8-c1f9-4ff8-9637-7a0c84a71507",
+      "scene_id": "hysan-place",
+      "names": [
+        "千両",
+        "sen-ryo"
+      ],
+      "category": "restaurant",
+      "level_id": "efc37ee6-6488-4c00-86b2-ea586a94f37d",
+      "lon": 114.18379673000004,
+      "lat": 22.27989376000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:00f93554-4d1d-4310-86be-b1a9cc013c66",
+      "scene_id": "hysan-place",
+      "names": [
+        "Green Waffle Diner"
+      ],
+      "category": "restaurant",
+      "level_id": "efc37ee6-6488-4c00-86b2-ea586a94f37d",
+      "lon": 114.18399152000006,
+      "lat": 22.27992744000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:bea0714c-e5e4-476b-aa10-a14b260375e6",
+      "scene_id": "hysan-place",
+      "names": [
+        "Pizza Maru"
+      ],
+      "category": "restaurant",
+      "level_id": "efc37ee6-6488-4c00-86b2-ea586a94f37d",
+      "lon": 114.18403535000004,
+      "lat": 22.279688110000052,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:34de7fd5-44ed-417c-8717-ce19b6817a05",
+      "scene_id": "hysan-place",
+      "names": [
+        "牛気",
+        "Nabe Urawa"
+      ],
+      "category": "restaurant",
+      "level_id": "56d8f2b3-d4e4-47a6-a65d-3f380ef80e89",
+      "lon": 114.1837287300001,
+      "lat": 22.279901720000055,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:428bcaca-91e6-4532-81cc-0218abc48a73",
+      "scene_id": "hysan-place",
+      "names": [
+        "湊湊火鍋・茶憩",
+        "Coucou Hotpot・Brew Tea"
+      ],
+      "category": "restaurant",
+      "level_id": "56d8f2b3-d4e4-47a6-a65d-3f380ef80e89",
+      "lon": 114.1838893800001,
+      "lat": 22.27967289000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5730b90d-88db-4e8c-8dc7-bdcb4696cc93",
+      "scene_id": "hysan-place",
+      "names": [
+        "紅點光學",
+        "Reddot Optic"
+      ],
+      "category": "shopping",
+      "level_id": "22dd83bc-9cfe-4245-8636-940eb76172d7",
+      "lon": 114.18358480000006,
+      "lat": 22.279908010000042,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:96c2d414-ba35-4257-9961-6c3234070f9b",
+      "scene_id": "hysan-place",
+      "names": [
+        "Owndays"
+      ],
+      "category": "shopping",
+      "level_id": "22dd83bc-9cfe-4245-8636-940eb76172d7",
+      "lon": 114.18353993000005,
+      "lat": 22.279650160000074,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e5e83c20-f4d0-4255-8c1e-7e87618a9eee",
+      "scene_id": "hysan-place",
+      "names": [
+        "THE NORTH FACE EXPLORATION CONCEPT STORE"
+      ],
+      "category": "shopping",
+      "level_id": "22dd83bc-9cfe-4245-8636-940eb76172d7",
+      "lon": 114.18355402000009,
+      "lat": 22.279516820000026,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f2041453-122e-4643-add7-b3b08e9559f7",
+      "scene_id": "hysan-place",
+      "names": [
+        "MLB"
+      ],
+      "category": "shopping",
+      "level_id": "22dd83bc-9cfe-4245-8636-940eb76172d7",
+      "lon": 114.18368562,
+      "lat": 22.279505270000072,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:f8cda266-0287-4e6d-92fe-a232e61de6ab",
+      "scene_id": "hysan-place",
+      "names": [
+        "Popcorn General Store"
+      ],
+      "category": "shopping",
+      "level_id": "22dd83bc-9cfe-4245-8636-940eb76172d7",
+      "lon": 114.18377733000011,
+      "lat": 22.27954256000004,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a51cdadd-fcc1-4eb2-89d1-fcfe28988fea",
+      "scene_id": "hysan-place",
+      "names": [
+        "RIPNDIP"
+      ],
+      "category": "shopping",
+      "level_id": "22dd83bc-9cfe-4245-8636-940eb76172d7",
+      "lon": 114.18380793000006,
+      "lat": 22.279593130000023,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4ef27e40-3ce5-4a10-95ff-73048233b6b1",
+      "scene_id": "hysan-place",
+      "names": [
+        "HUF"
+      ],
+      "category": "shopping",
+      "level_id": "22dd83bc-9cfe-4245-8636-940eb76172d7",
+      "lon": 114.1836986300001,
+      "lat": 22.279684030000055,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ac6f243e-5ea6-40b7-8dd2-688d55e06d66",
+      "scene_id": "hysan-place",
+      "names": [
+        "HOW to live well"
+      ],
+      "category": "restaurant",
+      "level_id": "22dd83bc-9cfe-4245-8636-940eb76172d7",
+      "lon": 114.18381804,
+      "lat": 22.279839450000054,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:db6e93c7-5b83-4f20-8f7e-eb81b51b2956",
+      "scene_id": "hysan-place",
+      "names": [
+        "KURA CHIKA by PORTER"
+      ],
+      "category": "shopping",
+      "level_id": "22dd83bc-9cfe-4245-8636-940eb76172d7",
+      "lon": 114.18374442000004,
+      "lat": 22.279795550000074,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/5bb79500-645d-4089-b5bc-5a02cfeed057/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:hysan-place-lift-a:a3a5bc3e-f461-444e-8e4a-f63489cc7f2a",
+      "scene_id": "hysan-place",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+      "lon": 114.18368036,
+      "lat": 22.27989718,
+      "node_id": "a3a5bc3e-f461-444e-8e4a-f63489cc7f2a",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/hysan-place/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:hysan-place-lift-a:8887c3eb-f74a-40b1-9f77-0edf09786e93",
+      "scene_id": "hysan-place",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "ba047eef-2b62-4561-932a-25c1a1e16fb3",
+      "lon": 114.18368036,
+      "lat": 22.27989718,
+      "node_id": "8887c3eb-f74a-40b1-9f77-0edf09786e93",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/hysan-place/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:hysan-place-lift-b:5891485d-7827-4e67-bd2f-495548cea0e3",
+      "scene_id": "hysan-place",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "a4e20e16-ac57-47bc-b24d-9583e8238caf",
+      "lon": 114.18365116,
+      "lat": 22.27989602,
+      "node_id": "5891485d-7827-4e67-bd2f-495548cea0e3",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/hysan-place/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:hysan-place-lift-b:49275d1a-aa09-4538-aa0f-fb83ec97c975",
+      "scene_id": "hysan-place",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "ba047eef-2b62-4561-932a-25c1a1e16fb3",
+      "lon": 114.18365116,
+      "lat": 22.27989602,
+      "node_id": "49275d1a-aa09-4538-aa0f-fb83ec97c975",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/hysan-place/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

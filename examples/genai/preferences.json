@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "context_id": "replace-with-live-context-id",
+  "scene_id": "hysan-place",
+  "request_id": "62b3ee8b-9637-4806-972a-f7cfa5ec2351",
+  "agent": "preferences",
+  "payload": {
+    "mobility_type": "manual_wheelchair",
+    "avoid_stairs": true,
+    "avoid_steep_slopes": true,
+    "prefer_covered_shelter": true,
+    "tts_selection": "cantonese_female"
+  }
+}

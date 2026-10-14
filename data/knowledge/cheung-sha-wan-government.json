@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "scene_id": "cheung-sha-wan-government",
+  "records": [
+    {
+      "id": "facility:cheung-sha-wan-government-lift-a:32c888a6-1f7c-4615-a9ec-85bc81a4c206",
+      "scene_id": "cheung-sha-wan-government",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "216adbc9-b1fc-4a3c-98f1-2c35ca686816",
+      "lon": 114.16036459,
+      "lat": 22.33180905,
+      "node_id": "32c888a6-1f7c-4615-a9ec-85bc81a4c206",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/cheung-sha-wan-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:cheung-sha-wan-government-lift-a:c8f068b6-c852-4447-965e-69106a461bb1",
+      "scene_id": "cheung-sha-wan-government",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "efa3b69e-2bed-4508-bd74-461aeaadd2a4",
+      "lon": 114.16036459,
+      "lat": 22.33180905,
+      "node_id": "c8f068b6-c852-4447-965e-69106a461bb1",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/cheung-sha-wan-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:cheung-sha-wan-government-lift-b:4c61a17e-d1b5-4ba3-be7c-b34831cd3140",
+      "scene_id": "cheung-sha-wan-government",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "216adbc9-b1fc-4a3c-98f1-2c35ca686816",
+      "lon": 114.16034663,
+      "lat": 22.33178905,
+      "node_id": "4c61a17e-d1b5-4ba3-be7c-b34831cd3140",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/cheung-sha-wan-government/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:cheung-sha-wan-government-lift-b:d612cd3c-f3bf-484d-a533-831f02b24734",
+      "scene_id": "cheung-sha-wan-government",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "efa3b69e-2bed-4508-bd74-461aeaadd2a4",
+      "lon": 114.16034663,
+      "lat": 22.33178905,
+      "node_id": "d612cd3c-f3bf-484d-a533-831f02b24734",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/cheung-sha-wan-government/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

@@ -1,0 +1,38 @@
+
+> accessroute-hk@0.1.0 check
+> npm test && npm run build
+
+
+> accessroute-hk@0.1.0 test
+> vitest run
+
+
+ RUN  v3.2.7 /Users/zhou/Desktop/Research/05_Applications/GenAI2026/accessroute-hk
+
+ ✓ tests/policies/weather.test.ts (2 tests) 4ms
+ ✓ tests/events/events.test.ts (6 tests) 8ms
+ ✓ tests/scene-contract/contract.test.ts (7 tests) 135ms
+ ✓ tests/api/api.test.ts (5 tests) 109ms
+ ✓ tests/routing/routing.test.ts (11 tests) 229ms
+
+ Test Files  5 passed (5)
+      Tests  31 passed (31)
+   Start at  04:01:04
+   Duration  638ms (transform 230ms, setup 0ms, collect 465ms, tests 485ms, environment 1ms, prepare 359ms)
+
+
+> accessroute-hk@0.1.0 build
+> node --import tsx scripts/sync-data.ts && tsc --noEmit && vite build --config frontend/vite.config.ts
+
+vite v6.4.3 building for production...
+transforming...
+✓ 1601 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                          0.61 kB │ gzip:   0.40 kB
+dist/assets/index-vRL2mxOK.css          21.29 kB │ gzip:   5.19 kB
+dist/assets/MacroMap-B-YMMjus.css       69.94 kB │ gzip:  10.11 kB
+dist/assets/MacroMap-D1dDLteB.js         3.69 kB │ gzip:   1.83 kB
+dist/assets/index-AV-l8OYF.js          325.38 kB │ gzip:  97.06 kB
+dist/assets/maplibre-gl-B0v8EXYx.js  1,055.60 kB │ gzip: 283.96 kB
+✓ built in 2.15s

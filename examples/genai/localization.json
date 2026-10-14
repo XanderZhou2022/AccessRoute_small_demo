@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "context_id": "replace-with-live-context-id",
+  "scene_id": "hysan-place",
+  "request_id": "0aabda57-6ce3-49cb-addd-bb369d5318f0",
+  "agent": "localization",
+  "payload": {
+    "is_indoor": true,
+    "status": "matched",
+    "map_db_node_id": "ba047eef-9--6",
+    "level_id": "ba047eef-2b62-4561-932a-25c1a1e16fb3",
+    "anchor_names": [
+      "聯調錨點（非模型識別）"
+    ],
+    "direction_hint": "目前路段起點",
+    "confidence": 0.95
+  }
+}

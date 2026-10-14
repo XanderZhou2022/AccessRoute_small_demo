@@ -1,0 +1,16 @@
+{
+  "source": "Lands Department CSDI 3D Pedestrian Network",
+  "boundsWGS84": [
+    114.168,
+    22.332,
+    114.181,
+    22.343
+  ],
+  "sourceCount": 4372,
+  "featureCount": 4372,
+  "complete": true,
+  "nullGeometryIds": [],
+  "rawPages": "pedestrian/kowloon-tong-festival-walk",
+  "merge": "Concatenation ordered by OBJECTID; source geometry and properties unchanged",
+  "snapshot": "2026-10-04"
+}

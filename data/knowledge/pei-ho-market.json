@@ -1,0 +1,427 @@
+{
+  "version": "1.0",
+  "scene_id": "pei-ho-market",
+  "records": [
+    {
+      "id": "poi:98979888-187e-40d6-b27d-e04fcca9322d",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AREA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16059099000006,
+      "lat": 22.32939225000007,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:51669071-51e1-4b69-a860-03639cb80255",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AREA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16085251000004,
+      "lat": 22.329190150000045,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:317d1a47-9fcc-464f-a4b1-f0ff017746a3",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AREA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16082205000009,
+      "lat": 22.329213680000066,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a542f7cf-e630-495b-b152-20a53c5d0df2",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AREA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16079298000011,
+      "lat": 22.329236150000042,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:cd66d5c4-a2aa-495f-a61b-99a770042304",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AREA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16076463000002,
+      "lat": 22.32925806000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ce911838-0aa8-4a46-a131-bfb10127a8d4",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AREA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16073598000003,
+      "lat": 22.329280200000028,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:18fc3638-f47a-4e70-8206-dbd694ebf795",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AREA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16070662000004,
+      "lat": 22.329302890000065,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:35956c07-97ec-4cba-8a98-ac31ca0e8197",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AREA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16067719000011,
+      "lat": 22.329325630000028,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:bb272f1e-181a-4a9f-b601-b09cc59f0a69",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AREA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16064831000006,
+      "lat": 22.329347950000056,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:c8d6bac3-0d69-47f9-ad02-33e36235ef99",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AREA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.1606197100001,
+      "lat": 22.329370050000023,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:4d81e698-97d4-4e2c-a5b5-37cd96a5c5a6",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "SEATING AREA"
+      ],
+      "category": "restaurant",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16083028000003,
+      "lat": 22.329410340000038,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:80bd52d4-c6ca-4a5f-97ab-eb4b343f5804",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AERA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.1610692800001,
+      "lat": 22.329429580000067,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:ba5c6cfd-9bfa-42a6-9866-940535886094",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AERA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16080761,
+      "lat": 22.329632660000073,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:cf51b349-7e6b-44d5-8380-4aae929130d5",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AERA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16083638000009,
+      "lat": 22.329610330000037,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:3419855e-3cd3-4241-907d-572da95b1c73",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AERA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16086516000007,
+      "lat": 22.32958799000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6dd3feff-8210-4a56-8ace-e991a4793162",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AERA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16089451000005,
+      "lat": 22.329565220000063,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a431aaf0-09d9-424b-8db3-339e61b46dfb",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AERA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16092412000012,
+      "lat": 22.329542240000023,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:6da69fcf-3055-45fa-979e-3d0e59ede838",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AERA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16095325000003,
+      "lat": 22.32951963000005,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:a2dd5485-9539-476d-8f9d-e27985d33483",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AERA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16098177000003,
+      "lat": 22.32949750000006,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:e983473a-0b9b-4b03-9907-da55d912d363",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AERA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16101054,
+      "lat": 22.329475170000023,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "poi:5ffdffc8-c747-4e40-9168-e9d21ea9e589",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "熟食檔",
+        "FOOD PREPARATION AERA"
+      ],
+      "category": "foodstand",
+      "level_id": "b9d2f221-8c86-4c5f-9d76-18894ea62a04",
+      "lon": 114.16103996000004,
+      "lat": 22.329452340000046,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/61f55315-a44b-47ed-9201-7da2e5bcf1c1/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:pei-ho-market-lift-a:c8330dcb-66ab-4809-91f7-ea623a427fd0",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "ea7e7b10-672d-47ce-85d8-b01a89185e00",
+      "lon": 114.16122786,
+      "lat": 22.32930383,
+      "node_id": "c8330dcb-66ab-4809-91f7-ea623a427fd0",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/pei-ho-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:pei-ho-market-lift-a:3d2a5cfb-5e1a-40ea-957c-ace5397f73aa",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "391de1b0-4624-4df0-b67b-1aedef9b2aa5",
+      "lon": 114.16122786,
+      "lat": 22.32930383,
+      "node_id": "3d2a5cfb-5e1a-40ea-957c-ace5397f73aa",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/pei-ho-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:pei-ho-market-lift-b:525dfdd0-f995-4a5b-ab85-6000164273dc",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "ea7e7b10-672d-47ce-85d8-b01a89185e00",
+      "lon": 114.16057767,
+      "lat": 22.32944678,
+      "node_id": "525dfdd0-f995-4a5b-ab85-6000164273dc",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/pei-ho-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:pei-ho-market-lift-b:c3238c5f-ef80-48fa-bdf1-667c843ac7c2",
+      "scene_id": "pei-ho-market",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "391de1b0-4624-4df0-b67b-1aedef9b2aa5",
+      "lon": 114.16057767,
+      "lat": 22.32944678,
+      "node_id": "c3238c5f-ef80-48fa-bdf1-667c843ac7c2",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/pei-ho-market/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

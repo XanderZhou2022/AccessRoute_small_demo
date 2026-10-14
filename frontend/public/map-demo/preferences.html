@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#e9efe8" />
+    <title>出行設定 · AccessRoute 地圖示範</title>
+    <link rel="stylesheet" href="./map-demo.css" />
+    <script src="./map-demo.js" defer></script>
+  </head>
+  <body data-screen="preferences">
+    <a class="skip-link" href="#preferences-title">略過地圖，前往主要內容</a>
+    <main class="screen">
+      <iframe
+        class="map-frame"
+        data-map-frame
+        src="../?mapOnly=1&amp;route=sheltered&amp;profile=wheelchair&amp;weather=sunny"
+        title="AccessRoute 原版 3D 建築地圖"
+        loading="eager"
+      ></iframe>
+      <header class="map-topbar">
+        <a class="round-control" href="./index.html" aria-label="返回設定旅程">‹</a>
+        <button
+          class="search-pill search-trigger"
+          type="button"
+          data-search-open
+          aria-haspopup="dialog"
+          aria-controls="search-dialog"
+        >
+          ⌕ <span data-origin-summary>希慎廣場</span><span aria-hidden="true">→</span>
+          <span data-destination-summary>銅鑼灣站</span>
+        </button>
+      </header>
+      <dialog
+        class="search-dialog"
+        id="search-dialog"
+        data-search-dialog
+        aria-labelledby="search-title"
+      >
+        <form data-search-form>
+          <h2 id="search-title">選擇出發地和目的地</h2>
+          <label class="field-label" for="search-origin">
+            出發地
+            <select
+              id="search-origin"
+              name="origin"
+              data-search-origin
+              aria-describedby="search-error"
+              autofocus
+            >
+              <option value="cheung-sha-wan-government">長沙灣政府合署</option>
+              <option value="hysan-place">希慎廣場</option>
+              <option value="java-road-market">渣華道市政大廈</option>
+              <option value="kowloon-city-market">九龍城市政大廈</option>
+              <option value="kwai-hing-government">葵興政府合署</option>
+              <option value="north-point-government">北角政府合署</option>
+              <option value="pei-ho-market">北河街市政大廈</option>
+              <option value="popcorn-2">PopCorn 2</option>
+              <option value="sha-tin-government">沙田政府合署</option>
+              <option value="shek-kip-mei-services">石硤尾邨服務設施大樓</option>
+              <option value="tai-po-market">大埔墟街市及熟食中心</option>
+              <option value="kowloon-tong-festival-walk">又一城・九龍塘站天橋</option>
+            </select>
+          </label>
+          <label class="field-label" for="search-destination">
+            目的地
+            <select
+              id="search-destination"
+              name="destination"
+              data-search-destination
+              aria-describedby="search-error"
+            >
+              <option value="cheung-sha-wan-government">長沙灣政府合署</option>
+              <option value="hysan-place">希慎廣場</option>
+              <option value="java-road-market">渣華道市政大廈</option>
+              <option value="kowloon-city-market">九龍城市政大廈</option>
+              <option value="kwai-hing-government">葵興政府合署</option>
+              <option value="north-point-government">北角政府合署</option>
+              <option value="pei-ho-market">北河街市政大廈</option>
+              <option value="popcorn-2">PopCorn 2</option>
+              <option value="sha-tin-government">沙田政府合署</option>
+              <option value="shek-kip-mei-services">石硤尾邨服務設施大樓</option>
+              <option value="tai-po-market">大埔墟街市及熟食中心</option>
+              <option value="kowloon-tong-festival-walk">又一城・九龍塘站天橋</option>
+            </select>
+          </label>
+          <button class="secondary-action" type="button" data-search-voice>
+            以廣東話語音輸入地點
+          </button>
+          <p class="inline-status" data-search-voice-status role="status" aria-live="polite">
+            按下按鈕後才會啟動麥克風；辨識結果可在上方選單修改。
+          </p>
+          <p
+            id="search-error"
+            class="inline-status"
+            data-search-error
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          ></p>
+          <div class="search-dialog-actions">
+            <button class="secondary-action" type="button" data-search-cancel>取消</button>
+            <button class="primary-action" type="submit">套用</button>
+          </div>
+        </form>
+      </dialog>
+      <section class="map-sheet" aria-labelledby="preferences-title">
+        <button
+          class="sheet-handle"
+          type="button"
+          aria-label="收合設定卡"
+          aria-expanded="true"
+          data-sheet-handle
+        >
+          <span aria-hidden="true"></span>
+        </button>
+        <span class="sheet-kicker">出行設定</span>
+        <h1 id="preferences-title" tabindex="-1">哪些路線適合你？</h1>
+        <form data-preferences-form>
+          <fieldset class="preference-group">
+            <legend>出行需要（可多選）</legend>
+            <label><input type="checkbox" name="need" value="wheelchair" checked /> 使用輪椅</label>
+            <label><input type="checkbox" name="need" value="stroller" /> 使用嬰兒車</label>
+            <label><input type="checkbox" name="need" value="heavy" /> 推著重物</label>
+            <label><input type="checkbox" name="need" value="elevator" checked /> 需要升降機</label>
+            <label><input type="checkbox" name="need" value="elderly" /> 長者友善步速</label>
+            <label><input type="checkbox" name="need" value="stairs" /> 可走樓梯</label>
+            <label><input type="checkbox" name="need" value="escalators" /> 可使用扶手電梯</label>
+            <label><input type="checkbox" name="need" value="avoid_lifts" /> 優先避開升降機</label>
+          </fieldset>
+          <label class="field-label" for="goal">
+            選線目標
+            <select id="goal" name="goal">
+              <option value="accessible">無障礙優先</option>
+              <option value="sheltered">有蓋路線優先</option>
+              <option value="shortest">較短路線</option>
+            </select>
+          </label>
+          <label class="field-label" for="slope">
+            可接受坡度
+            <select id="slope" name="slope">
+              <option value="gentle">平坦或緩坡</option>
+              <option value="moderate">可接受一般斜坡</option>
+              <option value="any">可接受較陡斜坡（最高 12%）</option>
+            </select>
+          </label>
+          <p class="service-note">坡度上限：平坦或緩坡 5%、一般斜坡 8.33%、較陡斜坡 12%。</p>
+          <label class="field-label" for="pace">
+            預計步行速度
+            <select id="pace" name="pace">
+              <option value="auto">依出行方式預設</option>
+              <option value="0.5">較慢（0.5 米／秒）</option>
+              <option value="0.7">慢速（0.7 米／秒）</option>
+              <option value="0.9">一般（0.9 米／秒）</option>
+              <option value="1.2">較快（1.2 米／秒）</option>
+            </select>
+          </label>
+          <p class="service-note">
+            此速度用於估算步行時間及調整指引分段，不代表系統正在追蹤你的即時速度。
+          </p>
+          <fieldset class="preference-group">
+            <legend>導航方式</legend>
+            <label><input type="checkbox" name="mode" value="text" checked /> 顯示文字指示</label>
+            <label><input type="checkbox" name="mode" value="voice" /> 每步自動粵語語音提示</label>
+            <label
+              ><input type="checkbox" name="mode" value="pointer" checked /> 顯示方向指針</label
+            >
+          </fieldset>
+          <button class="primary-action" type="submit">儲存出行設定</button>
+          <p class="inline-status" data-status role="status" aria-live="polite">
+            設定只儲存在此示範瀏覽器。
+          </p>
+          <a class="secondary-action" href="./index.html">返回規劃旅程</a>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

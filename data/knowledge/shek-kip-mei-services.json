@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "scene_id": "shek-kip-mei-services",
+  "records": [
+    {
+      "id": "poi:3c656019-4b4c-495d-9614-623a4dd63340",
+      "scene_id": "shek-kip-mei-services",
+      "names": [
+        "圖書館",
+        "ADULT LIBRARY"
+      ],
+      "category": "library",
+      "level_id": "6a53c24f-b8e8-4907-b244-762ce03200ec",
+      "lon": 114.16720676000011,
+      "lat": 22.33326821000003,
+      "node_id": null,
+      "association": "unmapped",
+      "association_distance_m": null,
+      "source": "data/raw/0409d24b-80aa-4de5-adc5-ab0aa2864176/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:shek-kip-mei-services-lift-a:5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+      "scene_id": "shek-kip-mei-services",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "dc269231-91d9-4c8b-8427-a31f996715ca",
+      "lon": 114.16708276,
+      "lat": 22.33306257,
+      "node_id": "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/shek-kip-mei-services/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:shek-kip-mei-services-lift-a:8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+      "scene_id": "shek-kip-mei-services",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "012c4a74-a042-481b-ada0-80b739a5bf63",
+      "lon": 114.16708276,
+      "lat": 22.33306257,
+      "node_id": "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/shek-kip-mei-services/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:shek-kip-mei-services-lift-b:00c8ed16-e2bb-437d-8e22-7b0b5f1759dc",
+      "scene_id": "shek-kip-mei-services",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "dc269231-91d9-4c8b-8427-a31f996715ca",
+      "lon": 114.16705032,
+      "lat": 22.33302131,
+      "node_id": "00c8ed16-e2bb-437d-8e22-7b0b5f1759dc",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/shek-kip-mei-services/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:shek-kip-mei-services-lift-b:e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+      "scene_id": "shek-kip-mei-services",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "012c4a74-a042-481b-ada0-80b739a5bf63",
+      "lon": 114.16705031,
+      "lat": 22.33302131,
+      "node_id": "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/shek-kip-mei-services/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

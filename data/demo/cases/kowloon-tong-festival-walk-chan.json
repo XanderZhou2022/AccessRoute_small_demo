@@ -1,0 +1,4580 @@
+{
+  "id": "kowloon-tong-festival-walk-chan",
+  "title": "陳女士 Ms Chan · 又一城・九龍塘站天橋 → 石硤尾邨服務設施大樓",
+  "person": "陳女士 Ms Chan",
+  "purpose": "帶行李前往約定的建築會合點",
+  "origin_scene_id": "kowloon-tong-festival-walk",
+  "destination_scene_id": "shek-kip-mei-services",
+  "tags": [
+    "heavy_luggage",
+    "rain",
+    "facility_fault",
+    "localization"
+  ],
+  "narrative": "陳女士 Ms Chan拉著 25 公斤行李，無法抬上樓梯；今天下雨，要從又一城・九龍塘站天橋出發。途中遇到設施故障，改道後利用店舖或設施名稱確認位置，最後前往石硤尾邨服務設施大樓。",
+  "initial_state": {
+    "policy_mode": "distance_only",
+    "scene_id": "kowloon-tong-festival-walk",
+    "current_node_id": "ped-174e172232fa89656a38",
+    "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+    "preferences": null,
+    "guidance": "",
+    "routing": {
+      "profile": "elderly",
+      "rain": false,
+      "strictAccessibility": false,
+      "now": "2026-10-04T09:00:00.000Z",
+      "events": []
+    }
+  },
+  "destination_route": {
+    "result": {
+      "status": "ok",
+      "nodeIds": [
+        "shek-kip-mei-services-station",
+        "ped-f3c0f8a8f3a221aa75d3",
+        "ped-001750789bcbdb3f7994",
+        "ped-4bfd104e9db9f9b5fc44",
+        "ped-e71a1e9f21fa4be48daf",
+        "ped-0bd6c84e93261b101e35",
+        "ped-ab041dbbf5ab78102db4",
+        "ped-7692d225368b85ef3268",
+        "ped-c36827008e0a3ff548a1",
+        "ped-de57169739d6a0230f18",
+        "ped-46eaf1e8d5d6a92f3ff2",
+        "ped-254df239b362051b31fa",
+        "ped-680eb8b2871594c546cd",
+        "ped-cef6c4c6569e7d5a5d65",
+        "ped-9604212213765611b7cf",
+        "ped-faf4945eff51a9ad0c43",
+        "ped-9c8a6127ae2d5984e866",
+        "ped-cef6e390af5816d0558b",
+        "ped-b9a5c261271a8c546287",
+        "ped-26e9882f1856de8b8443",
+        "ped-7a6093b90b180b0719a7",
+        "ped-f39937ab98f0fbb019e1",
+        "ped-a9c9291516e797638d79",
+        "ped-2ca245dcdfc44085f149",
+        "ped-5700dc198bc12a9c2509",
+        "ped-5805de641c291aba6573",
+        "shek-kip-mei-services-doorway",
+        "dc269231--1--11",
+        "dc269231--2--11",
+        "dc269231--3--11",
+        "dc269231--4--11",
+        "dc269231--5--11",
+        "dc269231--6--12",
+        "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+        "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+        "012c4a74--7--12",
+        "012c4a74--6--11",
+        "012c4a74--5--10"
+      ],
+      "edgeIds": [
+        "official-endpoint-snap-1",
+        "ped-e-7",
+        "ped-e-6",
+        "ped-e-13",
+        "demo-ped-e-4-covered",
+        "ped-e-23",
+        "ped-e-21",
+        "ped-e-22",
+        "ped-e-16",
+        "ped-e-9",
+        "ped-e-10",
+        "ped-e-12",
+        "ped-e-11",
+        "ped-e-8",
+        "ped-e-5",
+        "ped-e-17",
+        "ped-e-18",
+        "ped-e-14",
+        "ped-e-2",
+        "ped-e-3",
+        "ped-e-0",
+        "ped-e-15",
+        "ped-e-19",
+        "ped-e-20",
+        "ped-e-1",
+        "official-endpoint-snap-0",
+        "e-213",
+        "e-156",
+        "e-146",
+        "e-131",
+        "e-110",
+        "e-83",
+        "e-197",
+        "e-203",
+        "e-199",
+        "e-183",
+        "e-191"
+      ],
+      "distanceM": 438.18671871131136,
+      "cost": 1844.6895841641542,
+      "reasonCodes": [
+        "ACCESSIBILITY_UNVERIFIED",
+        "RAIN_EXPOSURE"
+      ],
+      "warnings": [
+        "ACCESSIBILITY_UNVERIFIED",
+        "DEMO_CONNECTION"
+      ],
+      "metrics": {
+        "exposedM": 263.4738387113115,
+        "outdoorM": 417.94771871131144,
+        "indoorM": 20.238999999999997,
+        "shelteredM": 174.71287999999998,
+        "estimatedDurationS": 572.6417317224726,
+        "ascentM": 5.300000000000001,
+        "descentM": 0,
+        "stairs": 0,
+        "transitions": {
+          "lift": 1
+        }
+      }
+    },
+    "segments": [
+      {
+        "id": "segment-0",
+        "sceneId": "shek-kip-mei-services",
+        "type": "outdoor",
+        "nodeIds": [
+          "shek-kip-mei-services-station",
+          "ped-f3c0f8a8f3a221aa75d3",
+          "ped-001750789bcbdb3f7994",
+          "ped-4bfd104e9db9f9b5fc44",
+          "ped-e71a1e9f21fa4be48daf",
+          "ped-0bd6c84e93261b101e35",
+          "ped-ab041dbbf5ab78102db4",
+          "ped-7692d225368b85ef3268",
+          "ped-c36827008e0a3ff548a1",
+          "ped-de57169739d6a0230f18",
+          "ped-46eaf1e8d5d6a92f3ff2",
+          "ped-254df239b362051b31fa",
+          "ped-680eb8b2871594c546cd",
+          "ped-cef6c4c6569e7d5a5d65",
+          "ped-9604212213765611b7cf",
+          "ped-faf4945eff51a9ad0c43",
+          "ped-9c8a6127ae2d5984e866",
+          "ped-cef6e390af5816d0558b",
+          "ped-b9a5c261271a8c546287",
+          "ped-26e9882f1856de8b8443",
+          "ped-7a6093b90b180b0719a7",
+          "ped-f39937ab98f0fbb019e1",
+          "ped-a9c9291516e797638d79",
+          "ped-2ca245dcdfc44085f149",
+          "ped-5700dc198bc12a9c2509",
+          "ped-5805de641c291aba6573",
+          "shek-kip-mei-services-doorway",
+          "dc269231--1--11"
+        ],
+        "edgeIds": [
+          "official-endpoint-snap-1",
+          "ped-e-7",
+          "ped-e-6",
+          "ped-e-13",
+          "demo-ped-e-4-covered",
+          "ped-e-23",
+          "ped-e-21",
+          "ped-e-22",
+          "ped-e-16",
+          "ped-e-9",
+          "ped-e-10",
+          "ped-e-12",
+          "ped-e-11",
+          "ped-e-8",
+          "ped-e-5",
+          "ped-e-17",
+          "ped-e-18",
+          "ped-e-14",
+          "ped-e-2",
+          "ped-e-3",
+          "ped-e-0",
+          "ped-e-15",
+          "ped-e-19",
+          "ped-e-20",
+          "ped-e-1",
+          "official-endpoint-snap-0",
+          "e-213"
+        ],
+        "geometry": [
+          [
+            114.16893357000004,
+            22.331491510000035
+          ],
+          [
+            114.168863893517,
+            22.331497936003995
+          ],
+          [
+            114.16871128981789,
+            22.331499587348343
+          ],
+          [
+            114.16866363907839,
+            22.33150010330947
+          ],
+          [
+            114.16864983987456,
+            22.33150025252115
+          ],
+          [
+            114.1681807997741,
+            22.33179889075428
+          ],
+          [
+            114.16771175967365,
+            22.33185752898741
+          ],
+          [
+            114.16767179752625,
+            22.33188874635381
+          ],
+          [
+            114.1676318305074,
+            22.331919967322168
+          ],
+          [
+            114.16761007249065,
+            22.33193696344425
+          ],
+          [
+            114.16759482032542,
+            22.331948878426623
+          ],
+          [
+            114.16747539962662,
+            22.332042164696652
+          ],
+          [
+            114.16748471167155,
+            22.332052678635495
+          ],
+          [
+            114.16752426409815,
+            22.33209733442184
+          ],
+          [
+            114.16753359265078,
+            22.33210786732299
+          ],
+          [
+            114.1675629119389,
+            22.33214096969102
+          ],
+          [
+            114.16757202502134,
+            22.33215125875191
+          ],
+          [
+            114.16740424113475,
+            22.33228125060182
+          ],
+          [
+            114.16739218458629,
+            22.33229059203515
+          ],
+          [
+            114.16736814720217,
+            22.332309214398624
+          ],
+          [
+            114.16734860335387,
+            22.332324355732865
+          ],
+          [
+            114.16720683968163,
+            22.332434545737254
+          ],
+          [
+            114.16673160710931,
+            22.33283522982663
+          ],
+          [
+            114.16672688073113,
+            22.33284994757035
+          ],
+          [
+            114.16672133197082,
+            22.332867533374593
+          ],
+          [
+            114.1667215353675,
+            22.33288722095335
+          ],
+          [
+            114.1667287612893,
+            22.332912730984443
+          ],
+          [
+            114.16681126307108,
+            22.333009298284182
+          ],
+          [
+            114.16682737907941,
+            22.33302816235362
+          ],
+          [
+            114.16682940765334,
+            22.333030554679254
+          ],
+          [
+            114.16684505096453,
+            22.333049072846528
+          ],
+          [
+            114.16699271385389,
+            22.333223867832885
+          ],
+          [
+            114.16701019554763,
+            22.333244562464905
+          ],
+          [
+            114.167174146,
+            22.333074662
+          ],
+          [
+            114.167174146,
+            22.333074662
+          ]
+        ],
+        "distanceM": 417.94771871131144
+      },
+      {
+        "id": "segment-1",
+        "sceneId": "shek-kip-mei-services",
+        "type": "floor",
+        "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+        "levelId": "dc269231-91d9-4c8b-8427-a31f996715ca",
+        "nodeIds": [
+          "dc269231--1--11",
+          "dc269231--2--11",
+          "dc269231--3--11",
+          "dc269231--4--11",
+          "dc269231--5--11",
+          "dc269231--6--12",
+          "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99"
+        ],
+        "edgeIds": [
+          "e-156",
+          "e-146",
+          "e-131",
+          "e-110",
+          "e-83",
+          "e-197"
+        ],
+        "geometry": [
+          [
+            114.167174146,
+            22.333074662
+          ],
+          [
+            114.167158608,
+            22.333074662
+          ],
+          [
+            114.167143069,
+            22.333074662
+          ],
+          [
+            114.167127531,
+            22.333074662
+          ],
+          [
+            114.167111992,
+            22.333074662
+          ],
+          [
+            114.167096454,
+            22.333060289
+          ],
+          [
+            114.16708276,
+            22.33306257
+          ]
+        ],
+        "distanceM": 10.096
+      },
+      {
+        "id": "segment-2",
+        "sceneId": "shek-kip-mei-services",
+        "type": "transition",
+        "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+        "nodeIds": [
+          "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+          "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09"
+        ],
+        "edgeIds": [
+          "e-203"
+        ],
+        "geometry": [
+          [
+            114.16708276,
+            22.33306257
+          ],
+          [
+            114.16708276,
+            22.33306257
+          ]
+        ],
+        "distanceM": 5.300000000000001,
+        "facilityId": "shek-kip-mei-services-lift-a",
+        "mode": "lift",
+        "fromLevel": "dc269231-91d9-4c8b-8427-a31f996715ca",
+        "toLevel": "012c4a74-a042-481b-ada0-80b739a5bf63"
+      },
+      {
+        "id": "segment-3",
+        "sceneId": "shek-kip-mei-services",
+        "type": "floor",
+        "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+        "levelId": "012c4a74-a042-481b-ada0-80b739a5bf63",
+        "nodeIds": [
+          "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+          "012c4a74--7--12",
+          "012c4a74--6--11",
+          "012c4a74--5--10"
+        ],
+        "edgeIds": [
+          "e-199",
+          "e-183",
+          "e-191"
+        ],
+        "geometry": [
+          [
+            114.16708276,
+            22.33306257
+          ],
+          [
+            114.167080915,
+            22.333060289
+          ],
+          [
+            114.167096454,
+            22.333074662
+          ],
+          [
+            114.167111992,
+            22.333089035
+          ]
+        ],
+        "distanceM": 4.843
+      }
+    ],
+    "exposed_m": 263.4738387113115,
+    "facilities": [
+      "shek-kip-mei-services-lift-a"
+    ]
+  },
+  "steps": [
+    {
+      "agent_records": [
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "ped-174e172232fa89656a38",
+            "to": "ped-0f0cdae72d8dbd5c6c5c",
+            "routing": {
+              "profile": "elderly",
+              "rain": false,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": []
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 277.9271,
+            "exposed_m": 0,
+            "facilities": [
+              "demo-kowloon-tong-festival-walk-stairs"
+            ],
+            "route_changed": false
+          }
+        }
+      ],
+      "id": "start",
+      "title": "人物與原路線",
+      "utterance": "陳女士 Ms Chan要從又一城・九龍塘站天橋前往石硤尾邨服務設施大樓。",
+      "explanation": "帶行李前往約定的建築會合點。先展示未加入個人需求的原路線。",
+      "context": {
+        "context_id": "kowloon-tong-festival-walk-chan-0",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-174e172232fa89656a38",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "phase": "planning",
+        "routing": {
+          "profile": "elderly",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": []
+        },
+        "preferences": null,
+        "segment_id": "segment-0"
+      },
+      "response": null,
+      "state": {
+        "policy_mode": "distance_only",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-174e172232fa89656a38",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "preferences": null,
+        "guidance": "",
+        "routing": {
+          "profile": "elderly",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": []
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "ped-174e172232fa89656a38",
+            "ped-02919ab0bd6fe6848cb6",
+            "ped-6a81837e5f04362f3ab6",
+            "ped-e68f8c88f8d09b47435d",
+            "ped-e2dffc33a20c7001d188",
+            "ped-0b38d7d0672238cd4924",
+            "ped-e1ebde95e9b028b11f70",
+            "ped-48254e17198ed4f5fe08",
+            "ped-7709ee85c9b2d4e1f2e1",
+            "ped-9ffdd935b8f9b1f2312a",
+            "ped-9bffe9ae99789e927511",
+            "ped-b6d80e08a2a2fa02a315",
+            "ped-d5c31141b766a27f397f",
+            "ped-57f419038263e24f5cbb",
+            "ped-52ab3cbccb2a06510d6f",
+            "ped-5d6ea09ebd6d26642ea0",
+            "ped-7ea13982bde2a8dda007",
+            "ped-0f0cdae72d8dbd5c6c5c"
+          ],
+          "edgeIds": [
+            "ped-e-1162",
+            "ped-e-1182",
+            "ped-e-1153",
+            "ped-e-1139",
+            "ped-e-1140",
+            "demo-kowloon-tong-festival-walk-stairs-edge",
+            "ped-e-1119",
+            "ped-e-1121",
+            "ped-e-1120",
+            "ped-e-1086",
+            "ped-e-1257",
+            "ped-e-953",
+            "ped-e-973",
+            "ped-e-1192",
+            "ped-e-1193",
+            "ped-e-951",
+            "ped-e-255"
+          ],
+          "distanceM": 277.9271,
+          "cost": 277.9271,
+          "reasonCodes": [],
+          "warnings": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "DEMO_CONNECTION"
+          ],
+          "metrics": {
+            "exposedM": 0,
+            "outdoorM": 22.5135,
+            "indoorM": 255.41360000000003,
+            "shelteredM": 277.9271,
+            "estimatedDurationS": 401.8608571428571,
+            "ascentM": 0,
+            "descentM": 6.75,
+            "stairs": 0,
+            "transitions": {
+              "stairs": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "floor",
+            "venueId": "official-building-1108222840",
+            "levelId": "ped-floor-220000040",
+            "nodeIds": [
+              "ped-174e172232fa89656a38",
+              "ped-02919ab0bd6fe6848cb6",
+              "ped-6a81837e5f04362f3ab6",
+              "ped-e68f8c88f8d09b47435d",
+              "ped-e2dffc33a20c7001d188",
+              "ped-0b38d7d0672238cd4924"
+            ],
+            "edgeIds": [
+              "ped-e-1162",
+              "ped-e-1182",
+              "ped-e-1153",
+              "ped-e-1139",
+              "ped-e-1140"
+            ],
+            "geometry": [
+              [
+                114.17465750061011,
+                22.33700156006815
+              ],
+              [
+                114.17467393712761,
+                22.337044568400692
+              ],
+              [
+                114.17466591206826,
+                22.337052711163004
+              ],
+              [
+                114.1746657936387,
+                22.337052831268082
+              ],
+              [
+                114.17468260144244,
+                22.337065625107215
+              ],
+              [
+                114.17468272666376,
+                22.337065720832953
+              ],
+              [
+                114.17478664868071,
+                22.337150026205567
+              ],
+              [
+                114.17475829653489,
+                22.33717274677135
+              ],
+              [
+                114.17473132870762,
+                22.337190057132755
+              ],
+              [
+                114.17468224676868,
+                22.33721589657564
+              ],
+              [
+                114.1746361692629,
+                22.337237149415433
+              ],
+              [
+                114.17458589342999,
+                22.337255105121134
+              ],
+              [
+                114.17454987174845,
+                22.337266680911586
+              ],
+              [
+                114.17451573807877,
+                22.33728029943695
+              ],
+              [
+                114.17448784512978,
+                22.337296069128357
+              ],
+              [
+                114.17447871443648,
+                22.337301695947072
+              ],
+              [
+                114.17455480109182,
+                22.337384762064566
+              ],
+              [
+                114.17453293142508,
+                22.33740222778991
+              ],
+              [
+                114.17454745509187,
+                22.337418642870468
+              ]
+            ],
+            "distanceM": 76.4428
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "transition",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-0b38d7d0672238cd4924",
+              "ped-e1ebde95e9b028b11f70"
+            ],
+            "edgeIds": [
+              "demo-kowloon-tong-festival-walk-stairs-edge"
+            ],
+            "geometry": [
+              [
+                114.17454745509187,
+                22.337418642870468
+              ],
+              [
+                114.17454831419205,
+                22.337417929467193
+              ]
+            ],
+            "distanceM": 3.3755,
+            "facilityId": "demo-kowloon-tong-festival-walk-stairs",
+            "mode": "stairs",
+            "fromLevel": "ped-floor-220000040",
+            "toLevel": "ped-floor-220000044"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "floor",
+            "venueId": "official-building-1108222840",
+            "levelId": "ped-floor-220000044",
+            "nodeIds": [
+              "ped-e1ebde95e9b028b11f70",
+              "ped-48254e17198ed4f5fe08",
+              "ped-7709ee85c9b2d4e1f2e1",
+              "ped-9ffdd935b8f9b1f2312a",
+              "ped-9bffe9ae99789e927511"
+            ],
+            "edgeIds": [
+              "ped-e-1119",
+              "ped-e-1121",
+              "ped-e-1120",
+              "ped-e-1086"
+            ],
+            "geometry": [
+              [
+                114.17454831419205,
+                22.337417929467193
+              ],
+              [
+                114.17453389923301,
+                22.337402309078815
+              ],
+              [
+                114.17455589121158,
+                22.337384777431843
+              ],
+              [
+                114.17447936772862,
+                22.33730187024663
+              ],
+              [
+                114.17448814119209,
+                22.337296517952193
+              ],
+              [
+                114.17451596230843,
+                22.337280710331292
+              ],
+              [
+                114.1745498649469,
+                22.33726708186899
+              ],
+              [
+                114.1745860477661,
+                22.33725563250885
+              ],
+              [
+                114.17463626535641,
+                22.337237646098338
+              ],
+              [
+                114.17468247585369,
+                22.337216219873252
+              ],
+              [
+                114.1747316859275,
+                22.337190395783935
+              ],
+              [
+                114.17475862366088,
+                22.337173192885928
+              ],
+              [
+                114.17478703113997,
+                22.33715032151017
+              ],
+              [
+                114.17478749223721,
+                22.337149950359386
+              ],
+              [
+                114.17478778344984,
+                22.337150176127412
+              ],
+              [
+                114.17485885003553,
+                22.337205178626466
+              ],
+              [
+                114.175022052662,
+                22.33733129702076
+              ],
+              [
+                114.17519338451368,
+                22.337198893461224
+              ],
+              [
+                114.17519378153533,
+                22.337199134581585
+              ],
+              [
+                114.17522298350202,
+                22.337216921493958
+              ],
+              [
+                114.1752451729628,
+                22.337237364224553
+              ],
+              [
+                114.17525038967565,
+                22.337231864655582
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 117.72240000000001
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "outdoor",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-9bffe9ae99789e927511",
+              "ped-b6d80e08a2a2fa02a315"
+            ],
+            "edgeIds": [
+              "ped-e-1257"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 0
+          },
+          {
+            "id": "segment-4",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "bridge",
+            "nodeIds": [
+              "ped-b6d80e08a2a2fa02a315",
+              "ped-d5c31141b766a27f397f",
+              "ped-57f419038263e24f5cbb",
+              "ped-52ab3cbccb2a06510d6f",
+              "ped-5d6ea09ebd6d26642ea0",
+              "ped-7ea13982bde2a8dda007",
+              "ped-0f0cdae72d8dbd5c6c5c"
+            ],
+            "edgeIds": [
+              "ped-e-953",
+              "ped-e-973",
+              "ped-e-1192",
+              "ped-e-1193",
+              "ped-e-951",
+              "ped-e-255"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17527125631806,
+                22.337228289653304
+              ],
+              [
+                114.17529228186754,
+                22.33725113901437
+              ],
+              [
+                114.17531302785963,
+                22.33727368403965
+              ],
+              [
+                114.17532814471464,
+                22.337290111698852
+              ],
+              [
+                114.1753390606655,
+                22.337271594606534
+              ],
+              [
+                114.17536011256979,
+                22.3372822590046
+              ],
+              [
+                114.17537997340924,
+                22.337292319243808
+              ],
+              [
+                114.17539234129708,
+                22.33729858566983
+              ],
+              [
+                114.17543238138296,
+                22.337318869594007
+              ],
+              [
+                114.17546876867529,
+                22.337337303112875
+              ],
+              [
+                114.17551078807418,
+                22.337358589427996
+              ],
+              [
+                114.17572110464236,
+                22.33746513462614
+              ],
+              [
+                114.1758276931277,
+                22.337285934407085
+              ]
+            ],
+            "distanceM": 80.38640000000001
+          }
+        ],
+        "exposed_m": 0,
+        "facilities": [
+          "demo-kowloon-tong-festival-walk-stairs"
+        ]
+      },
+      "media_ids": [
+        "kowloon-tong-festival-walk-chan-start-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": false
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "出行意圖 agent",
+          "source": "example_library",
+          "input": {
+            "description": "我拉著 25 公斤行李，無法抬上樓梯，請幫我規劃。"
+          },
+          "output": {
+            "mobility_type": "heavy_luggage",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": false,
+            "tts_selection": "text_only"
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "ped-174e172232fa89656a38",
+            "to": "ped-0f0cdae72d8dbd5c6c5c",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": false,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": false
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 281.30260000000004,
+            "exposed_m": 0,
+            "facilities": [
+              "kowloon-tong-festival-walk-official-lift-220018539"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "preferences",
+      "title": "解析出行需求",
+      "utterance": "我拉著 25 公斤行李，無法抬上樓梯，請幫我規劃。",
+      "explanation": "意圖結果更新出行類型、避樓梯及陡坡條件，再用現有地圖重新求路。",
+      "context": {
+        "context_id": "kowloon-tong-festival-walk-chan-1",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-174e172232fa89656a38",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "phase": "planning",
+        "routing": {
+          "profile": "elderly",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": []
+        },
+        "preferences": null,
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "preferences",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "kowloon-tong-festival-walk-chan-preferences-1",
+          "context_id": "kowloon-tong-festival-walk-chan-1",
+          "scene_id": "kowloon-tong-festival-walk",
+          "agent": "preferences",
+          "payload": {
+            "mobility_type": "heavy_luggage",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": false,
+            "tts_selection": "text_only"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-preferences",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "意圖結果更新出行類型、避樓梯及陡坡條件，再用現有地圖重新求路。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-174e172232fa89656a38",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": false,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": false
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "ped-174e172232fa89656a38",
+            "ped-02919ab0bd6fe6848cb6",
+            "ped-6a81837e5f04362f3ab6",
+            "ped-e68f8c88f8d09b47435d",
+            "ped-e2dffc33a20c7001d188",
+            "ped-0b38d7d0672238cd4924",
+            "ped-e1ebde95e9b028b11f70",
+            "ped-48254e17198ed4f5fe08",
+            "ped-7709ee85c9b2d4e1f2e1",
+            "ped-9ffdd935b8f9b1f2312a",
+            "ped-9bffe9ae99789e927511",
+            "ped-b6d80e08a2a2fa02a315",
+            "ped-d5c31141b766a27f397f",
+            "ped-57f419038263e24f5cbb",
+            "ped-52ab3cbccb2a06510d6f",
+            "ped-5d6ea09ebd6d26642ea0",
+            "ped-7ea13982bde2a8dda007",
+            "ped-0f0cdae72d8dbd5c6c5c"
+          ],
+          "edgeIds": [
+            "ped-e-1162",
+            "ped-e-1182",
+            "ped-e-1153",
+            "ped-e-1139",
+            "ped-e-1140",
+            "ped-e-1090",
+            "ped-e-1119",
+            "ped-e-1121",
+            "ped-e-1120",
+            "ped-e-1086",
+            "ped-e-1257",
+            "ped-e-953",
+            "ped-e-973",
+            "ped-e-1192",
+            "ped-e-1193",
+            "ped-e-951",
+            "ped-e-255"
+          ],
+          "distanceM": 281.30260000000004,
+          "cost": 640.601478668036,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "warnings": [
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 0,
+            "outdoorM": 22.5135,
+            "indoorM": 258.7891,
+            "shelteredM": 281.3026,
+            "estimatedDurationS": 375.6901666666666,
+            "ascentM": 0,
+            "descentM": 6.75,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "floor",
+            "venueId": "official-building-1108222840",
+            "levelId": "ped-floor-220000040",
+            "nodeIds": [
+              "ped-174e172232fa89656a38",
+              "ped-02919ab0bd6fe6848cb6",
+              "ped-6a81837e5f04362f3ab6",
+              "ped-e68f8c88f8d09b47435d",
+              "ped-e2dffc33a20c7001d188",
+              "ped-0b38d7d0672238cd4924"
+            ],
+            "edgeIds": [
+              "ped-e-1162",
+              "ped-e-1182",
+              "ped-e-1153",
+              "ped-e-1139",
+              "ped-e-1140"
+            ],
+            "geometry": [
+              [
+                114.17465750061011,
+                22.33700156006815
+              ],
+              [
+                114.17467393712761,
+                22.337044568400692
+              ],
+              [
+                114.17466591206826,
+                22.337052711163004
+              ],
+              [
+                114.1746657936387,
+                22.337052831268082
+              ],
+              [
+                114.17468260144244,
+                22.337065625107215
+              ],
+              [
+                114.17468272666376,
+                22.337065720832953
+              ],
+              [
+                114.17478664868071,
+                22.337150026205567
+              ],
+              [
+                114.17475829653489,
+                22.33717274677135
+              ],
+              [
+                114.17473132870762,
+                22.337190057132755
+              ],
+              [
+                114.17468224676868,
+                22.33721589657564
+              ],
+              [
+                114.1746361692629,
+                22.337237149415433
+              ],
+              [
+                114.17458589342999,
+                22.337255105121134
+              ],
+              [
+                114.17454987174845,
+                22.337266680911586
+              ],
+              [
+                114.17451573807877,
+                22.33728029943695
+              ],
+              [
+                114.17448784512978,
+                22.337296069128357
+              ],
+              [
+                114.17447871443648,
+                22.337301695947072
+              ],
+              [
+                114.17455480109182,
+                22.337384762064566
+              ],
+              [
+                114.17453293142508,
+                22.33740222778991
+              ],
+              [
+                114.17454745509187,
+                22.337418642870468
+              ]
+            ],
+            "distanceM": 76.4428
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "transition",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-0b38d7d0672238cd4924",
+              "ped-e1ebde95e9b028b11f70"
+            ],
+            "edgeIds": [
+              "ped-e-1090"
+            ],
+            "geometry": [
+              [
+                114.17454745509187,
+                22.337418642870468
+              ],
+              [
+                114.17454831419205,
+                22.337417929467193
+              ]
+            ],
+            "distanceM": 6.751,
+            "facilityId": "kowloon-tong-festival-walk-official-lift-220018539",
+            "mode": "lift",
+            "fromLevel": "ped-floor-220000040",
+            "toLevel": "ped-floor-220000044"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "floor",
+            "venueId": "official-building-1108222840",
+            "levelId": "ped-floor-220000044",
+            "nodeIds": [
+              "ped-e1ebde95e9b028b11f70",
+              "ped-48254e17198ed4f5fe08",
+              "ped-7709ee85c9b2d4e1f2e1",
+              "ped-9ffdd935b8f9b1f2312a",
+              "ped-9bffe9ae99789e927511"
+            ],
+            "edgeIds": [
+              "ped-e-1119",
+              "ped-e-1121",
+              "ped-e-1120",
+              "ped-e-1086"
+            ],
+            "geometry": [
+              [
+                114.17454831419205,
+                22.337417929467193
+              ],
+              [
+                114.17453389923301,
+                22.337402309078815
+              ],
+              [
+                114.17455589121158,
+                22.337384777431843
+              ],
+              [
+                114.17447936772862,
+                22.33730187024663
+              ],
+              [
+                114.17448814119209,
+                22.337296517952193
+              ],
+              [
+                114.17451596230843,
+                22.337280710331292
+              ],
+              [
+                114.1745498649469,
+                22.33726708186899
+              ],
+              [
+                114.1745860477661,
+                22.33725563250885
+              ],
+              [
+                114.17463626535641,
+                22.337237646098338
+              ],
+              [
+                114.17468247585369,
+                22.337216219873252
+              ],
+              [
+                114.1747316859275,
+                22.337190395783935
+              ],
+              [
+                114.17475862366088,
+                22.337173192885928
+              ],
+              [
+                114.17478703113997,
+                22.33715032151017
+              ],
+              [
+                114.17478749223721,
+                22.337149950359386
+              ],
+              [
+                114.17478778344984,
+                22.337150176127412
+              ],
+              [
+                114.17485885003553,
+                22.337205178626466
+              ],
+              [
+                114.175022052662,
+                22.33733129702076
+              ],
+              [
+                114.17519338451368,
+                22.337198893461224
+              ],
+              [
+                114.17519378153533,
+                22.337199134581585
+              ],
+              [
+                114.17522298350202,
+                22.337216921493958
+              ],
+              [
+                114.1752451729628,
+                22.337237364224553
+              ],
+              [
+                114.17525038967565,
+                22.337231864655582
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 117.72240000000001
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "outdoor",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-9bffe9ae99789e927511",
+              "ped-b6d80e08a2a2fa02a315"
+            ],
+            "edgeIds": [
+              "ped-e-1257"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 0
+          },
+          {
+            "id": "segment-4",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "bridge",
+            "nodeIds": [
+              "ped-b6d80e08a2a2fa02a315",
+              "ped-d5c31141b766a27f397f",
+              "ped-57f419038263e24f5cbb",
+              "ped-52ab3cbccb2a06510d6f",
+              "ped-5d6ea09ebd6d26642ea0",
+              "ped-7ea13982bde2a8dda007",
+              "ped-0f0cdae72d8dbd5c6c5c"
+            ],
+            "edgeIds": [
+              "ped-e-953",
+              "ped-e-973",
+              "ped-e-1192",
+              "ped-e-1193",
+              "ped-e-951",
+              "ped-e-255"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17527125631806,
+                22.337228289653304
+              ],
+              [
+                114.17529228186754,
+                22.33725113901437
+              ],
+              [
+                114.17531302785963,
+                22.33727368403965
+              ],
+              [
+                114.17532814471464,
+                22.337290111698852
+              ],
+              [
+                114.1753390606655,
+                22.337271594606534
+              ],
+              [
+                114.17536011256979,
+                22.3372822590046
+              ],
+              [
+                114.17537997340924,
+                22.337292319243808
+              ],
+              [
+                114.17539234129708,
+                22.33729858566983
+              ],
+              [
+                114.17543238138296,
+                22.337318869594007
+              ],
+              [
+                114.17546876867529,
+                22.337337303112875
+              ],
+              [
+                114.17551078807418,
+                22.337358589427996
+              ],
+              [
+                114.17572110464236,
+                22.33746513462614
+              ],
+              [
+                114.1758276931277,
+                22.337285934407085
+              ]
+            ],
+            "distanceM": 80.38640000000001
+          }
+        ],
+        "exposed_m": 0,
+        "facilities": [
+          "kowloon-tong-festival-walk-official-lift-220018539"
+        ]
+      },
+      "media_ids": [
+        "kowloon-tong-festival-walk-chan-preferences-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "出行意圖 agent",
+          "source": "example_library",
+          "input": {
+            "description": "現在下雨了，我想盡量在室內或有蓋地方行。"
+          },
+          "output": {
+            "mobility_type": "heavy_luggage",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": true,
+            "tts_selection": "text_only"
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "ped-174e172232fa89656a38",
+            "to": "ped-0f0cdae72d8dbd5c6c5c",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 281.30260000000004,
+            "exposed_m": 0,
+            "facilities": [
+              "kowloon-tong-festival-walk-official-lift-220018539"
+            ],
+            "route_changed": false
+          }
+        }
+      ],
+      "id": "rain",
+      "title": "下雨與有蓋偏好",
+      "utterance": "現在下雨了，我想盡量在室內或有蓋地方行。",
+      "explanation": "天氣來自演示情境；意圖結果加入有蓋偏好。比較露天距離，若現有圖沒有更好的替代線，保留原路。",
+      "context": {
+        "context_id": "kowloon-tong-festival-walk-chan-2",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-174e172232fa89656a38",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": false
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": false,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "preferences",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "kowloon-tong-festival-walk-chan-preferences-2",
+          "context_id": "kowloon-tong-festival-walk-chan-2",
+          "scene_id": "kowloon-tong-festival-walk",
+          "agent": "preferences",
+          "payload": {
+            "mobility_type": "heavy_luggage",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": true,
+            "tts_selection": "text_only"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-preferences",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "天氣來自演示情境；意圖結果加入有蓋偏好。比較露天距離，若現有圖沒有更好的替代線，保留原路。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-174e172232fa89656a38",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "ped-174e172232fa89656a38",
+            "ped-02919ab0bd6fe6848cb6",
+            "ped-6a81837e5f04362f3ab6",
+            "ped-e68f8c88f8d09b47435d",
+            "ped-e2dffc33a20c7001d188",
+            "ped-0b38d7d0672238cd4924",
+            "ped-e1ebde95e9b028b11f70",
+            "ped-48254e17198ed4f5fe08",
+            "ped-7709ee85c9b2d4e1f2e1",
+            "ped-9ffdd935b8f9b1f2312a",
+            "ped-9bffe9ae99789e927511",
+            "ped-b6d80e08a2a2fa02a315",
+            "ped-d5c31141b766a27f397f",
+            "ped-57f419038263e24f5cbb",
+            "ped-52ab3cbccb2a06510d6f",
+            "ped-5d6ea09ebd6d26642ea0",
+            "ped-7ea13982bde2a8dda007",
+            "ped-0f0cdae72d8dbd5c6c5c"
+          ],
+          "edgeIds": [
+            "ped-e-1162",
+            "ped-e-1182",
+            "ped-e-1153",
+            "ped-e-1139",
+            "ped-e-1140",
+            "ped-e-1090",
+            "ped-e-1119",
+            "ped-e-1121",
+            "ped-e-1120",
+            "ped-e-1086",
+            "ped-e-1257",
+            "ped-e-953",
+            "ped-e-973",
+            "ped-e-1192",
+            "ped-e-1193",
+            "ped-e-951",
+            "ped-e-255"
+          ],
+          "distanceM": 281.30260000000004,
+          "cost": 640.601478668036,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 0,
+            "outdoorM": 22.5135,
+            "indoorM": 258.7891,
+            "shelteredM": 281.3026,
+            "estimatedDurationS": 375.6901666666666,
+            "ascentM": 0,
+            "descentM": 6.75,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "floor",
+            "venueId": "official-building-1108222840",
+            "levelId": "ped-floor-220000040",
+            "nodeIds": [
+              "ped-174e172232fa89656a38",
+              "ped-02919ab0bd6fe6848cb6",
+              "ped-6a81837e5f04362f3ab6",
+              "ped-e68f8c88f8d09b47435d",
+              "ped-e2dffc33a20c7001d188",
+              "ped-0b38d7d0672238cd4924"
+            ],
+            "edgeIds": [
+              "ped-e-1162",
+              "ped-e-1182",
+              "ped-e-1153",
+              "ped-e-1139",
+              "ped-e-1140"
+            ],
+            "geometry": [
+              [
+                114.17465750061011,
+                22.33700156006815
+              ],
+              [
+                114.17467393712761,
+                22.337044568400692
+              ],
+              [
+                114.17466591206826,
+                22.337052711163004
+              ],
+              [
+                114.1746657936387,
+                22.337052831268082
+              ],
+              [
+                114.17468260144244,
+                22.337065625107215
+              ],
+              [
+                114.17468272666376,
+                22.337065720832953
+              ],
+              [
+                114.17478664868071,
+                22.337150026205567
+              ],
+              [
+                114.17475829653489,
+                22.33717274677135
+              ],
+              [
+                114.17473132870762,
+                22.337190057132755
+              ],
+              [
+                114.17468224676868,
+                22.33721589657564
+              ],
+              [
+                114.1746361692629,
+                22.337237149415433
+              ],
+              [
+                114.17458589342999,
+                22.337255105121134
+              ],
+              [
+                114.17454987174845,
+                22.337266680911586
+              ],
+              [
+                114.17451573807877,
+                22.33728029943695
+              ],
+              [
+                114.17448784512978,
+                22.337296069128357
+              ],
+              [
+                114.17447871443648,
+                22.337301695947072
+              ],
+              [
+                114.17455480109182,
+                22.337384762064566
+              ],
+              [
+                114.17453293142508,
+                22.33740222778991
+              ],
+              [
+                114.17454745509187,
+                22.337418642870468
+              ]
+            ],
+            "distanceM": 76.4428
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "transition",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-0b38d7d0672238cd4924",
+              "ped-e1ebde95e9b028b11f70"
+            ],
+            "edgeIds": [
+              "ped-e-1090"
+            ],
+            "geometry": [
+              [
+                114.17454745509187,
+                22.337418642870468
+              ],
+              [
+                114.17454831419205,
+                22.337417929467193
+              ]
+            ],
+            "distanceM": 6.751,
+            "facilityId": "kowloon-tong-festival-walk-official-lift-220018539",
+            "mode": "lift",
+            "fromLevel": "ped-floor-220000040",
+            "toLevel": "ped-floor-220000044"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "floor",
+            "venueId": "official-building-1108222840",
+            "levelId": "ped-floor-220000044",
+            "nodeIds": [
+              "ped-e1ebde95e9b028b11f70",
+              "ped-48254e17198ed4f5fe08",
+              "ped-7709ee85c9b2d4e1f2e1",
+              "ped-9ffdd935b8f9b1f2312a",
+              "ped-9bffe9ae99789e927511"
+            ],
+            "edgeIds": [
+              "ped-e-1119",
+              "ped-e-1121",
+              "ped-e-1120",
+              "ped-e-1086"
+            ],
+            "geometry": [
+              [
+                114.17454831419205,
+                22.337417929467193
+              ],
+              [
+                114.17453389923301,
+                22.337402309078815
+              ],
+              [
+                114.17455589121158,
+                22.337384777431843
+              ],
+              [
+                114.17447936772862,
+                22.33730187024663
+              ],
+              [
+                114.17448814119209,
+                22.337296517952193
+              ],
+              [
+                114.17451596230843,
+                22.337280710331292
+              ],
+              [
+                114.1745498649469,
+                22.33726708186899
+              ],
+              [
+                114.1745860477661,
+                22.33725563250885
+              ],
+              [
+                114.17463626535641,
+                22.337237646098338
+              ],
+              [
+                114.17468247585369,
+                22.337216219873252
+              ],
+              [
+                114.1747316859275,
+                22.337190395783935
+              ],
+              [
+                114.17475862366088,
+                22.337173192885928
+              ],
+              [
+                114.17478703113997,
+                22.33715032151017
+              ],
+              [
+                114.17478749223721,
+                22.337149950359386
+              ],
+              [
+                114.17478778344984,
+                22.337150176127412
+              ],
+              [
+                114.17485885003553,
+                22.337205178626466
+              ],
+              [
+                114.175022052662,
+                22.33733129702076
+              ],
+              [
+                114.17519338451368,
+                22.337198893461224
+              ],
+              [
+                114.17519378153533,
+                22.337199134581585
+              ],
+              [
+                114.17522298350202,
+                22.337216921493958
+              ],
+              [
+                114.1752451729628,
+                22.337237364224553
+              ],
+              [
+                114.17525038967565,
+                22.337231864655582
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 117.72240000000001
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "outdoor",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-9bffe9ae99789e927511",
+              "ped-b6d80e08a2a2fa02a315"
+            ],
+            "edgeIds": [
+              "ped-e-1257"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 0
+          },
+          {
+            "id": "segment-4",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "bridge",
+            "nodeIds": [
+              "ped-b6d80e08a2a2fa02a315",
+              "ped-d5c31141b766a27f397f",
+              "ped-57f419038263e24f5cbb",
+              "ped-52ab3cbccb2a06510d6f",
+              "ped-5d6ea09ebd6d26642ea0",
+              "ped-7ea13982bde2a8dda007",
+              "ped-0f0cdae72d8dbd5c6c5c"
+            ],
+            "edgeIds": [
+              "ped-e-953",
+              "ped-e-973",
+              "ped-e-1192",
+              "ped-e-1193",
+              "ped-e-951",
+              "ped-e-255"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17527125631806,
+                22.337228289653304
+              ],
+              [
+                114.17529228186754,
+                22.33725113901437
+              ],
+              [
+                114.17531302785963,
+                22.33727368403965
+              ],
+              [
+                114.17532814471464,
+                22.337290111698852
+              ],
+              [
+                114.1753390606655,
+                22.337271594606534
+              ],
+              [
+                114.17536011256979,
+                22.3372822590046
+              ],
+              [
+                114.17537997340924,
+                22.337292319243808
+              ],
+              [
+                114.17539234129708,
+                22.33729858566983
+              ],
+              [
+                114.17543238138296,
+                22.337318869594007
+              ],
+              [
+                114.17546876867529,
+                22.337337303112875
+              ],
+              [
+                114.17551078807418,
+                22.337358589427996
+              ],
+              [
+                114.17572110464236,
+                22.33746513462614
+              ],
+              [
+                114.1758276931277,
+                22.337285934407085
+              ]
+            ],
+            "distanceM": 80.38640000000001
+          }
+        ],
+        "exposed_m": 0,
+        "facilities": [
+          "kowloon-tong-festival-walk-official-lift-220018539"
+        ]
+      },
+      "media_ids": [
+        "kowloon-tong-festival-walk-chan-rain-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": false
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "VLM 路障觀察 agent",
+          "source": "example_library",
+          "input": {
+            "notice": "又一城升降機 220018539顯示維修中，不能使用。"
+          },
+          "output": {
+            "has_obstacle": true,
+            "type": "broken_lift",
+            "evidence": "又一城升降機 220018539 維修中（演示情境）",
+            "confidence": 0.95
+          }
+        },
+        {
+          "agent": "地圖設施匹配 agent",
+          "source": "example_library",
+          "input": {
+            "scene_id": "kowloon-tong-festival-walk",
+            "notice": "又一城升降機 220018539顯示維修中，不能使用。"
+          },
+          "output": {
+            "target": {
+              "facility_id": "kowloon-tong-festival-walk-official-lift-220018539"
+            },
+            "match_method": "user_confirmed",
+            "confidence": 0.95
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "ped-174e172232fa89656a38",
+            "to": "ped-0f0cdae72d8dbd5c6c5c",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 483.2516,
+            "exposed_m": 0,
+            "facilities": [
+              "demo-ped-e-1090-ramp"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "fault",
+      "title": "報告設施故障與改道",
+      "utterance": "又一城升降機 220018539顯示維修中，不能使用。",
+      "explanation": "將演示故障對應到 又一城升降機 220018539 的 facility ID，封閉後重新規劃替代線。",
+      "context": {
+        "context_id": "kowloon-tong-festival-walk-chan-3",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-174e172232fa89656a38",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "obstacle",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+          "context_id": "kowloon-tong-festival-walk-chan-3",
+          "scene_id": "kowloon-tong-festival-walk",
+          "agent": "obstacle",
+          "payload": {
+            "event_id": "kowloon-tong-festival-walk-chan-fault",
+            "has_obstacle": true,
+            "barrier_type": "broken_lift",
+            "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+            "is_indoor": true,
+            "target": {
+              "facility_id": "kowloon-tong-festival-walk-official-lift-220018539"
+            },
+            "confidence": 0.95,
+            "match_method": "user_confirmed",
+            "valid_from": "2026-10-04T09:00:00.000Z",
+            "valid_until": "2026-10-04T11:00:00.000Z"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-obstacle",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "將演示故障對應到 又一城升降機 220018539 的 facility ID，封閉後重新規劃替代線。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-174e172232fa89656a38",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "ped-174e172232fa89656a38",
+            "ped-02919ab0bd6fe6848cb6",
+            "ped-6a81837e5f04362f3ab6",
+            "ped-e68f8c88f8d09b47435d",
+            "ped-e2dffc33a20c7001d188",
+            "ped-0b38d7d0672238cd4924",
+            "ped-e1ebde95e9b028b11f70",
+            "ped-48254e17198ed4f5fe08",
+            "ped-7709ee85c9b2d4e1f2e1",
+            "ped-9ffdd935b8f9b1f2312a",
+            "ped-9bffe9ae99789e927511",
+            "ped-b6d80e08a2a2fa02a315",
+            "ped-d5c31141b766a27f397f",
+            "ped-57f419038263e24f5cbb",
+            "ped-52ab3cbccb2a06510d6f",
+            "ped-5d6ea09ebd6d26642ea0",
+            "ped-7ea13982bde2a8dda007",
+            "ped-0f0cdae72d8dbd5c6c5c"
+          ],
+          "edgeIds": [
+            "ped-e-1162",
+            "ped-e-1182",
+            "ped-e-1153",
+            "ped-e-1139",
+            "ped-e-1140",
+            "demo-ped-e-1090-ramp-edge",
+            "ped-e-1119",
+            "ped-e-1121",
+            "ped-e-1120",
+            "ped-e-1086",
+            "ped-e-1257",
+            "ped-e-953",
+            "ped-e-973",
+            "ped-e-1192",
+            "ped-e-1193",
+            "ped-e-951",
+            "ped-e-255"
+          ],
+          "distanceM": 483.2516,
+          "cost": 935.770478668036,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "DEMO_CONNECTION"
+          ],
+          "metrics": {
+            "exposedM": 0,
+            "outdoorM": 22.5135,
+            "indoorM": 460.7381000000001,
+            "shelteredM": 483.2516000000001,
+            "estimatedDurationS": 682.3270000000001,
+            "ascentM": 0,
+            "descentM": 6.75,
+            "stairs": 0,
+            "transitions": {
+              "ramp": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "floor",
+            "venueId": "official-building-1108222840",
+            "levelId": "ped-floor-220000040",
+            "nodeIds": [
+              "ped-174e172232fa89656a38",
+              "ped-02919ab0bd6fe6848cb6",
+              "ped-6a81837e5f04362f3ab6",
+              "ped-e68f8c88f8d09b47435d",
+              "ped-e2dffc33a20c7001d188",
+              "ped-0b38d7d0672238cd4924"
+            ],
+            "edgeIds": [
+              "ped-e-1162",
+              "ped-e-1182",
+              "ped-e-1153",
+              "ped-e-1139",
+              "ped-e-1140"
+            ],
+            "geometry": [
+              [
+                114.17465750061011,
+                22.33700156006815
+              ],
+              [
+                114.17467393712761,
+                22.337044568400692
+              ],
+              [
+                114.17466591206826,
+                22.337052711163004
+              ],
+              [
+                114.1746657936387,
+                22.337052831268082
+              ],
+              [
+                114.17468260144244,
+                22.337065625107215
+              ],
+              [
+                114.17468272666376,
+                22.337065720832953
+              ],
+              [
+                114.17478664868071,
+                22.337150026205567
+              ],
+              [
+                114.17475829653489,
+                22.33717274677135
+              ],
+              [
+                114.17473132870762,
+                22.337190057132755
+              ],
+              [
+                114.17468224676868,
+                22.33721589657564
+              ],
+              [
+                114.1746361692629,
+                22.337237149415433
+              ],
+              [
+                114.17458589342999,
+                22.337255105121134
+              ],
+              [
+                114.17454987174845,
+                22.337266680911586
+              ],
+              [
+                114.17451573807877,
+                22.33728029943695
+              ],
+              [
+                114.17448784512978,
+                22.337296069128357
+              ],
+              [
+                114.17447871443648,
+                22.337301695947072
+              ],
+              [
+                114.17455480109182,
+                22.337384762064566
+              ],
+              [
+                114.17453293142508,
+                22.33740222778991
+              ],
+              [
+                114.17454745509187,
+                22.337418642870468
+              ]
+            ],
+            "distanceM": 76.4428
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "transition",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-0b38d7d0672238cd4924",
+              "ped-e1ebde95e9b028b11f70"
+            ],
+            "edgeIds": [
+              "demo-ped-e-1090-ramp-edge"
+            ],
+            "geometry": [
+              [
+                114.17454745509187,
+                22.337418642870468
+              ],
+              [
+                114.17454831419205,
+                22.337417929467193
+              ]
+            ],
+            "distanceM": 208.70000000000005,
+            "facilityId": "demo-ped-e-1090-ramp",
+            "mode": "ramp",
+            "fromLevel": "ped-floor-220000040",
+            "toLevel": "ped-floor-220000044"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "floor",
+            "venueId": "official-building-1108222840",
+            "levelId": "ped-floor-220000044",
+            "nodeIds": [
+              "ped-e1ebde95e9b028b11f70",
+              "ped-48254e17198ed4f5fe08",
+              "ped-7709ee85c9b2d4e1f2e1",
+              "ped-9ffdd935b8f9b1f2312a",
+              "ped-9bffe9ae99789e927511"
+            ],
+            "edgeIds": [
+              "ped-e-1119",
+              "ped-e-1121",
+              "ped-e-1120",
+              "ped-e-1086"
+            ],
+            "geometry": [
+              [
+                114.17454831419205,
+                22.337417929467193
+              ],
+              [
+                114.17453389923301,
+                22.337402309078815
+              ],
+              [
+                114.17455589121158,
+                22.337384777431843
+              ],
+              [
+                114.17447936772862,
+                22.33730187024663
+              ],
+              [
+                114.17448814119209,
+                22.337296517952193
+              ],
+              [
+                114.17451596230843,
+                22.337280710331292
+              ],
+              [
+                114.1745498649469,
+                22.33726708186899
+              ],
+              [
+                114.1745860477661,
+                22.33725563250885
+              ],
+              [
+                114.17463626535641,
+                22.337237646098338
+              ],
+              [
+                114.17468247585369,
+                22.337216219873252
+              ],
+              [
+                114.1747316859275,
+                22.337190395783935
+              ],
+              [
+                114.17475862366088,
+                22.337173192885928
+              ],
+              [
+                114.17478703113997,
+                22.33715032151017
+              ],
+              [
+                114.17478749223721,
+                22.337149950359386
+              ],
+              [
+                114.17478778344984,
+                22.337150176127412
+              ],
+              [
+                114.17485885003553,
+                22.337205178626466
+              ],
+              [
+                114.175022052662,
+                22.33733129702076
+              ],
+              [
+                114.17519338451368,
+                22.337198893461224
+              ],
+              [
+                114.17519378153533,
+                22.337199134581585
+              ],
+              [
+                114.17522298350202,
+                22.337216921493958
+              ],
+              [
+                114.1752451729628,
+                22.337237364224553
+              ],
+              [
+                114.17525038967565,
+                22.337231864655582
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 117.72240000000001
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "outdoor",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-9bffe9ae99789e927511",
+              "ped-b6d80e08a2a2fa02a315"
+            ],
+            "edgeIds": [
+              "ped-e-1257"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 0
+          },
+          {
+            "id": "segment-4",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "bridge",
+            "nodeIds": [
+              "ped-b6d80e08a2a2fa02a315",
+              "ped-d5c31141b766a27f397f",
+              "ped-57f419038263e24f5cbb",
+              "ped-52ab3cbccb2a06510d6f",
+              "ped-5d6ea09ebd6d26642ea0",
+              "ped-7ea13982bde2a8dda007",
+              "ped-0f0cdae72d8dbd5c6c5c"
+            ],
+            "edgeIds": [
+              "ped-e-953",
+              "ped-e-973",
+              "ped-e-1192",
+              "ped-e-1193",
+              "ped-e-951",
+              "ped-e-255"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17527125631806,
+                22.337228289653304
+              ],
+              [
+                114.17529228186754,
+                22.33725113901437
+              ],
+              [
+                114.17531302785963,
+                22.33727368403965
+              ],
+              [
+                114.17532814471464,
+                22.337290111698852
+              ],
+              [
+                114.1753390606655,
+                22.337271594606534
+              ],
+              [
+                114.17536011256979,
+                22.3372822590046
+              ],
+              [
+                114.17537997340924,
+                22.337292319243808
+              ],
+              [
+                114.17539234129708,
+                22.33729858566983
+              ],
+              [
+                114.17543238138296,
+                22.337318869594007
+              ],
+              [
+                114.17546876867529,
+                22.337337303112875
+              ],
+              [
+                114.17551078807418,
+                22.337358589427996
+              ],
+              [
+                114.17572110464236,
+                22.33746513462614
+              ],
+              [
+                114.1758276931277,
+                22.337285934407085
+              ]
+            ],
+            "distanceM": 80.38640000000001
+          }
+        ],
+        "exposed_m": 0,
+        "facilities": [
+          "demo-ped-e-1090-ramp"
+        ]
+      },
+      "media_ids": [
+        "kowloon-tong-festival-walk-chan-fault-view",
+        "kowloon-tong-festival-walk-chan-fault-sign"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "VLM／描述觀察 agent",
+          "source": "example_library",
+          "input": {
+            "description": "我好像走錯了，招牌有點模糊，只看見「又一城」和 又一城地下 樓層標誌。"
+          },
+          "output": {
+            "names": [],
+            "text": [
+              "又一城"
+            ],
+            "objects": [],
+            "floor_label": "又一城地下",
+            "confidence": 0.55
+          }
+        },
+        {
+          "agent": "附近知識檢索",
+          "source": "computed",
+          "input": {
+            "query": "又一城",
+            "level_id": "ped-floor-220000040"
+          },
+          "output": [
+            {
+              "id": "facility:kowloon-tong-festival-walk-official-lift-220021880:ped-0b38d7d0672238cd4924",
+              "scene_id": "kowloon-tong-festival-walk",
+              "names": [
+                "又一城升降機 220021880"
+              ],
+              "category": "lift",
+              "level_id": "ped-floor-220000040",
+              "lon": 114.17454745509187,
+              "lat": 22.337418642870468,
+              "node_id": "ped-0b38d7d0672238cd4924",
+              "association": "approximate",
+              "association_distance_m": 0,
+              "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+              "media_ids": []
+            },
+            {
+              "id": "facility:kowloon-tong-festival-walk-official-lift-220021909:ped-135e16360685fadfb229",
+              "scene_id": "kowloon-tong-festival-walk",
+              "names": [
+                "又一城升降機 220021909"
+              ],
+              "category": "lift",
+              "level_id": "ped-floor-220000040",
+              "lon": 114.17451488150049,
+              "lat": 22.33701082888029,
+              "node_id": "ped-135e16360685fadfb229",
+              "association": "approximate",
+              "association_distance_m": 0,
+              "source": "data/scenes/kowloon-tong-festival-walk/graph.json",
+              "media_ids": []
+            }
+          ]
+        },
+        {
+          "agent": "地圖匹配 agent＋使用者確認",
+          "source": "example_library",
+          "input": {
+            "query": "又一城",
+            "candidates": [
+              "facility:kowloon-tong-festival-walk-official-lift-220021880:ped-0b38d7d0672238cd4924",
+              "facility:kowloon-tong-festival-walk-official-lift-220021909:ped-135e16360685fadfb229"
+            ]
+          },
+          "output": {
+            "is_indoor": true,
+            "status": "matched",
+            "map_db_node_id": "ped-0b38d7d0672238cd4924",
+            "level_id": "ped-floor-220000040",
+            "anchor_names": [
+              "又一城升降機 220021880"
+            ],
+            "direction_hint": "已確認的同層公共通道候選",
+            "confidence": 0.55,
+            "match_method": "user_confirmed"
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "ped-0b38d7d0672238cd4924",
+            "to": "ped-0f0cdae72d8dbd5c6c5c",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 406.8088,
+            "exposed_m": 0,
+            "facilities": [
+              "demo-ped-e-1090-ramp"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "localization",
+      "title": "迷路後用照片／描述找位置",
+      "utterance": "我好像走錯了，招牌有點模糊，只看見「又一城」和 又一城地下 樓層標誌。",
+      "explanation": "用設施名稱和樓層縮小範圍；本例使用者確認圖上的候選，重新求剩餘路線。",
+      "context": {
+        "context_id": "kowloon-tong-festival-walk-chan-4",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-174e172232fa89656a38",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "localization",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "kowloon-tong-festival-walk-chan-localization-4",
+          "context_id": "kowloon-tong-festival-walk-chan-4",
+          "scene_id": "kowloon-tong-festival-walk",
+          "agent": "localization",
+          "payload": {
+            "is_indoor": true,
+            "status": "matched",
+            "map_db_node_id": "ped-0b38d7d0672238cd4924",
+            "level_id": "ped-floor-220000040",
+            "anchor_names": [
+              "又一城升降機 220021880"
+            ],
+            "direction_hint": "已確認的同層公共通道候選",
+            "confidence": 0.55,
+            "match_method": "user_confirmed"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-observation",
+            "summary": "例子庫提供照片／周圍描述中的名稱線索"
+          },
+          {
+            "step": "map-retrieval",
+            "summary": "從官方 POI、同層公共節點與當前路線取候選"
+          },
+          {
+            "step": "user-confirmed-match",
+            "summary": "本例由使用者確認候選位置，分數是預設演示分數"
+          }
+        ],
+        "message": "用設施名稱和樓層縮小範圍；本例使用者確認圖上的候選，重新求剩餘路線。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-0b38d7d0672238cd4924",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "ped-0b38d7d0672238cd4924",
+            "ped-e1ebde95e9b028b11f70",
+            "ped-48254e17198ed4f5fe08",
+            "ped-7709ee85c9b2d4e1f2e1",
+            "ped-9ffdd935b8f9b1f2312a",
+            "ped-9bffe9ae99789e927511",
+            "ped-b6d80e08a2a2fa02a315",
+            "ped-d5c31141b766a27f397f",
+            "ped-57f419038263e24f5cbb",
+            "ped-52ab3cbccb2a06510d6f",
+            "ped-5d6ea09ebd6d26642ea0",
+            "ped-7ea13982bde2a8dda007",
+            "ped-0f0cdae72d8dbd5c6c5c"
+          ],
+          "edgeIds": [
+            "demo-ped-e-1090-ramp-edge",
+            "ped-e-1119",
+            "ped-e-1121",
+            "ped-e-1120",
+            "ped-e-1086",
+            "ped-e-1257",
+            "ped-e-953",
+            "ped-e-973",
+            "ped-e-1192",
+            "ped-e-1193",
+            "ped-e-951",
+            "ped-e-255"
+          ],
+          "distanceM": 406.8088,
+          "cost": 759.327678668036,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "DEMO_CONNECTION"
+          ],
+          "metrics": {
+            "exposedM": 0,
+            "outdoorM": 22.5135,
+            "indoorM": 384.29530000000005,
+            "shelteredM": 406.8088000000001,
+            "estimatedDurationS": 586.7735000000001,
+            "ascentM": 0,
+            "descentM": 6.75,
+            "stairs": 0,
+            "transitions": {
+              "ramp": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "transition",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-0b38d7d0672238cd4924",
+              "ped-e1ebde95e9b028b11f70"
+            ],
+            "edgeIds": [
+              "demo-ped-e-1090-ramp-edge"
+            ],
+            "geometry": [
+              [
+                114.17454745509187,
+                22.337418642870468
+              ],
+              [
+                114.17454831419205,
+                22.337417929467193
+              ]
+            ],
+            "distanceM": 208.70000000000005,
+            "facilityId": "demo-ped-e-1090-ramp",
+            "mode": "ramp",
+            "fromLevel": "ped-floor-220000040",
+            "toLevel": "ped-floor-220000044"
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "floor",
+            "venueId": "official-building-1108222840",
+            "levelId": "ped-floor-220000044",
+            "nodeIds": [
+              "ped-e1ebde95e9b028b11f70",
+              "ped-48254e17198ed4f5fe08",
+              "ped-7709ee85c9b2d4e1f2e1",
+              "ped-9ffdd935b8f9b1f2312a",
+              "ped-9bffe9ae99789e927511"
+            ],
+            "edgeIds": [
+              "ped-e-1119",
+              "ped-e-1121",
+              "ped-e-1120",
+              "ped-e-1086"
+            ],
+            "geometry": [
+              [
+                114.17454831419205,
+                22.337417929467193
+              ],
+              [
+                114.17453389923301,
+                22.337402309078815
+              ],
+              [
+                114.17455589121158,
+                22.337384777431843
+              ],
+              [
+                114.17447936772862,
+                22.33730187024663
+              ],
+              [
+                114.17448814119209,
+                22.337296517952193
+              ],
+              [
+                114.17451596230843,
+                22.337280710331292
+              ],
+              [
+                114.1745498649469,
+                22.33726708186899
+              ],
+              [
+                114.1745860477661,
+                22.33725563250885
+              ],
+              [
+                114.17463626535641,
+                22.337237646098338
+              ],
+              [
+                114.17468247585369,
+                22.337216219873252
+              ],
+              [
+                114.1747316859275,
+                22.337190395783935
+              ],
+              [
+                114.17475862366088,
+                22.337173192885928
+              ],
+              [
+                114.17478703113997,
+                22.33715032151017
+              ],
+              [
+                114.17478749223721,
+                22.337149950359386
+              ],
+              [
+                114.17478778344984,
+                22.337150176127412
+              ],
+              [
+                114.17485885003553,
+                22.337205178626466
+              ],
+              [
+                114.175022052662,
+                22.33733129702076
+              ],
+              [
+                114.17519338451368,
+                22.337198893461224
+              ],
+              [
+                114.17519378153533,
+                22.337199134581585
+              ],
+              [
+                114.17522298350202,
+                22.337216921493958
+              ],
+              [
+                114.1752451729628,
+                22.337237364224553
+              ],
+              [
+                114.17525038967565,
+                22.337231864655582
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 117.72240000000001
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "outdoor",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-9bffe9ae99789e927511",
+              "ped-b6d80e08a2a2fa02a315"
+            ],
+            "edgeIds": [
+              "ped-e-1257"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 0
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "bridge",
+            "nodeIds": [
+              "ped-b6d80e08a2a2fa02a315",
+              "ped-d5c31141b766a27f397f",
+              "ped-57f419038263e24f5cbb",
+              "ped-52ab3cbccb2a06510d6f",
+              "ped-5d6ea09ebd6d26642ea0",
+              "ped-7ea13982bde2a8dda007",
+              "ped-0f0cdae72d8dbd5c6c5c"
+            ],
+            "edgeIds": [
+              "ped-e-953",
+              "ped-e-973",
+              "ped-e-1192",
+              "ped-e-1193",
+              "ped-e-951",
+              "ped-e-255"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17527125631806,
+                22.337228289653304
+              ],
+              [
+                114.17529228186754,
+                22.33725113901437
+              ],
+              [
+                114.17531302785963,
+                22.33727368403965
+              ],
+              [
+                114.17532814471464,
+                22.337290111698852
+              ],
+              [
+                114.1753390606655,
+                22.337271594606534
+              ],
+              [
+                114.17536011256979,
+                22.3372822590046
+              ],
+              [
+                114.17537997340924,
+                22.337292319243808
+              ],
+              [
+                114.17539234129708,
+                22.33729858566983
+              ],
+              [
+                114.17543238138296,
+                22.337318869594007
+              ],
+              [
+                114.17546876867529,
+                22.337337303112875
+              ],
+              [
+                114.17551078807418,
+                22.337358589427996
+              ],
+              [
+                114.17572110464236,
+                22.33746513462614
+              ],
+              [
+                114.1758276931277,
+                22.337285934407085
+              ]
+            ],
+            "distanceM": 80.38640000000001
+          }
+        ],
+        "exposed_m": 0,
+        "facilities": [
+          "demo-ped-e-1090-ramp"
+        ]
+      },
+      "media_ids": [
+        "kowloon-tong-festival-walk-photo",
+        "kowloon-tong-festival-walk-chan-localization-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "粵語表述 agent",
+          "source": "example_library",
+          "input": {
+            "segment": {
+              "id": "segment-0",
+              "sceneId": "kowloon-tong-festival-walk",
+              "type": "transition",
+              "venueId": "official-building-1108222840",
+              "nodeIds": [
+                "ped-0b38d7d0672238cd4924",
+                "ped-e1ebde95e9b028b11f70"
+              ],
+              "edgeIds": [
+                "demo-ped-e-1090-ramp-edge"
+              ],
+              "geometry": [
+                [
+                  114.17454745509187,
+                  22.337418642870468
+                ],
+                [
+                  114.17454831419205,
+                  22.337417929467193
+                ]
+              ],
+              "distanceM": 208.70000000000005,
+              "facilityId": "demo-ped-e-1090-ramp",
+              "mode": "ramp",
+              "fromLevel": "ped-floor-220000040",
+              "toLevel": "ped-floor-220000044"
+            }
+          },
+          "output": {
+            "text": "請搭升降機去又一城低層地下一樓。",
+            "speech": {
+              "mode": "browser",
+              "language": "zh-HK",
+              "selection": "text_only"
+            }
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "ped-0b38d7d0672238cd4924",
+            "to": "ped-0f0cdae72d8dbd5c6c5c",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 406.8088,
+            "exposed_m": 0,
+            "facilities": [
+              "demo-ped-e-1090-ramp"
+            ],
+            "route_changed": false
+          }
+        }
+      ],
+      "id": "guidance",
+      "title": "生成下一段導航指引",
+      "utterance": "請告訴我下一步怎麼走。",
+      "explanation": "由重新規劃後的第一路段生成預設粵語句子，語音服務與文字生成分開。",
+      "context": {
+        "context_id": "kowloon-tong-festival-walk-chan-5",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-0b38d7d0672238cd4924",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "guidance",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "kowloon-tong-festival-walk-chan-guidance-5",
+          "context_id": "kowloon-tong-festival-walk-chan-5",
+          "scene_id": "kowloon-tong-festival-walk",
+          "agent": "guidance",
+          "payload": {
+            "segment_id": "segment-0",
+            "text": "請搭升降機去又一城低層地下一樓。"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-guidance",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "由重新規劃後的第一路段生成預設粵語句子，語音服務與文字生成分開。",
+        "speech": {
+          "mode": "browser",
+          "language": "zh-HK",
+          "selection": "text_only"
+        }
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-0b38d7d0672238cd4924",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "請搭升降機去又一城低層地下一樓。",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "ped-0b38d7d0672238cd4924",
+            "ped-e1ebde95e9b028b11f70",
+            "ped-48254e17198ed4f5fe08",
+            "ped-7709ee85c9b2d4e1f2e1",
+            "ped-9ffdd935b8f9b1f2312a",
+            "ped-9bffe9ae99789e927511",
+            "ped-b6d80e08a2a2fa02a315",
+            "ped-d5c31141b766a27f397f",
+            "ped-57f419038263e24f5cbb",
+            "ped-52ab3cbccb2a06510d6f",
+            "ped-5d6ea09ebd6d26642ea0",
+            "ped-7ea13982bde2a8dda007",
+            "ped-0f0cdae72d8dbd5c6c5c"
+          ],
+          "edgeIds": [
+            "demo-ped-e-1090-ramp-edge",
+            "ped-e-1119",
+            "ped-e-1121",
+            "ped-e-1120",
+            "ped-e-1086",
+            "ped-e-1257",
+            "ped-e-953",
+            "ped-e-973",
+            "ped-e-1192",
+            "ped-e-1193",
+            "ped-e-951",
+            "ped-e-255"
+          ],
+          "distanceM": 406.8088,
+          "cost": 759.327678668036,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "DEMO_CONNECTION"
+          ],
+          "metrics": {
+            "exposedM": 0,
+            "outdoorM": 22.5135,
+            "indoorM": 384.29530000000005,
+            "shelteredM": 406.8088000000001,
+            "estimatedDurationS": 586.7735000000001,
+            "ascentM": 0,
+            "descentM": 6.75,
+            "stairs": 0,
+            "transitions": {
+              "ramp": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "transition",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-0b38d7d0672238cd4924",
+              "ped-e1ebde95e9b028b11f70"
+            ],
+            "edgeIds": [
+              "demo-ped-e-1090-ramp-edge"
+            ],
+            "geometry": [
+              [
+                114.17454745509187,
+                22.337418642870468
+              ],
+              [
+                114.17454831419205,
+                22.337417929467193
+              ]
+            ],
+            "distanceM": 208.70000000000005,
+            "facilityId": "demo-ped-e-1090-ramp",
+            "mode": "ramp",
+            "fromLevel": "ped-floor-220000040",
+            "toLevel": "ped-floor-220000044"
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "floor",
+            "venueId": "official-building-1108222840",
+            "levelId": "ped-floor-220000044",
+            "nodeIds": [
+              "ped-e1ebde95e9b028b11f70",
+              "ped-48254e17198ed4f5fe08",
+              "ped-7709ee85c9b2d4e1f2e1",
+              "ped-9ffdd935b8f9b1f2312a",
+              "ped-9bffe9ae99789e927511"
+            ],
+            "edgeIds": [
+              "ped-e-1119",
+              "ped-e-1121",
+              "ped-e-1120",
+              "ped-e-1086"
+            ],
+            "geometry": [
+              [
+                114.17454831419205,
+                22.337417929467193
+              ],
+              [
+                114.17453389923301,
+                22.337402309078815
+              ],
+              [
+                114.17455589121158,
+                22.337384777431843
+              ],
+              [
+                114.17447936772862,
+                22.33730187024663
+              ],
+              [
+                114.17448814119209,
+                22.337296517952193
+              ],
+              [
+                114.17451596230843,
+                22.337280710331292
+              ],
+              [
+                114.1745498649469,
+                22.33726708186899
+              ],
+              [
+                114.1745860477661,
+                22.33725563250885
+              ],
+              [
+                114.17463626535641,
+                22.337237646098338
+              ],
+              [
+                114.17468247585369,
+                22.337216219873252
+              ],
+              [
+                114.1747316859275,
+                22.337190395783935
+              ],
+              [
+                114.17475862366088,
+                22.337173192885928
+              ],
+              [
+                114.17478703113997,
+                22.33715032151017
+              ],
+              [
+                114.17478749223721,
+                22.337149950359386
+              ],
+              [
+                114.17478778344984,
+                22.337150176127412
+              ],
+              [
+                114.17485885003553,
+                22.337205178626466
+              ],
+              [
+                114.175022052662,
+                22.33733129702076
+              ],
+              [
+                114.17519338451368,
+                22.337198893461224
+              ],
+              [
+                114.17519378153533,
+                22.337199134581585
+              ],
+              [
+                114.17522298350202,
+                22.337216921493958
+              ],
+              [
+                114.1752451729628,
+                22.337237364224553
+              ],
+              [
+                114.17525038967565,
+                22.337231864655582
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 117.72240000000001
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "outdoor",
+            "venueId": "official-building-1108222840",
+            "nodeIds": [
+              "ped-9bffe9ae99789e927511",
+              "ped-b6d80e08a2a2fa02a315"
+            ],
+            "edgeIds": [
+              "ped-e-1257"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17526265098782,
+                22.33721893841017
+              ]
+            ],
+            "distanceM": 0
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "kowloon-tong-festival-walk",
+            "type": "bridge",
+            "nodeIds": [
+              "ped-b6d80e08a2a2fa02a315",
+              "ped-d5c31141b766a27f397f",
+              "ped-57f419038263e24f5cbb",
+              "ped-52ab3cbccb2a06510d6f",
+              "ped-5d6ea09ebd6d26642ea0",
+              "ped-7ea13982bde2a8dda007",
+              "ped-0f0cdae72d8dbd5c6c5c"
+            ],
+            "edgeIds": [
+              "ped-e-953",
+              "ped-e-973",
+              "ped-e-1192",
+              "ped-e-1193",
+              "ped-e-951",
+              "ped-e-255"
+            ],
+            "geometry": [
+              [
+                114.17526265098782,
+                22.33721893841017
+              ],
+              [
+                114.17527125631806,
+                22.337228289653304
+              ],
+              [
+                114.17529228186754,
+                22.33725113901437
+              ],
+              [
+                114.17531302785963,
+                22.33727368403965
+              ],
+              [
+                114.17532814471464,
+                22.337290111698852
+              ],
+              [
+                114.1753390606655,
+                22.337271594606534
+              ],
+              [
+                114.17536011256979,
+                22.3372822590046
+              ],
+              [
+                114.17537997340924,
+                22.337292319243808
+              ],
+              [
+                114.17539234129708,
+                22.33729858566983
+              ],
+              [
+                114.17543238138296,
+                22.337318869594007
+              ],
+              [
+                114.17546876867529,
+                22.337337303112875
+              ],
+              [
+                114.17551078807418,
+                22.337358589427996
+              ],
+              [
+                114.17572110464236,
+                22.33746513462614
+              ],
+              [
+                114.1758276931277,
+                22.337285934407085
+              ]
+            ],
+            "distanceM": 80.38640000000001
+          }
+        ],
+        "exposed_m": 0,
+        "facilities": [
+          "demo-ped-e-1090-ramp"
+        ]
+      },
+      "media_ids": [
+        "kowloon-tong-festival-walk-chan-guidance-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": false
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "shek-kip-mei-services-station",
+            "to": "012c4a74--5--10",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 438.18671871131136,
+            "exposed_m": 263.4738387113115,
+            "facilities": [
+              "shek-kip-mei-services-lift-a"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "transfer",
+      "title": "接駁到目的建築",
+      "utterance": "我已到九龍塘站接駁點，接下來到石硤尾鐵路站。",
+      "explanation": "兩端步行路線已備好；中間公共交通是接駁敘事，沒有虛構班次或站間導航。",
+      "context": {
+        "context_id": "kowloon-tong-festival-walk-chan-6",
+        "scene_id": "kowloon-tong-festival-walk",
+        "current_node_id": "ped-0b38d7d0672238cd4924",
+        "destination_node_id": "ped-0f0cdae72d8dbd5c6c5c",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": null,
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "shek-kip-mei-services-station",
+        "destination_node_id": "012c4a74--5--10",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "shek-kip-mei-services-station",
+            "ped-f3c0f8a8f3a221aa75d3",
+            "ped-001750789bcbdb3f7994",
+            "ped-4bfd104e9db9f9b5fc44",
+            "ped-e71a1e9f21fa4be48daf",
+            "ped-0bd6c84e93261b101e35",
+            "ped-ab041dbbf5ab78102db4",
+            "ped-7692d225368b85ef3268",
+            "ped-c36827008e0a3ff548a1",
+            "ped-de57169739d6a0230f18",
+            "ped-46eaf1e8d5d6a92f3ff2",
+            "ped-254df239b362051b31fa",
+            "ped-680eb8b2871594c546cd",
+            "ped-cef6c4c6569e7d5a5d65",
+            "ped-9604212213765611b7cf",
+            "ped-faf4945eff51a9ad0c43",
+            "ped-9c8a6127ae2d5984e866",
+            "ped-cef6e390af5816d0558b",
+            "ped-b9a5c261271a8c546287",
+            "ped-26e9882f1856de8b8443",
+            "ped-7a6093b90b180b0719a7",
+            "ped-f39937ab98f0fbb019e1",
+            "ped-a9c9291516e797638d79",
+            "ped-2ca245dcdfc44085f149",
+            "ped-5700dc198bc12a9c2509",
+            "ped-5805de641c291aba6573",
+            "shek-kip-mei-services-doorway",
+            "dc269231--1--11",
+            "dc269231--2--11",
+            "dc269231--3--11",
+            "dc269231--4--11",
+            "dc269231--5--11",
+            "dc269231--6--12",
+            "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+            "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+            "012c4a74--7--12",
+            "012c4a74--6--11",
+            "012c4a74--5--10"
+          ],
+          "edgeIds": [
+            "official-endpoint-snap-1",
+            "ped-e-7",
+            "ped-e-6",
+            "ped-e-13",
+            "demo-ped-e-4-covered",
+            "ped-e-23",
+            "ped-e-21",
+            "ped-e-22",
+            "ped-e-16",
+            "ped-e-9",
+            "ped-e-10",
+            "ped-e-12",
+            "ped-e-11",
+            "ped-e-8",
+            "ped-e-5",
+            "ped-e-17",
+            "ped-e-18",
+            "ped-e-14",
+            "ped-e-2",
+            "ped-e-3",
+            "ped-e-0",
+            "ped-e-15",
+            "ped-e-19",
+            "ped-e-20",
+            "ped-e-1",
+            "official-endpoint-snap-0",
+            "e-213",
+            "e-156",
+            "e-146",
+            "e-131",
+            "e-110",
+            "e-83",
+            "e-197",
+            "e-203",
+            "e-199",
+            "e-183",
+            "e-191"
+          ],
+          "distanceM": 438.18671871131136,
+          "cost": 1844.6895841641542,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "DEMO_CONNECTION"
+          ],
+          "metrics": {
+            "exposedM": 263.4738387113115,
+            "outdoorM": 417.94771871131144,
+            "indoorM": 20.238999999999997,
+            "shelteredM": 174.71287999999998,
+            "estimatedDurationS": 572.6417317224726,
+            "ascentM": 5.300000000000001,
+            "descentM": 0,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "shek-kip-mei-services",
+            "type": "outdoor",
+            "nodeIds": [
+              "shek-kip-mei-services-station",
+              "ped-f3c0f8a8f3a221aa75d3",
+              "ped-001750789bcbdb3f7994",
+              "ped-4bfd104e9db9f9b5fc44",
+              "ped-e71a1e9f21fa4be48daf",
+              "ped-0bd6c84e93261b101e35",
+              "ped-ab041dbbf5ab78102db4",
+              "ped-7692d225368b85ef3268",
+              "ped-c36827008e0a3ff548a1",
+              "ped-de57169739d6a0230f18",
+              "ped-46eaf1e8d5d6a92f3ff2",
+              "ped-254df239b362051b31fa",
+              "ped-680eb8b2871594c546cd",
+              "ped-cef6c4c6569e7d5a5d65",
+              "ped-9604212213765611b7cf",
+              "ped-faf4945eff51a9ad0c43",
+              "ped-9c8a6127ae2d5984e866",
+              "ped-cef6e390af5816d0558b",
+              "ped-b9a5c261271a8c546287",
+              "ped-26e9882f1856de8b8443",
+              "ped-7a6093b90b180b0719a7",
+              "ped-f39937ab98f0fbb019e1",
+              "ped-a9c9291516e797638d79",
+              "ped-2ca245dcdfc44085f149",
+              "ped-5700dc198bc12a9c2509",
+              "ped-5805de641c291aba6573",
+              "shek-kip-mei-services-doorway",
+              "dc269231--1--11"
+            ],
+            "edgeIds": [
+              "official-endpoint-snap-1",
+              "ped-e-7",
+              "ped-e-6",
+              "ped-e-13",
+              "demo-ped-e-4-covered",
+              "ped-e-23",
+              "ped-e-21",
+              "ped-e-22",
+              "ped-e-16",
+              "ped-e-9",
+              "ped-e-10",
+              "ped-e-12",
+              "ped-e-11",
+              "ped-e-8",
+              "ped-e-5",
+              "ped-e-17",
+              "ped-e-18",
+              "ped-e-14",
+              "ped-e-2",
+              "ped-e-3",
+              "ped-e-0",
+              "ped-e-15",
+              "ped-e-19",
+              "ped-e-20",
+              "ped-e-1",
+              "official-endpoint-snap-0",
+              "e-213"
+            ],
+            "geometry": [
+              [
+                114.16893357000004,
+                22.331491510000035
+              ],
+              [
+                114.168863893517,
+                22.331497936003995
+              ],
+              [
+                114.16871128981789,
+                22.331499587348343
+              ],
+              [
+                114.16866363907839,
+                22.33150010330947
+              ],
+              [
+                114.16864983987456,
+                22.33150025252115
+              ],
+              [
+                114.1681807997741,
+                22.33179889075428
+              ],
+              [
+                114.16771175967365,
+                22.33185752898741
+              ],
+              [
+                114.16767179752625,
+                22.33188874635381
+              ],
+              [
+                114.1676318305074,
+                22.331919967322168
+              ],
+              [
+                114.16761007249065,
+                22.33193696344425
+              ],
+              [
+                114.16759482032542,
+                22.331948878426623
+              ],
+              [
+                114.16747539962662,
+                22.332042164696652
+              ],
+              [
+                114.16748471167155,
+                22.332052678635495
+              ],
+              [
+                114.16752426409815,
+                22.33209733442184
+              ],
+              [
+                114.16753359265078,
+                22.33210786732299
+              ],
+              [
+                114.1675629119389,
+                22.33214096969102
+              ],
+              [
+                114.16757202502134,
+                22.33215125875191
+              ],
+              [
+                114.16740424113475,
+                22.33228125060182
+              ],
+              [
+                114.16739218458629,
+                22.33229059203515
+              ],
+              [
+                114.16736814720217,
+                22.332309214398624
+              ],
+              [
+                114.16734860335387,
+                22.332324355732865
+              ],
+              [
+                114.16720683968163,
+                22.332434545737254
+              ],
+              [
+                114.16673160710931,
+                22.33283522982663
+              ],
+              [
+                114.16672688073113,
+                22.33284994757035
+              ],
+              [
+                114.16672133197082,
+                22.332867533374593
+              ],
+              [
+                114.1667215353675,
+                22.33288722095335
+              ],
+              [
+                114.1667287612893,
+                22.332912730984443
+              ],
+              [
+                114.16681126307108,
+                22.333009298284182
+              ],
+              [
+                114.16682737907941,
+                22.33302816235362
+              ],
+              [
+                114.16682940765334,
+                22.333030554679254
+              ],
+              [
+                114.16684505096453,
+                22.333049072846528
+              ],
+              [
+                114.16699271385389,
+                22.333223867832885
+              ],
+              [
+                114.16701019554763,
+                22.333244562464905
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ]
+            ],
+            "distanceM": 417.94771871131144
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "dc269231-91d9-4c8b-8427-a31f996715ca",
+            "nodeIds": [
+              "dc269231--1--11",
+              "dc269231--2--11",
+              "dc269231--3--11",
+              "dc269231--4--11",
+              "dc269231--5--11",
+              "dc269231--6--12",
+              "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99"
+            ],
+            "edgeIds": [
+              "e-156",
+              "e-146",
+              "e-131",
+              "e-110",
+              "e-83",
+              "e-197"
+            ],
+            "geometry": [
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.167158608,
+                22.333074662
+              ],
+              [
+                114.167143069,
+                22.333074662
+              ],
+              [
+                114.167127531,
+                22.333074662
+              ],
+              [
+                114.167111992,
+                22.333074662
+              ],
+              [
+                114.167096454,
+                22.333060289
+              ],
+              [
+                114.16708276,
+                22.33306257
+              ]
+            ],
+            "distanceM": 10.096
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "shek-kip-mei-services",
+            "type": "transition",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+              "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09"
+            ],
+            "edgeIds": [
+              "e-203"
+            ],
+            "geometry": [
+              [
+                114.16708276,
+                22.33306257
+              ],
+              [
+                114.16708276,
+                22.33306257
+              ]
+            ],
+            "distanceM": 5.300000000000001,
+            "facilityId": "shek-kip-mei-services-lift-a",
+            "mode": "lift",
+            "fromLevel": "dc269231-91d9-4c8b-8427-a31f996715ca",
+            "toLevel": "012c4a74-a042-481b-ada0-80b739a5bf63"
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "nodeIds": [
+              "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+              "012c4a74--7--12",
+              "012c4a74--6--11",
+              "012c4a74--5--10"
+            ],
+            "edgeIds": [
+              "e-199",
+              "e-183",
+              "e-191"
+            ],
+            "geometry": [
+              [
+                114.16708276,
+                22.33306257
+              ],
+              [
+                114.167080915,
+                22.333060289
+              ],
+              [
+                114.167096454,
+                22.333074662
+              ],
+              [
+                114.167111992,
+                22.333089035
+              ]
+            ],
+            "distanceM": 4.843
+          }
+        ],
+        "exposed_m": 263.4738387113115,
+        "facilities": [
+          "shek-kip-mei-services-lift-a"
+        ]
+      },
+      "media_ids": [
+        "shek-kip-mei-services-photo",
+        "kowloon-tong-festival-walk-chan-transfer-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "012c4a74--5--10",
+            "to": "012c4a74--5--10",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 0,
+            "exposed_m": 0,
+            "facilities": [],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "arrival",
+      "title": "完成剩餘步行與到達",
+      "utterance": "我跟著路線到達石硤尾邨服務設施大樓的公共走廊會合點。",
+      "explanation": "帶行李前往約定的建築會合點。剩餘步行完成；到達節點與目的節點相同。",
+      "context": {
+        "context_id": "kowloon-tong-festival-walk-chan-7",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "shek-kip-mei-services-station",
+        "destination_node_id": "012c4a74--5--10",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": null,
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "012c4a74--5--10",
+        "destination_node_id": "012c4a74--5--10",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "已到達目的地會合點。",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-kowloon-tong-festival-walk-kowloon-tong-festival-walk-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "kowloon-tong-festival-walk-official-lift-220018539"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "kowloon-tong-festival-walk-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "又一城升降機 220018539 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "012c4a74--5--10"
+          ],
+          "edgeIds": [],
+          "distanceM": 0,
+          "cost": 0,
+          "reasonCodes": [],
+          "warnings": [],
+          "metrics": {
+            "exposedM": 0,
+            "outdoorM": 0,
+            "indoorM": 0,
+            "shelteredM": 0,
+            "estimatedDurationS": 0,
+            "ascentM": 0,
+            "descentM": 0,
+            "stairs": 0,
+            "transitions": {}
+          }
+        },
+        "segments": [],
+        "exposed_m": 0,
+        "facilities": []
+      },
+      "media_ids": [
+        "kowloon-tong-festival-walk-chan-arrival-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    }
+  ]
+}

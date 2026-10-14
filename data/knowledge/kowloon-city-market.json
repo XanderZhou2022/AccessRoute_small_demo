@@ -1,0 +1,87 @@
+{
+  "version": "1.0",
+  "scene_id": "kowloon-city-market",
+  "records": [
+    {
+      "id": "poi:a611f9d7-344a-467b-b882-c3f526020539",
+      "scene_id": "kowloon-city-market",
+      "names": [
+        "SCALDING ROOM"
+      ],
+      "category": "restaurant",
+      "level_id": "902f0d3f-92ed-4e9b-b763-76a107a9f7e0",
+      "lon": 114.18903382000008,
+      "lat": 22.330043990000036,
+      "node_id": "902f0d3f--2-34",
+      "association": "approximate",
+      "association_distance_m": 4.47,
+      "source": "data/raw/2b9f5d77-6a27-4dc3-bbc8-2c98e25fdb48/occupant_point.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-city-market-lift-a:9c7b385f-97aa-48d4-9981-afe834e18919",
+      "scene_id": "kowloon-city-market",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "902f0d3f-92ed-4e9b-b763-76a107a9f7e0",
+      "lon": 114.18910007,
+      "lat": 22.32958777,
+      "node_id": "9c7b385f-97aa-48d4-9981-afe834e18919",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-city-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-city-market-lift-a:dcfe2513-7696-4968-afa7-a056591a94a6",
+      "scene_id": "kowloon-city-market",
+      "names": [
+        "Lift A"
+      ],
+      "category": "lift",
+      "level_id": "59388cb2-b045-4ef9-8ce3-98dd7c877b17",
+      "lon": 114.18910006,
+      "lat": 22.32958777,
+      "node_id": "dcfe2513-7696-4968-afa7-a056591a94a6",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-city-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-city-market-lift-b:786bdd2d-6850-40b8-bb44-0226dbc032e8",
+      "scene_id": "kowloon-city-market",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "902f0d3f-92ed-4e9b-b763-76a107a9f7e0",
+      "lon": 114.18909588,
+      "lat": 22.3294881,
+      "node_id": "786bdd2d-6850-40b8-bb44-0226dbc032e8",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-city-market/graph.json",
+      "media_ids": []
+    },
+    {
+      "id": "facility:kowloon-city-market-lift-b:c996fa2e-e7c1-4339-ad62-7c6171cda127",
+      "scene_id": "kowloon-city-market",
+      "names": [
+        "Lift B"
+      ],
+      "category": "lift",
+      "level_id": "59388cb2-b045-4ef9-8ce3-98dd7c877b17",
+      "lon": 114.18909588,
+      "lat": 22.32948811,
+      "node_id": "c996fa2e-e7c1-4339-ad62-7c6171cda127",
+      "association": "approximate",
+      "association_distance_m": 0,
+      "source": "data/scenes/kowloon-city-market/graph.json",
+      "media_ids": []
+    }
+  ],
+  "association_note": "店舖坐標來自官方 POI；同層 20 米內公共節點只是候選，需用戶確認。設施記錄沿用現有圖的官方或演示來源。"
+}

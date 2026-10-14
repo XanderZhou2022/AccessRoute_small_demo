@@ -1,0 +1,5488 @@
+{
+  "id": "shek-kip-mei-services-chan",
+  "title": "陳女士 Ms Chan · 石硤尾邨服務設施大樓 → 長沙灣政府合署",
+  "person": "陳女士 Ms Chan",
+  "purpose": "帶行李前往約定的建築會合點",
+  "origin_scene_id": "shek-kip-mei-services",
+  "destination_scene_id": "cheung-sha-wan-government",
+  "tags": [
+    "heavy_luggage",
+    "rain",
+    "facility_fault",
+    "localization"
+  ],
+  "narrative": "陳女士 Ms Chan拉著 25 公斤行李，無法抬上樓梯；今天下雨，要從石硤尾邨服務設施大樓出發。途中遇到設施故障，改道後利用店舖或設施名稱確認位置，最後前往長沙灣政府合署。",
+  "initial_state": {
+    "policy_mode": "distance_only",
+    "scene_id": "shek-kip-mei-services",
+    "current_node_id": "012c4a74--5--10",
+    "destination_node_id": "shek-kip-mei-services-station",
+    "preferences": null,
+    "guidance": "",
+    "routing": {
+      "profile": "elderly",
+      "rain": false,
+      "strictAccessibility": false,
+      "now": "2026-10-04T09:00:00.000Z",
+      "events": []
+    }
+  },
+  "destination_route": {
+    "result": {
+      "status": "ok",
+      "nodeIds": [
+        "cheung-sha-wan-government-station",
+        "ped-5e5dbe3928cf1c21fd52",
+        "ped-4205aa35da00c3682667",
+        "ped-4c80c83c92097743f15e",
+        "ped-b67024f72a73e7a0a1ad",
+        "ped-b67d5cb7fac1f8005e63",
+        "ped-cbf4764cc2a7d907d764",
+        "ped-2373cf0789ebc9115840",
+        "ped-fff9cf7b2ab6b70f3b86",
+        "ped-e7e0d8e23d42fea024ff",
+        "ped-a5ec70c1925474dfb7e4",
+        "ped-c9ec490f9270fa704714",
+        "ped-59e8dca25e3b501f3b99",
+        "ped-e71fbb9fd7fd90e8c460",
+        "ped-1efa0bcff5559543ace7",
+        "ped-ceada7e12adccfe46b93",
+        "ped-5244a8b5205358eb2f64",
+        "ped-e7347bb85297a43b64db",
+        "ped-7e070e7552c0de9880e5",
+        "ped-db0e89da7060c202ad53",
+        "ped-d70e0b610ccdf4f718dc",
+        "ped-446c7fe059c8da889da4",
+        "ped-bfe943f39eaac7850742",
+        "ped-38cfc0aec45efa6ae688",
+        "ped-963f49ffb0e3e7f3f223",
+        "ped-81b79b4e4e6ea671350d",
+        "ped-e292e24a4364b19cc68b",
+        "ped-0a9ba498bc4c8525f7e5",
+        "ped-d37b8339b4a25cd866a6",
+        "ped-3be0278ae7033b24acd9",
+        "ped-12b7628a65e1487aed25",
+        "ped-210759e1b9e117c1a502",
+        "ped-f80a6d43225434e2e729",
+        "ped-de0dd611870a0042e3b9",
+        "ped-a91d60ea7d6ac232c4cf",
+        "ped-62864c44fe4bb5e85ff2",
+        "ped-0ba97931cf253f88b62d",
+        "ped-572e82b1cd10c150b548",
+        "ped-5ae6d71f009cda4b07f5",
+        "ped-9c114bfa6428ebbd9873",
+        "ped-54a0dd157856a4bbd4ce",
+        "cheung-sha-wan-government-doorway",
+        "216adbc9--6-29",
+        "216adbc9--5-28",
+        "216adbc9--4-27",
+        "216adbc9--3-26",
+        "216adbc9--2-25",
+        "216adbc9--1-24",
+        "216adbc9-0-23",
+        "216adbc9-1-22",
+        "216adbc9-2-21",
+        "216adbc9-3-20",
+        "216adbc9-4-19",
+        "216adbc9-4-18",
+        "216adbc9-4-17",
+        "216adbc9-4-16",
+        "216adbc9-4-15",
+        "216adbc9-4-14",
+        "216adbc9-4-13",
+        "216adbc9-4-12",
+        "216adbc9-4-11",
+        "216adbc9-4-10",
+        "216adbc9-4-9",
+        "216adbc9-4-8",
+        "216adbc9-4-7",
+        "216adbc9-4-6",
+        "216adbc9-4-5",
+        "216adbc9-4-4",
+        "32c888a6-1f7c-4615-a9ec-85bc81a4c206",
+        "c8f068b6-c852-4447-965e-69106a461bb1",
+        "efa3b69e-4-3",
+        "efa3b69e-3-3",
+        "efa3b69e-2-3"
+      ],
+      "edgeIds": [
+        "official-endpoint-snap-1",
+        "ped-e-4",
+        "ped-e-3",
+        "ped-e-2",
+        "ped-e-0",
+        "ped-e-1",
+        "ped-e-10",
+        "ped-e-11",
+        "ped-e-13",
+        "ped-e-14",
+        "ped-e-12",
+        "ped-e-9",
+        "ped-e-32",
+        "ped-e-8",
+        "ped-e-21",
+        "ped-e-22",
+        "ped-e-5",
+        "ped-e-29",
+        "ped-e-28",
+        "ped-e-19",
+        "ped-e-20",
+        "ped-e-16",
+        "ped-e-15",
+        "ped-e-24",
+        "ped-e-23",
+        "ped-e-7",
+        "ped-e-31",
+        "ped-e-30",
+        "ped-e-6",
+        "demo-ped-e-18-covered",
+        "ped-e-25",
+        "ped-e-33",
+        "ped-e-26",
+        "ped-e-34",
+        "ped-e-38",
+        "ped-e-27",
+        "ped-e-37",
+        "ped-e-36",
+        "ped-e-17",
+        "ped-e-35",
+        "official-endpoint-snap-0",
+        "e-1436",
+        "e-27",
+        "e-53",
+        "e-88",
+        "e-134",
+        "e-191",
+        "e-252",
+        "e-306",
+        "e-356",
+        "e-412",
+        "e-483",
+        "e-549",
+        "e-545",
+        "e-541",
+        "e-537",
+        "e-533",
+        "e-529",
+        "e-525",
+        "e-521",
+        "e-517",
+        "e-513",
+        "e-510",
+        "e-507",
+        "e-506",
+        "e-504",
+        "e-502",
+        "e-1430",
+        "e-1435",
+        "e-1432",
+        "e-1403",
+        "e-1393"
+      ],
+      "distanceM": 329.61164323096955,
+      "cost": 2031.6086756121624,
+      "reasonCodes": [
+        "ACCESSIBILITY_UNVERIFIED",
+        "RAIN_EXPOSURE"
+      ],
+      "warnings": [
+        "ACCESSIBILITY_UNVERIFIED",
+        "DEMO_CONNECTION"
+      ],
+      "metrics": {
+        "exposedM": 120.20160617584679,
+        "outdoorM": 273.6236432309696,
+        "indoorM": 55.988000000000014,
+        "shelteredM": 209.4100370551228,
+        "estimatedDurationS": 437.9437207053789,
+        "ascentM": 3.549999999999999,
+        "descentM": 0,
+        "stairs": 0,
+        "transitions": {
+          "lift": 1
+        }
+      }
+    },
+    "segments": [
+      {
+        "id": "segment-0",
+        "sceneId": "cheung-sha-wan-government",
+        "type": "outdoor",
+        "nodeIds": [
+          "cheung-sha-wan-government-station",
+          "ped-5e5dbe3928cf1c21fd52",
+          "ped-4205aa35da00c3682667",
+          "ped-4c80c83c92097743f15e",
+          "ped-b67024f72a73e7a0a1ad",
+          "ped-b67d5cb7fac1f8005e63",
+          "ped-cbf4764cc2a7d907d764",
+          "ped-2373cf0789ebc9115840",
+          "ped-fff9cf7b2ab6b70f3b86",
+          "ped-e7e0d8e23d42fea024ff",
+          "ped-a5ec70c1925474dfb7e4",
+          "ped-c9ec490f9270fa704714",
+          "ped-59e8dca25e3b501f3b99",
+          "ped-e71fbb9fd7fd90e8c460",
+          "ped-1efa0bcff5559543ace7",
+          "ped-ceada7e12adccfe46b93",
+          "ped-5244a8b5205358eb2f64",
+          "ped-e7347bb85297a43b64db",
+          "ped-7e070e7552c0de9880e5",
+          "ped-db0e89da7060c202ad53",
+          "ped-d70e0b610ccdf4f718dc",
+          "ped-446c7fe059c8da889da4",
+          "ped-bfe943f39eaac7850742",
+          "ped-38cfc0aec45efa6ae688",
+          "ped-963f49ffb0e3e7f3f223",
+          "ped-81b79b4e4e6ea671350d",
+          "ped-e292e24a4364b19cc68b",
+          "ped-0a9ba498bc4c8525f7e5",
+          "ped-d37b8339b4a25cd866a6",
+          "ped-3be0278ae7033b24acd9",
+          "ped-12b7628a65e1487aed25",
+          "ped-210759e1b9e117c1a502",
+          "ped-f80a6d43225434e2e729",
+          "ped-de0dd611870a0042e3b9",
+          "ped-a91d60ea7d6ac232c4cf",
+          "ped-62864c44fe4bb5e85ff2",
+          "ped-0ba97931cf253f88b62d",
+          "ped-572e82b1cd10c150b548",
+          "ped-5ae6d71f009cda4b07f5",
+          "ped-9c114bfa6428ebbd9873",
+          "ped-54a0dd157856a4bbd4ce",
+          "cheung-sha-wan-government-doorway",
+          "216adbc9--6-29"
+        ],
+        "edgeIds": [
+          "official-endpoint-snap-1",
+          "ped-e-4",
+          "ped-e-3",
+          "ped-e-2",
+          "ped-e-0",
+          "ped-e-1",
+          "ped-e-10",
+          "ped-e-11",
+          "ped-e-13",
+          "ped-e-14",
+          "ped-e-12",
+          "ped-e-9",
+          "ped-e-32",
+          "ped-e-8",
+          "ped-e-21",
+          "ped-e-22",
+          "ped-e-5",
+          "ped-e-29",
+          "ped-e-28",
+          "ped-e-19",
+          "ped-e-20",
+          "ped-e-16",
+          "ped-e-15",
+          "ped-e-24",
+          "ped-e-23",
+          "ped-e-7",
+          "ped-e-31",
+          "ped-e-30",
+          "ped-e-6",
+          "demo-ped-e-18-covered",
+          "ped-e-25",
+          "ped-e-33",
+          "ped-e-26",
+          "ped-e-34",
+          "ped-e-38",
+          "ped-e-27",
+          "ped-e-37",
+          "ped-e-36",
+          "ped-e-17",
+          "ped-e-35",
+          "official-endpoint-snap-0",
+          "e-1436"
+        ],
+        "geometry": [
+          [
+            114.16202771000007,
+            22.331154110000057
+          ],
+          [
+            114.16200392437486,
+            22.331128566119563
+          ],
+          [
+            114.16198231822509,
+            22.331145286068697
+          ],
+          [
+            114.1619755374829,
+            22.331150533118052
+          ],
+          [
+            114.16197466380093,
+            22.331151209428484
+          ],
+          [
+            114.16196738603018,
+            22.331156841134675
+          ],
+          [
+            114.16195739693198,
+            22.33116457220188
+          ],
+          [
+            114.16194899599283,
+            22.331171073449113
+          ],
+          [
+            114.16193964370991,
+            22.331178311503937
+          ],
+          [
+            114.16191496218222,
+            22.331197413428697
+          ],
+          [
+            114.16189244446886,
+            22.331214839473237
+          ],
+          [
+            114.16148430654623,
+            22.331530697382114
+          ],
+          [
+            114.16144622544884,
+            22.331560168684092
+          ],
+          [
+            114.16125694581004,
+            22.331706651006044
+          ],
+          [
+            114.16124288135995,
+            22.33171753511566
+          ],
+          [
+            114.16116923711436,
+            22.331774527233616
+          ],
+          [
+            114.16117923098179,
+            22.331785728827956
+          ],
+          [
+            114.16119320318168,
+            22.33180139010615
+          ],
+          [
+            114.16119162762624,
+            22.331802623531402
+          ],
+          [
+            114.16118107538401,
+            22.33181088639692
+          ],
+          [
+            114.16109001346213,
+            22.331882190265173
+          ],
+          [
+            114.16107077574074,
+            22.331897254112715
+          ],
+          [
+            114.16100441979204,
+            22.331949212314512
+          ],
+          [
+            114.16100104248513,
+            22.331951857041616
+          ],
+          [
+            114.16099037955269,
+            22.331960206577318
+          ],
+          [
+            114.16096577003086,
+            22.331932486610274
+          ],
+          [
+            114.16092488708946,
+            22.331964010164768
+          ],
+          [
+            114.16091798931917,
+            22.33195625944372
+          ],
+          [
+            114.16091185343917,
+            22.331949364896218
+          ],
+          [
+            114.16083939827242,
+            22.33186795340362
+          ],
+          [
+            114.16082950245581,
+            22.331856834879463
+          ],
+          [
+            114.16076694318977,
+            22.33178654187787
+          ],
+          [
+            114.16075358249451,
+            22.3317715299223
+          ],
+          [
+            114.16070092686704,
+            22.331933498819367
+          ],
+          [
+            114.16064827123958,
+            22.331855467716437
+          ],
+          [
+            114.16055792044679,
+            22.331927481159767
+          ],
+          [
+            114.16052236781007,
+            22.33195581825606
+          ],
+          [
+            114.16043008990023,
+            22.33202936843797
+          ],
+          [
+            114.16038515661188,
+            22.332065181874544
+          ],
+          [
+            114.16037053770731,
+            22.332076833450966
+          ],
+          [
+            114.16035578871626,
+            22.33208858976758
+          ],
+          [
+            114.16034396272829,
+            22.332098015587494
+          ],
+          [
+            114.16030437448914,
+            22.332129568917328
+          ],
+          [
+            114.16023458925297,
+            22.332185191061857
+          ],
+          [
+            114.1602279345775,
+            22.332190494942918
+          ],
+          [
+            114.160199925,
+            22.332179911
+          ],
+          [
+            114.160199925,
+            22.332179911
+          ]
+        ],
+        "distanceM": 273.6236432309696
+      },
+      {
+        "id": "segment-1",
+        "sceneId": "cheung-sha-wan-government",
+        "type": "floor",
+        "venueId": "bd9576da-e2d9-47ff-9ab1-447a54ddff47",
+        "levelId": "216adbc9-b1fc-4a3c-98f1-2c35ca686816",
+        "nodeIds": [
+          "216adbc9--6-29",
+          "216adbc9--5-28",
+          "216adbc9--4-27",
+          "216adbc9--3-26",
+          "216adbc9--2-25",
+          "216adbc9--1-24",
+          "216adbc9-0-23",
+          "216adbc9-1-22",
+          "216adbc9-2-21",
+          "216adbc9-3-20",
+          "216adbc9-4-19",
+          "216adbc9-4-18",
+          "216adbc9-4-17",
+          "216adbc9-4-16",
+          "216adbc9-4-15",
+          "216adbc9-4-14",
+          "216adbc9-4-13",
+          "216adbc9-4-12",
+          "216adbc9-4-11",
+          "216adbc9-4-10",
+          "216adbc9-4-9",
+          "216adbc9-4-8",
+          "216adbc9-4-7",
+          "216adbc9-4-6",
+          "216adbc9-4-5",
+          "216adbc9-4-4",
+          "32c888a6-1f7c-4615-a9ec-85bc81a4c206"
+        ],
+        "edgeIds": [
+          "e-27",
+          "e-53",
+          "e-88",
+          "e-134",
+          "e-191",
+          "e-252",
+          "e-306",
+          "e-356",
+          "e-412",
+          "e-483",
+          "e-549",
+          "e-545",
+          "e-541",
+          "e-537",
+          "e-533",
+          "e-529",
+          "e-525",
+          "e-521",
+          "e-517",
+          "e-513",
+          "e-510",
+          "e-507",
+          "e-506",
+          "e-504",
+          "e-502",
+          "e-1430"
+        ],
+        "geometry": [
+          [
+            114.160199925,
+            22.332179911
+          ],
+          [
+            114.160215463,
+            22.332165538
+          ],
+          [
+            114.160231002,
+            22.332151165
+          ],
+          [
+            114.16024654,
+            22.332136792
+          ],
+          [
+            114.160262078,
+            22.332122419
+          ],
+          [
+            114.160277617,
+            22.332108046
+          ],
+          [
+            114.160293155,
+            22.332093674
+          ],
+          [
+            114.160308693,
+            22.332079301
+          ],
+          [
+            114.160324232,
+            22.332064928
+          ],
+          [
+            114.16033977,
+            22.332050555
+          ],
+          [
+            114.160355308,
+            22.332036182
+          ],
+          [
+            114.160355308,
+            22.332021809
+          ],
+          [
+            114.160355308,
+            22.332007436
+          ],
+          [
+            114.160355308,
+            22.331993063
+          ],
+          [
+            114.160355308,
+            22.33197869
+          ],
+          [
+            114.160355308,
+            22.331964317
+          ],
+          [
+            114.160355308,
+            22.331949944
+          ],
+          [
+            114.160355308,
+            22.331935571
+          ],
+          [
+            114.160355308,
+            22.331921198
+          ],
+          [
+            114.160355308,
+            22.331906825
+          ],
+          [
+            114.160355308,
+            22.331892452
+          ],
+          [
+            114.160355308,
+            22.331878079
+          ],
+          [
+            114.160355308,
+            22.331863706
+          ],
+          [
+            114.160355308,
+            22.331849333
+          ],
+          [
+            114.160355308,
+            22.33183496
+          ],
+          [
+            114.160355308,
+            22.331820587
+          ],
+          [
+            114.16036459,
+            22.33180905
+          ]
+        ],
+        "distanceM": 48.231000000000016
+      },
+      {
+        "id": "segment-2",
+        "sceneId": "cheung-sha-wan-government",
+        "type": "transition",
+        "venueId": "bd9576da-e2d9-47ff-9ab1-447a54ddff47",
+        "nodeIds": [
+          "32c888a6-1f7c-4615-a9ec-85bc81a4c206",
+          "c8f068b6-c852-4447-965e-69106a461bb1"
+        ],
+        "edgeIds": [
+          "e-1435"
+        ],
+        "geometry": [
+          [
+            114.16036459,
+            22.33180905
+          ],
+          [
+            114.16036459,
+            22.33180905
+          ]
+        ],
+        "distanceM": 3.549999999999999,
+        "facilityId": "cheung-sha-wan-government-lift-a",
+        "mode": "lift",
+        "fromLevel": "216adbc9-b1fc-4a3c-98f1-2c35ca686816",
+        "toLevel": "efa3b69e-2bed-4508-bd74-461aeaadd2a4"
+      },
+      {
+        "id": "segment-3",
+        "sceneId": "cheung-sha-wan-government",
+        "type": "floor",
+        "venueId": "bd9576da-e2d9-47ff-9ab1-447a54ddff47",
+        "levelId": "efa3b69e-2bed-4508-bd74-461aeaadd2a4",
+        "nodeIds": [
+          "c8f068b6-c852-4447-965e-69106a461bb1",
+          "efa3b69e-4-3",
+          "efa3b69e-3-3",
+          "efa3b69e-2-3"
+        ],
+        "edgeIds": [
+          "e-1432",
+          "e-1403",
+          "e-1393"
+        ],
+        "geometry": [
+          [
+            114.16036459,
+            22.33180905
+          ],
+          [
+            114.160355308,
+            22.331806214
+          ],
+          [
+            114.16033977,
+            22.331806214
+          ],
+          [
+            114.160324232,
+            22.331806214
+          ]
+        ],
+        "distanceM": 4.207000000000001
+      }
+    ],
+    "exposed_m": 120.20160617584679,
+    "facilities": [
+      "cheung-sha-wan-government-lift-a"
+    ]
+  },
+  "steps": [
+    {
+      "agent_records": [
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "012c4a74--5--10",
+            "to": "shek-kip-mei-services-station",
+            "routing": {
+              "profile": "elderly",
+              "rain": false,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": []
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 403.0870387113114,
+            "exposed_m": 371.63943871131136,
+            "facilities": [
+              "demo-shek-kip-mei-services-stairs"
+            ],
+            "route_changed": false
+          }
+        }
+      ],
+      "id": "start",
+      "title": "人物與原路線",
+      "utterance": "陳女士 Ms Chan要從石硤尾邨服務設施大樓前往長沙灣政府合署。",
+      "explanation": "帶行李前往約定的建築會合點。先展示未加入個人需求的原路線。",
+      "context": {
+        "context_id": "shek-kip-mei-services-chan-0",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "012c4a74--5--10",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "elderly",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": []
+        },
+        "preferences": null,
+        "segment_id": "segment-0"
+      },
+      "response": null,
+      "state": {
+        "policy_mode": "distance_only",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "012c4a74--5--10",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "preferences": null,
+        "guidance": "",
+        "routing": {
+          "profile": "elderly",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": []
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "012c4a74--5--10",
+            "012c4a74--6--11",
+            "012c4a74--7--12",
+            "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+            "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+            "dc269231--6--12",
+            "dc269231--5--12",
+            "dc269231--4--12",
+            "dc269231--3--12",
+            "dc269231--2--12",
+            "dc269231--1--11",
+            "shek-kip-mei-services-doorway",
+            "ped-5805de641c291aba6573",
+            "ped-5700dc198bc12a9c2509",
+            "ped-2ca245dcdfc44085f149",
+            "ped-a9c9291516e797638d79",
+            "ped-f39937ab98f0fbb019e1",
+            "ped-7a6093b90b180b0719a7",
+            "ped-26e9882f1856de8b8443",
+            "ped-b9a5c261271a8c546287",
+            "ped-cef6e390af5816d0558b",
+            "ped-9c8a6127ae2d5984e866",
+            "ped-faf4945eff51a9ad0c43",
+            "ped-9604212213765611b7cf",
+            "ped-cef6c4c6569e7d5a5d65",
+            "ped-680eb8b2871594c546cd",
+            "ped-254df239b362051b31fa",
+            "ped-46eaf1e8d5d6a92f3ff2",
+            "ped-de57169739d6a0230f18",
+            "ped-c36827008e0a3ff548a1",
+            "ped-7692d225368b85ef3268",
+            "ped-ab041dbbf5ab78102db4",
+            "ped-0bd6c84e93261b101e35",
+            "ped-e71a1e9f21fa4be48daf",
+            "ped-4bfd104e9db9f9b5fc44",
+            "ped-001750789bcbdb3f7994",
+            "ped-f3c0f8a8f3a221aa75d3",
+            "shek-kip-mei-services-station"
+          ],
+          "edgeIds": [
+            "e-191",
+            "e-183",
+            "e-199",
+            "demo-shek-kip-mei-services-stairs-edge",
+            "e-197",
+            "e-81",
+            "e-106",
+            "e-127",
+            "e-143",
+            "e-155",
+            "e-213",
+            "official-endpoint-snap-0",
+            "ped-e-1",
+            "ped-e-20",
+            "ped-e-19",
+            "ped-e-15",
+            "ped-e-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-14",
+            "ped-e-18",
+            "ped-e-17",
+            "ped-e-5",
+            "ped-e-8",
+            "ped-e-11",
+            "ped-e-12",
+            "ped-e-10",
+            "ped-e-9",
+            "ped-e-16",
+            "ped-e-22",
+            "ped-e-21",
+            "ped-e-23",
+            "ped-e-4",
+            "ped-e-13",
+            "ped-e-6",
+            "ped-e-7",
+            "official-endpoint-snap-1"
+          ],
+          "distanceM": 403.0870387113114,
+          "cost": 403.0870387113113,
+          "reasonCodes": [],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 371.63943871131136,
+            "outdoorM": 385.4980387113113,
+            "indoorM": 17.589,
+            "shelteredM": 31.4476,
+            "estimatedDurationS": 579.6243410161592,
+            "ascentM": 0,
+            "descentM": 5.300000000000001,
+            "stairs": 0,
+            "transitions": {
+              "stairs": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "nodeIds": [
+              "012c4a74--5--10",
+              "012c4a74--6--11",
+              "012c4a74--7--12",
+              "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09"
+            ],
+            "edgeIds": [
+              "e-191",
+              "e-183",
+              "e-199"
+            ],
+            "geometry": [
+              [
+                114.167111992,
+                22.333089035
+              ],
+              [
+                114.167096454,
+                22.333074662
+              ],
+              [
+                114.167080915,
+                22.333060289
+              ],
+              [
+                114.16708276,
+                22.33306257
+              ]
+            ],
+            "distanceM": 4.843
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "shek-kip-mei-services",
+            "type": "transition",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+              "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99"
+            ],
+            "edgeIds": [
+              "demo-shek-kip-mei-services-stairs-edge"
+            ],
+            "geometry": [
+              [
+                114.16708276,
+                22.33306257
+              ],
+              [
+                114.16708276,
+                22.33306257
+              ]
+            ],
+            "distanceM": 2.6500000000000004,
+            "facilityId": "demo-shek-kip-mei-services-stairs",
+            "mode": "stairs",
+            "fromLevel": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "toLevel": "dc269231-91d9-4c8b-8427-a31f996715ca"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "dc269231-91d9-4c8b-8427-a31f996715ca",
+            "nodeIds": [
+              "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+              "dc269231--6--12",
+              "dc269231--5--12",
+              "dc269231--4--12",
+              "dc269231--3--12",
+              "dc269231--2--12",
+              "dc269231--1--11"
+            ],
+            "edgeIds": [
+              "e-197",
+              "e-81",
+              "e-106",
+              "e-127",
+              "e-143",
+              "e-155"
+            ],
+            "geometry": [
+              [
+                114.16708276,
+                22.33306257
+              ],
+              [
+                114.167096454,
+                22.333060289
+              ],
+              [
+                114.167111992,
+                22.333060289
+              ],
+              [
+                114.167127531,
+                22.333060289
+              ],
+              [
+                114.167143069,
+                22.333060289
+              ],
+              [
+                114.167158608,
+                22.333060289
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ]
+            ],
+            "distanceM": 10.096
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "shek-kip-mei-services",
+            "type": "outdoor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "dc269231--1--11",
+              "shek-kip-mei-services-doorway",
+              "ped-5805de641c291aba6573",
+              "ped-5700dc198bc12a9c2509",
+              "ped-2ca245dcdfc44085f149",
+              "ped-a9c9291516e797638d79",
+              "ped-f39937ab98f0fbb019e1",
+              "ped-7a6093b90b180b0719a7",
+              "ped-26e9882f1856de8b8443",
+              "ped-b9a5c261271a8c546287",
+              "ped-cef6e390af5816d0558b",
+              "ped-9c8a6127ae2d5984e866",
+              "ped-faf4945eff51a9ad0c43",
+              "ped-9604212213765611b7cf",
+              "ped-cef6c4c6569e7d5a5d65",
+              "ped-680eb8b2871594c546cd",
+              "ped-254df239b362051b31fa",
+              "ped-46eaf1e8d5d6a92f3ff2",
+              "ped-de57169739d6a0230f18",
+              "ped-c36827008e0a3ff548a1",
+              "ped-7692d225368b85ef3268",
+              "ped-ab041dbbf5ab78102db4",
+              "ped-0bd6c84e93261b101e35",
+              "ped-e71a1e9f21fa4be48daf",
+              "ped-4bfd104e9db9f9b5fc44",
+              "ped-001750789bcbdb3f7994",
+              "ped-f3c0f8a8f3a221aa75d3",
+              "shek-kip-mei-services-station"
+            ],
+            "edgeIds": [
+              "e-213",
+              "official-endpoint-snap-0",
+              "ped-e-1",
+              "ped-e-20",
+              "ped-e-19",
+              "ped-e-15",
+              "ped-e-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-14",
+              "ped-e-18",
+              "ped-e-17",
+              "ped-e-5",
+              "ped-e-8",
+              "ped-e-11",
+              "ped-e-12",
+              "ped-e-10",
+              "ped-e-9",
+              "ped-e-16",
+              "ped-e-22",
+              "ped-e-21",
+              "ped-e-23",
+              "ped-e-4",
+              "ped-e-13",
+              "ped-e-6",
+              "ped-e-7",
+              "official-endpoint-snap-1"
+            ],
+            "geometry": [
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.16701019554763,
+                22.333244562464905
+              ],
+              [
+                114.16699271385389,
+                22.333223867832885
+              ],
+              [
+                114.16684505096453,
+                22.333049072846528
+              ],
+              [
+                114.16682940765334,
+                22.333030554679254
+              ],
+              [
+                114.16682737907941,
+                22.33302816235362
+              ],
+              [
+                114.16681126307108,
+                22.333009298284182
+              ],
+              [
+                114.1667287612893,
+                22.332912730984443
+              ],
+              [
+                114.1667215353675,
+                22.33288722095335
+              ],
+              [
+                114.16672133197082,
+                22.332867533374593
+              ],
+              [
+                114.16672688073113,
+                22.33284994757035
+              ],
+              [
+                114.16673160710931,
+                22.33283522982663
+              ],
+              [
+                114.16720683968163,
+                22.332434545737254
+              ],
+              [
+                114.16734860335387,
+                22.332324355732865
+              ],
+              [
+                114.16736814720217,
+                22.332309214398624
+              ],
+              [
+                114.16739218458629,
+                22.33229059203515
+              ],
+              [
+                114.16740424113475,
+                22.33228125060182
+              ],
+              [
+                114.16757202502134,
+                22.33215125875191
+              ],
+              [
+                114.1675629119389,
+                22.33214096969102
+              ],
+              [
+                114.16753359265078,
+                22.33210786732299
+              ],
+              [
+                114.16752426409815,
+                22.33209733442184
+              ],
+              [
+                114.16748471167155,
+                22.332052678635495
+              ],
+              [
+                114.16747539962662,
+                22.332042164696652
+              ],
+              [
+                114.16759482032542,
+                22.331948878426623
+              ],
+              [
+                114.16761007249065,
+                22.33193696344425
+              ],
+              [
+                114.1676318305074,
+                22.331919967322168
+              ],
+              [
+                114.16767179752625,
+                22.33188874635381
+              ],
+              [
+                114.16771175967365,
+                22.33185752898741
+              ],
+              [
+                114.16785063836002,
+                22.331749041540895
+              ],
+              [
+                114.16794515496042,
+                22.33168310093502
+              ],
+              [
+                114.16803247861462,
+                22.33163436313952
+              ],
+              [
+                114.16812596658907,
+                22.33159231548213
+              ],
+              [
+                114.1682194540968,
+                22.331556958527937
+              ],
+              [
+                114.16831807684918,
+                22.331531158853217
+              ],
+              [
+                114.16841875415224,
+                22.331511093643908
+              ],
+              [
+                114.16853073049639,
+                22.331501541450343
+              ],
+              [
+                114.16864983987456,
+                22.33150025252115
+              ],
+              [
+                114.16866363907839,
+                22.33150010330947
+              ],
+              [
+                114.16871128981789,
+                22.331499587348343
+              ],
+              [
+                114.168863893517,
+                22.331497936003995
+              ],
+              [
+                114.16893357000004,
+                22.331491510000035
+              ]
+            ],
+            "distanceM": 385.4980387113113
+          }
+        ],
+        "exposed_m": 371.63943871131136,
+        "facilities": [
+          "demo-shek-kip-mei-services-stairs"
+        ]
+      },
+      "media_ids": [
+        "shek-kip-mei-services-chan-start-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": false
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "出行意圖 agent",
+          "source": "example_library",
+          "input": {
+            "description": "我拉著 25 公斤行李，無法抬上樓梯，請幫我規劃。"
+          },
+          "output": {
+            "mobility_type": "heavy_luggage",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": false,
+            "tts_selection": "text_only"
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "012c4a74--5--10",
+            "to": "shek-kip-mei-services-station",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": false,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": false
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 405.7370387113114,
+            "exposed_m": 371.63943871131136,
+            "facilities": [
+              "shek-kip-mei-services-lift-a"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "preferences",
+      "title": "解析出行需求",
+      "utterance": "我拉著 25 公斤行李，無法抬上樓梯，請幫我規劃。",
+      "explanation": "意圖結果更新出行類型、避樓梯及陡坡條件，再用現有地圖重新求路。",
+      "context": {
+        "context_id": "shek-kip-mei-services-chan-1",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "012c4a74--5--10",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "elderly",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": []
+        },
+        "preferences": null,
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "preferences",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "shek-kip-mei-services-chan-preferences-1",
+          "context_id": "shek-kip-mei-services-chan-1",
+          "scene_id": "shek-kip-mei-services",
+          "agent": "preferences",
+          "payload": {
+            "mobility_type": "heavy_luggage",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": false,
+            "tts_selection": "text_only"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-preferences",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "意圖結果更新出行類型、避樓梯及陡坡條件，再用現有地圖重新求路。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "012c4a74--5--10",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": false,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": false
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "012c4a74--5--10",
+            "012c4a74--6--11",
+            "012c4a74--7--12",
+            "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+            "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+            "dc269231--6--12",
+            "dc269231--5--12",
+            "dc269231--4--12",
+            "dc269231--3--12",
+            "dc269231--2--12",
+            "dc269231--1--11",
+            "shek-kip-mei-services-doorway",
+            "ped-5805de641c291aba6573",
+            "ped-5700dc198bc12a9c2509",
+            "ped-2ca245dcdfc44085f149",
+            "ped-a9c9291516e797638d79",
+            "ped-f39937ab98f0fbb019e1",
+            "ped-7a6093b90b180b0719a7",
+            "ped-26e9882f1856de8b8443",
+            "ped-b9a5c261271a8c546287",
+            "ped-cef6e390af5816d0558b",
+            "ped-9c8a6127ae2d5984e866",
+            "ped-faf4945eff51a9ad0c43",
+            "ped-9604212213765611b7cf",
+            "ped-cef6c4c6569e7d5a5d65",
+            "ped-680eb8b2871594c546cd",
+            "ped-254df239b362051b31fa",
+            "ped-46eaf1e8d5d6a92f3ff2",
+            "ped-de57169739d6a0230f18",
+            "ped-c36827008e0a3ff548a1",
+            "ped-7692d225368b85ef3268",
+            "ped-ab041dbbf5ab78102db4",
+            "ped-0bd6c84e93261b101e35",
+            "ped-e71a1e9f21fa4be48daf",
+            "ped-4bfd104e9db9f9b5fc44",
+            "ped-001750789bcbdb3f7994",
+            "ped-f3c0f8a8f3a221aa75d3",
+            "shek-kip-mei-services-station"
+          ],
+          "edgeIds": [
+            "e-191",
+            "e-183",
+            "e-199",
+            "e-203",
+            "e-197",
+            "e-81",
+            "e-106",
+            "e-127",
+            "e-143",
+            "e-155",
+            "e-213",
+            "official-endpoint-snap-0",
+            "ped-e-1",
+            "ped-e-20",
+            "ped-e-19",
+            "ped-e-15",
+            "ped-e-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-14",
+            "ped-e-18",
+            "ped-e-17",
+            "ped-e-5",
+            "ped-e-8",
+            "ped-e-11",
+            "ped-e-12",
+            "ped-e-10",
+            "ped-e-9",
+            "ped-e-16",
+            "ped-e-22",
+            "ped-e-21",
+            "ped-e-23",
+            "ped-e-4",
+            "ped-e-13",
+            "ped-e-6",
+            "ped-e-7",
+            "official-endpoint-snap-1"
+          ],
+          "distanceM": 405.7370387113114,
+          "cost": 1268.4108012143995,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 371.63943871131136,
+            "outdoorM": 385.4980387113113,
+            "indoorM": 20.239000000000004,
+            "shelteredM": 34.09760000000001,
+            "estimatedDurationS": 532.0796317224725,
+            "ascentM": 0,
+            "descentM": 5.300000000000001,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "nodeIds": [
+              "012c4a74--5--10",
+              "012c4a74--6--11",
+              "012c4a74--7--12",
+              "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09"
+            ],
+            "edgeIds": [
+              "e-191",
+              "e-183",
+              "e-199"
+            ],
+            "geometry": [
+              [
+                114.167111992,
+                22.333089035
+              ],
+              [
+                114.167096454,
+                22.333074662
+              ],
+              [
+                114.167080915,
+                22.333060289
+              ],
+              [
+                114.16708276,
+                22.33306257
+              ]
+            ],
+            "distanceM": 4.843
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "shek-kip-mei-services",
+            "type": "transition",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+              "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99"
+            ],
+            "edgeIds": [
+              "e-203"
+            ],
+            "geometry": [
+              [
+                114.16708276,
+                22.33306257
+              ],
+              [
+                114.16708276,
+                22.33306257
+              ]
+            ],
+            "distanceM": 5.300000000000001,
+            "facilityId": "shek-kip-mei-services-lift-a",
+            "mode": "lift",
+            "fromLevel": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "toLevel": "dc269231-91d9-4c8b-8427-a31f996715ca"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "dc269231-91d9-4c8b-8427-a31f996715ca",
+            "nodeIds": [
+              "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+              "dc269231--6--12",
+              "dc269231--5--12",
+              "dc269231--4--12",
+              "dc269231--3--12",
+              "dc269231--2--12",
+              "dc269231--1--11"
+            ],
+            "edgeIds": [
+              "e-197",
+              "e-81",
+              "e-106",
+              "e-127",
+              "e-143",
+              "e-155"
+            ],
+            "geometry": [
+              [
+                114.16708276,
+                22.33306257
+              ],
+              [
+                114.167096454,
+                22.333060289
+              ],
+              [
+                114.167111992,
+                22.333060289
+              ],
+              [
+                114.167127531,
+                22.333060289
+              ],
+              [
+                114.167143069,
+                22.333060289
+              ],
+              [
+                114.167158608,
+                22.333060289
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ]
+            ],
+            "distanceM": 10.096
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "shek-kip-mei-services",
+            "type": "outdoor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "dc269231--1--11",
+              "shek-kip-mei-services-doorway",
+              "ped-5805de641c291aba6573",
+              "ped-5700dc198bc12a9c2509",
+              "ped-2ca245dcdfc44085f149",
+              "ped-a9c9291516e797638d79",
+              "ped-f39937ab98f0fbb019e1",
+              "ped-7a6093b90b180b0719a7",
+              "ped-26e9882f1856de8b8443",
+              "ped-b9a5c261271a8c546287",
+              "ped-cef6e390af5816d0558b",
+              "ped-9c8a6127ae2d5984e866",
+              "ped-faf4945eff51a9ad0c43",
+              "ped-9604212213765611b7cf",
+              "ped-cef6c4c6569e7d5a5d65",
+              "ped-680eb8b2871594c546cd",
+              "ped-254df239b362051b31fa",
+              "ped-46eaf1e8d5d6a92f3ff2",
+              "ped-de57169739d6a0230f18",
+              "ped-c36827008e0a3ff548a1",
+              "ped-7692d225368b85ef3268",
+              "ped-ab041dbbf5ab78102db4",
+              "ped-0bd6c84e93261b101e35",
+              "ped-e71a1e9f21fa4be48daf",
+              "ped-4bfd104e9db9f9b5fc44",
+              "ped-001750789bcbdb3f7994",
+              "ped-f3c0f8a8f3a221aa75d3",
+              "shek-kip-mei-services-station"
+            ],
+            "edgeIds": [
+              "e-213",
+              "official-endpoint-snap-0",
+              "ped-e-1",
+              "ped-e-20",
+              "ped-e-19",
+              "ped-e-15",
+              "ped-e-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-14",
+              "ped-e-18",
+              "ped-e-17",
+              "ped-e-5",
+              "ped-e-8",
+              "ped-e-11",
+              "ped-e-12",
+              "ped-e-10",
+              "ped-e-9",
+              "ped-e-16",
+              "ped-e-22",
+              "ped-e-21",
+              "ped-e-23",
+              "ped-e-4",
+              "ped-e-13",
+              "ped-e-6",
+              "ped-e-7",
+              "official-endpoint-snap-1"
+            ],
+            "geometry": [
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.16701019554763,
+                22.333244562464905
+              ],
+              [
+                114.16699271385389,
+                22.333223867832885
+              ],
+              [
+                114.16684505096453,
+                22.333049072846528
+              ],
+              [
+                114.16682940765334,
+                22.333030554679254
+              ],
+              [
+                114.16682737907941,
+                22.33302816235362
+              ],
+              [
+                114.16681126307108,
+                22.333009298284182
+              ],
+              [
+                114.1667287612893,
+                22.332912730984443
+              ],
+              [
+                114.1667215353675,
+                22.33288722095335
+              ],
+              [
+                114.16672133197082,
+                22.332867533374593
+              ],
+              [
+                114.16672688073113,
+                22.33284994757035
+              ],
+              [
+                114.16673160710931,
+                22.33283522982663
+              ],
+              [
+                114.16720683968163,
+                22.332434545737254
+              ],
+              [
+                114.16734860335387,
+                22.332324355732865
+              ],
+              [
+                114.16736814720217,
+                22.332309214398624
+              ],
+              [
+                114.16739218458629,
+                22.33229059203515
+              ],
+              [
+                114.16740424113475,
+                22.33228125060182
+              ],
+              [
+                114.16757202502134,
+                22.33215125875191
+              ],
+              [
+                114.1675629119389,
+                22.33214096969102
+              ],
+              [
+                114.16753359265078,
+                22.33210786732299
+              ],
+              [
+                114.16752426409815,
+                22.33209733442184
+              ],
+              [
+                114.16748471167155,
+                22.332052678635495
+              ],
+              [
+                114.16747539962662,
+                22.332042164696652
+              ],
+              [
+                114.16759482032542,
+                22.331948878426623
+              ],
+              [
+                114.16761007249065,
+                22.33193696344425
+              ],
+              [
+                114.1676318305074,
+                22.331919967322168
+              ],
+              [
+                114.16767179752625,
+                22.33188874635381
+              ],
+              [
+                114.16771175967365,
+                22.33185752898741
+              ],
+              [
+                114.16785063836002,
+                22.331749041540895
+              ],
+              [
+                114.16794515496042,
+                22.33168310093502
+              ],
+              [
+                114.16803247861462,
+                22.33163436313952
+              ],
+              [
+                114.16812596658907,
+                22.33159231548213
+              ],
+              [
+                114.1682194540968,
+                22.331556958527937
+              ],
+              [
+                114.16831807684918,
+                22.331531158853217
+              ],
+              [
+                114.16841875415224,
+                22.331511093643908
+              ],
+              [
+                114.16853073049639,
+                22.331501541450343
+              ],
+              [
+                114.16864983987456,
+                22.33150025252115
+              ],
+              [
+                114.16866363907839,
+                22.33150010330947
+              ],
+              [
+                114.16871128981789,
+                22.331499587348343
+              ],
+              [
+                114.168863893517,
+                22.331497936003995
+              ],
+              [
+                114.16893357000004,
+                22.331491510000035
+              ]
+            ],
+            "distanceM": 385.4980387113113
+          }
+        ],
+        "exposed_m": 371.63943871131136,
+        "facilities": [
+          "shek-kip-mei-services-lift-a"
+        ]
+      },
+      "media_ids": [
+        "shek-kip-mei-services-chan-preferences-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "出行意圖 agent",
+          "source": "example_library",
+          "input": {
+            "description": "現在下雨了，我想盡量在室內或有蓋地方行。"
+          },
+          "output": {
+            "mobility_type": "heavy_luggage",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": true,
+            "tts_selection": "text_only"
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "012c4a74--5--10",
+            "to": "shek-kip-mei-services-station",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 438.18671871131147,
+            "exposed_m": 263.47383871131143,
+            "facilities": [
+              "shek-kip-mei-services-lift-a"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "rain",
+      "title": "下雨與有蓋偏好",
+      "utterance": "現在下雨了，我想盡量在室內或有蓋地方行。",
+      "explanation": "天氣來自演示情境；意圖結果加入有蓋偏好。比較露天距離，若現有圖沒有更好的替代線，保留原路。",
+      "context": {
+        "context_id": "shek-kip-mei-services-chan-2",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "012c4a74--5--10",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": false,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": false
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": false,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "preferences",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "shek-kip-mei-services-chan-preferences-2",
+          "context_id": "shek-kip-mei-services-chan-2",
+          "scene_id": "shek-kip-mei-services",
+          "agent": "preferences",
+          "payload": {
+            "mobility_type": "heavy_luggage",
+            "avoid_stairs": true,
+            "avoid_steep_slopes": true,
+            "prefer_covered_shelter": true,
+            "tts_selection": "text_only"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-preferences",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "天氣來自演示情境；意圖結果加入有蓋偏好。比較露天距離，若現有圖沒有更好的替代線，保留原路。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "012c4a74--5--10",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "012c4a74--5--10",
+            "012c4a74--6--11",
+            "012c4a74--7--12",
+            "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+            "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+            "dc269231--6--12",
+            "dc269231--5--12",
+            "dc269231--4--12",
+            "dc269231--3--12",
+            "dc269231--2--12",
+            "dc269231--1--11",
+            "shek-kip-mei-services-doorway",
+            "ped-5805de641c291aba6573",
+            "ped-5700dc198bc12a9c2509",
+            "ped-2ca245dcdfc44085f149",
+            "ped-a9c9291516e797638d79",
+            "ped-f39937ab98f0fbb019e1",
+            "ped-7a6093b90b180b0719a7",
+            "ped-26e9882f1856de8b8443",
+            "ped-b9a5c261271a8c546287",
+            "ped-cef6e390af5816d0558b",
+            "ped-9c8a6127ae2d5984e866",
+            "ped-faf4945eff51a9ad0c43",
+            "ped-9604212213765611b7cf",
+            "ped-cef6c4c6569e7d5a5d65",
+            "ped-680eb8b2871594c546cd",
+            "ped-254df239b362051b31fa",
+            "ped-46eaf1e8d5d6a92f3ff2",
+            "ped-de57169739d6a0230f18",
+            "ped-c36827008e0a3ff548a1",
+            "ped-7692d225368b85ef3268",
+            "ped-ab041dbbf5ab78102db4",
+            "ped-0bd6c84e93261b101e35",
+            "ped-e71a1e9f21fa4be48daf",
+            "ped-4bfd104e9db9f9b5fc44",
+            "ped-001750789bcbdb3f7994",
+            "ped-f3c0f8a8f3a221aa75d3",
+            "shek-kip-mei-services-station"
+          ],
+          "edgeIds": [
+            "e-191",
+            "e-183",
+            "e-199",
+            "e-203",
+            "e-197",
+            "e-81",
+            "e-106",
+            "e-127",
+            "e-143",
+            "e-155",
+            "e-213",
+            "official-endpoint-snap-0",
+            "ped-e-1",
+            "ped-e-20",
+            "ped-e-19",
+            "ped-e-15",
+            "ped-e-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-14",
+            "ped-e-18",
+            "ped-e-17",
+            "ped-e-5",
+            "ped-e-8",
+            "ped-e-11",
+            "ped-e-12",
+            "ped-e-10",
+            "ped-e-9",
+            "ped-e-16",
+            "ped-e-22",
+            "ped-e-21",
+            "ped-e-23",
+            "demo-ped-e-4-covered",
+            "ped-e-13",
+            "ped-e-6",
+            "ped-e-7",
+            "official-endpoint-snap-1"
+          ],
+          "distanceM": 438.18671871131147,
+          "cost": 1844.6895841641551,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 263.47383871131143,
+            "outdoorM": 417.9477187113113,
+            "indoorM": 20.239000000000004,
+            "shelteredM": 174.71288,
+            "estimatedDurationS": 572.6417317224725,
+            "ascentM": 0,
+            "descentM": 5.300000000000001,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "nodeIds": [
+              "012c4a74--5--10",
+              "012c4a74--6--11",
+              "012c4a74--7--12",
+              "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09"
+            ],
+            "edgeIds": [
+              "e-191",
+              "e-183",
+              "e-199"
+            ],
+            "geometry": [
+              [
+                114.167111992,
+                22.333089035
+              ],
+              [
+                114.167096454,
+                22.333074662
+              ],
+              [
+                114.167080915,
+                22.333060289
+              ],
+              [
+                114.16708276,
+                22.33306257
+              ]
+            ],
+            "distanceM": 4.843
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "shek-kip-mei-services",
+            "type": "transition",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+              "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99"
+            ],
+            "edgeIds": [
+              "e-203"
+            ],
+            "geometry": [
+              [
+                114.16708276,
+                22.33306257
+              ],
+              [
+                114.16708276,
+                22.33306257
+              ]
+            ],
+            "distanceM": 5.300000000000001,
+            "facilityId": "shek-kip-mei-services-lift-a",
+            "mode": "lift",
+            "fromLevel": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "toLevel": "dc269231-91d9-4c8b-8427-a31f996715ca"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "dc269231-91d9-4c8b-8427-a31f996715ca",
+            "nodeIds": [
+              "5b99b2bd-e6b6-4cd7-81f9-098f7d36ed99",
+              "dc269231--6--12",
+              "dc269231--5--12",
+              "dc269231--4--12",
+              "dc269231--3--12",
+              "dc269231--2--12",
+              "dc269231--1--11"
+            ],
+            "edgeIds": [
+              "e-197",
+              "e-81",
+              "e-106",
+              "e-127",
+              "e-143",
+              "e-155"
+            ],
+            "geometry": [
+              [
+                114.16708276,
+                22.33306257
+              ],
+              [
+                114.167096454,
+                22.333060289
+              ],
+              [
+                114.167111992,
+                22.333060289
+              ],
+              [
+                114.167127531,
+                22.333060289
+              ],
+              [
+                114.167143069,
+                22.333060289
+              ],
+              [
+                114.167158608,
+                22.333060289
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ]
+            ],
+            "distanceM": 10.096
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "shek-kip-mei-services",
+            "type": "outdoor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "dc269231--1--11",
+              "shek-kip-mei-services-doorway",
+              "ped-5805de641c291aba6573",
+              "ped-5700dc198bc12a9c2509",
+              "ped-2ca245dcdfc44085f149",
+              "ped-a9c9291516e797638d79",
+              "ped-f39937ab98f0fbb019e1",
+              "ped-7a6093b90b180b0719a7",
+              "ped-26e9882f1856de8b8443",
+              "ped-b9a5c261271a8c546287",
+              "ped-cef6e390af5816d0558b",
+              "ped-9c8a6127ae2d5984e866",
+              "ped-faf4945eff51a9ad0c43",
+              "ped-9604212213765611b7cf",
+              "ped-cef6c4c6569e7d5a5d65",
+              "ped-680eb8b2871594c546cd",
+              "ped-254df239b362051b31fa",
+              "ped-46eaf1e8d5d6a92f3ff2",
+              "ped-de57169739d6a0230f18",
+              "ped-c36827008e0a3ff548a1",
+              "ped-7692d225368b85ef3268",
+              "ped-ab041dbbf5ab78102db4",
+              "ped-0bd6c84e93261b101e35",
+              "ped-e71a1e9f21fa4be48daf",
+              "ped-4bfd104e9db9f9b5fc44",
+              "ped-001750789bcbdb3f7994",
+              "ped-f3c0f8a8f3a221aa75d3",
+              "shek-kip-mei-services-station"
+            ],
+            "edgeIds": [
+              "e-213",
+              "official-endpoint-snap-0",
+              "ped-e-1",
+              "ped-e-20",
+              "ped-e-19",
+              "ped-e-15",
+              "ped-e-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-14",
+              "ped-e-18",
+              "ped-e-17",
+              "ped-e-5",
+              "ped-e-8",
+              "ped-e-11",
+              "ped-e-12",
+              "ped-e-10",
+              "ped-e-9",
+              "ped-e-16",
+              "ped-e-22",
+              "ped-e-21",
+              "ped-e-23",
+              "demo-ped-e-4-covered",
+              "ped-e-13",
+              "ped-e-6",
+              "ped-e-7",
+              "official-endpoint-snap-1"
+            ],
+            "geometry": [
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.16701019554763,
+                22.333244562464905
+              ],
+              [
+                114.16699271385389,
+                22.333223867832885
+              ],
+              [
+                114.16684505096453,
+                22.333049072846528
+              ],
+              [
+                114.16682940765334,
+                22.333030554679254
+              ],
+              [
+                114.16682737907941,
+                22.33302816235362
+              ],
+              [
+                114.16681126307108,
+                22.333009298284182
+              ],
+              [
+                114.1667287612893,
+                22.332912730984443
+              ],
+              [
+                114.1667215353675,
+                22.33288722095335
+              ],
+              [
+                114.16672133197082,
+                22.332867533374593
+              ],
+              [
+                114.16672688073113,
+                22.33284994757035
+              ],
+              [
+                114.16673160710931,
+                22.33283522982663
+              ],
+              [
+                114.16720683968163,
+                22.332434545737254
+              ],
+              [
+                114.16734860335387,
+                22.332324355732865
+              ],
+              [
+                114.16736814720217,
+                22.332309214398624
+              ],
+              [
+                114.16739218458629,
+                22.33229059203515
+              ],
+              [
+                114.16740424113475,
+                22.33228125060182
+              ],
+              [
+                114.16757202502134,
+                22.33215125875191
+              ],
+              [
+                114.1675629119389,
+                22.33214096969102
+              ],
+              [
+                114.16753359265078,
+                22.33210786732299
+              ],
+              [
+                114.16752426409815,
+                22.33209733442184
+              ],
+              [
+                114.16748471167155,
+                22.332052678635495
+              ],
+              [
+                114.16747539962662,
+                22.332042164696652
+              ],
+              [
+                114.16759482032542,
+                22.331948878426623
+              ],
+              [
+                114.16761007249065,
+                22.33193696344425
+              ],
+              [
+                114.1676318305074,
+                22.331919967322168
+              ],
+              [
+                114.16767179752625,
+                22.33188874635381
+              ],
+              [
+                114.16771175967365,
+                22.33185752898741
+              ],
+              [
+                114.1681807997741,
+                22.33179889075428
+              ],
+              [
+                114.16864983987456,
+                22.33150025252115
+              ],
+              [
+                114.16866363907839,
+                22.33150010330947
+              ],
+              [
+                114.16871128981789,
+                22.331499587348343
+              ],
+              [
+                114.168863893517,
+                22.331497936003995
+              ],
+              [
+                114.16893357000004,
+                22.331491510000035
+              ]
+            ],
+            "distanceM": 417.9477187113113
+          }
+        ],
+        "exposed_m": 263.47383871131143,
+        "facilities": [
+          "shek-kip-mei-services-lift-a"
+        ]
+      },
+      "media_ids": [
+        "shek-kip-mei-services-chan-rain-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "VLM 路障觀察 agent",
+          "source": "example_library",
+          "input": {
+            "notice": "Lift A顯示維修中，不能使用。"
+          },
+          "output": {
+            "has_obstacle": true,
+            "type": "broken_lift",
+            "evidence": "Lift A 維修中（演示情境）",
+            "confidence": 0.95
+          }
+        },
+        {
+          "agent": "地圖設施匹配 agent",
+          "source": "example_library",
+          "input": {
+            "scene_id": "shek-kip-mei-services",
+            "notice": "Lift A顯示維修中，不能使用。"
+          },
+          "output": {
+            "target": {
+              "facility_id": "shek-kip-mei-services-lift-a"
+            },
+            "match_method": "user_confirmed",
+            "confidence": 0.95
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "012c4a74--5--10",
+            "to": "shek-kip-mei-services-station",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "shek-kip-mei-services-lift-a"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "Lift A 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 448.90871871131134,
+            "exposed_m": 263.47383871131143,
+            "facilities": [
+              "shek-kip-mei-services-lift-b"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "fault",
+      "title": "報告設施故障與改道",
+      "utterance": "Lift A顯示維修中，不能使用。",
+      "explanation": "將演示故障對應到 Lift A 的 facility ID，封閉後重新規劃替代線。",
+      "context": {
+        "context_id": "shek-kip-mei-services-chan-3",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "012c4a74--5--10",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "obstacle",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "shek-kip-mei-services-chan-obstacle-3",
+          "context_id": "shek-kip-mei-services-chan-3",
+          "scene_id": "shek-kip-mei-services",
+          "agent": "obstacle",
+          "payload": {
+            "event_id": "shek-kip-mei-services-chan-fault",
+            "has_obstacle": true,
+            "barrier_type": "broken_lift",
+            "location_sign": "Lift A 維修中（演示情境）",
+            "is_indoor": true,
+            "target": {
+              "facility_id": "shek-kip-mei-services-lift-a"
+            },
+            "confidence": 0.95,
+            "match_method": "user_confirmed",
+            "valid_from": "2026-10-04T09:00:00.000Z",
+            "valid_until": "2026-10-04T11:00:00.000Z"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-obstacle",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "將演示故障對應到 Lift A 的 facility ID，封閉後重新規劃替代線。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "012c4a74--5--10",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "shek-kip-mei-services-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "012c4a74--5--10",
+            "012c4a74--6--11",
+            "012c4a74--7--12",
+            "012c4a74--8--13",
+            "012c4a74--9--14",
+            "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+            "00c8ed16-e2bb-437d-8e22-7b0b5f1759dc",
+            "dc269231--8--15",
+            "dc269231--7--15",
+            "dc269231--6--15",
+            "dc269231--5--15",
+            "dc269231--4--14",
+            "dc269231--3--13",
+            "dc269231--2--12",
+            "dc269231--1--11",
+            "shek-kip-mei-services-doorway",
+            "ped-5805de641c291aba6573",
+            "ped-5700dc198bc12a9c2509",
+            "ped-2ca245dcdfc44085f149",
+            "ped-a9c9291516e797638d79",
+            "ped-f39937ab98f0fbb019e1",
+            "ped-7a6093b90b180b0719a7",
+            "ped-26e9882f1856de8b8443",
+            "ped-b9a5c261271a8c546287",
+            "ped-cef6e390af5816d0558b",
+            "ped-9c8a6127ae2d5984e866",
+            "ped-faf4945eff51a9ad0c43",
+            "ped-9604212213765611b7cf",
+            "ped-cef6c4c6569e7d5a5d65",
+            "ped-680eb8b2871594c546cd",
+            "ped-254df239b362051b31fa",
+            "ped-46eaf1e8d5d6a92f3ff2",
+            "ped-de57169739d6a0230f18",
+            "ped-c36827008e0a3ff548a1",
+            "ped-7692d225368b85ef3268",
+            "ped-ab041dbbf5ab78102db4",
+            "ped-0bd6c84e93261b101e35",
+            "ped-e71a1e9f21fa4be48daf",
+            "ped-4bfd104e9db9f9b5fc44",
+            "ped-001750789bcbdb3f7994",
+            "ped-f3c0f8a8f3a221aa75d3",
+            "shek-kip-mei-services-station"
+          ],
+          "edgeIds": [
+            "e-191",
+            "e-183",
+            "e-175",
+            "e-168",
+            "e-209",
+            "e-212",
+            "e-206",
+            "e-21",
+            "e-45",
+            "e-69",
+            "e-98",
+            "e-123",
+            "e-142",
+            "e-155",
+            "e-213",
+            "official-endpoint-snap-0",
+            "ped-e-1",
+            "ped-e-20",
+            "ped-e-19",
+            "ped-e-15",
+            "ped-e-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-14",
+            "ped-e-18",
+            "ped-e-17",
+            "ped-e-5",
+            "ped-e-8",
+            "ped-e-11",
+            "ped-e-12",
+            "ped-e-10",
+            "ped-e-9",
+            "ped-e-16",
+            "ped-e-22",
+            "ped-e-21",
+            "ped-e-23",
+            "demo-ped-e-4-covered",
+            "ped-e-13",
+            "ped-e-6",
+            "ped-e-7",
+            "official-endpoint-snap-1"
+          ],
+          "distanceM": 448.90871871131134,
+          "cost": 1935.4115841641549,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 263.47383871131143,
+            "outdoorM": 417.9477187113113,
+            "indoorM": 30.961,
+            "shelteredM": 185.43488000000002,
+            "estimatedDurationS": 586.0442317224724,
+            "ascentM": 0,
+            "descentM": 5.300000000000001,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "nodeIds": [
+              "012c4a74--5--10",
+              "012c4a74--6--11",
+              "012c4a74--7--12",
+              "012c4a74--8--13",
+              "012c4a74--9--14",
+              "e952f3af-4507-47d3-a8c2-1e3f71122d3e"
+            ],
+            "edgeIds": [
+              "e-191",
+              "e-183",
+              "e-175",
+              "e-168",
+              "e-209"
+            ],
+            "geometry": [
+              [
+                114.167111992,
+                22.333089035
+              ],
+              [
+                114.167096454,
+                22.333074662
+              ],
+              [
+                114.167080915,
+                22.333060289
+              ],
+              [
+                114.167065377,
+                22.333045916
+              ],
+              [
+                114.167049838,
+                22.333031543
+              ],
+              [
+                114.16705031,
+                22.33302131
+              ]
+            ],
+            "distanceM": 10.192
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "shek-kip-mei-services",
+            "type": "transition",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+              "00c8ed16-e2bb-437d-8e22-7b0b5f1759dc"
+            ],
+            "edgeIds": [
+              "e-212"
+            ],
+            "geometry": [
+              [
+                114.16705031,
+                22.33302131
+              ],
+              [
+                114.16705032,
+                22.33302131
+              ]
+            ],
+            "distanceM": 5.300000000000001,
+            "facilityId": "shek-kip-mei-services-lift-b",
+            "mode": "lift",
+            "fromLevel": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "toLevel": "dc269231-91d9-4c8b-8427-a31f996715ca"
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "dc269231-91d9-4c8b-8427-a31f996715ca",
+            "nodeIds": [
+              "00c8ed16-e2bb-437d-8e22-7b0b5f1759dc",
+              "dc269231--8--15",
+              "dc269231--7--15",
+              "dc269231--6--15",
+              "dc269231--5--15",
+              "dc269231--4--14",
+              "dc269231--3--13",
+              "dc269231--2--12",
+              "dc269231--1--11"
+            ],
+            "edgeIds": [
+              "e-206",
+              "e-21",
+              "e-45",
+              "e-69",
+              "e-98",
+              "e-123",
+              "e-142",
+              "e-155"
+            ],
+            "geometry": [
+              [
+                114.16705032,
+                22.33302131
+              ],
+              [
+                114.167065377,
+                22.33301717
+              ],
+              [
+                114.167080915,
+                22.33301717
+              ],
+              [
+                114.167096454,
+                22.33301717
+              ],
+              [
+                114.167111992,
+                22.33301717
+              ],
+              [
+                114.167127531,
+                22.333031543
+              ],
+              [
+                114.167143069,
+                22.333045916
+              ],
+              [
+                114.167158608,
+                22.333060289
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ]
+            ],
+            "distanceM": 15.469
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "shek-kip-mei-services",
+            "type": "outdoor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "dc269231--1--11",
+              "shek-kip-mei-services-doorway",
+              "ped-5805de641c291aba6573",
+              "ped-5700dc198bc12a9c2509",
+              "ped-2ca245dcdfc44085f149",
+              "ped-a9c9291516e797638d79",
+              "ped-f39937ab98f0fbb019e1",
+              "ped-7a6093b90b180b0719a7",
+              "ped-26e9882f1856de8b8443",
+              "ped-b9a5c261271a8c546287",
+              "ped-cef6e390af5816d0558b",
+              "ped-9c8a6127ae2d5984e866",
+              "ped-faf4945eff51a9ad0c43",
+              "ped-9604212213765611b7cf",
+              "ped-cef6c4c6569e7d5a5d65",
+              "ped-680eb8b2871594c546cd",
+              "ped-254df239b362051b31fa",
+              "ped-46eaf1e8d5d6a92f3ff2",
+              "ped-de57169739d6a0230f18",
+              "ped-c36827008e0a3ff548a1",
+              "ped-7692d225368b85ef3268",
+              "ped-ab041dbbf5ab78102db4",
+              "ped-0bd6c84e93261b101e35",
+              "ped-e71a1e9f21fa4be48daf",
+              "ped-4bfd104e9db9f9b5fc44",
+              "ped-001750789bcbdb3f7994",
+              "ped-f3c0f8a8f3a221aa75d3",
+              "shek-kip-mei-services-station"
+            ],
+            "edgeIds": [
+              "e-213",
+              "official-endpoint-snap-0",
+              "ped-e-1",
+              "ped-e-20",
+              "ped-e-19",
+              "ped-e-15",
+              "ped-e-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-14",
+              "ped-e-18",
+              "ped-e-17",
+              "ped-e-5",
+              "ped-e-8",
+              "ped-e-11",
+              "ped-e-12",
+              "ped-e-10",
+              "ped-e-9",
+              "ped-e-16",
+              "ped-e-22",
+              "ped-e-21",
+              "ped-e-23",
+              "demo-ped-e-4-covered",
+              "ped-e-13",
+              "ped-e-6",
+              "ped-e-7",
+              "official-endpoint-snap-1"
+            ],
+            "geometry": [
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.16701019554763,
+                22.333244562464905
+              ],
+              [
+                114.16699271385389,
+                22.333223867832885
+              ],
+              [
+                114.16684505096453,
+                22.333049072846528
+              ],
+              [
+                114.16682940765334,
+                22.333030554679254
+              ],
+              [
+                114.16682737907941,
+                22.33302816235362
+              ],
+              [
+                114.16681126307108,
+                22.333009298284182
+              ],
+              [
+                114.1667287612893,
+                22.332912730984443
+              ],
+              [
+                114.1667215353675,
+                22.33288722095335
+              ],
+              [
+                114.16672133197082,
+                22.332867533374593
+              ],
+              [
+                114.16672688073113,
+                22.33284994757035
+              ],
+              [
+                114.16673160710931,
+                22.33283522982663
+              ],
+              [
+                114.16720683968163,
+                22.332434545737254
+              ],
+              [
+                114.16734860335387,
+                22.332324355732865
+              ],
+              [
+                114.16736814720217,
+                22.332309214398624
+              ],
+              [
+                114.16739218458629,
+                22.33229059203515
+              ],
+              [
+                114.16740424113475,
+                22.33228125060182
+              ],
+              [
+                114.16757202502134,
+                22.33215125875191
+              ],
+              [
+                114.1675629119389,
+                22.33214096969102
+              ],
+              [
+                114.16753359265078,
+                22.33210786732299
+              ],
+              [
+                114.16752426409815,
+                22.33209733442184
+              ],
+              [
+                114.16748471167155,
+                22.332052678635495
+              ],
+              [
+                114.16747539962662,
+                22.332042164696652
+              ],
+              [
+                114.16759482032542,
+                22.331948878426623
+              ],
+              [
+                114.16761007249065,
+                22.33193696344425
+              ],
+              [
+                114.1676318305074,
+                22.331919967322168
+              ],
+              [
+                114.16767179752625,
+                22.33188874635381
+              ],
+              [
+                114.16771175967365,
+                22.33185752898741
+              ],
+              [
+                114.1681807997741,
+                22.33179889075428
+              ],
+              [
+                114.16864983987456,
+                22.33150025252115
+              ],
+              [
+                114.16866363907839,
+                22.33150010330947
+              ],
+              [
+                114.16871128981789,
+                22.331499587348343
+              ],
+              [
+                114.168863893517,
+                22.331497936003995
+              ],
+              [
+                114.16893357000004,
+                22.331491510000035
+              ]
+            ],
+            "distanceM": 417.9477187113113
+          }
+        ],
+        "exposed_m": 263.47383871131143,
+        "facilities": [
+          "shek-kip-mei-services-lift-b"
+        ]
+      },
+      "media_ids": [
+        "shek-kip-mei-services-chan-fault-view",
+        "shek-kip-mei-services-chan-fault-sign"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "VLM／描述觀察 agent",
+          "source": "example_library",
+          "input": {
+            "description": "我好像走錯了，招牌有點模糊，只看見「Lif」和 1/F 樓層標誌。"
+          },
+          "output": {
+            "names": [],
+            "text": [
+              "Lif"
+            ],
+            "objects": [],
+            "floor_label": "1/F",
+            "confidence": 0.55
+          }
+        },
+        {
+          "agent": "附近知識檢索",
+          "source": "computed",
+          "input": {
+            "query": "Lif",
+            "level_id": "012c4a74-a042-481b-ada0-80b739a5bf63"
+          },
+          "output": [
+            {
+              "id": "facility:shek-kip-mei-services-lift-a:8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+              "scene_id": "shek-kip-mei-services",
+              "names": [
+                "Lift A"
+              ],
+              "category": "lift",
+              "level_id": "012c4a74-a042-481b-ada0-80b739a5bf63",
+              "lon": 114.16708276,
+              "lat": 22.33306257,
+              "node_id": "8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+              "association": "approximate",
+              "association_distance_m": 0,
+              "source": "data/scenes/shek-kip-mei-services/graph.json",
+              "media_ids": []
+            },
+            {
+              "id": "facility:shek-kip-mei-services-lift-b:e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+              "scene_id": "shek-kip-mei-services",
+              "names": [
+                "Lift B"
+              ],
+              "category": "lift",
+              "level_id": "012c4a74-a042-481b-ada0-80b739a5bf63",
+              "lon": 114.16705031,
+              "lat": 22.33302131,
+              "node_id": "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+              "association": "approximate",
+              "association_distance_m": 0,
+              "source": "data/scenes/shek-kip-mei-services/graph.json",
+              "media_ids": []
+            }
+          ]
+        },
+        {
+          "agent": "地圖匹配 agent＋使用者確認",
+          "source": "example_library",
+          "input": {
+            "query": "Lif",
+            "candidates": [
+              "facility:shek-kip-mei-services-lift-a:8a159f2d-4bc2-4d3b-8fe8-513ed08ccb09",
+              "facility:shek-kip-mei-services-lift-b:e952f3af-4507-47d3-a8c2-1e3f71122d3e"
+            ]
+          },
+          "output": {
+            "is_indoor": true,
+            "status": "matched",
+            "map_db_node_id": "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+            "level_id": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "anchor_names": [
+              "Lift B"
+            ],
+            "direction_hint": "已確認的同層公共通道候選",
+            "confidence": 0.55,
+            "match_method": "user_confirmed"
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+            "to": "shek-kip-mei-services-station",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "shek-kip-mei-services-lift-a"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "Lift A 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 438.71671871131144,
+            "exposed_m": 263.47383871131143,
+            "facilities": [
+              "shek-kip-mei-services-lift-b"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "localization",
+      "title": "迷路後用照片／描述找位置",
+      "utterance": "我好像走錯了，招牌有點模糊，只看見「Lif」和 1/F 樓層標誌。",
+      "explanation": "用設施名稱和樓層縮小範圍；本例使用者確認圖上的候選，重新求剩餘路線。",
+      "context": {
+        "context_id": "shek-kip-mei-services-chan-4",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "012c4a74--5--10",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "shek-kip-mei-services-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "localization",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "shek-kip-mei-services-chan-localization-4",
+          "context_id": "shek-kip-mei-services-chan-4",
+          "scene_id": "shek-kip-mei-services",
+          "agent": "localization",
+          "payload": {
+            "is_indoor": true,
+            "status": "matched",
+            "map_db_node_id": "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+            "level_id": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "anchor_names": [
+              "Lift B"
+            ],
+            "direction_hint": "已確認的同層公共通道候選",
+            "confidence": 0.55,
+            "match_method": "user_confirmed"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-observation",
+            "summary": "例子庫提供照片／周圍描述中的名稱線索"
+          },
+          {
+            "step": "map-retrieval",
+            "summary": "從官方 POI、同層公共節點與當前路線取候選"
+          },
+          {
+            "step": "user-confirmed-match",
+            "summary": "本例由使用者確認候選位置，分數是預設演示分數"
+          }
+        ],
+        "message": "用設施名稱和樓層縮小範圍；本例使用者確認圖上的候選，重新求剩餘路線。"
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "shek-kip-mei-services-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+            "00c8ed16-e2bb-437d-8e22-7b0b5f1759dc",
+            "dc269231--8--15",
+            "dc269231--7--15",
+            "dc269231--6--15",
+            "dc269231--5--15",
+            "dc269231--4--14",
+            "dc269231--3--13",
+            "dc269231--2--12",
+            "dc269231--1--11",
+            "shek-kip-mei-services-doorway",
+            "ped-5805de641c291aba6573",
+            "ped-5700dc198bc12a9c2509",
+            "ped-2ca245dcdfc44085f149",
+            "ped-a9c9291516e797638d79",
+            "ped-f39937ab98f0fbb019e1",
+            "ped-7a6093b90b180b0719a7",
+            "ped-26e9882f1856de8b8443",
+            "ped-b9a5c261271a8c546287",
+            "ped-cef6e390af5816d0558b",
+            "ped-9c8a6127ae2d5984e866",
+            "ped-faf4945eff51a9ad0c43",
+            "ped-9604212213765611b7cf",
+            "ped-cef6c4c6569e7d5a5d65",
+            "ped-680eb8b2871594c546cd",
+            "ped-254df239b362051b31fa",
+            "ped-46eaf1e8d5d6a92f3ff2",
+            "ped-de57169739d6a0230f18",
+            "ped-c36827008e0a3ff548a1",
+            "ped-7692d225368b85ef3268",
+            "ped-ab041dbbf5ab78102db4",
+            "ped-0bd6c84e93261b101e35",
+            "ped-e71a1e9f21fa4be48daf",
+            "ped-4bfd104e9db9f9b5fc44",
+            "ped-001750789bcbdb3f7994",
+            "ped-f3c0f8a8f3a221aa75d3",
+            "shek-kip-mei-services-station"
+          ],
+          "edgeIds": [
+            "e-212",
+            "e-206",
+            "e-21",
+            "e-45",
+            "e-69",
+            "e-98",
+            "e-123",
+            "e-142",
+            "e-155",
+            "e-213",
+            "official-endpoint-snap-0",
+            "ped-e-1",
+            "ped-e-20",
+            "ped-e-19",
+            "ped-e-15",
+            "ped-e-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-14",
+            "ped-e-18",
+            "ped-e-17",
+            "ped-e-5",
+            "ped-e-8",
+            "ped-e-11",
+            "ped-e-12",
+            "ped-e-10",
+            "ped-e-9",
+            "ped-e-16",
+            "ped-e-22",
+            "ped-e-21",
+            "ped-e-23",
+            "demo-ped-e-4-covered",
+            "ped-e-13",
+            "ped-e-6",
+            "ped-e-7",
+            "official-endpoint-snap-1"
+          ],
+          "distanceM": 438.71671871131144,
+          "cost": 1825.2195841641553,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 263.47383871131143,
+            "outdoorM": 417.9477187113113,
+            "indoorM": 20.769,
+            "shelteredM": 175.24288,
+            "estimatedDurationS": 573.3042317224725,
+            "ascentM": 0,
+            "descentM": 5.300000000000001,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "shek-kip-mei-services",
+            "type": "transition",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+              "00c8ed16-e2bb-437d-8e22-7b0b5f1759dc"
+            ],
+            "edgeIds": [
+              "e-212"
+            ],
+            "geometry": [
+              [
+                114.16705031,
+                22.33302131
+              ],
+              [
+                114.16705032,
+                22.33302131
+              ]
+            ],
+            "distanceM": 5.300000000000001,
+            "facilityId": "shek-kip-mei-services-lift-b",
+            "mode": "lift",
+            "fromLevel": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "toLevel": "dc269231-91d9-4c8b-8427-a31f996715ca"
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "dc269231-91d9-4c8b-8427-a31f996715ca",
+            "nodeIds": [
+              "00c8ed16-e2bb-437d-8e22-7b0b5f1759dc",
+              "dc269231--8--15",
+              "dc269231--7--15",
+              "dc269231--6--15",
+              "dc269231--5--15",
+              "dc269231--4--14",
+              "dc269231--3--13",
+              "dc269231--2--12",
+              "dc269231--1--11"
+            ],
+            "edgeIds": [
+              "e-206",
+              "e-21",
+              "e-45",
+              "e-69",
+              "e-98",
+              "e-123",
+              "e-142",
+              "e-155"
+            ],
+            "geometry": [
+              [
+                114.16705032,
+                22.33302131
+              ],
+              [
+                114.167065377,
+                22.33301717
+              ],
+              [
+                114.167080915,
+                22.33301717
+              ],
+              [
+                114.167096454,
+                22.33301717
+              ],
+              [
+                114.167111992,
+                22.33301717
+              ],
+              [
+                114.167127531,
+                22.333031543
+              ],
+              [
+                114.167143069,
+                22.333045916
+              ],
+              [
+                114.167158608,
+                22.333060289
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ]
+            ],
+            "distanceM": 15.469
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "shek-kip-mei-services",
+            "type": "outdoor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "dc269231--1--11",
+              "shek-kip-mei-services-doorway",
+              "ped-5805de641c291aba6573",
+              "ped-5700dc198bc12a9c2509",
+              "ped-2ca245dcdfc44085f149",
+              "ped-a9c9291516e797638d79",
+              "ped-f39937ab98f0fbb019e1",
+              "ped-7a6093b90b180b0719a7",
+              "ped-26e9882f1856de8b8443",
+              "ped-b9a5c261271a8c546287",
+              "ped-cef6e390af5816d0558b",
+              "ped-9c8a6127ae2d5984e866",
+              "ped-faf4945eff51a9ad0c43",
+              "ped-9604212213765611b7cf",
+              "ped-cef6c4c6569e7d5a5d65",
+              "ped-680eb8b2871594c546cd",
+              "ped-254df239b362051b31fa",
+              "ped-46eaf1e8d5d6a92f3ff2",
+              "ped-de57169739d6a0230f18",
+              "ped-c36827008e0a3ff548a1",
+              "ped-7692d225368b85ef3268",
+              "ped-ab041dbbf5ab78102db4",
+              "ped-0bd6c84e93261b101e35",
+              "ped-e71a1e9f21fa4be48daf",
+              "ped-4bfd104e9db9f9b5fc44",
+              "ped-001750789bcbdb3f7994",
+              "ped-f3c0f8a8f3a221aa75d3",
+              "shek-kip-mei-services-station"
+            ],
+            "edgeIds": [
+              "e-213",
+              "official-endpoint-snap-0",
+              "ped-e-1",
+              "ped-e-20",
+              "ped-e-19",
+              "ped-e-15",
+              "ped-e-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-14",
+              "ped-e-18",
+              "ped-e-17",
+              "ped-e-5",
+              "ped-e-8",
+              "ped-e-11",
+              "ped-e-12",
+              "ped-e-10",
+              "ped-e-9",
+              "ped-e-16",
+              "ped-e-22",
+              "ped-e-21",
+              "ped-e-23",
+              "demo-ped-e-4-covered",
+              "ped-e-13",
+              "ped-e-6",
+              "ped-e-7",
+              "official-endpoint-snap-1"
+            ],
+            "geometry": [
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.16701019554763,
+                22.333244562464905
+              ],
+              [
+                114.16699271385389,
+                22.333223867832885
+              ],
+              [
+                114.16684505096453,
+                22.333049072846528
+              ],
+              [
+                114.16682940765334,
+                22.333030554679254
+              ],
+              [
+                114.16682737907941,
+                22.33302816235362
+              ],
+              [
+                114.16681126307108,
+                22.333009298284182
+              ],
+              [
+                114.1667287612893,
+                22.332912730984443
+              ],
+              [
+                114.1667215353675,
+                22.33288722095335
+              ],
+              [
+                114.16672133197082,
+                22.332867533374593
+              ],
+              [
+                114.16672688073113,
+                22.33284994757035
+              ],
+              [
+                114.16673160710931,
+                22.33283522982663
+              ],
+              [
+                114.16720683968163,
+                22.332434545737254
+              ],
+              [
+                114.16734860335387,
+                22.332324355732865
+              ],
+              [
+                114.16736814720217,
+                22.332309214398624
+              ],
+              [
+                114.16739218458629,
+                22.33229059203515
+              ],
+              [
+                114.16740424113475,
+                22.33228125060182
+              ],
+              [
+                114.16757202502134,
+                22.33215125875191
+              ],
+              [
+                114.1675629119389,
+                22.33214096969102
+              ],
+              [
+                114.16753359265078,
+                22.33210786732299
+              ],
+              [
+                114.16752426409815,
+                22.33209733442184
+              ],
+              [
+                114.16748471167155,
+                22.332052678635495
+              ],
+              [
+                114.16747539962662,
+                22.332042164696652
+              ],
+              [
+                114.16759482032542,
+                22.331948878426623
+              ],
+              [
+                114.16761007249065,
+                22.33193696344425
+              ],
+              [
+                114.1676318305074,
+                22.331919967322168
+              ],
+              [
+                114.16767179752625,
+                22.33188874635381
+              ],
+              [
+                114.16771175967365,
+                22.33185752898741
+              ],
+              [
+                114.1681807997741,
+                22.33179889075428
+              ],
+              [
+                114.16864983987456,
+                22.33150025252115
+              ],
+              [
+                114.16866363907839,
+                22.33150010330947
+              ],
+              [
+                114.16871128981789,
+                22.331499587348343
+              ],
+              [
+                114.168863893517,
+                22.331497936003995
+              ],
+              [
+                114.16893357000004,
+                22.331491510000035
+              ]
+            ],
+            "distanceM": 417.9477187113113
+          }
+        ],
+        "exposed_m": 263.47383871131143,
+        "facilities": [
+          "shek-kip-mei-services-lift-b"
+        ]
+      },
+      "media_ids": [
+        "shek-kip-mei-services-photo",
+        "shek-kip-mei-services-chan-localization-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "粵語表述 agent",
+          "source": "example_library",
+          "input": {
+            "segment": {
+              "id": "segment-0",
+              "sceneId": "shek-kip-mei-services",
+              "type": "transition",
+              "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+              "nodeIds": [
+                "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+                "00c8ed16-e2bb-437d-8e22-7b0b5f1759dc"
+              ],
+              "edgeIds": [
+                "e-212"
+              ],
+              "geometry": [
+                [
+                  114.16705031,
+                  22.33302131
+                ],
+                [
+                  114.16705032,
+                  22.33302131
+                ]
+              ],
+              "distanceM": 5.300000000000001,
+              "facilityId": "shek-kip-mei-services-lift-b",
+              "mode": "lift",
+              "fromLevel": "012c4a74-a042-481b-ada0-80b739a5bf63",
+              "toLevel": "dc269231-91d9-4c8b-8427-a31f996715ca"
+            }
+          },
+          "output": {
+            "text": "請搭升降機去G/F。",
+            "speech": {
+              "mode": "browser",
+              "language": "zh-HK",
+              "selection": "text_only"
+            }
+          }
+        },
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+            "to": "shek-kip-mei-services-station",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "shek-kip-mei-services-lift-a"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "Lift A 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 438.71671871131144,
+            "exposed_m": 263.47383871131143,
+            "facilities": [
+              "shek-kip-mei-services-lift-b"
+            ],
+            "route_changed": false
+          }
+        }
+      ],
+      "id": "guidance",
+      "title": "生成下一段導航指引",
+      "utterance": "請告訴我下一步怎麼走。",
+      "explanation": "由重新規劃後的第一路段生成預設粵語句子，語音服務與文字生成分開。",
+      "context": {
+        "context_id": "shek-kip-mei-services-chan-5",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "shek-kip-mei-services-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": {
+        "workflow": "guidance",
+        "status": "ready",
+        "result": {
+          "version": "1.0",
+          "request_id": "shek-kip-mei-services-chan-guidance-5",
+          "context_id": "shek-kip-mei-services-chan-5",
+          "scene_id": "shek-kip-mei-services",
+          "agent": "guidance",
+          "payload": {
+            "segment_id": "segment-0",
+            "text": "請搭升降機去G/F。"
+          }
+        },
+        "candidates": [],
+        "trace": [
+          {
+            "step": "recorded-guidance",
+            "summary": "例子庫預設結果；經相同結果契約與路由引擎處理"
+          }
+        ],
+        "message": "由重新規劃後的第一路段生成預設粵語句子，語音服務與文字生成分開。",
+        "speech": {
+          "mode": "browser",
+          "language": "zh-HK",
+          "selection": "text_only"
+        }
+      },
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "請搭升降機去G/F。",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "shek-kip-mei-services-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+            "00c8ed16-e2bb-437d-8e22-7b0b5f1759dc",
+            "dc269231--8--15",
+            "dc269231--7--15",
+            "dc269231--6--15",
+            "dc269231--5--15",
+            "dc269231--4--14",
+            "dc269231--3--13",
+            "dc269231--2--12",
+            "dc269231--1--11",
+            "shek-kip-mei-services-doorway",
+            "ped-5805de641c291aba6573",
+            "ped-5700dc198bc12a9c2509",
+            "ped-2ca245dcdfc44085f149",
+            "ped-a9c9291516e797638d79",
+            "ped-f39937ab98f0fbb019e1",
+            "ped-7a6093b90b180b0719a7",
+            "ped-26e9882f1856de8b8443",
+            "ped-b9a5c261271a8c546287",
+            "ped-cef6e390af5816d0558b",
+            "ped-9c8a6127ae2d5984e866",
+            "ped-faf4945eff51a9ad0c43",
+            "ped-9604212213765611b7cf",
+            "ped-cef6c4c6569e7d5a5d65",
+            "ped-680eb8b2871594c546cd",
+            "ped-254df239b362051b31fa",
+            "ped-46eaf1e8d5d6a92f3ff2",
+            "ped-de57169739d6a0230f18",
+            "ped-c36827008e0a3ff548a1",
+            "ped-7692d225368b85ef3268",
+            "ped-ab041dbbf5ab78102db4",
+            "ped-0bd6c84e93261b101e35",
+            "ped-e71a1e9f21fa4be48daf",
+            "ped-4bfd104e9db9f9b5fc44",
+            "ped-001750789bcbdb3f7994",
+            "ped-f3c0f8a8f3a221aa75d3",
+            "shek-kip-mei-services-station"
+          ],
+          "edgeIds": [
+            "e-212",
+            "e-206",
+            "e-21",
+            "e-45",
+            "e-69",
+            "e-98",
+            "e-123",
+            "e-142",
+            "e-155",
+            "e-213",
+            "official-endpoint-snap-0",
+            "ped-e-1",
+            "ped-e-20",
+            "ped-e-19",
+            "ped-e-15",
+            "ped-e-0",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-14",
+            "ped-e-18",
+            "ped-e-17",
+            "ped-e-5",
+            "ped-e-8",
+            "ped-e-11",
+            "ped-e-12",
+            "ped-e-10",
+            "ped-e-9",
+            "ped-e-16",
+            "ped-e-22",
+            "ped-e-21",
+            "ped-e-23",
+            "demo-ped-e-4-covered",
+            "ped-e-13",
+            "ped-e-6",
+            "ped-e-7",
+            "official-endpoint-snap-1"
+          ],
+          "distanceM": 438.71671871131144,
+          "cost": 1825.2195841641553,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "DEMO_CONNECTION",
+            "ACCESSIBILITY_UNVERIFIED"
+          ],
+          "metrics": {
+            "exposedM": 263.47383871131143,
+            "outdoorM": 417.9477187113113,
+            "indoorM": 20.769,
+            "shelteredM": 175.24288,
+            "estimatedDurationS": 573.3042317224725,
+            "ascentM": 0,
+            "descentM": 5.300000000000001,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "shek-kip-mei-services",
+            "type": "transition",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+              "00c8ed16-e2bb-437d-8e22-7b0b5f1759dc"
+            ],
+            "edgeIds": [
+              "e-212"
+            ],
+            "geometry": [
+              [
+                114.16705031,
+                22.33302131
+              ],
+              [
+                114.16705032,
+                22.33302131
+              ]
+            ],
+            "distanceM": 5.300000000000001,
+            "facilityId": "shek-kip-mei-services-lift-b",
+            "mode": "lift",
+            "fromLevel": "012c4a74-a042-481b-ada0-80b739a5bf63",
+            "toLevel": "dc269231-91d9-4c8b-8427-a31f996715ca"
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "shek-kip-mei-services",
+            "type": "floor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "levelId": "dc269231-91d9-4c8b-8427-a31f996715ca",
+            "nodeIds": [
+              "00c8ed16-e2bb-437d-8e22-7b0b5f1759dc",
+              "dc269231--8--15",
+              "dc269231--7--15",
+              "dc269231--6--15",
+              "dc269231--5--15",
+              "dc269231--4--14",
+              "dc269231--3--13",
+              "dc269231--2--12",
+              "dc269231--1--11"
+            ],
+            "edgeIds": [
+              "e-206",
+              "e-21",
+              "e-45",
+              "e-69",
+              "e-98",
+              "e-123",
+              "e-142",
+              "e-155"
+            ],
+            "geometry": [
+              [
+                114.16705032,
+                22.33302131
+              ],
+              [
+                114.167065377,
+                22.33301717
+              ],
+              [
+                114.167080915,
+                22.33301717
+              ],
+              [
+                114.167096454,
+                22.33301717
+              ],
+              [
+                114.167111992,
+                22.33301717
+              ],
+              [
+                114.167127531,
+                22.333031543
+              ],
+              [
+                114.167143069,
+                22.333045916
+              ],
+              [
+                114.167158608,
+                22.333060289
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ]
+            ],
+            "distanceM": 15.469
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "shek-kip-mei-services",
+            "type": "outdoor",
+            "venueId": "0409d24b-80aa-4de5-adc5-ab0aa2864176",
+            "nodeIds": [
+              "dc269231--1--11",
+              "shek-kip-mei-services-doorway",
+              "ped-5805de641c291aba6573",
+              "ped-5700dc198bc12a9c2509",
+              "ped-2ca245dcdfc44085f149",
+              "ped-a9c9291516e797638d79",
+              "ped-f39937ab98f0fbb019e1",
+              "ped-7a6093b90b180b0719a7",
+              "ped-26e9882f1856de8b8443",
+              "ped-b9a5c261271a8c546287",
+              "ped-cef6e390af5816d0558b",
+              "ped-9c8a6127ae2d5984e866",
+              "ped-faf4945eff51a9ad0c43",
+              "ped-9604212213765611b7cf",
+              "ped-cef6c4c6569e7d5a5d65",
+              "ped-680eb8b2871594c546cd",
+              "ped-254df239b362051b31fa",
+              "ped-46eaf1e8d5d6a92f3ff2",
+              "ped-de57169739d6a0230f18",
+              "ped-c36827008e0a3ff548a1",
+              "ped-7692d225368b85ef3268",
+              "ped-ab041dbbf5ab78102db4",
+              "ped-0bd6c84e93261b101e35",
+              "ped-e71a1e9f21fa4be48daf",
+              "ped-4bfd104e9db9f9b5fc44",
+              "ped-001750789bcbdb3f7994",
+              "ped-f3c0f8a8f3a221aa75d3",
+              "shek-kip-mei-services-station"
+            ],
+            "edgeIds": [
+              "e-213",
+              "official-endpoint-snap-0",
+              "ped-e-1",
+              "ped-e-20",
+              "ped-e-19",
+              "ped-e-15",
+              "ped-e-0",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-14",
+              "ped-e-18",
+              "ped-e-17",
+              "ped-e-5",
+              "ped-e-8",
+              "ped-e-11",
+              "ped-e-12",
+              "ped-e-10",
+              "ped-e-9",
+              "ped-e-16",
+              "ped-e-22",
+              "ped-e-21",
+              "ped-e-23",
+              "demo-ped-e-4-covered",
+              "ped-e-13",
+              "ped-e-6",
+              "ped-e-7",
+              "official-endpoint-snap-1"
+            ],
+            "geometry": [
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.167174146,
+                22.333074662
+              ],
+              [
+                114.16701019554763,
+                22.333244562464905
+              ],
+              [
+                114.16699271385389,
+                22.333223867832885
+              ],
+              [
+                114.16684505096453,
+                22.333049072846528
+              ],
+              [
+                114.16682940765334,
+                22.333030554679254
+              ],
+              [
+                114.16682737907941,
+                22.33302816235362
+              ],
+              [
+                114.16681126307108,
+                22.333009298284182
+              ],
+              [
+                114.1667287612893,
+                22.332912730984443
+              ],
+              [
+                114.1667215353675,
+                22.33288722095335
+              ],
+              [
+                114.16672133197082,
+                22.332867533374593
+              ],
+              [
+                114.16672688073113,
+                22.33284994757035
+              ],
+              [
+                114.16673160710931,
+                22.33283522982663
+              ],
+              [
+                114.16720683968163,
+                22.332434545737254
+              ],
+              [
+                114.16734860335387,
+                22.332324355732865
+              ],
+              [
+                114.16736814720217,
+                22.332309214398624
+              ],
+              [
+                114.16739218458629,
+                22.33229059203515
+              ],
+              [
+                114.16740424113475,
+                22.33228125060182
+              ],
+              [
+                114.16757202502134,
+                22.33215125875191
+              ],
+              [
+                114.1675629119389,
+                22.33214096969102
+              ],
+              [
+                114.16753359265078,
+                22.33210786732299
+              ],
+              [
+                114.16752426409815,
+                22.33209733442184
+              ],
+              [
+                114.16748471167155,
+                22.332052678635495
+              ],
+              [
+                114.16747539962662,
+                22.332042164696652
+              ],
+              [
+                114.16759482032542,
+                22.331948878426623
+              ],
+              [
+                114.16761007249065,
+                22.33193696344425
+              ],
+              [
+                114.1676318305074,
+                22.331919967322168
+              ],
+              [
+                114.16767179752625,
+                22.33188874635381
+              ],
+              [
+                114.16771175967365,
+                22.33185752898741
+              ],
+              [
+                114.1681807997741,
+                22.33179889075428
+              ],
+              [
+                114.16864983987456,
+                22.33150025252115
+              ],
+              [
+                114.16866363907839,
+                22.33150010330947
+              ],
+              [
+                114.16871128981789,
+                22.331499587348343
+              ],
+              [
+                114.168863893517,
+                22.331497936003995
+              ],
+              [
+                114.16893357000004,
+                22.331491510000035
+              ]
+            ],
+            "distanceM": 417.9477187113113
+          }
+        ],
+        "exposed_m": 263.47383871131143,
+        "facilities": [
+          "shek-kip-mei-services-lift-b"
+        ]
+      },
+      "media_ids": [
+        "shek-kip-mei-services-chan-guidance-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": false
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "cheung-sha-wan-government-station",
+            "to": "efa3b69e-2-3",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "shek-kip-mei-services-lift-a"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "Lift A 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 329.61164323096955,
+            "exposed_m": 120.20160617584679,
+            "facilities": [
+              "cheung-sha-wan-government-lift-a"
+            ],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "transfer",
+      "title": "接駁到目的建築",
+      "utterance": "我已到石硤尾鐵路站接駁點，接下來到深水埗鐵路站。",
+      "explanation": "兩端步行路線已備好；中間公共交通是接駁敘事，沒有虛構班次或站間導航。",
+      "context": {
+        "context_id": "shek-kip-mei-services-chan-6",
+        "scene_id": "shek-kip-mei-services",
+        "current_node_id": "e952f3af-4507-47d3-a8c2-1e3f71122d3e",
+        "destination_node_id": "shek-kip-mei-services-station",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "shek-kip-mei-services-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": null,
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "cheung-sha-wan-government",
+        "current_node_id": "cheung-sha-wan-government-station",
+        "destination_node_id": "efa3b69e-2-3",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "shek-kip-mei-services-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "cheung-sha-wan-government-station",
+            "ped-5e5dbe3928cf1c21fd52",
+            "ped-4205aa35da00c3682667",
+            "ped-4c80c83c92097743f15e",
+            "ped-b67024f72a73e7a0a1ad",
+            "ped-b67d5cb7fac1f8005e63",
+            "ped-cbf4764cc2a7d907d764",
+            "ped-2373cf0789ebc9115840",
+            "ped-fff9cf7b2ab6b70f3b86",
+            "ped-e7e0d8e23d42fea024ff",
+            "ped-a5ec70c1925474dfb7e4",
+            "ped-c9ec490f9270fa704714",
+            "ped-59e8dca25e3b501f3b99",
+            "ped-e71fbb9fd7fd90e8c460",
+            "ped-1efa0bcff5559543ace7",
+            "ped-ceada7e12adccfe46b93",
+            "ped-5244a8b5205358eb2f64",
+            "ped-e7347bb85297a43b64db",
+            "ped-7e070e7552c0de9880e5",
+            "ped-db0e89da7060c202ad53",
+            "ped-d70e0b610ccdf4f718dc",
+            "ped-446c7fe059c8da889da4",
+            "ped-bfe943f39eaac7850742",
+            "ped-38cfc0aec45efa6ae688",
+            "ped-963f49ffb0e3e7f3f223",
+            "ped-81b79b4e4e6ea671350d",
+            "ped-e292e24a4364b19cc68b",
+            "ped-0a9ba498bc4c8525f7e5",
+            "ped-d37b8339b4a25cd866a6",
+            "ped-3be0278ae7033b24acd9",
+            "ped-12b7628a65e1487aed25",
+            "ped-210759e1b9e117c1a502",
+            "ped-f80a6d43225434e2e729",
+            "ped-de0dd611870a0042e3b9",
+            "ped-a91d60ea7d6ac232c4cf",
+            "ped-62864c44fe4bb5e85ff2",
+            "ped-0ba97931cf253f88b62d",
+            "ped-572e82b1cd10c150b548",
+            "ped-5ae6d71f009cda4b07f5",
+            "ped-9c114bfa6428ebbd9873",
+            "ped-54a0dd157856a4bbd4ce",
+            "cheung-sha-wan-government-doorway",
+            "216adbc9--6-29",
+            "216adbc9--5-28",
+            "216adbc9--4-27",
+            "216adbc9--3-26",
+            "216adbc9--2-25",
+            "216adbc9--1-24",
+            "216adbc9-0-23",
+            "216adbc9-1-22",
+            "216adbc9-2-21",
+            "216adbc9-3-20",
+            "216adbc9-4-19",
+            "216adbc9-4-18",
+            "216adbc9-4-17",
+            "216adbc9-4-16",
+            "216adbc9-4-15",
+            "216adbc9-4-14",
+            "216adbc9-4-13",
+            "216adbc9-4-12",
+            "216adbc9-4-11",
+            "216adbc9-4-10",
+            "216adbc9-4-9",
+            "216adbc9-4-8",
+            "216adbc9-4-7",
+            "216adbc9-4-6",
+            "216adbc9-4-5",
+            "216adbc9-4-4",
+            "32c888a6-1f7c-4615-a9ec-85bc81a4c206",
+            "c8f068b6-c852-4447-965e-69106a461bb1",
+            "efa3b69e-4-3",
+            "efa3b69e-3-3",
+            "efa3b69e-2-3"
+          ],
+          "edgeIds": [
+            "official-endpoint-snap-1",
+            "ped-e-4",
+            "ped-e-3",
+            "ped-e-2",
+            "ped-e-0",
+            "ped-e-1",
+            "ped-e-10",
+            "ped-e-11",
+            "ped-e-13",
+            "ped-e-14",
+            "ped-e-12",
+            "ped-e-9",
+            "ped-e-32",
+            "ped-e-8",
+            "ped-e-21",
+            "ped-e-22",
+            "ped-e-5",
+            "ped-e-29",
+            "ped-e-28",
+            "ped-e-19",
+            "ped-e-20",
+            "ped-e-16",
+            "ped-e-15",
+            "ped-e-24",
+            "ped-e-23",
+            "ped-e-7",
+            "ped-e-31",
+            "ped-e-30",
+            "ped-e-6",
+            "demo-ped-e-18-covered",
+            "ped-e-25",
+            "ped-e-33",
+            "ped-e-26",
+            "ped-e-34",
+            "ped-e-38",
+            "ped-e-27",
+            "ped-e-37",
+            "ped-e-36",
+            "ped-e-17",
+            "ped-e-35",
+            "official-endpoint-snap-0",
+            "e-1436",
+            "e-27",
+            "e-53",
+            "e-88",
+            "e-134",
+            "e-191",
+            "e-252",
+            "e-306",
+            "e-356",
+            "e-412",
+            "e-483",
+            "e-549",
+            "e-545",
+            "e-541",
+            "e-537",
+            "e-533",
+            "e-529",
+            "e-525",
+            "e-521",
+            "e-517",
+            "e-513",
+            "e-510",
+            "e-507",
+            "e-506",
+            "e-504",
+            "e-502",
+            "e-1430",
+            "e-1435",
+            "e-1432",
+            "e-1403",
+            "e-1393"
+          ],
+          "distanceM": 329.61164323096955,
+          "cost": 2031.6086756121624,
+          "reasonCodes": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "RAIN_EXPOSURE"
+          ],
+          "warnings": [
+            "ACCESSIBILITY_UNVERIFIED",
+            "DEMO_CONNECTION"
+          ],
+          "metrics": {
+            "exposedM": 120.20160617584679,
+            "outdoorM": 273.6236432309696,
+            "indoorM": 55.988000000000014,
+            "shelteredM": 209.4100370551228,
+            "estimatedDurationS": 437.9437207053789,
+            "ascentM": 3.549999999999999,
+            "descentM": 0,
+            "stairs": 0,
+            "transitions": {
+              "lift": 1
+            }
+          }
+        },
+        "segments": [
+          {
+            "id": "segment-0",
+            "sceneId": "cheung-sha-wan-government",
+            "type": "outdoor",
+            "nodeIds": [
+              "cheung-sha-wan-government-station",
+              "ped-5e5dbe3928cf1c21fd52",
+              "ped-4205aa35da00c3682667",
+              "ped-4c80c83c92097743f15e",
+              "ped-b67024f72a73e7a0a1ad",
+              "ped-b67d5cb7fac1f8005e63",
+              "ped-cbf4764cc2a7d907d764",
+              "ped-2373cf0789ebc9115840",
+              "ped-fff9cf7b2ab6b70f3b86",
+              "ped-e7e0d8e23d42fea024ff",
+              "ped-a5ec70c1925474dfb7e4",
+              "ped-c9ec490f9270fa704714",
+              "ped-59e8dca25e3b501f3b99",
+              "ped-e71fbb9fd7fd90e8c460",
+              "ped-1efa0bcff5559543ace7",
+              "ped-ceada7e12adccfe46b93",
+              "ped-5244a8b5205358eb2f64",
+              "ped-e7347bb85297a43b64db",
+              "ped-7e070e7552c0de9880e5",
+              "ped-db0e89da7060c202ad53",
+              "ped-d70e0b610ccdf4f718dc",
+              "ped-446c7fe059c8da889da4",
+              "ped-bfe943f39eaac7850742",
+              "ped-38cfc0aec45efa6ae688",
+              "ped-963f49ffb0e3e7f3f223",
+              "ped-81b79b4e4e6ea671350d",
+              "ped-e292e24a4364b19cc68b",
+              "ped-0a9ba498bc4c8525f7e5",
+              "ped-d37b8339b4a25cd866a6",
+              "ped-3be0278ae7033b24acd9",
+              "ped-12b7628a65e1487aed25",
+              "ped-210759e1b9e117c1a502",
+              "ped-f80a6d43225434e2e729",
+              "ped-de0dd611870a0042e3b9",
+              "ped-a91d60ea7d6ac232c4cf",
+              "ped-62864c44fe4bb5e85ff2",
+              "ped-0ba97931cf253f88b62d",
+              "ped-572e82b1cd10c150b548",
+              "ped-5ae6d71f009cda4b07f5",
+              "ped-9c114bfa6428ebbd9873",
+              "ped-54a0dd157856a4bbd4ce",
+              "cheung-sha-wan-government-doorway",
+              "216adbc9--6-29"
+            ],
+            "edgeIds": [
+              "official-endpoint-snap-1",
+              "ped-e-4",
+              "ped-e-3",
+              "ped-e-2",
+              "ped-e-0",
+              "ped-e-1",
+              "ped-e-10",
+              "ped-e-11",
+              "ped-e-13",
+              "ped-e-14",
+              "ped-e-12",
+              "ped-e-9",
+              "ped-e-32",
+              "ped-e-8",
+              "ped-e-21",
+              "ped-e-22",
+              "ped-e-5",
+              "ped-e-29",
+              "ped-e-28",
+              "ped-e-19",
+              "ped-e-20",
+              "ped-e-16",
+              "ped-e-15",
+              "ped-e-24",
+              "ped-e-23",
+              "ped-e-7",
+              "ped-e-31",
+              "ped-e-30",
+              "ped-e-6",
+              "demo-ped-e-18-covered",
+              "ped-e-25",
+              "ped-e-33",
+              "ped-e-26",
+              "ped-e-34",
+              "ped-e-38",
+              "ped-e-27",
+              "ped-e-37",
+              "ped-e-36",
+              "ped-e-17",
+              "ped-e-35",
+              "official-endpoint-snap-0",
+              "e-1436"
+            ],
+            "geometry": [
+              [
+                114.16202771000007,
+                22.331154110000057
+              ],
+              [
+                114.16200392437486,
+                22.331128566119563
+              ],
+              [
+                114.16198231822509,
+                22.331145286068697
+              ],
+              [
+                114.1619755374829,
+                22.331150533118052
+              ],
+              [
+                114.16197466380093,
+                22.331151209428484
+              ],
+              [
+                114.16196738603018,
+                22.331156841134675
+              ],
+              [
+                114.16195739693198,
+                22.33116457220188
+              ],
+              [
+                114.16194899599283,
+                22.331171073449113
+              ],
+              [
+                114.16193964370991,
+                22.331178311503937
+              ],
+              [
+                114.16191496218222,
+                22.331197413428697
+              ],
+              [
+                114.16189244446886,
+                22.331214839473237
+              ],
+              [
+                114.16148430654623,
+                22.331530697382114
+              ],
+              [
+                114.16144622544884,
+                22.331560168684092
+              ],
+              [
+                114.16125694581004,
+                22.331706651006044
+              ],
+              [
+                114.16124288135995,
+                22.33171753511566
+              ],
+              [
+                114.16116923711436,
+                22.331774527233616
+              ],
+              [
+                114.16117923098179,
+                22.331785728827956
+              ],
+              [
+                114.16119320318168,
+                22.33180139010615
+              ],
+              [
+                114.16119162762624,
+                22.331802623531402
+              ],
+              [
+                114.16118107538401,
+                22.33181088639692
+              ],
+              [
+                114.16109001346213,
+                22.331882190265173
+              ],
+              [
+                114.16107077574074,
+                22.331897254112715
+              ],
+              [
+                114.16100441979204,
+                22.331949212314512
+              ],
+              [
+                114.16100104248513,
+                22.331951857041616
+              ],
+              [
+                114.16099037955269,
+                22.331960206577318
+              ],
+              [
+                114.16096577003086,
+                22.331932486610274
+              ],
+              [
+                114.16092488708946,
+                22.331964010164768
+              ],
+              [
+                114.16091798931917,
+                22.33195625944372
+              ],
+              [
+                114.16091185343917,
+                22.331949364896218
+              ],
+              [
+                114.16083939827242,
+                22.33186795340362
+              ],
+              [
+                114.16082950245581,
+                22.331856834879463
+              ],
+              [
+                114.16076694318977,
+                22.33178654187787
+              ],
+              [
+                114.16075358249451,
+                22.3317715299223
+              ],
+              [
+                114.16070092686704,
+                22.331933498819367
+              ],
+              [
+                114.16064827123958,
+                22.331855467716437
+              ],
+              [
+                114.16055792044679,
+                22.331927481159767
+              ],
+              [
+                114.16052236781007,
+                22.33195581825606
+              ],
+              [
+                114.16043008990023,
+                22.33202936843797
+              ],
+              [
+                114.16038515661188,
+                22.332065181874544
+              ],
+              [
+                114.16037053770731,
+                22.332076833450966
+              ],
+              [
+                114.16035578871626,
+                22.33208858976758
+              ],
+              [
+                114.16034396272829,
+                22.332098015587494
+              ],
+              [
+                114.16030437448914,
+                22.332129568917328
+              ],
+              [
+                114.16023458925297,
+                22.332185191061857
+              ],
+              [
+                114.1602279345775,
+                22.332190494942918
+              ],
+              [
+                114.160199925,
+                22.332179911
+              ],
+              [
+                114.160199925,
+                22.332179911
+              ]
+            ],
+            "distanceM": 273.6236432309696
+          },
+          {
+            "id": "segment-1",
+            "sceneId": "cheung-sha-wan-government",
+            "type": "floor",
+            "venueId": "bd9576da-e2d9-47ff-9ab1-447a54ddff47",
+            "levelId": "216adbc9-b1fc-4a3c-98f1-2c35ca686816",
+            "nodeIds": [
+              "216adbc9--6-29",
+              "216adbc9--5-28",
+              "216adbc9--4-27",
+              "216adbc9--3-26",
+              "216adbc9--2-25",
+              "216adbc9--1-24",
+              "216adbc9-0-23",
+              "216adbc9-1-22",
+              "216adbc9-2-21",
+              "216adbc9-3-20",
+              "216adbc9-4-19",
+              "216adbc9-4-18",
+              "216adbc9-4-17",
+              "216adbc9-4-16",
+              "216adbc9-4-15",
+              "216adbc9-4-14",
+              "216adbc9-4-13",
+              "216adbc9-4-12",
+              "216adbc9-4-11",
+              "216adbc9-4-10",
+              "216adbc9-4-9",
+              "216adbc9-4-8",
+              "216adbc9-4-7",
+              "216adbc9-4-6",
+              "216adbc9-4-5",
+              "216adbc9-4-4",
+              "32c888a6-1f7c-4615-a9ec-85bc81a4c206"
+            ],
+            "edgeIds": [
+              "e-27",
+              "e-53",
+              "e-88",
+              "e-134",
+              "e-191",
+              "e-252",
+              "e-306",
+              "e-356",
+              "e-412",
+              "e-483",
+              "e-549",
+              "e-545",
+              "e-541",
+              "e-537",
+              "e-533",
+              "e-529",
+              "e-525",
+              "e-521",
+              "e-517",
+              "e-513",
+              "e-510",
+              "e-507",
+              "e-506",
+              "e-504",
+              "e-502",
+              "e-1430"
+            ],
+            "geometry": [
+              [
+                114.160199925,
+                22.332179911
+              ],
+              [
+                114.160215463,
+                22.332165538
+              ],
+              [
+                114.160231002,
+                22.332151165
+              ],
+              [
+                114.16024654,
+                22.332136792
+              ],
+              [
+                114.160262078,
+                22.332122419
+              ],
+              [
+                114.160277617,
+                22.332108046
+              ],
+              [
+                114.160293155,
+                22.332093674
+              ],
+              [
+                114.160308693,
+                22.332079301
+              ],
+              [
+                114.160324232,
+                22.332064928
+              ],
+              [
+                114.16033977,
+                22.332050555
+              ],
+              [
+                114.160355308,
+                22.332036182
+              ],
+              [
+                114.160355308,
+                22.332021809
+              ],
+              [
+                114.160355308,
+                22.332007436
+              ],
+              [
+                114.160355308,
+                22.331993063
+              ],
+              [
+                114.160355308,
+                22.33197869
+              ],
+              [
+                114.160355308,
+                22.331964317
+              ],
+              [
+                114.160355308,
+                22.331949944
+              ],
+              [
+                114.160355308,
+                22.331935571
+              ],
+              [
+                114.160355308,
+                22.331921198
+              ],
+              [
+                114.160355308,
+                22.331906825
+              ],
+              [
+                114.160355308,
+                22.331892452
+              ],
+              [
+                114.160355308,
+                22.331878079
+              ],
+              [
+                114.160355308,
+                22.331863706
+              ],
+              [
+                114.160355308,
+                22.331849333
+              ],
+              [
+                114.160355308,
+                22.33183496
+              ],
+              [
+                114.160355308,
+                22.331820587
+              ],
+              [
+                114.16036459,
+                22.33180905
+              ]
+            ],
+            "distanceM": 48.231000000000016
+          },
+          {
+            "id": "segment-2",
+            "sceneId": "cheung-sha-wan-government",
+            "type": "transition",
+            "venueId": "bd9576da-e2d9-47ff-9ab1-447a54ddff47",
+            "nodeIds": [
+              "32c888a6-1f7c-4615-a9ec-85bc81a4c206",
+              "c8f068b6-c852-4447-965e-69106a461bb1"
+            ],
+            "edgeIds": [
+              "e-1435"
+            ],
+            "geometry": [
+              [
+                114.16036459,
+                22.33180905
+              ],
+              [
+                114.16036459,
+                22.33180905
+              ]
+            ],
+            "distanceM": 3.549999999999999,
+            "facilityId": "cheung-sha-wan-government-lift-a",
+            "mode": "lift",
+            "fromLevel": "216adbc9-b1fc-4a3c-98f1-2c35ca686816",
+            "toLevel": "efa3b69e-2bed-4508-bd74-461aeaadd2a4"
+          },
+          {
+            "id": "segment-3",
+            "sceneId": "cheung-sha-wan-government",
+            "type": "floor",
+            "venueId": "bd9576da-e2d9-47ff-9ab1-447a54ddff47",
+            "levelId": "efa3b69e-2bed-4508-bd74-461aeaadd2a4",
+            "nodeIds": [
+              "c8f068b6-c852-4447-965e-69106a461bb1",
+              "efa3b69e-4-3",
+              "efa3b69e-3-3",
+              "efa3b69e-2-3"
+            ],
+            "edgeIds": [
+              "e-1432",
+              "e-1403",
+              "e-1393"
+            ],
+            "geometry": [
+              [
+                114.16036459,
+                22.33180905
+              ],
+              [
+                114.160355308,
+                22.331806214
+              ],
+              [
+                114.16033977,
+                22.331806214
+              ],
+              [
+                114.160324232,
+                22.331806214
+              ]
+            ],
+            "distanceM": 4.207000000000001
+          }
+        ],
+        "exposed_m": 120.20160617584679,
+        "facilities": [
+          "cheung-sha-wan-government-lift-a"
+        ]
+      },
+      "media_ids": [
+        "cheung-sha-wan-government-photo",
+        "shek-kip-mei-services-chan-transfer-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    },
+    {
+      "agent_records": [
+        {
+          "agent": "共用路由引擎",
+          "source": "computed",
+          "input": {
+            "from": "efa3b69e-2-3",
+            "to": "efa3b69e-2-3",
+            "routing": {
+              "profile": "heavy_luggage",
+              "rain": true,
+              "strictAccessibility": false,
+              "now": "2026-10-04T09:00:00.000Z",
+              "events": [
+                {
+                  "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+                  "type": "facility_closed",
+                  "target": {
+                    "facilityId": "shek-kip-mei-services-lift-a"
+                  },
+                  "status": "active",
+                  "validFrom": "2026-10-04T09:00:00.000Z",
+                  "validUntil": "2026-10-04T11:00:00.000Z",
+                  "confidence": 0.95,
+                  "source": "demo",
+                  "metadata": {
+                    "agent": "obstacle",
+                    "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                    "barrier_type": "broken_lift",
+                    "location_sign": "Lift A 維修中（演示情境）",
+                    "match_method": "user_confirmed"
+                  }
+                }
+              ],
+              "avoidStairs": true,
+              "allowStairs": false,
+              "allowEscalators": false,
+              "avoidSteepSlopes": true,
+              "preferCoveredShelter": true
+            }
+          },
+          "output": {
+            "status": "ok",
+            "distance_m": 0,
+            "exposed_m": 0,
+            "facilities": [],
+            "route_changed": true
+          }
+        }
+      ],
+      "id": "arrival",
+      "title": "完成剩餘步行與到達",
+      "utterance": "我跟著路線到達長沙灣政府合署的公共走廊會合點。",
+      "explanation": "帶行李前往約定的建築會合點。剩餘步行完成；到達節點與目的節點相同。",
+      "context": {
+        "context_id": "shek-kip-mei-services-chan-7",
+        "scene_id": "cheung-sha-wan-government",
+        "current_node_id": "cheung-sha-wan-government-station",
+        "destination_node_id": "efa3b69e-2-3",
+        "phase": "planning",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "shek-kip-mei-services-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        },
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "segment_id": "segment-0"
+      },
+      "response": null,
+      "state": {
+        "policy_mode": "accessible",
+        "scene_id": "cheung-sha-wan-government",
+        "current_node_id": "efa3b69e-2-3",
+        "destination_node_id": "efa3b69e-2-3",
+        "preferences": {
+          "mobility_type": "heavy_luggage",
+          "avoid_stairs": true,
+          "avoid_steep_slopes": true,
+          "prefer_covered_shelter": true,
+          "tts_selection": "text_only"
+        },
+        "guidance": "已到達目的地會合點。",
+        "routing": {
+          "profile": "heavy_luggage",
+          "rain": true,
+          "strictAccessibility": false,
+          "now": "2026-10-04T09:00:00.000Z",
+          "events": [
+            {
+              "id": "genai-shek-kip-mei-services-shek-kip-mei-services-chan-fault",
+              "type": "facility_closed",
+              "target": {
+                "facilityId": "shek-kip-mei-services-lift-a"
+              },
+              "status": "active",
+              "validFrom": "2026-10-04T09:00:00.000Z",
+              "validUntil": "2026-10-04T11:00:00.000Z",
+              "confidence": 0.95,
+              "source": "demo",
+              "metadata": {
+                "agent": "obstacle",
+                "request_id": "shek-kip-mei-services-chan-obstacle-3",
+                "barrier_type": "broken_lift",
+                "location_sign": "Lift A 維修中（演示情境）",
+                "match_method": "user_confirmed"
+              }
+            }
+          ],
+          "avoidStairs": true,
+          "allowStairs": false,
+          "allowEscalators": false,
+          "avoidSteepSlopes": true,
+          "preferCoveredShelter": true
+        }
+      },
+      "route": {
+        "result": {
+          "status": "ok",
+          "nodeIds": [
+            "efa3b69e-2-3"
+          ],
+          "edgeIds": [],
+          "distanceM": 0,
+          "cost": 0,
+          "reasonCodes": [],
+          "warnings": [],
+          "metrics": {
+            "exposedM": 0,
+            "outdoorM": 0,
+            "indoorM": 0,
+            "shelteredM": 0,
+            "estimatedDurationS": 0,
+            "ascentM": 0,
+            "descentM": 0,
+            "stairs": 0,
+            "transitions": {}
+          }
+        },
+        "segments": [],
+        "exposed_m": 0,
+        "facilities": []
+      },
+      "media_ids": [
+        "shek-kip-mei-services-chan-arrival-view"
+      ],
+      "knowledge_ids": [],
+      "route_changed": true
+    }
+  ]
+}
