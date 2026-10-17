@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AccessRoute HK — Product Manual, Current Demo Edition</title>
+    <style>
+      @page { size: A4; margin: 17mm 16mm 18mm; }
+      :root { color-scheme: light; --ink: #173532; --teal: #267b76; --muted: #58706d; --line: #d8e5e2; --pale: #eef6f4; }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: #243b39; font: 10pt/1.48 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+      h1, h2, h3 { color: var(--ink); line-height: 1.2; }
+      h1 { margin: 0 0 9pt; font-size: 31pt; letter-spacing: -.5pt; }
+      h2 { margin: 0 0 11pt; font-size: 20pt; }
+      h3 { margin: 15pt 0 5pt; font-size: 12pt; }
+      p { margin: 5pt 0 8pt; }
+      ul, ol { margin: 5pt 0 10pt; padding-left: 20pt; }
+      li { margin: 3pt 0; }
+      a { color: #176b67; overflow-wrap: anywhere; }
+      .eyebrow { color: var(--teal); font-size: 8pt; font-weight: 700; letter-spacing: 1.5pt; text-transform: uppercase; }
+      .subtitle { color: var(--muted); font-size: 15pt; }
+      .meta { color: var(--muted); font-size: 9pt; }
+      .cover { min-height: 250mm; display: flex; flex-direction: column; justify-content: space-between; break-after: page; }
+      .cover-copy { padding: 23mm 2mm 9mm; }
+      .cover img { width: 100%; max-height: 105mm; object-fit: contain; object-position: left center; border: 1px solid var(--line); border-radius: 9px; }
+      figure { margin: 12pt 0 14pt; break-inside: avoid; }
+      figure img { display: block; width: 100%; max-height: 126mm; object-fit: contain; object-position: center; border: 1px solid var(--line); border-radius: 7px; }
+      .setup-figure img { max-height: 110mm; }
+      figcaption { margin-top: 4pt; color: var(--muted); font-size: 8pt; }
+      .manual-page { break-before: page; }
+      .callout { margin: 10pt 0; padding: 10pt 12pt; background: var(--pale); border-left: 4px solid var(--teal); border-radius: 4px; }
+      .warning { background: #fff6e8; border-left-color: #b66b13; }
+      .tag { display: inline-block; margin-right: 4pt; padding: 2pt 6pt; border-radius: 9px; color: #176b67; background: #e2f1ed; font-size: 8pt; font-weight: 700; }
+      table { width: 100%; border-collapse: collapse; margin: 9pt 0 13pt; font-size: 8.4pt; break-inside: auto; }
+      th, td { padding: 6pt 7pt; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+      th { color: var(--ink); background: var(--pale); }
+      tr { break-inside: avoid; }
+      code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 8.5pt; }
+      pre { margin: 6pt 0 9pt; padding: 9pt 11pt; border-radius: 5px; color: #eef6f4; background: #183c39; white-space: pre-wrap; }
+      .small { color: var(--muted); font-size: 8.5pt; }
+      .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; }
+      .card { padding: 9pt; border: 1px solid var(--line); border-radius: 6px; break-inside: avoid; }
+      .footer-note { margin-top: 16pt; padding-top: 7pt; border-top: 1px solid var(--line); color: var(--muted); font-size: 8pt; }
+      @media screen {
+        body { max-width: 850px; margin: 25px auto; padding: 22px; }
+        .cover, .manual-page { margin-bottom: 32px; padding: 25px; border: 1px solid var(--line); border-radius: 10px; }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cover">
+      <div class="cover-copy">
+        <div class="eyebrow">AccessRoute HK · Product manual</div>
+        <h1>Plan an accessible<br />first- and last-mile journey</h1>
+        <p class="subtitle">Current demo edition · English</p>
+        <p class="meta">Prepared 14 October 2026 · Updated against the project in this workspace</p>
+        <div class="callout">
+          <strong>What this guide is:</strong> a visual guide to the current AccessRoute HK research demo, including a clear change log against the supplied 24-page Product Manual.
+        </div>
+      </div>
+      <figure>
+        <img src="qa/product-manual-map-demo.png" alt="Mobile map-first journey planner with a place selector and expandable bottom sheet" />
+        <figcaption>The current mobile map-first interface: places and map above an expandable journey-planning sheet.</figcaption>
+      </figure>
+      <p class="footer-note">Research demonstration only — not certified real-world accessibility navigation.</p>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">01 · What's changed</div>
+      <h2>Changes since the supplied manual</h2>
+      <p>This comparison uses the supplied <i>AccessRoute HK Product Manual</i> PDF and the current repository's product-manual parity audit. “Changed” means the current project documents or implements a difference; it does not imply every earlier feature was new or has been independently field-tested.</p>
+      <table>
+        <thead><tr><th>Area</th><th>Current change or clarification</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Starting screen</td><td>The regular app entry now opens a map-first journey flow: choose places, set mobility needs, compare a route, then navigate or request help. The earlier full planning workspace remains available at <code>/?legacy=1</code>.</td><td><span class="tag">Changed</span></td></tr>
+          <tr><td>Mobility setup</td><td>The current map-card flow exposes five profiles (walking, wheelchair, elderly, stroller and heavy luggage) and additional caregiver controls for lifts, stairs/escalators, slope, pace and route goal.</td><td><span class="tag">Expanded</span></td></tr>
+          <tr><td>Weather</td><td>Weather can use Hong Kong Observatory open data. The service reports whether a result is live or a previously cached stale snapshot; territory-wide weather is not precise local forecasting.</td><td><span class="tag">Updated</span></td></tr>
+          <tr><td>Accessibility evidence</td><td>Route information is more explicit that many source accessibility attributes remain unknown. A “verified routes only” option can exclude unknown segments; a route result is not an accessibility certification.</td><td><span class="tag">Clarified</span></td></tr>
+          <tr><td>Accessibility of the interface</td><td>The project now includes skip navigation, visible keyboard focus, larger touch targets, reduced-motion handling and high-contrast support in relevant views.</td><td><span class="tag">Improved</span></td></tr>
+          <tr><td>AI assistance</td><td>Text preferences, photo obstacle reports, photo location help and generated guidance are presented as separate workflows. Real provider calls and real-world recognition quality are not certified by UI or mock tests.</td><td><span class="tag">Clarified</span></td></tr>
+          <tr><td>End-to-end claims</td><td>The exact 13-step journey in the old manual and its accuracy targets have not been independently reproduced. Live indoor positioning, live MTR accessibility and full phone/operator integration remain out of scope or partial.</td><td><span class="tag">Important limitation</span></td></tr>
+        </tbody>
+      </table>
+      <div class="callout warning"><strong>Read before travelling:</strong> this product remains a research demo. Route geometry, entrances, slopes, lifts and public access must be checked in person.</div>
+      <p class="small">The app still includes 12 selectable scenes, map views, route calculation and demo elevator events. These are not listed as new changes because the supplied manual already describes overlapping capabilities.</p>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">02 · Old-manual feature check · 1/2</div>
+      <h2>Core journey and map functions</h2>
+      <p><strong>Many core planning and map functions are available, but the newest app does not fully match the old manual.</strong> This table checks the manual's named workflows against the current project audit. “Partial” means a demo path exists but a dependency, exact workflow, live service or real-device result is not verified.</p>
+      <table>
+        <thead><tr><th>Old-manual function</th><th>Current status</th><th>What works / what does not</th></tr></thead>
+        <tbody>
+          <tr><td>Choose and swap places in the 12-scene catalogue</td><td><span class="tag">Available</span></td><td>Places are independently selectable; local routes recalculate when changed or swapped.</td></tr>
+          <tr><td>Caregiver defaults, profiles and passage limits</td><td><span class="tag">Partial</span></td><td>Profiles and several lift/stair/slope/route settings feed local routing. Settings are browser-local, not shared across accounts; the old 1 m minimum-width example is not verified as a current control.</td></tr>
+          <tr><td>Continuous walk → rail → walk journey and exactly 13 steps</td><td><span class="tag">Partial</span></td><td>Walking legs can be composed with a saved MTR station sequence and transfer instructions. Timetables/accessibility data are not live, and the old exact 13-step route is not reproduced (current default can produce 14 or more steps).</td></tr>
+          <tr><td>Maps, current/next step, step completion and accessible routing</td><td><span class="tag">Partial</span></td><td>Floor/overview maps and user-advanced steps work. There is no live indoor position, and graph accessibility facts remain incomplete or unknown.</td></tr>
+          <tr><td>Three Kowloon Tong branches: outdoor, mall A and mall B</td><td><span class="tag">Unavailable</span></td><td>These manual-specific branches are deferred because verified branch endpoints/topology are unavailable. Do not rely on their old distances.</td></tr>
+          <tr><td>Report a lift problem and reroute</td><td><span class="tag">Partial</span></td><td>Demo facility closure/restoration can reroute the remaining graph path. The full live photo-to-AI matching flow and real operator alert are not verified.</td></tr>
+          <tr><td>Wait for a lift, restore it and resume with an operator</td><td><span class="tag">Partial</span></td><td>Local session/operator controls and update streaming exist. Production authentication and multi-process synchronization are not in place.</td></tr>
+          <tr><td>Find a location from a landmark photo</td><td><span class="tag">Mock-only verification</span></td><td>A mocked candidate can be previewed, confirmed and applied. Real photo recognition and GPS matching are not verified.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">03 · Old-manual feature check · 2/2</div>
+      <h2>AI, weather and accessibility functions</h2>
+      <p>The statuses below distinguish a local interface or code path from an available, measured external service.</p>
+      <table>
+        <thead><tr><th>Old-manual function</th><th>Current status</th><th>What works / what does not</th></tr></thead>
+        <tbody>
+          <tr><td>HKO weather and sheltered-route changes</td><td><span class="tag">Partial</span></td><td>The backend reads HKO feeds and identifies live/stale data; location can be territory-wide or approximate. Device accuracy and sustained live operation are not certified.</td></tr>
+          <tr><td>Nearby Street View panorama</td><td><span class="tag">Unavailable</span></td><td>No Street View provider or panorama endpoint is implemented.</td></tr>
+          <tr><td>Natural-language preferences</td><td><span class="tag">Partial</span></td><td>A review/apply workflow exists. Live language parsing requires a configured model provider and has not been benchmarked.</td></tr>
+          <tr><td>Cantonese voice input</td><td><span class="tag">Partial</span></td><td>Press-to-speak is available in browsers that expose Web Speech API; actual microphone/service behavior has not been device-tested.</td></tr>
+          <tr><td>Automatic Cantonese narration</td><td><span class="tag">Locally implemented</span></td><td>Browser speech synthesis can read active steps if the device has a Hong Kong Cantonese voice; physical-device output is unverified.</td></tr>
+          <tr><td>GenAI accuracy, workflow success and cost targets</td><td><span class="tag">Not measured</span></td><td>The old manual's percentages and token-cost figures are targets/examples, not current measured results.</td></tr>
+          <tr><td>WCAG conformance and assistive-technology use</td><td><span class="tag">Not certified</span></td><td>Keyboard, focus, contrast and responsive checks have improved; full WCAG conformance and VoiceOver/TalkBack use have not been verified.</td></tr>
+        </tbody>
+      </table>
+      <div class="callout warning"><strong>Bottom line:</strong> use the current app for a supervised demo of supported local workflows. Do not treat unavailable or partial items as live services, verified routes or safety guarantees.</div>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">04 · Get started</div>
+      <h2>Start the demo</h2>
+      <h3>First-time setup</h3>
+      <ol>
+        <li>Install Node.js 22 LTS or newer on Windows or macOS.</li>
+        <li>Extract the project folder. Open a terminal in that folder.</li>
+        <li>Install dependencies and start the local demo:</li>
+      </ol>
+      <pre>npm ci
+npm run dev</pre>
+      <ol start="4">
+        <li>Open <a href="http://127.0.0.1:5173/map-demo/index.html">http://127.0.0.1:5173/map-demo/index.html</a> in a modern browser. Keep the terminal running while using the demo.</li>
+      </ol>
+      <p>On later visits, run <code>npm run dev</code> and reopen the address. Stop the demo with <code>Ctrl+C</code> in the terminal.</p>
+      <h3>Optional: enable Qwen-powered assistance</h3>
+      <p>Route planning works without an AI key. To enable the Qwen workflows, copy <code>.env.example</code> to <code>.env</code>, set your private <code>DASHSCOPE_API_KEY</code> in that local file, then restart the demo. Never paste the key into the browser or share it in screenshots.</p>
+      <pre>DASHSCOPE_API_KEY=your_private_key</pre>
+      <div class="callout"><strong>Production build:</strong> for the locally served production build, run <code>npm run build</code>, then <code>npm start</code> and open <code>http://127.0.0.1:8787/map-demo/index.html</code>.</div>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">05 · Plan a route</div>
+      <h2>Choose places and travel needs</h2>
+      <ol>
+        <li>Select the place pill at the top of the map, choose a departure and destination, then apply the selection.</li>
+        <li>Expand the bottom sheet and choose a profile: walking, wheelchair, elderly, stroller or heavy luggage. Adjust the available route preferences as needed.</li>
+        <li>Select <strong>Search route</strong> at the bottom of the screen.</li>
+        <li>Compare the sheltered and shorter route options, review their limitations, then select <strong>Start navigation</strong>.</li>
+      </ol>
+      <figure>
+        <img src="qa/product-manual-map-demo.png" alt="Mobile map-first journey planner showing the expandable profile and route-preference sheet" />
+        <figcaption>Map and journey sheet in the current mobile interface; screen labels are in Hong Kong Traditional Chinese.</figcaption>
+      </figure>
+      <h3>Compare map views</h3>
+      <p>Use the overview map for the surrounding route and the floor-navigation view for indoor floor geometry. Use the floor controls and map zoom controls to inspect a level. Follow the displayed route segments, but treat every path as a demo unless verified independently.</p>
+      <figure>
+        <img src="qa/product-manual-routes.png" alt="Mobile route-choice screen showing the map above sheltered and shorter route options" />
+        <figcaption>Route choices appear in the same map-and-bottom-sheet layout. Distances and accessibility attributes are demonstration data and may be unverified.</figcaption>
+      </figure>
+      <div class="callout warning"><strong>Unknown is not accessible:</strong> source data can describe geometry without confirming door widths, gradients, operating hours, permission to pass or lift service. Even “verified routes only” does not certify the remaining route.</div>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">06 · Navigate and request help</div>
+      <h2>Follow steps and handle a demo closure</h2>
+      <ol>
+        <li>Start the navigation demonstration from the route preview.</li>
+        <li>Read the current instruction and inspect the corresponding map segment or floor.</li>
+        <li>Advance a step using the on-screen control after you have checked your surroundings. Progress is user-operated; it is not live indoor positioning.</li>
+        <li>In the elevator-event demo, simulate a lift outage to see the remaining route recalculate. Restore the lift or reset the journey when finished.</li>
+      </ol>
+      <figure>
+        <img src="qa/product-manual-navigation.png" alt="Mobile step-by-step navigation screen with an indoor map and a current instruction card" />
+        <figcaption>Step-by-step demo guidance. Progress is user-operated; it is not live indoor positioning.</figcaption>
+      </figure>
+      <h2>Optional AI help</h2>
+      <p>Use the <strong>?</strong> help control for facility or location assistance. Travel preferences are entered in the planning sheet. Depending on the workflow, Qwen requires a configured backend; review any proposed match or route change before applying it:</p>
+      <ul>
+        <li><strong>Travel preferences:</strong> describe needs in text and review the suggested preference changes before applying them.</li>
+        <li><strong>Photo obstacle report:</strong> submit a photo and review the proposed facility/candidate before applying an event or reroute.</li>
+        <li><strong>Photo location help:</strong> review matched place candidates and confirm the right one before changing the route start.</li>
+        <li><strong>Voice guidance:</strong> request the next instruction; browser speech output depends on the device's installed language voice.</li>
+      </ul>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">07 · Accessibility, weather and boundaries</div>
+      <h2>Use the interface accessibly</h2>
+      <ul>
+        <li>Use the skip link and keyboard focus outline to move through the main screen without starting at every control.</li>
+        <li>Use browser/device text scaling, high contrast and reduced motion where available. Some demo screens also expose larger text or touch-target presentation.</li>
+        <li>For voice output, enable a Cantonese (Hong Kong) voice in the operating system if available. Actual microphone recognition and speech output are device/browser dependent.</li>
+      </ul>
+      <h3>Weather information</h3>
+      <p>When the backend is running and weather data is available, the app can show Hong Kong Observatory observations, forecast and warning data. Check its live/stale indicator and update time. Territory-wide readings may not reflect conditions at your current street or building.</p>
+      <h3>Known limits</h3>
+      <div class="two-col">
+        <div class="card"><strong>Location and navigation</strong><ul><li>No continuous real-time indoor positioning.</li><li>Step progress is advanced by the user.</li><li>Map coverage is limited to the demo scenes.</li></ul></div>
+        <div class="card"><strong>Accessibility and transit</strong><ul><li>Many access attributes remain unknown and need field verification.</li><li>Lift status is simulated, not a live feed.</li><li>Saved MTR connections are not live schedules, fares or accessibility data.</li></ul></div>
+        <div class="card"><strong>AI and photos</strong><ul><li>AI needs a configured backend key and network access.</li><li>Recognition and provider behavior have not been certified in real-world use.</li><li>Always review and confirm proposed candidates.</li></ul></div>
+        <div class="card"><strong>Accounts and service</strong><ul><li>Settings may be stored only in the local browser.</li><li>Session/operator functions are for the local demo, not a production service.</li><li>Accessibility checks do not equal WCAG certification.</li></ul></div>
+      </div>
+      <div class="callout warning"><strong>Safety note:</strong> AccessRoute HK is a research demonstration, not certified real-world accessibility navigation. Confirm route conditions, public access, station facilities, lift availability and safety information before travelling. If in doubt, use a verified alternative or ask the venue/operator for assistance.</div>
+      <p class="footer-note">Reference: <code>docs/acceptance.md</code> (Product Manual parity audit, 13 October 2026); current project state snapshot: 14 October 2026. This guide is an updated companion to the supplied English PDF, not a claim that every old-manual workflow is complete.</p>
+    </section>
+  </body>
+</html>

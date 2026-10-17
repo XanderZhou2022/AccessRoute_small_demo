@@ -19,8 +19,6 @@
         loading="eager"
       ></iframe>
       <header class="map-topbar">
-        <a class="round-control" href="../?demo=1" aria-label="返回示範首頁">‹</a>
-        <button class="round-control accessibility-trigger" type="button" data-accessibility-open aria-expanded="false" aria-controls="accessibility-panel" aria-label="顯示與操作設定">Aa</button>
         <button
           class="search-pill search-trigger"
           type="button"
@@ -31,6 +29,7 @@
           ⌕ <span data-origin-summary>希慎廣場</span><span aria-hidden="true">→</span>
           <span data-destination-summary>銅鑼灣站</span>
         </button>
+        <button class="round-control accessibility-trigger" type="button" data-accessibility-open aria-expanded="false" aria-controls="accessibility-panel" aria-label="顯示與操作設定">Aa</button>
       </header>
       <dialog
         class="search-dialog"
@@ -46,7 +45,7 @@
               id="search-origin"
               name="origin"
               data-search-origin
-              aria-describedby="search-error"
+              aria-describedby="search-error search-voice-status"
               autofocus
             >
               <option value="cheung-sha-wan-government">長沙灣政府合署</option>
@@ -69,7 +68,7 @@
               id="search-destination"
               name="destination"
               data-search-destination
-              aria-describedby="search-error"
+              aria-describedby="search-error search-voice-status"
             >
               <option value="cheung-sha-wan-government">長沙灣政府合署</option>
               <option value="hysan-place">希慎廣場</option>
@@ -85,12 +84,10 @@
               <option value="kowloon-tong-festival-walk">又一城・九龍塘站天橋</option>
             </select>
           </label>
-          <button class="secondary-action" type="button" data-search-voice>
-            以廣東話語音輸入地點
+          <button class="secondary-action" type="button" data-search-voice-start>
+            用廣東話說出出發地和目的地
           </button>
-          <p class="inline-status" data-search-voice-status role="status" aria-live="polite">
-            按下按鈕後才會啟動麥克風；辨識結果可在上方選單修改。
-          </p>
+          <p class="inline-status" data-search-voice-status role="status" aria-live="polite"></p>
           <p
             id="search-error"
             class="inline-status"
@@ -134,6 +131,11 @@
                   data-profile="wheelchair"
                   aria-pressed="true"
                 >
+                  <svg class="choice-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="11" cy="4.5" r="2" />
+                    <circle cx="10" cy="17" r="4.5" />
+                    <path d="M10 8h4l2.5 6H21M10 8l-1.5 6h6l2 4" />
+                  </svg>
                   輪椅
                 </button>
                 <button
@@ -142,6 +144,12 @@
                   data-profile="stroller"
                   aria-pressed="false"
                 >
+                  <svg class="choice-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="9" cy="5" r="2" />
+                    <circle cx="10" cy="19" r="2" />
+                    <circle cx="17" cy="19" r="2" />
+                    <path d="M8 8h8l-1 8H9L8 8ZM16 10h4l-2 6h-3M8 8l-2-2" />
+                  </svg>
                   嬰兒車
                 </button>
                 <button
@@ -162,6 +170,10 @@
                   data-profile="elderly"
                   aria-pressed="false"
                 >
+                  <svg class="choice-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="11" cy="4" r="2" />
+                    <path d="m10 7-2 5 4 2-1 7m-3-9-3 6m7-4 4 6m1-11v15" />
+                  </svg>
                   長者
                 </button>
                 <button
@@ -170,36 +182,53 @@
                   data-profile="walking"
                   aria-pressed="false"
                 >
+                  <svg class="choice-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <ellipse cx="8" cy="7" rx="2.2" ry="3.5" transform="rotate(-18 8 7)" />
+                    <ellipse cx="16" cy="17" rx="2.2" ry="3.5" transform="rotate(-18 16 17)" />
+                    <circle cx="5.5" cy="3.2" r="1" />
+                    <circle cx="13.5" cy="13.2" r="1" />
+                  </svg>
                   步行
+                </button>
+                <button
+                  class="choice-chip"
+                  type="button"
+                  data-profile="other"
+                  aria-pressed="false"
+                >
+                  <svg class="choice-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="9" />
+                    <circle cx="8" cy="12" r="1" />
+                    <circle cx="12" cy="12" r="1" />
+                    <circle cx="16" cy="12" r="1" />
+                  </svg>
+                  其他
                 </button>
               </div>
             </fieldset>
           </details>
           <section class="voice-input-panel" aria-labelledby="voice-input-title">
             <h2 id="voice-input-title">用語音描述需要</h2>
-            <p class="service-note">
-              你可以用廣東話或普通話描述輪椅、樓梯、坡度或有蓋路線需要；停止錄音後可交給 Qwen 分析。
-            </p>
             <label class="field-label" for="voice-needs">
-              出行需要描述
+              目的地與出行需要
               <textarea
                 id="voice-needs"
                 data-voice-needs
                 rows="3"
                 maxlength="4000"
-                placeholder="例如：我坐輪椅，想避開樓梯，下雨時盡量走有蓋通道。"
+                placeholder="例如：我想由希慎廣場去 PopCorn 2，我坐輪椅，請避開樓梯並優先走有蓋通道。"
               ></textarea>
             </label>
+            <p class="service-note">
+              只說目的地會保留目前出發地；辨認不到的地點可用頁面上方的搜尋按鈕選擇。
+            </p>
             <div class="voice-input-actions">
               <button class="secondary-action" type="button" data-voice-start>
                 開始語音輸入
               </button>
-              <button class="secondary-action" type="button" data-voice-analyze disabled>
-                用 Qwen 分析需要
-              </button>
             </div>
             <p class="inline-status" data-voice-status role="status" aria-live="polite">
-              可直接輸入文字，或按「開始語音輸入」。
+              可一次描述目的地和出行偏好；停頓後會自動辨認地點並分析偏好。
             </p>
           </section>
           <details class="option-group weather-options" data-weather-debug hidden>

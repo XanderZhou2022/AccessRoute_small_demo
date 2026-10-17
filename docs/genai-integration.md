@@ -22,6 +22,21 @@ npm run dev
 
 正式本機服務：`npm run build` 後 `npm start`，開啟 `http://127.0.0.1:8787/`。
 
+### 自架香港粵語 TTS
+
+在執行 AccessRoute 的電腦上安裝並啟動 `canto-tts` 服務：
+
+```bash
+python3 -m venv .venv-tts
+source .venv-tts/bin/activate
+python -m pip install -r services/requirements-tts.txt
+npm run dev:canto-tts
+```
+
+首次啟動需連接網路下載模型權重；之後會使用本機快取。於專案根目錄 `.env` 加入 `CANTO_TTS_URL=http://127.0.0.1:8000/synthesize`，並在另一個終端執行／重啟 `npm run dev` 或 `npm start`。瀏覽器和手機仍只呼叫 AccessRoute 的 `/api/genai/speech`；Node 後端代為連接本機 TTS，8000 port 不需向手機或 LAN 開放。
+
+`canto-tts` 目前只有一把預設聲線，故男聲／女聲偏好不會改變實際聲音；導航頁會顯示此限制。若未設定 `CANTO_TTS_URL`，既有 Azure／瀏覽器語音選擇不變；如果自架服務已選中但無法連線，系統會報錯，不會自動改用英文語音。`CANTO_TTS_URL` 使用 loopback HTTP 或 HTTPS；若同時設定 Azure，自架服務優先。
+
 目前 Qwen provider 使用相容的 chat completions 和 JSON mode。[Qwen 官方結構化輸出文件](https://www.alibabacloud.com/help/en/model-studio/qwen-structured-output)列出可用模型與 JSON mode 要求；模型名稱和區域端點可用環境變數設定。
 
 ## 操作
@@ -144,7 +159,7 @@ workflow API 回傳計算結果，不修改頁面或保存事件。前端套用�
 
 候選確認回傳 `match_method=user_confirmed`，保留原有分數。一般匹配使用 `map_evidence`。沒有該欄位的舊 JSON 示例仍可使用。
 
-`guidance` 回傳 `speech={mode:"browser",language:"zh-HK",selection:"cantonese_female"}`。前端 speech 適配器播報。另接 TTS 服務時由 `SpeechProvider` 回傳 HTTPS `audio_url`（本機測試亦允許 loopback HTTP），與生成指引的 agent 分開。
+`guidance` 回傳 `speech` 播報計畫。可使用瀏覽器語音、Azure Speech，或設定 `CANTO_TTS_URL` 使用電腦本機 `canto-tts`。前端把文字送至 `POST /api/genai/speech`，由後端回傳音訊；Azure 回傳 `audio/mpeg`，自架服務回傳 `audio/wav`。Azure 金鑰不會暴露給瀏覽器或 APK。自架模型只有一把預設聲線，男聲／女聲偏好不會改變其聲線。
 
 ## JavaScript
 

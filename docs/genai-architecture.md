@@ -15,7 +15,7 @@ flowchart TD
   Result --> Apply[前端套用結果]
   Apply --> Route[共享規劃器：更新偏好 / 起點 / 事件後重算]
   Apply --> Events[地圖 API：本機後端模式保存路障事件]
-  Apply --> Speech[独立語音適配器：瀏覽器粵語播報]
+  Apply --> Speech[獨立語音適配器：瀏覽器、Azure 或本機 Cantonese TTS]
 ```
 
 ## 四套流程
@@ -54,11 +54,11 @@ flowchart TD
 
 ### 4. 語音指引
 
-後端重算的目前路段 → 確定距離 / 樓層 / 設施 / 下一步行動 → 指引 agent 轉成粵語短句 → speech provider → 前端套用與播報。
+後端重算的目前路段 → 確定距離 / 樓層 / 設施 / 下一步行動 → 指引 agent 轉成粵語短句 → speech provider → 前端套用與播報。每一步自動朗讀只使用 Qwen 已生成或快取的提示；無法取得 Qwen 提示時顯示錯誤，不會改讀地圖上的簡短步驟摘要。
 
-目前使用瀏覽器 SpeechSynthesis。API 回傳文字與 `speech` 播報計畫；前端語音適配器執行播報。`text_only` 不播放。已預留 `SpeechProvider` 接口，可另接產生 `audio_url` 的 TTS 服務，無需改寫 workflow。
+Android APK 優先使用裝置預設 TTS 引擎的 `yue-HK` 聲線（建議在系統選用 Google Speech Services 並安裝香港粵語語音資料）。Chrome 網頁只接受標籤為 `yue-HK` 的瀏覽器聲線；找不到時顯示安裝提示，不改用普通話或英文。也可選擇 Azure Speech，或設定 `CANTO_TTS_URL` 使用電腦上自架的 `canto-tts`。自架服務只綁定 loopback，前端透過 `/api/genai/speech` 取得 WAV；金鑰和模型服務都不會暴露給前端。此模型只有一把預設聲線，男女聲偏好不會改變它。`text_only` 不播放。
 
-瀏覽器需要裝置提供 `zh-HK` 或 `yue` 語音。沒有粵語語音時顯示原因並保留文字，不換成其他語言。性別選項依裝置語音名稱選擇；若無指定性別聲線，使用可用的粵語聲線。
+Azure 使用 `zh-HK-HiuMaanNeural` 或 `zh-HK-WanLungNeural`；Android 本機 TTS 與 Chrome 瀏覽器語音需支援 `yue-HK`。語音不受支援時會顯示原因並保留文字，不換成其他語言。
 
 ## 匹配分數與候選確認
 
@@ -90,7 +90,7 @@ flowchart TD
 | `backend/repositories`                       | 場景、補充地標和事件讀寫                    |
 | `frontend/src/api`                           | HTTP 呼叫；無 workflow 決策                 |
 | `frontend/src/components/AgentWorkflows.tsx` | 輸入、候選展示、確認、結果套用              |
-| `frontend/src/genai/speech.ts`               | 裝置語音播放                                |
+| `frontend/src/genai/speech.ts`               | 裝置或後端音訊播放                          |
 | `services/accessroute_api.py`                | Python HTTP 客戶端                          |
 | `services/accessroute_agents.py`             | Python CLI，使用同一套後端 workflow         |
 

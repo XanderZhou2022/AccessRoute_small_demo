@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "node --import tsx scripts/dev.ts",
+    "dev:canto-tts": "python3 -m uvicorn services.canto_tts_server:app --host 127.0.0.1 --port 8000",
+    "dev:lan": "node --import tsx scripts/dev.ts --lan",
     "dev:frontend": "vite --config frontend/vite.config.ts",
     "dev:backend": "tsx watch backend/server.ts",
     "build": "node --import tsx scripts/sync-data.ts && tsc --noEmit && vite build --config frontend/vite.config.ts",
@@ -18,6 +20,8 @@
     "format": "prettier --write frontend/src shared backend scripts/*.ts tests"
   },
   "dependencies": {
+    "@capacitor-community/text-to-speech": "^8.0.2",
+    "@capacitor/core": "^8.4.3",
     "express": "^5.1.0",
     "lucide-react": "^0.468.0",
     "maplibre-gl": "^5.6.0",

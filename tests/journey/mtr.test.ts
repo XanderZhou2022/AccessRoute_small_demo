@@ -25,6 +25,17 @@ describe('MTR station routing', () => {
     expect(result!.hops.some((hop) => hop.lineCode === 'TRANSFER')).toBe(true);
   });
 
+  it('includes the line terminus used to give MTR platform directions', () => {
+    const result = findMtrRoute(csv, 'Sham Shui Po', 'Shek Kip Mei');
+    expect(result).not.toBeNull();
+    const kwunTongHop = result!.hops.find((hop) => hop.lineCode === 'KTL');
+    expect(kwunTongHop).toMatchObject({
+      from: { nameZh: '太子' },
+      to: { nameZh: '石硤尾' },
+      directionTerminus: { nameZh: '調景嶺' },
+    });
+  });
+
   it('connects every ordered pair in the twelve saved map scenes', () => {
     const failures = scenes.flatMap((from) =>
       scenes.flatMap((to) => {

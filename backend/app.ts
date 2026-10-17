@@ -9,7 +9,7 @@ import { SessionRepository } from './repositories/sessions';
 import { HkoWeatherProvider } from './providers/weather';
 import { configuredQwen } from './providers/qwen';
 import type { ModelProvider } from './providers/model';
-import { BrowserSpeechProvider, type SpeechProvider } from './providers/speech';
+import { configuredSpeechProvider, type SpeechProvider } from './providers/speech';
 import { WorkflowService } from './workflows/service';
 import { genaiRouter } from './api/genai';
 import { mapRouter } from './api/map';
@@ -24,6 +24,7 @@ export function createApp(
     knowledgeRoot?: string;
     eventFile?: string;
     sessionsFile?: string;
+    allowedOrigins?: string[];
     weatherProvider?: HkoWeatherProvider;
     useVercelWeatherLocationHeaders?: boolean;
     allowWrites?: boolean;
@@ -40,12 +41,20 @@ export function createApp(
   const events = new EventRepository(options.eventFile);
   const sessions = new SessionRepository(options.sessionsFile);
   const weather = options.weatherProvider || new HkoWeatherProvider();
+  const allowedOrigins = new Set(
+    options.allowedOrigins ??
+      (process.env.ACCESSROUTE_CORS_ORIGINS || '')
+        .split(',')
+        .map((origin) => origin.trim())
+        .filter(Boolean),
+  );
   const model = options.model || configuredQwen();
+  const speech = options.speech || configuredSpeechProvider();
   const workflows = new WorkflowService({
     scenes,
     events,
     model,
-    speech: options.speech || new BrowserSpeechProvider(),
+    speech,
   });
   app.disable('x-powered-by');
   app.use('/api/genai/workflows', express.json({ limit: '12mb' }));
@@ -53,6 +62,32 @@ export function createApp(
   app.use((_req, res, next) => {
     res.set('X-Content-Type-Options', 'nosniff');
     res.set('Cache-Control', 'no-store');
+    next();
+  });
+  app.use('/api', (req, res, next) => {
+    const origin = req.get('origin');
+    if (!origin) {
+      if (req.method === 'OPTIONS') {
+        res.sendStatus(403);
+        return;
+      }
+      next();
+      return;
+    }
+    if (!allowedOrigins.has(origin)) {
+      if (req.method === 'OPTIONS') res.sendStatus(403);
+      else next();
+      return;
+    }
+
+    res.setHeader('Access-Control-Allow-Origin', origin);
+    res.vary('Origin');
+    if (req.method === 'OPTIONS') {
+      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+      res.sendStatus(204);
+      return;
+    }
     next();
   });
   app.get('/api/health', (_req, res) =>
@@ -65,7 +100,13 @@ export function createApp(
   );
   app.use(
     '/api/genai',
-    genaiRouter(workflows, scenes, model, !!options.model || !!process.env.DASHSCOPE_API_KEY),
+    genaiRouter(
+      workflows,
+      scenes,
+      model,
+      !!options.model || !!process.env.DASHSCOPE_API_KEY,
+      speech,
+    ),
   );
   app.use('/api', sessionsRouter(sessions, scenes, options.allowWrites ?? false));
   app.use(

@@ -1,5 +1,6 @@
 node_modules/
 .venv/
+.venv-tts/
 frontend/dist/
 frontend/public/data/
 .env

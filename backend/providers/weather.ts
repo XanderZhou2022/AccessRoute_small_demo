@@ -17,7 +17,7 @@ const temperatureSchema = z.object({
       }),
     ),
   }),
-  warningMessage: z.string().optional(),
+  warningMessage: z.union([z.string(), z.array(z.string())]).optional(),
 });
 const forecastSchema = z.object({
   updateTime: z.string().datetime({ offset: true }),
@@ -213,7 +213,9 @@ export class HkoWeatherProvider {
         forecastMaxTemperatureC: dailyForecast.forecastMaxtemp.value,
         forecastSummary: dailyForecast.forecastWeather,
         generalSituation: forecast.generalSituation,
-        warningMessage: current.warningMessage || '',
+        warningMessage: Array.isArray(current.warningMessage)
+          ? current.warningMessage.join(' ')
+          : current.warningMessage || '',
         warnings,
         signals: {
           rainObserved: rainfallLastHourMm > 0,

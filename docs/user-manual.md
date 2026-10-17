@@ -1,6 +1,8 @@
 # AccessRoute HK user manual
 
-This guide is for someone who does not work in IT. It explains how to start and use the AccessRoute demo after receiving a ZIP file.
+This setup guide is for someone who does not work in IT. For the current mobile map-and-bottom-sheet walkthrough, screenshots, changes from the previous manual, and a function-by-function availability check, see the [English manual](product-manual-v2.en.pdf) or [Traditional Chinese manual](product-manual-v2.zh-Hant.pdf).
+
+The illustrated manuals use the standalone map-first route demo at `http://127.0.0.1:5173/map-demo/index.html`. The main app remains available from `http://127.0.0.1:5173/`.
 
 ## Before you start
 
@@ -35,6 +37,23 @@ You only need to install Node.js once. Keep the default installation options, th
    ```text
    http://127.0.0.1:5173/map-demo/index.html
    ```
+
+## Open the demo on an Android phone
+
+The computer runs the server; the phone only opens the page in Chrome. Connect both devices to the same trusted private Wi-Fi, then run this command in the project folder on the computer:
+
+```bash
+npm run dev:lan
+```
+
+Find the computer's private IPv4 address:
+
+- **Mac:** System Settings → Wi-Fi → Details → TCP/IP.
+- **Windows:** open Terminal and run `ipconfig`; use the Wi-Fi adapter's IPv4 address.
+
+On the phone, open `http://<computer-IPv4>:5173/map-demo/index.html`, replacing `<computer-IPv4>` with that address, for example `http://192.168.1.23:5173/map-demo/index.html`. The main app is at `http://<computer-IPv4>:5173/`.
+
+If the page does not load, allow Node.js through the computer's firewall on private networks and check that the Wi-Fi does not isolate connected devices. Press Ctrl+C in the computer's terminal when finished. This local HTTP address is not secure HTTPS, so Android browsers will disable PWA offline installation and secure-context features such as GPS. Use the deployed HTTPS site to install the PWA. Do not expose this development server through public port forwarding.
 
 ## Later starts
 

@@ -85,12 +85,6 @@
               <option value="kowloon-tong-festival-walk">又一城・九龍塘站天橋</option>
             </select>
           </label>
-          <button class="secondary-action" type="button" data-search-voice>
-            以廣東話語音輸入地點
-          </button>
-          <p class="inline-status" data-search-voice-status role="status" aria-live="polite">
-            按下按鈕後才會啟動麥克風；辨識結果可在上方選單修改。
-          </p>
           <p
             id="search-error"
             class="inline-status"
@@ -261,19 +255,13 @@
             <span data-progress style="width: 0%"></span>
           </div>
         </article>
-        <button class="secondary-action" type="button" data-speak-step>朗讀目前指示</button>
-        <button class="secondary-action" type="button" data-guidance-step>用 Qwen 生成提示</button>
+        <button class="secondary-action" type="button" data-speak-step>
+          朗讀當前提示
+        </button>
+        <p class="inline-status" data-speech-engine-notice role="status" aria-live="polite" hidden></p>
         <p class="inline-status" data-narration-status role="status" aria-live="polite"></p>
         <p class="inline-status" data-guidance-text role="status" aria-live="polite"></p>
         <p><strong data-needs-summary>輪椅・避開樓梯</strong></p>
-        <p class="inline-status">
-          鐵路站序按靜態 MTR
-          資料計算；班次、車程及車站無障礙設施未核實。按「已到達」推進為示範操作。
-        </p>
-        <p class="inline-status" data-session-status role="status" aria-live="polite"></p>
-        <a class="secondary-action" href="./operator.html" data-operator-link>
-          開啟配對控制頁（示範同一裝置使用）
-        </a>
       </section>
       <button class="primary-action route-submit-dock" type="button" data-next-step disabled>
         路線計算中

@@ -1,132 +1,115 @@
-# 驗收報告
+# 功能現況與後續驗收計劃
 
-驗收日期：2026-09-27（香港時間）。本地開發及正式構建均已完成；目標倉庫已指定為 XanderZhou2022/AccessRoute_small_demo；Pages 已發布：https://xanderzhou2022.github.io/AccessRoute_small_demo/。
+**資料更新日期：2026-10-17（香港時間）**
 
-## 可直接驗收
+本文件取代 2026-09-27 的舊版驗收摘要，並整合其後的產品手冊功能差異審核、程式測試及瀏覽器驗證結果。核對對象為目前專案與《AccessRoute_HK_Product_Manual_EN.pdf》（24 頁）。新版雙語手冊另見 [English PDF](product-manual-v2.en.pdf)、[繁體中文 PDF](product-manual-v2.zh-Hant.pdf) 及其 [繁體中文網頁版](product-manual-v2.zh-Hant.html)。
 
-正式構建：**http://127.0.0.1:8787/**。開發介面：**http://127.0.0.1:5173/**。若服務已結束，從根目錄 `npm run dev` 或雙擊 `啟動演示.command`。
+## 最新結論
 
-| 任務書要求                                    | 結果 / 證據                                                                                                    |
-| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| 官方真實請求與保存響應                        | 已完成；39 份官方 JSON/CSV 快照，另有 headers、URL 與 SHA-256                                                  |
-| 至少五個候選                                  | 六個；data/candidates.csv                                                                                      |
-| 選出兩個獨立場景                              | 希慎廣場 / 銅鑼灣；PopCorn 2 / 將軍澳                                                                          |
-| 兩端離線資料包                                | 兩個 Scene Package 共約 5.5MB；本地幾何、圖和來源一併打包                                                      |
-| 前後端及 data 分離                            | frontend/、backend/、data/、shared/，各有說明                                                                  |
-| 純路由核心、無場地分支                        | shared 與 renderers 不包含具體場地名稱                                                                         |
-| Wheelchair / stroller 避開 stairs / escalator | 自動測試通過                                                                                                   |
-| Lift A 故障改走 Lift B                        | 兩場景真實圖測試通過；瀏覽器確認當前路段起點重算                                                               |
-| 所有電梯故障顯示 no_route                     | 自動測試與瀏覽器均通過；下一步被禁用                                                                           |
-| 嚴格模式阻擋未知属性                          | 瀏覽器確認顯示無可行路線，不降級成樓梯                                                                         |
-| floor → transition → floor                    | 兩場景 segmenter 測試與瀏覽器確認                                                                              |
-| 完整 A → A1 → Transit → B1 → B                | 瀏覽器逐步完成並顯示「已完成旅程演示」                                                                         |
-| 第三個 mock 場景契約                          | 不改 core 的獨立 fixture 驗證及路由測試通過                                                                    |
-| 雨天插件                                      | 模擬兩條路徑時切換選擇；無負權重                                                                               |
-| static / HTTP provider swap                   | 自動契約測試及瀏覽器後端模式確認                                                                               |
-| 後端事件持久化                                | 寫入後刷新仍為停用；測試驗證新 app 實例重讀及並行寫入                                                          |
-| 桌面 / 手機                                   | 390px 手機，DOM scrollWidth=clientWidth=390，無横向溢出；電梯卡片及按鈕可用                                    |
-| 正式構建 / TypeScript                         | 已通過；docs/qa/check-output.txt                                                                               |
-| GitHub Pages 公開網址                         | **已發布**：[線上演示](https://xanderzhou2022.github.io/AccessRoute_small_demo/)；Actions 測試、構建及部署成功 |
+目前版本是**可運行、具自動化測試的本機研究演示**，尚未達到 PDF 描述的完整旅程、即時服務或已核實的實地無障礙導航水平。
 
-## 自動化結果
+截至本次更新，`npm test` 通過 **123 項測試（20 個測試檔案）**；TypeScript 型別檢查及 Vite 正式構建亦通過。這表示已測試的程式流程可正常運作；不代表已驗證實地路線、即時外部服務、模型準確度、實機語音或 WCAG 符合度。
 
-`npm run check`：**31 項測試、5 個測試文件全部通過**，TypeScript 檢查及 Vite production build 成功。
+### 狀態定義
 
-- routing：11 項（輪椅、不走扶梯、單向邊、零長路線、負權重拒絕、嚴格模式、分段、反向幾何、兩個真實場景改路）
-- events：6 項（關閉、解除、過期、未生效、時間驗證、edge-target construction）
-- policies：2 項（雨天成本及選路）
-- scene-contract：7 項（第三場景、格式錯誤、路徑安全、provider 一致）
-- API：5 項（健康/場景/route、輸入驗證、寫入限制、持久化、並行事件）
+- **已實作（本機演示）**：目前程式有相應流程，並有自動化或瀏覽器證據；不代表正式服務或實地情況已驗證。
+- **部分支援**：主要介面或本機流程存在，但外部服務、完整工作流程、真實裝置或生產環境尚未核實。
+- **未提供／暫緩**：目前沒有可用實作，或欠缺足夠資料而不應提供為可導航功能。
+- **未量度／未認證**：有待用明確測試、數據或正式審核證明；不得以介面完成或單元測試代替。
 
-`docs/qa/scene-routes.json` 保存當前靜態圖的正常路線統計。預設總距離約 656m，包括兩端演示路段；不是全程公共交通距離，也不是經實地核實的導航距離。
+## PDF 功能現況
 
-## 浏览器證據
+| PDF 描述的功能 | 2026-10-14 現況 | 已有證據與限制 |
+| --- | --- | --- |
+| 從 12 個場景選擇、交換出發地及目的地 | 已實作（本機演示） | 地點可分別選擇；更改後會重新計算本地路線。 |
+| 照顧者預設、出行畫像、電梯／樓梯選項及路線偏好 | 部分支援 | 五種畫像及部分設定會傳入本地路由。設定儲存在瀏覽器，並非帳戶同步；PDF 的最少通道闊度 1 米控制未核實為現行設定。 |
+| 連續步行 → 港鐵 → 步行旅程 | 部分支援 | 可組合場景步行路段及已保存的 MTR 車站序列；乘車步驟會列出轉乘綫、行車方向及下車站。班次、車程、票價、月台號碼、站內轉乘通道及車站無障礙設施並非即時核實。 |
+| PDF 指定 PopCorn 2 至九龍塘的完整 13 步旅程 | 尚未重現 | 目前預設路線產生的指引步數可與 13 步不同；實際路線方向與 PDF 指定步驟仍需逐項核實。 |
+| 概覽／樓層地圖、目前指引及手動完成步驟 | 部分支援 | 本機地圖與手動推進可用；沒有持續即時室內定位，圖資的無障礙屬性不完整或未知。 |
+| 九龍塘室外、商場 A、商場 B 三種指定路線 | 暫緩／未提供 | 目前缺少已核實的分支端點和路網拓撲；不應將估算距離或不完整路網顯示為可導航路線。 |
+| 電梯故障、剩餘路線重算、等待及恢復 | 部分支援 | 本機可模擬設施停用／恢復，重算剩餘路線；無可行路線時會阻止繼續。這不是即時電梯狀態或實際故障通報。 |
+| 手機與操作員配對、工作階段更新 | 部分支援 | 本機工作階段、操作員頁及 SSE 更新存在，且已有瀏覽器驗證；尚無正式身份驗證，SSE／同步亦未達多程序生產環境要求。 |
+| 相片回報路障及設施匹配 | 部分支援 | 設施狀態與路線重算流程存在；真實相片辨識、外部模型服務及正式操作員通知未完成實測。 |
+| 以地標相片確認位置並重規劃 | 僅驗證模擬流程 | 已以模擬回應測試候選預覽、確認及套用至本地路由；不代表真實影像辨識或 GPS 配對有效。 |
+| 香港天文台天氣及有蓋路線偏好 | 部分支援 | 後端讀取天文台觀測、預報及警告摘要；具快取及 live/stale 狀態，並兼容警告訊息為字串或陣列的回應。已確認重啟後本機天氣 API 回傳 live 資料。所在地天氣屬全港、近似或經使用者同意後的定位參考；持續服務與實機定位準確度未驗證。GitHub Pages 靜態頁面本身沒有後端。 |
+| 附近 Street View 全景 | 未提供 | 目前沒有街景供應商接入或全景服務端點。 |
+| 自然語言出行偏好分析 | 部分支援 | 設定旅程頁的單一語音描述欄可同時辨認目的地及出行偏好；偏好會儲存並同步至已開啟的設定頁。即時模型分析須設定後端 Qwen 服務；目前沒有可代表正式模型效果的測試結果。 |
+| 粵語語音輸入 | 部分支援 | 支援 Web Speech API 的瀏覽器可在設定旅程頁按鍵語音描述目的地與出行需要；實際麥克風、權限及辨識服務尚未在實體裝置驗證。 |
+| 粵語語音播報 | Android 本機、Azure 及自架 `canto-tts` 選項已實作；實機效果待驗證 | 自架服務由本機 Python 服務輸出 WAV，只有一把預設聲線；Chrome 在沒有配置後端服務時僅使用 `yue-HK` 瀏覽器聲線。缺少服務或聲線時保留文字指引，不會自動改用其他語言。 |
+| PDF 中的 GenAI 準確率、成功率及成本指標 | 未量度 | 尚無已標註評估集及正式基準測試。PDF 所列目標或成本估算不能當作現行實測結果。 |
+| WCAG 與 VoiceOver／TalkBack 支援 | 有改善，未認證 | 已有略過導覽、鍵盤焦點、觸控目標、減少動態效果及部分高對比支援；尚未完成全站稽核及實機輔助科技測試。 |
 
-- desktop-overview.png：桌面概覽。
-- mobile-390.png：390px 完整規劃頁。
-- mobile-transition.png：手機樓層 / 電梯切換。
-- production-overview.png：正式構建頁面。
+## 已完成的技術驗證
 
-開發中曾發現並修复 fetch 綁定、室外段重複拆分、SVG logo 尺寸為零、資料模式刷新丟失，以及開發熱更新重複 createRoot。最終版本重新構建並以正式服務驗收，避免把中間開發狀態作為交付。
+- `npm test`：**126 項測試、20 個測試檔案通過**；`npm run build` 的 TypeScript 檢查與正式構建通過。
+- 路由、資料契約、事件重算、MTR 指引、天氣 adapter、GenAI workflow 契約及錯誤處理已有自動化測試。
+- 瀏覽器已驗證部分照顧者設定會傳入路由、手動步驟推進、本機操作員關閉／恢復設施時更新路線，以及模擬相片定位候選的確認與套用。
+- HKO 回應、語音辨識、部分 AI 候選等驗證使用 API 測試替身或瀏覽器模擬；不能視為真實外部服務驗收。
+- `canto-tts` 實際模型下載、語音品質、即時延遲和手機端音訊播放尚未作端對端實測。
+- 已檢查部分響應式版面、鍵盤略過導覽、搜尋對話框焦點與錯誤提示；這些抽樣檢查不等於完整鍵盤或輔助科技驗收。
 
-## 必須保留的限制
+## 後續工作（建議按依賴次序）
 
-1. 本期是**可追溯、可運行的研究演示**，不宣稱提供已認證的實地無障礙導航。現有場景圖邊均標記 `unknown`；只有有證據的邊才可使用 `verified_accessible` 或 `verified_inaccessible`，臨時停用使用 `temporarily_blocked`。
-2. 官方樓層 / 單元 / 設施幾何是真實資料；電梯跨層配對、部分 G/F 交接點及站口連接為明示的演示補充。沒有用虛構 yes 掩盖缺資料。
-3. 希慎廣場所選室外 query 返回 no solution；保留官方失敗 JSON，演示連線明確標為 manual/demo augmentation。PopCorn 2 有成功的室外 baseline，端點連接仍待核實。
-4. 地圖為本地建築輪廓擠出，並非官方 photorealistic 3D Tiles；WebGL fallback 已實現，未在本次瀏覽器中強制製造 WebGL 故障。
-5. 無真實 GPS / 室內定位；進度由「已到達」按鈕模擬。地圖示範按保存的 MTR 站序計算列車路線及轉乘站，但不含即時班次、車程、票價、月台／站內指引或已核實的車站無障礙設施。
-6. 後端只適用本機 demo。外部客戶端寫入不會即時推送至已開頁面；刷新可讀取。公開上線需正式部署與鑑權。
+### P0：核實場地與無障礙路網
 
-## 下一階段
+- 實地核對場景入口、可公眾通行的連接、樓層轉換、電梯、斜度及通道寬度。
+- 為每項核實結果保存來源、日期、適用範圍及負責人；無證據的屬性繼續保持 `unknown`，不可為了產生路線而改標為已核實。
+- 釐清目前端點與實際入口的差距，尤其是公共通道、站口和跨層連接。
 
-優先實地核實入口與電梯服務，將有證據的通行属性逐邊升級；再考慮更多 Scene Package、官方設施事件 provider、交通規劃 provider 和定位。先補證據，不應為了讓嚴格模式有路而把 `unknown` 改成 `verified_accessible`。
+**完成條件：** 每個對外展示的路段都能追溯到核實證據；未知路段有清楚標示，嚴格模式不會偷偷放行。
 
-最終正式服務 `http://127.0.0.1:8787/` 已成功載入，獨立瀏覽器頁面的 error log 為空。前後端已用最終代碼重新啟動；本次測試產生的電梯停用事件均已解除。
+### P1：完成 PDF 指定旅程及路線分支
 
-## Pages 上線驗證
+- 以核實後的資料重建 PopCorn 2 → 九龍塘的步行、港鐵、轉乘及目的地步行流程。
+- 逐項對照 PDF 的 13 步指引：起終點、動作、樓層、設施、方向、距離和下一步；若產品設計不再採用 13 步，須更新產品規格及手冊，而非為符合數字而拆併不合理步驟。
+- 只有在端點和拓撲核實後，才實作室外、商場 A、商場 B 三條可選路線；清楚列出無障礙資料缺口。
 
-2026-09-27：部署工作流 [36295560644](https://github.com/XanderZhou2022/AccessRoute_small_demo/actions/runs/36295560644) 成功。線上實測兩個場景載入、656 m 路線預覽、立體地圖與開始導航後的 1/F 樓層圖及下一步按鈕正常。Pages 使用靜態資料，無 Express 後端；演示事件在頁面記憶體處理。
+**完成條件：** 路線及各步可由已核實圖資重現；自動化測試覆蓋三條分支、樓層轉換、不可達情況及指定旅程回歸。
 
-## GenAI 接入增量驗收（2026-09-30）
+### P2：補足交通、設施即時資料及街景服務
 
-新增四 Agent 版本 1.0 契約、浏览器 bridge、JSON 联调面板和只读 HTTP 校验端点。测试共 39 项（原有 31 + 接入 8），全部通过。Pages 子路径构建通过，产物包含手册及四份 JSON 示例。
+- 評估並接入適當的港鐵班次、轉乘、車站設施及電梯狀態資料來源。
+- 決定是否需要 Street View；如需要，先確認供應商、使用條款、覆蓋範圍及失效時的替代流程，再接入全景服務。
+- 對每種外部資料顯示來源與更新時間；資料過期、查詢失敗或不涵蓋當地時明確提示。
 
-本机浏览器已确认四示例 applied、重复 request_id 拒绝、过期 context 拒绝、错误室内节点拒绝；电梯改道后总距离由 656 m 变为 662 m；路线偏好变化会隐藏旧粤语指引；清除按钮可移除本页 GenAI 状态。未调用真实 Qwen、STT/TTS、GPS，没有验证真实音频合成或现场视觉匹配。
+**完成條件：** 外部資料有可追溯來源與新鮮度策略，且離線、過期及服務失敗都有受測的安全退路。
 
-本次按用户要求仅更新本地文件，未 push 或触发 Pages 部署；线上仍以用户随后发布的版本为准。
+### P3：完成真實 GenAI 整合與量度
 
-## Product Manual parity audit (2026-10-13)
+- 在明確設定與錯誤提示下驗證偏好解析、地標定位、路障回報及粵語指引的真實 Qwen 端到端流程。
+- 建立具人工標註和版本紀錄的測試集，逐一量度 PDF 表格中的各項準確度、結構化輸出、工作流程成功率、延遲和每次呼叫成本。
+- 設定低信心、模型錯誤、配額不足及網絡中斷時的處理；候選結果及路線變更須由使用者確認。
 
-This audit compares the current application with `AccessRoute_HK_Product_Manual_EN.pdf`. It does not treat a UI control, mocked response, or local graph calculation as proof of a live external service or real-world accessibility. The manual's exact 13-step PopCorn 2 → Kowloon Tong journey and all accuracy targets have not been independently reproduced or measured.
+**完成條件：** 對照 PDF 目標公布可重現的實測結果、樣本數和誤差；未達標或未測項目明確標示，絕不以目標值冒充成績。
 
-### Current automated baseline
+### P4：把手機／操作員配對升級為可部署服務
 
-`npm run check` currently passes 104 tests across 16 test files, TypeScript checking, and the production Vite build. The baseline includes the four-state accessibility evidence model, route rerouting from the current node, HKO live/stale weather handling, live weather controls with manual override, and explicit Qwen provider errors for missing configuration, quota responses, invalid JSON, and malformed response shapes.
+- 設計登入、角色權限、工作階段擁有權、資料保留及操作稽核。
+- 將目前程序內的更新串流改為適用於正式部署的同步方案；測試多程序、多裝置、重新連線、重複／過期命令及伺服器重新啟動。
+- 測試操作員確認真實設施通報、關閉／恢復狀態，以及手機端正確重新規劃。
 
-The current UI includes visible skip navigation, keyboard focus indicators, 44px touch targets, reduced-motion handling, a high-contrast media mode, and the offline demo's large-text/high-contrast controls. These are implementation checks, not WCAG certification. The following items remain intentionally deferred: real Qwen calls, real-device VoiceOver/TalkBack testing, the exact manual 13-step journey, and production session authentication/ownership. Session APIs remain suitable for the local demo only until the deferred Phase 6 security work is completed.
+**完成條件：** 未授權用戶不能讀取或變更行程；更新可在部署架構內可靠同步，失敗時顯示清楚狀態且不會保留過期路線為最新結果。
 
-| Manual workflow / service                                                            | Status                                                    | Evidence and remaining work                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------ | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Choose and reverse departure/destination from the 12-scene catalogue                 | Implemented in map demo                                   | Both places are independently selectable and local routes are recalculated.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Caregiver defaults, profiles, lift/stair choices, and measurable passage constraints | Partial                                                   | The map-demo settings page saves selected needs, route goal, slope limit, and presentation modes in browser local storage. Profile, elevator need, and the selected 5%/8.33%/12% slope limit are passed into route calculation; route choices remain changeable afterward. Settings are not account-backed or shared across devices, and voice mode remains a prototype preference.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Continuous walking → rail → walking route and all 13 numbered steps                  | Partial                                                   | Cross-scene route composes graph-derived walking legs with a deterministic saved MTR station sequence and transfer/rail instructions. Walking instructions are split into roughly 90-second chunks according to the selected speed; floor transitions and rail instructions remain intact. Paired-session position now changes to the destination's first map node as the rail leg ends. The manual's exact numbered route and real station directions have not been verified, and static rail data has no live/accessibility guarantees. The default graph route currently produces 14 instructions at ordinary-walking speed and 21 at 0.5 m/s; it does not claim to reproduce the manual's 13 numbered steps.                                                                                                                                                                                                                                                              |
-| Current/next step, map views, step completion, and accessible route calculation      | Partial                                                   | Local graph routes and step updates work in the demo. Position advancement is user-operated; there is no real indoor positioning. Accessibility attributes in the source graph are incomplete/unknown and have not been field-verified.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Photo-based obstacle reporting and facility rerouting                                | Partial                                                   | A paired operator can close/restore a session-scoped facility and the backend recalculates the remaining graph route; the phone receives updated steps over SSE. This does not yet verify the photo-to-agent/provider flow or a real operator notification.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Photo-based lost-location localization and rerouting                                 | Mocked browser flow verified; live service unverified     | With intercepted mock workflow responses, a candidate was previewed, confirmed, and applied without reloading the map. The route's first step changed to start at the candidate node (about 52 m → 50 m in this fixture). This verifies the UI-to-local-router handoff only; it does not verify image recognition, GPS matching, or a live agent.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Hong Kong Observatory weather and weather-driven route preference                    | Partial                                                   | `GET /api/weather` reads HKO current observations, daily forecast, and warning summary; successful results cache for five minutes and expose source/update times plus `dataStatus=live`. If a refresh fails after a previous snapshot expires, it returns that snapshot explicitly as `dataStatus=stale`; without a prior snapshot it returns an error. By default the planner uses territory-wide observations; the local backend can use platform-provided Vercel IP coordinates when deployed with `VERCEL=1`, or approximate GPS-nearest observations after explicit user consent. IP-based location is approximate; neither raw IP nor location coordinates are saved. GitHub Pages is static and has no backend/platform coordinates, so it continues to require a separate API deployment or uses static demo data. Actual device permission/accuracy and sustained service outage behavior remain unverified.                                                                                                                                                                                                                                               |
-| Three selectable destination branches (outdoor, mall A, mall B)                      | Deferred                                                  | Per user direction, skip these manual-specific branches for now because verified branch endpoint/topology data is unavailable. Do not expose them as navigable routes or infer them from approximate distances. Revisit when reliable route data is available.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Closed-facility waiting state, paired restoration, and resume                        | Partial                                                   | Journey sessions persist waiting/resume state; the operator page exposes wait/resume controls. Facility closures now recalculate the remaining route, restoration recalculates it again, and a no-route result blocks advancing. Paired facility updates were browser-verified; production multi-process synchronization and authenticated operator access remain out of scope.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Nearby Street View panorama                                                          | Missing                                                   | No Street View provider or `/api/sessions/:id/streetview` endpoint is available.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Paired operator page, shared journey sessions, ordered commands, and SSE updates     | Partial                                                   | Persistent `/api/sessions/*` endpoints, revision/idempotency checks, SSE, a local operator page, and phone-side session wiring are present. Browser verification confirmed facility closure/restoration updates both operator and phone instructions. The operator service is local and unauthenticated, and SSE is process-local.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Natural-language preference parsing and review                                       | Partial                                                   | A preferences workflow and review UI exist, but live parsing is unavailable until a model provider is configured.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Voice-to-text input                                                                  | Partial                                                   | The map-demo search dialog offers press-to-speak Cantonese recognition in browsers exposing Web Speech API. Recognized locations populate editable departure/destination selectors and require user review before applying; unsupported browsers use the existing dropdowns. Microphone behavior has only been browser-mocked, not tested on a physical device or with speech-recognition services.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Cantonese narration on every active step                                             | Implemented locally; device voice availability unverified | When voice mode is enabled, the navigation page automatically reads each newly active step, including after route updates, using an installed Hong Kong Cantonese browser voice. Users can replay a step manually; unsupported browsers or devices without a Cantonese voice receive an explicit status and retain text guidance. No external TTS provider or physical device was tested.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| GenAI and complete-workflow accuracy/cost targets in manual Tables 2–6               | Not measured                                              | No annotated evaluation corpus, benchmark run, or configured provider results are available. The manual's percentages and token charges are targets/examples, not verified results.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| WCAG 2.0/2.1/3.0 conformance and assistive-technology use                            | Partially improved; conformance not verified              | Added skip-to-main-content links to the main planner and all map-demo screens, with keyboard-visible focus and focusable targets. Planner/info view changes move focus to a labelled main landmark. Search dialogs focus their first field, announce validation errors assertively, associate errors with both location fields, mark invalid fields, and restore focus when closed. An Escape-key dismissal handler was added, but native Escape behavior could not be verified in the browser harness. Empty live regions remain exposed so later status updates can be announced. Browser checks confirmed skip navigation, dialog focus/validation/close behavior, no horizontal overflow at 390 px, and no visible text below 4.5:1 in sampled planner, info, and map-demo planner views. These are targeted checks, not full conformance tests; complete keyboard traversal, whole-app contrast scanning, and real VoiceOver/TalkBack/device testing remain outstanding. |
+### P5：實機易用性、安全及公開發布驗收
 
-### Verification performed for this audit
+- 在實體 iOS／Android 裝置測試定位權限與誤差、麥克風權限、粵語語音辨識及語音播報；檢查無語音或拒絕權限時的文字替代方式。
+- 完成全流程鍵盤操作、VoiceOver／TalkBack 測試、主要頁面對比與焦點檢查，以及合資格人員的 WCAG 稽核。
+- 由目標使用者進行受監督的端到端 UAT；另行驗證資料更新、後端安全、監控、服務恢復與隱私告知。
+- 在公開上線前，重新審查手冊和網站對即時交通、AI、定位與無障礙的所有承諾。
 
-- Mocked localization in the browser: upload fixture, inspect and select a candidate, preview its map marker, confirm, and apply. The current instruction then reflected the candidate as the route origin; no page reload occurred. The workflow API response was intercepted, so this is not evidence of a real model call.
-- Caregiver settings in the browser: saved heavy-luggage/elevator needs, a 5% slope cap, and a shortest-route goal. The route planner retained the profile and goal, and the map iframe received `profile=heavy_luggage`, `stairs=false`, `escalators=false`, and `slope=0.05` while HKO heat data was active. A selectable walking pace now feeds route-time estimates and guidance chunking; it does not track live user speed. The ordinary-walking PopCorn 2 → Kowloon Tong graph route was browser-verified at 786 m of local walking with the configured 12% slope cap; slower 0.5 m/s pace increased generated instructions from 14 to 21. Exact manual path distance and real-world accessibility remain unverified.
-- The backend capability endpoint reports the GenAI provider as unconfigured. Real agent workflows cannot be verified in this environment.
-- Paired-session browser verification: created a phone journey, connected the operator page, closed Lift A and observed the revised route on both pages, then restored the lift and observed another synchronized route update. Automated API tests cover rerouting, restoration, `no_route`, and refusal to advance while no route exists. During this check, a stale map-frame response was found to overwrite session-authoritative steps; session navigation now keeps SSE session steps authoritative.
-- Automated rail-handoff regression: after the last origin-side walking step, the paired session remains on the origin map during the rail stage; advancing past that stage moves position to the destination's first walking node/map.
-- GPS-weather browser verification: simulated an allowed device location in Happy Valley; the page sent one location-aware request and announced nearby Happy Valley temperature and Wan Chai rainfall data. The browser-stored demo settings contain the weather preference only; the coordinates are not saved. Geolocation is requested only after pressing the dedicated button. HKO station coordinates are approximate selection anchors because the observation feed itself supplies place names, not coordinates.
-- Voice-to-text browser simulation: a mocked `zh-HK` speech-recognition result filled the departure and destination selectors without starting route search; the user must review and press Apply. Native microphone permission and actual recognition remain unverified.
-- Automatic Cantonese narration: the navigation page now uses the browser speech-synthesis API for newly active steps and reroutes when voice mode is enabled; a manual replay button remains available. A browser smoke test verified the explicit missing-Cantonese-voice status and text fallback. Actual audio output and installed voice availability require device testing.
-- Keyboard skip navigation: all map-demo screens now provide a visible-on-focus link that targets the main heading, allowing users to bypass the interactive map. In-browser activation focused the heading as intended. Full keyboard-only traversal and screen-reader behavior remain unverified.
-- Main-app accessibility follow-up: switching between planner and data views moves focus to the newly rendered, labelled main landmark. At 390 px, the main planner and map-demo planner have no horizontal overflow. Contrast spot-checks of visible text in the planner, data page, and map-demo planner found no ratio below 4.5:1 after darkening low-contrast text. Full coverage across other states and screens is still needed.
-- Accessibility interaction checks: confirmed the skip link is the first Tab stop on the map-demo page; the location dialog initially focuses the departure field; equal departure/destination announces an assertive error, marks and focuses the destination field; closing restores focus to the trigger; and empty error live regions remain in the rendered accessibility tree. The main planner now has an equivalent skip link and focusable main landmark. These checks do not replace assistive-technology or WCAG conformance testing.
-- Kowloon Tong route-branch investigation: the current graph can produce only one unique path for the configured endpoints across all supported objectives. Its source metadata does not verify accessibility, and it does not represent the manual's mall-B exit stairs. Per user direction, these manual-specific branches are deferred; their distances remain documentation targets, not route results.
-- The official HKO Open Data introduction and live `rhrread`, `fnd`, and `warnsum` API responses were checked. Data source: [HKO Open Data](https://www.hko.gov.hk/en/abouthko/opendata_intro.htm); API reference: [HKO Open Data API documentation](https://data.weather.gov.hk/weatherAPI/doc/HKO_Open_Data_API_Documentation.pdf). The weather adapter's parsing/cache behavior is covered by mocked tests; live response behavior is not a substitute for sustained availability monitoring.
-- `npm run check`: all 97 tests in 16 files passed; data sync, TypeScript checking, and Vite production build passed.
+**完成條件：** 有可查閱的實機測試、UAT 與無障礙稽核結果；已知問題有負責人、修正計劃和發布前的風險接受紀錄。
 
-## Map-card UI consolidation (2026-10-13)
+## 不可省略的產品限制
 
-- The regular app entry now opens the map-first card flow: place selection, mobility/weather preferences, route comparison, turn-by-turn navigation, photo assistance, and the paired-session operator card all use the map/card layout. The previous full planning workspace remains available at `/?legacy=1`; `?demo=1` and `?mapOnly=1` remain supported.
-- The card flow exposes all five routing profiles (walking, wheelchair, elderly, stroller, and heavy luggage). Caregiver settings include elevator, stairs/escalator, lift-avoidance, slope, route goal, pace, and text/voice/pointer preferences; these are passed into the embedded routing map.
-- Operator controls now use the same map-background, collapsible-card layout as the phone journey screens.
-- Automated tests and production build are the current verification. This is not a claim that live AI, external-service availability, real-world route accessibility, or physical-device accessibility has been certified.
+1. 本專案目前仍是研究演示，不應描述為已認證的實地無障礙導航服務。
+2. 官方地圖幾何不等於入口、門寬、斜度、通行權、開放時間或電梯服務已核實。
+3. 手動「已到達」按鈕不是 GPS 或室內定位；模擬電梯事件不是實際設施回報。
+4. 已保存的 MTR 站序可生成綫路、行車方向及下車站提示，但不是即時班次、車程、票價、月台／站內導航或車站無障礙資料。
+5. 通過自動化測試、使用 AI 介面或顯示候選分數，都不能單獨證明路線安全、模型準確或產品符合 WCAG。
 
-**Conclusion:** the application is not fully at Product Manual parity. The most consequential remaining gaps are end-to-end verification and routing integration for phone/operator sessions, GPS-aware local weather, Street View, voice recognition, complete named destination branches, and measured GenAI acceptance performance. Do not present this demo as live end-to-end accessible navigation until these gaps and real-device accessibility are addressed.
+## 更新與驗收紀錄
+
+- 2026-09-27：舊版功能及本機路由演示驗收；該日測試數和 Pages 部署狀態只屬歷史紀錄，不代表目前版本。
+- 2026-10-13 至 2026-10-14：補充產品手冊功能差異、地圖卡片式流程、天氣與語音限制、配對操作員和 GenAI 驗證狀態。
+- 2026-10-14：執行 `npm run check`，105 項測試、TypeScript 檢查及正式構建通過。
+- 本文件只記錄已有證據的現況與待辦；每次版本更新後須重新執行驗收，並更新本段日期及結果。

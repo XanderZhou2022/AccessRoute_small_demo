@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AccessRoute HK — 產品手冊・現行演示版</title>
+    <style>
+      @page { size: A4; margin: 17mm 16mm 18mm; }
+      :root { color-scheme: light; --ink: #173532; --teal: #267b76; --muted: #58706d; --line: #d8e5e2; --pale: #eef6f4; }
+      * { box-sizing: border-box; }
+      body { margin: 0; color: #243b39; font: 10pt/1.58 -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans CJK TC", "Microsoft JhengHei", sans-serif; }
+      h1, h2, h3 { color: var(--ink); line-height: 1.25; }
+      h1 { margin: 0 0 9pt; font-size: 29pt; letter-spacing: -.3pt; }
+      h2 { margin: 0 0 11pt; font-size: 20pt; }
+      h3 { margin: 15pt 0 5pt; font-size: 12pt; }
+      p { margin: 5pt 0 8pt; }
+      ul, ol { margin: 5pt 0 10pt; padding-left: 22pt; }
+      li { margin: 3pt 0; }
+      a { color: #176b67; overflow-wrap: anywhere; }
+      .eyebrow { color: var(--teal); font-size: 8pt; font-weight: 700; letter-spacing: 1.2pt; }
+      .subtitle { color: var(--muted); font-size: 15pt; }
+      .meta { color: var(--muted); font-size: 9pt; }
+      .cover { min-height: 250mm; display: flex; flex-direction: column; justify-content: space-between; break-after: page; }
+      .cover-copy { padding: 23mm 2mm 9mm; }
+      .cover img { width: 100%; max-height: 105mm; object-fit: contain; object-position: left center; border: 1px solid var(--line); border-radius: 9px; }
+      figure { margin: 12pt 0 14pt; break-inside: avoid; }
+      figure img { display: block; width: 100%; max-height: 126mm; object-fit: contain; object-position: center; border: 1px solid var(--line); border-radius: 7px; }
+      .setup-figure img { max-height: 110mm; }
+      figcaption { margin-top: 4pt; color: var(--muted); font-size: 8pt; }
+      .manual-page { break-before: page; }
+      .callout { margin: 10pt 0; padding: 10pt 12pt; background: var(--pale); border-left: 4px solid var(--teal); border-radius: 4px; }
+      .warning { background: #fff6e8; border-left-color: #b66b13; }
+      .tag { display: inline-block; margin-right: 4pt; padding: 2pt 6pt; border-radius: 9px; color: #176b67; background: #e2f1ed; font-size: 8pt; font-weight: 700; }
+      table { width: 100%; border-collapse: collapse; margin: 9pt 0 13pt; font-size: 8.4pt; break-inside: auto; }
+      th, td { padding: 6pt 7pt; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+      th { color: var(--ink); background: var(--pale); }
+      tr { break-inside: avoid; }
+      code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 8.5pt; }
+      pre { margin: 6pt 0 9pt; padding: 9pt 11pt; border-radius: 5px; color: #eef6f4; background: #183c39; white-space: pre-wrap; }
+      .small { color: var(--muted); font-size: 8.5pt; }
+      .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; }
+      .card { padding: 9pt; border: 1px solid var(--line); border-radius: 6px; break-inside: avoid; }
+      .footer-note { margin-top: 16pt; padding-top: 7pt; border-top: 1px solid var(--line); color: var(--muted); font-size: 8pt; }
+      @media screen {
+        body { max-width: 850px; margin: 25px auto; padding: 22px; }
+        .cover, .manual-page { margin-bottom: 32px; padding: 25px; border: 1px solid var(--line); border-radius: 10px; }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="cover">
+      <div class="cover-copy">
+        <div class="eyebrow">AccessRoute HK・產品手冊</div>
+        <h1>規劃無障礙<br />首末段旅程</h1>
+        <p class="subtitle">現行演示版・繁體中文</p>
+        <p class="meta">編製日期：2026 年 10 月 14 日・按目前專案版本更新</p>
+        <div class="callout">
+          <strong>本手冊內容：</strong>介紹現行 AccessRoute HK 研究演示，並清楚列出與你提供的 24 頁產品手冊相比的變更。
+        </div>
+      </div>
+      <figure>
+        <img src="qa/product-manual-map-demo.png" alt="手機地圖優先旅程規劃畫面，顯示地點選擇器及可展開的底部卡片" />
+        <figcaption>現行手機地圖優先介面：地點與地圖位於上方，可展開的旅程規劃卡片位於底部。</figcaption>
+      </figure>
+      <p class="footer-note">研究演示用途，並非經認證的實地無障礙導航服務。</p>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">01・版本變更</div>
+      <h2>相對於舊手冊的變更</h2>
+      <p>本比較以你提供的《AccessRoute HK Product Manual》PDF 及目前程式庫內的產品手冊差異審核為依據。「已變更」代表目前專案有相應改動或補充說明，不代表舊手冊提及的每項功能都是全新功能，也不代表已完成實地測試。</p>
+      <table>
+        <thead><tr><th>範疇</th><th>目前版本的變更／補充</th><th>狀態</th></tr></thead>
+        <tbody>
+          <tr><td>首頁流程</td><td>一般入口現時採用地圖卡片流程：選地點、設定出行需要、比較路線，再導航或尋求協助。舊版完整規劃工作台仍可透過 <code>/?legacy=1</code> 開啟。</td><td><span class="tag">已更改</span></td></tr>
+          <tr><td>出行設定</td><td>現行流程提供五種畫像：步行、輪椅、長者、嬰兒車及重行李；照顧者亦可設定電梯、樓梯／扶手電梯、坡度、步速及路線目標等。</td><td><span class="tag">已擴充</span></td></tr>
+          <tr><td>天氣</td><td>天氣功能可使用香港天文台開放數據，並標示資料是即時或上次快取的過期資料；全港天氣並非精確的所在地預報。</td><td><span class="tag">已更新</span></td></tr>
+          <tr><td>無障礙證據</td><td>更清楚說明來源資料中仍有不少未知的通行屬性。「僅使用已核實通道」可排除未知路段，但計算結果不等於無障礙認證。</td><td><span class="tag">已釐清</span></td></tr>
+          <tr><td>介面易用性</td><td>專案已加入略過導覽連結、鍵盤焦點提示、較大的觸控目標、減少動態效果及相關頁面的高對比支援。</td><td><span class="tag">已改善</span></td></tr>
+          <tr><td>AI 協助</td><td>文字出行偏好、相片路障回報、相片位置協助及語音指引分為不同流程。介面或模擬測試不能證明真實服務已啟用，亦不能證明實地辨識準確度。</td><td><span class="tag">已釐清</span></td></tr>
+          <tr><td>端到端功能</td><td>舊手冊中的指定 13 步旅程及其準確度目標尚未獨立重現。即時室內定位、即時港鐵無障礙資料，以及完整手機／操作員整合仍未完成或只部分支援。</td><td><span class="tag">重要限制</span></td></tr>
+        </tbody>
+      </table>
+      <div class="callout warning"><strong>出發前請留意：</strong>本產品仍是研究演示。路線幾何、入口、斜度、電梯及公眾通行權均須另行核實。</div>
+      <p class="small">目前版本仍有 12 個可選場景、地圖檢視、路線計算及模擬電梯事件。舊手冊已提及相近能力，因此不會把它們列為全新功能。</p>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">02・舊手冊功能核對・1/2</div>
+      <h2>旅程規劃及地圖功能</h2>
+      <p><strong>不少核心規劃及地圖功能仍可使用，但新版程式並未完全達到舊手冊所述功能。</strong>下表逐項核對舊手冊列出的流程。「部分支援」表示有演示流程，但依賴服務、指定流程、即時資料或實機效果尚未核實。</p>
+      <table>
+        <thead><tr><th>舊手冊功能</th><th>目前狀態</th><th>可用內容／限制</th></tr></thead>
+        <tbody>
+          <tr><td>在 12 個場景選擇及交換地點</td><td><span class="tag">可用</span></td><td>可分別選擇出發地和目的地；更改或交換後會重新計算本地路線。</td></tr>
+          <tr><td>照顧者預設、出行畫像及通道限制</td><td><span class="tag">部分支援</span></td><td>多種畫像及部分電梯／樓梯／坡度／路線設定會套用於本地路由。設定只存在瀏覽器，不能跨帳戶共用；舊手冊的「最少通道闊度 1 米」示例未核實為現行控制項。</td></tr>
+          <tr><td>步行 → 港鐵 → 步行的連續旅程及指定 13 步</td><td><span class="tag">部分支援</span></td><td>可組合步行路段、已保存港鐵站序及轉乘指引；沒有即時班次／無障礙資料，亦未重現舊版指定 13 步（目前預設路線可有 14 步或更多）。</td></tr>
+          <tr><td>地圖、目前／下一步、完成步驟及無障礙路由</td><td><span class="tag">部分支援</span></td><td>樓層／概覽地圖及手動推進步驟可用；沒有即時室內定位，路網無障礙資料仍不完整或未知。</td></tr>
+          <tr><td>九龍塘三條路線：室外、商場 A、商場 B</td><td><span class="tag">未提供</span></td><td>因未有核實的分支端點及拓撲資料，這些舊手冊專用路線暫緩開發。請勿依賴舊版距離。</td></tr>
+          <tr><td>回報電梯故障及重新規劃</td><td><span class="tag">部分支援</span></td><td>模擬設施停用／恢復可令剩餘路網重新計算；完整即時「相片 → AI 匹配」流程及真實操作員通知未核實。</td></tr>
+          <tr><td>等待電梯恢復，並由操作員協助繼續</td><td><span class="tag">部分支援</span></td><td>本機工作階段／操作員控制及更新串流存在；尚未提供正式身份驗證及多程序同步。</td></tr>
+          <tr><td>以地標相片尋找目前位置</td><td><span class="tag">只核實模擬流程</span></td><td>模擬候選位置可預覽、確認及套用；實際相片辨識及 GPS 匹配未核實。</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">03・舊手冊功能核對・2/2</div>
+      <h2>AI、天氣及易用性功能</h2>
+      <p>以下狀態會區分本機介面／程式流程，以及實際可用、已量度的外部服務。</p>
+      <table>
+        <thead><tr><th>舊手冊功能</th><th>目前狀態</th><th>可用內容／限制</th></tr></thead>
+        <tbody>
+          <tr><td>天文台天氣及有蓋路線調整</td><td><span class="tag">部分支援</span></td><td>後端讀取天文台資料並標示即時／過期狀態；位置可能是全港或近似值。裝置定位準確度及持續即時服務未獲認證。</td></tr>
+          <tr><td>附近街景全景圖（Street View）</td><td><span class="tag">未提供</span></td><td>目前沒有街景服務供應商或全景圖 API。</td></tr>
+          <tr><td>自然語言出行偏好</td><td><span class="tag">部分支援</span></td><td>已有檢視及套用流程；即時語言分析需要設定模型服務，亦未完成基準測試。</td></tr>
+          <tr><td>粵語語音輸入</td><td><span class="tag">部分支援</span></td><td>支援 Web Speech API 的瀏覽器可按鍵說話；實際咪高峰／語音服務尚未在裝置測試。</td></tr>
+          <tr><td>自動粵語語音播報</td><td><span class="tag">本機已實作</span></td><td>若裝置有香港粵語語音，瀏覽器語音合成可朗讀目前步驟；實機輸出未核實。</td></tr>
+          <tr><td>GenAI 準確度、流程成功率及成本目標</td><td><span class="tag">未有量度</span></td><td>舊手冊的百分比及模型費用是目標／示例，並非目前已量度的結果。</td></tr>
+          <tr><td>WCAG 符合度及輔助科技測試</td><td><span class="tag">未獲認證</span></td><td>鍵盤、焦點、對比及響應式檢查已改善；完整 WCAG 符合度及 VoiceOver／TalkBack 尚未核實。</td></tr>
+        </tbody>
+      </table>
+      <div class="callout warning"><strong>簡單來說：</strong>新版適合在有人監督下演示目前已支援的本地流程。部分或未提供的功能不可當作即時服務、已核實路線或安全保證。</div>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">04・開始使用</div>
+      <h2>啟動演示</h2>
+      <h3>首次設定</h3>
+      <ol>
+        <li>在 Windows 或 macOS 電腦安裝 Node.js 22 LTS 或更新版本。</li>
+        <li>解壓縮專案資料夾，並在該資料夾開啟終端機。</li>
+        <li>安裝依賴並啟動本機演示：</li>
+      </ol>
+      <pre>npm ci
+npm run dev</pre>
+      <ol start="4">
+        <li>使用新版瀏覽器開啟 <a href="http://127.0.0.1:5173/map-demo/index.html">http://127.0.0.1:5173/map-demo/index.html</a>。使用期間請勿關閉終端機。</li>
+      </ol>
+      <p>之後再次使用，只需執行 <code>npm run dev</code> 並開啟網址。要停止服務，請在終端機按 <code>Ctrl+C</code>。</p>
+      <h3>選用：啟用 Qwen 智能協助</h3>
+      <p>沒有 AI 金鑰仍可規劃路線。要啟用 Qwen 流程，將 <code>.env.example</code> 複製為 <code>.env</code>，在該本機檔案填入私密的 <code>DASHSCOPE_API_KEY</code>，然後重新啟動演示。切勿把金鑰輸入瀏覽器或放進截圖。</p>
+      <pre>DASHSCOPE_API_KEY=your_private_key</pre>
+      <div class="callout"><strong>本機正式構建：</strong>執行 <code>npm run build</code>，再執行 <code>npm start</code>，並開啟 <code>http://127.0.0.1:8787/map-demo/index.html</code>。</div>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">05・規劃路線</div>
+      <h2>選擇地點與出行需要</h2>
+      <ol>
+        <li>按地圖頂部的地點選擇器，選擇出發地和目的地，再套用選擇。</li>
+        <li>展開底部卡片，選擇出行畫像：步行、輪椅、長者、嬰兒車或重行李；按需要調整可用的路線偏好。</li>
+        <li>按畫面底部的<strong>搜尋路線</strong>。</li>
+        <li>比較有蓋及較短路線、檢視其限制，再按<strong>開始導航</strong>。</li>
+      </ol>
+      <figure>
+        <img src="qa/product-manual-map-demo.png" alt="手機地圖優先旅程規劃畫面，顯示可展開的出行畫像及路線偏好卡片" />
+        <figcaption>現行手機介面的地圖與旅程卡片；畫面標籤使用香港繁體中文。</figcaption>
+      </figure>
+      <h3>切換地圖檢視</h3>
+      <p>使用概覽地圖查看周邊路線，使用樓層導航查看室內樓層幾何。可切換樓層並使用地圖縮放控制。請按畫面檢查路段；除非已另行核實，所有路線均只屬演示。</p>
+      <figure>
+        <img src="qa/product-manual-routes.png" alt="手機路線選擇畫面，地圖下方顯示有蓋及較短路線選項" />
+        <figcaption>路線選項沿用地圖與底部卡片介面；距離及無障礙屬性均為演示資料，未必已核實。</figcaption>
+      </figure>
+      <div class="callout warning"><strong>未知不等於無障礙：</strong>來源資料可呈現幾何，但不一定確認門寬、斜度、開放時間、通行權或電梯服務。即使選擇「僅使用已核實通道」，剩餘路線亦不等於已獲認證。</div>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">06・導航與求助</div>
+      <h2>查看指引及模擬設施停用</h2>
+      <ol>
+        <li>在路線預覽開始導航演示。</li>
+        <li>閱讀目前指引，並查看對應的地圖路段或樓層。</li>
+        <li>確認周遭情況後，再按畫面控制推進步驟。進度由使用者操作，並非即時室內定位。</li>
+        <li>在電梯事件演示中模擬電梯停用，查看剩餘路線重新計算。完成後可恢復電梯或重設行程。</li>
+      </ol>
+      <figure>
+        <img src="qa/product-manual-navigation.png" alt="手機逐步導航畫面，顯示室內地圖及目前指示卡片" />
+        <figcaption>逐步導航演示。進度由使用者操作，並非即時室內定位。</figcaption>
+      </figure>
+      <h2>選用 AI 協助</h2>
+      <p>按<strong>？</strong>求助按鈕使用設施或位置協助；出行偏好可在規劃卡片內輸入。視乎流程而定，Qwen 需要已設定後端；套用前請先檢查建議的匹配結果或路線變更：</p>
+      <ul>
+        <li><strong>出行偏好：</strong>以文字描述需要，檢視系統建議後才套用。</li>
+        <li><strong>相片回報路障：</strong>提交相片，先檢查設施／候選結果，再套用事件或重新規劃。</li>
+        <li><strong>相片找位置：</strong>檢視比對到的地點候選，確認後才更改路線起點。</li>
+        <li><strong>語音指引：</strong>要求播報下一段指引；語音輸出取決於裝置是否安裝所需語音。</li>
+      </ul>
+    </section>
+
+    <section class="manual-page">
+      <div class="eyebrow">07・易用性、天氣與限制</div>
+      <h2>易用性功能</h2>
+      <ul>
+        <li>使用略過導覽連結及鍵盤焦點提示，直接前往主要內容。</li>
+        <li>可使用瀏覽器／裝置的文字放大、高對比及減少動態效果設定；部分演示畫面另有大字或較大觸控目標模式。</li>
+        <li>如需語音播報，請在作業系統安裝香港粵語語音（如有）。實際語音辨識及播報效果視乎裝置和瀏覽器。</li>
+      </ul>
+      <h3>天氣資料</h3>
+      <p>後端運作且天氣服務有資料時，程式可顯示香港天文台觀測、預報及警告。請留意即時／過期狀態和更新時間。全港讀數未必反映你所在街道或建築物的實際情況。</p>
+      <h3>目前限制</h3>
+      <div class="two-col">
+        <div class="card"><strong>定位與導航</strong><ul><li>沒有持續即時室內定位。</li><li>導航步驟由使用者手動推進。</li><li>地圖範圍限於演示場景。</li></ul></div>
+        <div class="card"><strong>無障礙與交通</strong><ul><li>不少通行屬性仍未知，須實地核實。</li><li>電梯狀態為模擬資料，並非即時資訊。</li><li>已保存的港鐵接駁並非即時班次、票價或無障礙資料。</li></ul></div>
+        <div class="card"><strong>AI 與相片</strong><ul><li>AI 需要已設定的後端金鑰及網絡。</li><li>尚未認證實地辨識及外部服務行為。</li><li>請檢查並確認系統提出的候選結果。</li></ul></div>
+        <div class="card"><strong>帳戶與服務</strong><ul><li>設定可能只儲存在本機瀏覽器。</li><li>工作階段／操作員功能只供本機演示，並非正式服務。</li><li>介面檢查不等於 WCAG 認證。</li></ul></div>
+      </div>
+      <div class="callout warning"><strong>安全提示：</strong>AccessRoute HK 是研究演示，並非經認證的實地無障礙導航服務。出行前請確認路線狀況、公眾通行權、車站設施、電梯服務及安全資訊。如有疑問，請選擇已核實的替代路線或向場地／營運者求助。</div>
+      <p class="footer-note">參考：<code>docs/acceptance.md</code>（功能現況與後續驗收計劃，更新至 2026 年 10 月 14 日）；目前專案版本日期：2026 年 10 月 14 日。本手冊是舊版英文 PDF 的更新版配套，不代表舊手冊內所有流程均已完成。</p>
+    </section>
+  </body>
+</html>

@@ -8,6 +8,7 @@ import { createApp } from '../../backend/app';
 import { ctx, scene, close } from '../fixtures';
 import { route } from '../../shared/routing/route';
 import { segmentRoute } from '../../shared/journey/segment';
+import { BrowserSpeechProvider, type SpeechProvider } from '../../backend/providers/speech';
 it('health, scenes and route API return actual contracts', async () => {
   const app = createApp();
   await request(app).get('/api/health').expect(200);
@@ -38,12 +39,101 @@ it('validates input and unknown scene', async () => {
   await request(app).get('/api/scenes/not-found').expect(404);
   await request(app).get('/api/not-found').expect(404);
 });
+it('exposes the selected speech provider and serves Azure audio securely', async () => {
+  let spokenText = '';
+  const speech: SpeechProvider = {
+    mode: 'azure',
+    prepare: async (_text, selection) => ({
+      speech: { mode: 'azure', language: 'zh-HK', selection },
+    }),
+    synthesize: async (text) => {
+      spokenText = text;
+      return Uint8Array.of(1, 2, 3);
+    },
+  };
+  const azureApp = createApp({ speech });
+  await request(azureApp)
+    .get('/api/genai/capabilities')
+    .expect(200)
+    .expect((response) => expect(response.body.speech).toBe('azure'));
+  const audio = await request(azureApp)
+    .post('/api/genai/speech')
+    .send({ text: '請慢行', selection: 'cantonese_female' })
+    .buffer(true)
+    .parse((response, callback) => {
+      const chunks: Buffer[] = [];
+      response.on('data', (chunk: Buffer) => chunks.push(chunk));
+      response.on('end', () => callback(null, Buffer.concat(chunks)));
+    })
+    .expect(200)
+    .expect('Content-Type', /audio\/mpeg/);
+  expect(spokenText).toBe('請慢行');
+  expect(audio.body).toEqual(Buffer.from([1, 2, 3]));
+
+  await request(createApp({ speech: new BrowserSpeechProvider() }))
+    .post('/api/genai/speech')
+    .send({ text: '請慢行' })
+    .expect(503)
+    .expect((response) => expect(response.body.code).toBe('SPEECH_NOT_CONFIGURED'));
+});
+it('advertises the single-voice self-hosted provider and serves WAV audio', async () => {
+  const speech: SpeechProvider = {
+    mode: 'canto_tts',
+    supportsVoiceSelection: false,
+    audioContentType: 'audio/wav',
+    prepare: async (_text, selection) => ({
+      speech: {
+        mode: 'canto_tts',
+        language: 'zh-HK',
+        selection,
+        voice_selection: 'single_default',
+      },
+    }),
+    synthesize: async () => Uint8Array.of(82, 73, 70, 70),
+  };
+  const app = createApp({ speech });
+  await request(app)
+    .get('/api/genai/capabilities')
+    .expect(200)
+    .expect((response) =>
+      expect(response.body).toMatchObject({
+        speech: 'canto_tts',
+        speech_voice_selection: false,
+      }),
+    );
+  const audio = await request(app)
+    .post('/api/genai/speech')
+    .send({ text: '請慢慢行', selection: 'cantonese_male' })
+    .buffer(true)
+    .parse((response, callback) => {
+      const chunks: Buffer[] = [];
+      response.on('data', (chunk: Buffer) => chunks.push(chunk));
+      response.on('end', () => callback(null, Buffer.concat(chunks)));
+    })
+    .expect(200)
+    .expect('Content-Type', /audio\/wav/);
+  expect(audio.body).toEqual(Buffer.from([82, 73, 70, 70]));
+});
 it('writes are disabled by default and foreign origin is rejected', async () => {
   await request(createApp()).post('/api/events').send(close('lift-a')).expect(403);
   await request(createApp({ allowWrites: true }))
     .post('/api/events')
     .set('Origin', 'https://other.example')
     .send(close('lift-a'))
+    .expect(403);
+});
+it('allows configured Capacitor origins and rejects other CORS preflights', async () => {
+  const app = createApp({ allowedOrigins: ['https://localhost'] });
+  await request(app)
+    .options('/api/weather')
+    .set('Origin', 'https://localhost')
+    .set('Access-Control-Request-Method', 'GET')
+    .expect('Access-Control-Allow-Origin', 'https://localhost')
+    .expect(204);
+  await request(app)
+    .options('/api/weather')
+    .set('Origin', 'https://untrusted.example')
+    .set('Access-Control-Request-Method', 'GET')
     .expect(403);
 });
 it('events survive backend restart and change routing', async () => {

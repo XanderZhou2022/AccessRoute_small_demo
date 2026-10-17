@@ -1,0 +1,20 @@
+{
+  "name": "accessroute-android",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "android:add": "node scripts/build.mjs add",
+    "android:sync": "node scripts/build.mjs sync",
+    "android:open": "cap open android",
+    "android:apk:debug": "node scripts/build.mjs debug"
+  },
+  "dependencies": {
+    "@capacitor-community/text-to-speech": "^8.0.2",
+    "@capacitor/android": "8.4.3",
+    "@capacitor/core": "^8.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.4.3"
+  }
+}

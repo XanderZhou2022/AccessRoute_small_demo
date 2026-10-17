@@ -6,8 +6,10 @@ import type {
 } from '../../../shared/genai/workflows';
 import type { DynamicEvent } from '../../../shared/domain/schema';
 import type { WorkflowClient } from '../../../shared/demo/provider';
+import { apiUrl } from './url';
+
 async function post<T>(path: string, body: unknown): Promise<T> {
-  const response = await fetch(path, {
+  const response = await fetch(apiUrl(path), {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
@@ -21,17 +23,24 @@ export function runWorkflow(
   context: WorkflowContext,
   input: { text?: string } | Partial<PhotoInput> = {},
 ) {
-  return post<WorkflowResponse>(`/api/genai/workflows/${workflow}`, { context, ...input });
+  return post<WorkflowResponse>(`/api/genai/workflows/${workflow}`, {
+    context,
+    ...input,
+  });
 }
 export function confirmCandidate(
   confirmation_id: string,
   candidate_id: string,
   context: WorkflowContext,
 ) {
-  return post<WorkflowResponse>('/api/genai/confirm', { confirmation_id, candidate_id, context });
+  return post<WorkflowResponse>('/api/genai/confirm', {
+    confirmation_id,
+    candidate_id,
+    context,
+  });
 }
 export async function capabilities(): Promise<{ configured: boolean }> {
-  const response = await fetch('/api/genai/capabilities');
+  const response = await fetch(apiUrl('/api/genai/capabilities'));
   if (!response.ok) throw new Error('目前未連接 Agent 後端，請啟動本機服務');
   return response.json();
 }

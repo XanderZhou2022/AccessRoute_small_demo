@@ -4,13 +4,25 @@ const profileLabels = {
   elderly: '長者・優先升降機',
   walking: '步行・一般路線',
   heavy_luggage: '重行李・優先無台階',
+  other: '其他・依自訂需要規劃',
 };
+function apiPath(path) {
+  const base = localStorage.getItem('accessroute-api-base-url') || '';
+  return `${base.replace(/\/+$/, '')}${path}`;
+}
+function apiFetch(path, options) {
+  return fetch(apiPath(path), options);
+}
+function apiEventSource(path) {
+  return new EventSource(apiPath(path));
+}
 const profileNeeds = {
   wheelchair: ['wheelchair', 'elevator'],
   stroller: ['stroller', 'elevator'],
   elderly: ['elderly', 'elevator'],
   walking: [],
   heavy_luggage: ['heavy', 'elevator'],
+  other: [],
 };
 const profileWalkingSpeeds = {
   walking: 1.3,
@@ -70,20 +82,36 @@ function setDemoState(patch) {
   syncMapFrame(next);
   return next;
 }
+function selectedProfile(state) {
+  return state.preferences?.customMobility ? 'other' : state.profile || 'wheelchair';
+}
+function routeProfile(profile) {
+  return profile === 'other' ? 'walking' : profile;
+}
+function updateProfileButtons(profile) {
+  document.querySelectorAll('[data-profile]').forEach((button) => {
+    button.setAttribute('aria-pressed', String(button.dataset.profile === profile));
+  });
+  const summary = document.querySelector('[data-profile-summary]');
+  if (summary) summary.textContent = profileLabels[profile] || profileLabels.other;
+}
 async function sendSessionCommand(command) {
   const state = getDemoState();
   if (!state.sessionId) return null;
   const operationId = crypto.randomUUID();
   for (let attempt = 0; attempt < 2; attempt += 1) {
-    const response = await fetch(`/api/sessions/${encodeURIComponent(state.sessionId)}/commands`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        operationId,
-        expectedRevision: Number.isInteger(state.sessionRevision) ? state.sessionRevision : 1,
-        command,
-      }),
-    });
+    const response = await apiFetch(
+      `/api/sessions/${encodeURIComponent(state.sessionId)}/commands`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          operationId,
+          expectedRevision: Number.isInteger(state.sessionRevision) ? state.sessionRevision : 1,
+          command,
+        }),
+      },
+    );
     const result = await response.json().catch(() => null);
     if (response.status === 409 && result?.session && attempt === 0) {
       setDemoState({ sessionRevision: result.session.revision });
@@ -99,13 +127,13 @@ async function sendSessionCommand(command) {
 async function createPairedSession(routeResult) {
   const state = getDemoState();
   const trip = selectedTrip(state);
-  const createResponse = await fetch('/api/sessions', {
+  const createResponse = await apiFetch('/api/sessions', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       originSceneId: trip.originKey,
       destinationSceneId: trip.destinationKey,
-      profile: state.profile || 'wheelchair',
+      profile: routeProfile(state.profile || 'wheelchair'),
       weather: state.weather || 'sunny',
     }),
   });
@@ -114,7 +142,7 @@ async function createPairedSession(routeResult) {
   setDemoState({ sessionId: created.id, sessionRevision: created.revision });
   let current = await sendSessionCommand({
     type: 'set_preferences',
-    profile: state.profile || 'wheelchair',
+    profile: routeProfile(state.profile || 'wheelchair'),
     objective:
       state.route === 'short' ? 'shortest' : state.weather === 'heat' ? 'indoor' : 'sheltered',
   });
@@ -139,7 +167,7 @@ function syncMapFrame(state = getDemoState()) {
   if (!frame) return;
   const trip = selectedTrip(state);
   const route = state.route || 'sheltered';
-  const profile = state.profile || 'wheelchair';
+  const profile = routeProfile(selectedProfile(state));
   const weather = state.weather || 'sunny';
   const preferences = state.preferences || {};
   const needs = Array.isArray(preferences.needs) ? preferences.needs : [];
@@ -149,7 +177,10 @@ function syncMapFrame(state = getDemoState()) {
   const allowStairs =
     !stepFreeProfile && !needsElevator && (needs.includes('stairs') || profile === 'walking');
   const allowEscalators =
-    !stepFreeProfile && !needsElevator && (needs.includes('escalators') || profile === 'walking');
+    !stepFreeProfile &&
+    !needsElevator &&
+    !needs.includes('avoid_escalators') &&
+    (needs.includes('escalators') || profile === 'walking');
   const avoidLifts = needs.includes('avoid_lifts');
   const pace = preferences.pace || 'auto';
   const walkingSpeed = pace === 'auto' ? profileWalkingSpeeds[profile] || 0.8 : Number(pace);
@@ -196,6 +227,8 @@ function bindSpeechToTextarea({
   unsupportedText,
   labelIdle = '開始語音輸入',
   labelListening = '停止語音輸入',
+  onStart = () => {},
+  onComplete = () => {},
 }) {
   if (!(button instanceof HTMLButtonElement) || !(textarea instanceof HTMLTextAreaElement)) return;
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -217,6 +250,7 @@ function bindSpeechToTextarea({
     button.textContent = labelListening;
     button.setAttribute('aria-pressed', 'true');
     if (statusNode) statusNode.textContent = listeningText;
+    onStart();
     recognition.onresult = (event) => {
       const transcript = Array.from(event.results)
         .map((result) => result[0].transcript)
@@ -238,6 +272,7 @@ function bindSpeechToTextarea({
       button.textContent = labelIdle;
       button.removeAttribute('aria-pressed');
       if (statusNode && textarea.value.trim()) statusNode.textContent = readyText;
+      onComplete();
     };
     try {
       recognition.start();
@@ -246,6 +281,7 @@ function bindSpeechToTextarea({
       button.textContent = labelIdle;
       button.removeAttribute('aria-pressed');
       if (statusNode) statusNode.textContent = '無法啟動麥克風；請改用文字輸入。';
+      onComplete();
     }
   });
 }
@@ -323,108 +359,199 @@ function initializeSearch() {
   const form = document.querySelector('[data-search-form]');
   const origin = document.querySelector('[data-search-origin]');
   const destination = document.querySelector('[data-search-destination]');
+  const voiceButton = document.querySelector('[data-search-voice-start]');
+  const voiceStatus = document.querySelector('[data-search-voice-status]');
   const state = getDemoState();
   const trip = selectedTrip(state);
   if (!(dialog instanceof HTMLDialogElement) || !(form instanceof HTMLFormElement)) return;
   enableEscapeToClose(dialog);
   const error = document.querySelector('[data-search-error]');
-  const voiceButton = document.querySelector('[data-search-voice]');
-  const voiceStatus = document.querySelector('[data-search-voice-status]');
+  let recognition = null;
+  let recognitionTimer = null;
+  let selectionRevision = 0;
+  let resolutionRevision = 0;
   const clearSearchError = () => {
     if (error) error.textContent = '';
     origin?.removeAttribute('aria-invalid');
     destination?.removeAttribute('aria-invalid');
   };
+  const openSearchDialog = () => {
+    const selected = selectedTrip();
+    if (origin instanceof HTMLSelectElement) origin.value = selected.originKey;
+    if (destination instanceof HTMLSelectElement) destination.value = selected.destinationKey;
+    clearSearchError();
+    if (voiceStatus) voiceStatus.textContent = '';
+    if (!dialog.open) dialog.showModal();
+  };
+  dialog.addEventListener('close', () => {
+    clearTimeout(recognitionTimer);
+    recognitionTimer = null;
+    resolutionRevision += 1;
+    if (recognition) {
+      const activeRecognition = recognition;
+      recognition = null;
+      activeRecognition.stop();
+    }
+    if (voiceButton instanceof HTMLButtonElement) {
+      voiceButton.disabled = false;
+      voiceButton.textContent = '用廣東話說出出發地和目的地';
+      voiceButton.removeAttribute('aria-pressed');
+    }
+  });
   if (origin instanceof HTMLSelectElement) origin.value = trip.originKey;
   if (destination instanceof HTMLSelectElement) destination.value = trip.destinationKey;
-  origin?.addEventListener('change', clearSearchError);
-  destination?.addEventListener('change', clearSearchError);
+  origin?.addEventListener('change', () => {
+    selectionRevision += 1;
+    clearSearchError();
+  });
+  destination?.addEventListener('change', () => {
+    selectionRevision += 1;
+    clearSearchError();
+  });
+
+  const resolveSpokenLocations = async (transcript, expectedSelectionRevision) => {
+    const requestId = ++resolutionRevision;
+    if (voiceButton instanceof HTMLButtonElement) voiceButton.disabled = true;
+    if (voiceStatus) voiceStatus.textContent = '正在辨認出發地和目的地…';
+    try {
+      if (!(origin instanceof HTMLSelectElement) || !(destination instanceof HTMLSelectElement))
+        throw new Error('地點選單未準備好，請重新開啟視窗。');
+      const locations = Array.from(origin.options, (option) => ({
+        id: option.value,
+        name: option.textContent.trim(),
+      }));
+      const response = await apiFetch('/api/genai/location-resolution', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ transcript, locations }),
+      });
+      const result = await response.json().catch(() => null);
+      if (!response.ok)
+        throw new Error(
+          result?.error || result?.message || `地點辨認失敗（HTTP ${response.status}）`,
+        );
+      if (requestId !== resolutionRevision || !dialog.open) return;
+      if (selectionRevision !== expectedSelectionRevision) {
+        if (voiceStatus) voiceStatus.textContent = '你已手動修改地點，保留手動選擇。';
+        return;
+      }
+      if (result?.status !== 'ready') {
+        if (voiceStatus)
+          voiceStatus.textContent = result?.message || '未能辨認兩個地點，請再說一次或手動選擇。';
+        return;
+      }
+      const originId = result.origin_id;
+      const destinationId = result.destination_id;
+      const hasOrigin = Array.from(origin.options).some((option) => option.value === originId);
+      const hasDestination = Array.from(destination.options).some(
+        (option) => option.value === destinationId,
+      );
+      if (!hasOrigin || !hasDestination || originId === destinationId) {
+        if (voiceStatus)
+          voiceStatus.textContent = 'Qwen 回傳的地點不在可選清單中，請手動選擇或再說一次。';
+        return;
+      }
+      origin.value = originId;
+      destination.value = destinationId;
+      clearSearchError();
+      const originName = origin.selectedOptions[0]?.textContent.trim() || originId;
+      const destinationName = destination.selectedOptions[0]?.textContent.trim() || destinationId;
+      if (voiceStatus)
+        voiceStatus.textContent = `${result.message || '已辨認出發地和目的地。'} 出發地：${originName}；目的地：${destinationName}。請檢查後按「套用」。`;
+    } catch (error) {
+      if (requestId === resolutionRevision && voiceStatus)
+        voiceStatus.textContent = `地點辨認失敗：${error instanceof Error ? error.message : String(error)}`;
+    } finally {
+      if (requestId === resolutionRevision && voiceButton instanceof HTMLButtonElement)
+        voiceButton.disabled = false;
+    }
+  };
 
   voiceButton?.addEventListener('click', () => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!SpeechRecognition) {
       if (voiceStatus)
-        voiceStatus.textContent = '此瀏覽器不支援語音辨識；請使用上方出發地和目的地選單。';
+        voiceStatus.textContent = '此瀏覽器不支援語音辨識；請手動選擇出發地和目的地。';
       return;
     }
-
-    if (!(origin instanceof HTMLSelectElement) || !(destination instanceof HTMLSelectElement))
+    if (recognition) {
+      recognition.stop();
       return;
-    const recognition = new SpeechRecognition();
-    recognition.lang = 'zh-HK';
-    recognition.interimResults = false;
-    recognition.maxAlternatives = 1;
-    if (voiceButton instanceof HTMLButtonElement) voiceButton.disabled = true;
-    if (voiceStatus)
-      voiceStatus.textContent = '請說出出發地和目的地，例如「由 PopCorn 2 到又一城」。';
-    recognition.onresult = async (event) => {
-      const transcript = String(event.results?.[0]?.[0]?.transcript || '');
+    }
+    const activeRecognition = new SpeechRecognition();
+    recognition = activeRecognition;
+    clearTimeout(recognitionTimer);
+    recognitionTimer = null;
+    activeRecognition.lang = 'zh-HK';
+    activeRecognition.interimResults = true;
+    activeRecognition.continuous = false;
+    const expectedSelectionRevision = selectionRevision;
+    let transcript = '';
+    let resolutionStarted = false;
+    let recognitionFailed = false;
+    if (voiceButton instanceof HTMLButtonElement) {
+      voiceButton.textContent = '停止語音輸入';
+      voiceButton.setAttribute('aria-pressed', 'true');
+    }
+    if (voiceStatus) voiceStatus.textContent = '正在聆聽；請說出出發地和目的地。';
+    const scheduleResolution = () => {
+      clearTimeout(recognitionTimer);
+      recognitionTimer = window.setTimeout(() => {
+        recognitionTimer = null;
+        if (!transcript || resolutionStarted) return;
+        resolutionStarted = true;
+        void resolveSpokenLocations(transcript, expectedSelectionRevision);
+      }, 2000);
+    };
+    activeRecognition.onresult = (event) => {
+      transcript = Array.from(event.results)
+        .filter((result) => result.isFinal)
+        .map((result) => result[0]?.transcript || '')
+        .join(' ')
+        .trim();
+      if (!transcript) return;
+      if (voiceStatus) voiceStatus.textContent = `已聽到「${transcript}」；停頓約 2 秒後辨認地點。`;
+      scheduleResolution();
+    };
+    activeRecognition.onerror = (event) => {
+      recognitionFailed = true;
+      clearTimeout(recognitionTimer);
+      recognitionTimer = null;
+      if (voiceStatus)
+        voiceStatus.textContent =
+          event.error === 'not-allowed'
+            ? '未獲麥克風授權；請允許麥克風後再試，或手動選擇地點。'
+            : event.error === 'no-speech'
+              ? '未聽到語音；請再試一次，或手動選擇地點。'
+              : `語音輸入失敗（${event.error}）；請手動選擇地點。`;
+    };
+    activeRecognition.onend = () => {
+      if (recognition === activeRecognition) recognition = null;
+      if (voiceButton instanceof HTMLButtonElement) {
+        voiceButton.textContent = '用廣東話說出出發地和目的地';
+        voiceButton.removeAttribute('aria-pressed');
+      }
+      if (recognitionFailed || !dialog.open) return;
       if (!transcript) {
-        if (voiceStatus) voiceStatus.textContent = '未能辨認語音；請再試一次。';
+        if (voiceStatus) voiceStatus.textContent = '未聽到語音；請再試一次，或手動選擇地點。';
         return;
       }
-      if (voiceStatus) voiceStatus.textContent = `正在讓 Qwen 辨認「${transcript}」中的地點…`;
-      try {
-        const response = await fetch('/api/genai/location-resolution', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify({
-            transcript,
-            locations: Array.from(origin.options).map((option) => ({
-              id: option.value,
-              name: option.textContent || option.value,
-            })),
-          }),
-        });
-        const result = await response.json().catch(() => null);
-        if (!response.ok)
-          throw new Error(result?.error || `Qwen 服務暫時無法使用（HTTP ${response.status}）`);
-        const hasOrigin = [...origin.options].some((option) => option.value === result?.origin_id);
-        const hasDestination = [...destination.options].some(
-          (option) => option.value === result?.destination_id,
-        );
-        if (result?.status !== 'ready' || !hasOrigin || !hasDestination) {
-          if (voiceStatus)
-            voiceStatus.textContent =
-              result?.message || 'Qwen 未能可靠辨認地點；請用選單選擇或再試一次。';
-          return;
-        }
-        origin.value = result.origin_id;
-        destination.value = result.destination_id;
-        if (voiceStatus)
-          voiceStatus.textContent = `${result.message} 請核對出發地和目的地，再按套用。`;
-      } catch (error) {
-        if (voiceStatus)
-          voiceStatus.textContent = `Qwen 地點辨認失敗：${error instanceof Error ? error.message : String(error)}。請用選單選擇或再試一次。`;
-      }
-    };
-    recognition.onerror = (event) => {
-      const message =
-        event.error === 'not-allowed'
-          ? '未獲麥克風授權；請允許使用麥克風，或改用選單。'
-          : event.error === 'no-speech'
-            ? '未聽到語音；請再試一次，或改用選單。'
-            : '語音辨識未能完成；請改用選單。';
-      if (voiceStatus) voiceStatus.textContent = message;
-    };
-    recognition.onend = () => {
-      if (voiceButton instanceof HTMLButtonElement) voiceButton.disabled = false;
+      if (!resolutionStarted && !recognitionTimer) scheduleResolution();
     };
     try {
-      recognition.start();
-    } catch {
-      if (voiceStatus) voiceStatus.textContent = '無法啟動麥克風；請改用選單。';
-      if (voiceButton instanceof HTMLButtonElement) voiceButton.disabled = false;
+      activeRecognition.start();
+    } catch (error) {
+      recognition = null;
+      if (voiceButton instanceof HTMLButtonElement) {
+        voiceButton.textContent = '用廣東話說出出發地和目的地';
+        voiceButton.removeAttribute('aria-pressed');
+      }
+      if (voiceStatus)
+        voiceStatus.textContent = `無法啟動麥克風：${error instanceof Error ? error.message : String(error)}`;
     }
   });
 
-  document.querySelector('[data-search-open]')?.addEventListener('click', () => {
-    const selected = selectedTrip();
-    if (origin instanceof HTMLSelectElement) origin.value = selected.originKey;
-    if (destination instanceof HTMLSelectElement) destination.value = selected.destinationKey;
-    clearSearchError();
-    dialog.showModal();
-  });
+  document.querySelector('[data-search-open]')?.addEventListener('click', openSearchDialog);
   document.querySelector('[data-search-cancel]')?.addEventListener('click', () => {
     clearSearchError();
     dialog.close();
@@ -481,7 +608,6 @@ function initializeAccessibilitySettings() {
     <label><input type="checkbox" data-a11y-setting="highContrast"> 高對比</label>
     <label><input type="checkbox" data-a11y-setting="reducedMotion"> 減少動畫</label>
     <label><input type="checkbox" data-a11y-setting="largeTargets"> 放大按鈕</label>
-    <label><input type="checkbox" data-a11y-setting="textOnly"> 文字導航模式</label>
     <p class="accessibility-status" data-a11y-status role="status" aria-live="polite"></p>
   `;
   document.querySelector('.screen')?.append(panel);
@@ -490,14 +616,12 @@ function initializeAccessibilitySettings() {
     highContrast: Boolean(saved.highContrast),
     reducedMotion: Boolean(saved.reducedMotion),
     largeTargets: Boolean(saved.largeTargets),
-    textOnly: Boolean(saved.textOnly),
   };
   const classNames = {
     largeText: 'large-text',
     highContrast: 'high-contrast',
     reducedMotion: 'reduced-motion',
     largeTargets: 'large-targets',
-    textOnly: 'textOnly',
   };
   const apply = () => {
     Object.entries(settings).forEach(([key, value]) => {
@@ -513,7 +637,6 @@ function initializeAccessibilitySettings() {
     highContrast: ['已套用高對比。', '已關閉高對比。'],
     reducedMotion: ['已減少動畫。', '已恢復動畫。'],
     largeTargets: ['已放大按鈕。', '已恢復標準按鈕大小。'],
-    textOnly: ['已開啟文字導航模式；地圖已隱藏。', '已恢復地圖導航模式。'],
   };
   panel.querySelectorAll('input[data-a11y-setting]').forEach((input) => {
     input.addEventListener('change', () => {
@@ -658,10 +781,7 @@ function initializeSheets() {
       setOffset(sheet.dataset.collapsed === 'true' ? 0 : maxOffset());
     });
     handle.addEventListener('keydown', (event) => {
-      if (
-        sheet.dataset.compact === 'true' &&
-        (event.key === 'ArrowUp' || event.key === 'Home')
-      ) {
+      if (sheet.dataset.compact === 'true' && (event.key === 'ArrowUp' || event.key === 'Home')) {
         event.preventDefault();
         expandCompact();
         return;
@@ -728,113 +848,268 @@ function initializeSheets() {
 function initializePlan() {
   if (document.body.dataset.screen !== 'plan') return;
   const state = getDemoState();
-  const profile = state.profile || 'wheelchair';
+  const profile = selectedProfile(state);
+  updateProfileButtons(profile);
   document.querySelectorAll('[data-profile]').forEach((button) => {
-    const active = button.dataset.profile === profile;
-    button.setAttribute('aria-pressed', String(active));
     button.addEventListener('click', () => {
-      document
-        .querySelectorAll('[data-profile]')
-        .forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
-      const summary = document.querySelector('[data-profile-summary]');
-      if (summary) summary.textContent = profileLabels[button.dataset.profile];
+      const choice = button.dataset.profile || 'other';
+      const routingChoice = routeProfile(choice);
       const current = getDemoState();
-      const mobilityNeeds = ['wheelchair', 'stroller', 'heavy', 'elderly'];
+      analysisRevision += 1;
+      clearTimeout(analysisTimer);
+      if (voiceNeeds instanceof HTMLTextAreaElement) lastAnalyzedText = voiceNeeds.value.trim();
+      const mobilityNeeds = ['wheelchair', 'stroller', 'heavy', 'elderly', 'elevator'];
       const existingNeeds = Array.isArray(current.preferences?.needs)
         ? current.preferences.needs.filter((need) => !mobilityNeeds.includes(need))
         : [];
+      updateProfileButtons(choice);
       setDemoState({
-        profile: button.dataset.profile,
+        profile: routingChoice,
         preferences: {
           ...(current.preferences || {}),
-          needs: [...existingNeeds, ...(profileNeeds[button.dataset.profile] || [])],
+          customMobility: choice === 'other',
+          needs: [...existingNeeds, ...(profileNeeds[routingChoice] || [])],
         },
       });
     });
   });
-  const summary = document.querySelector('[data-profile-summary]');
-  if (summary) summary.textContent = profileLabels[profile];
   const voiceNeeds = document.querySelector('[data-voice-needs]');
   const voiceStart = document.querySelector('[data-voice-start]');
-  const voiceAnalyze = document.querySelector('[data-voice-analyze]');
   const voiceStatus = document.querySelector('[data-voice-status]');
-  const updateVoiceActions = () => {
-    if (voiceAnalyze instanceof HTMLButtonElement)
-      voiceAnalyze.disabled = !(voiceNeeds instanceof HTMLTextAreaElement && voiceNeeds.value.trim());
-  };
-  voiceNeeds?.addEventListener('input', updateVoiceActions);
+  let analysisTimer;
+  let analysisPromise = null;
+  let analysisRevision = 0;
+  let lastAnalyzedText = '';
+  let speechActive = false;
+
+  function scheduleAnalysis(delay = 1500) {
+    clearTimeout(analysisTimer);
+    if (
+      !(voiceNeeds instanceof HTMLTextAreaElement) ||
+      !voiceNeeds.value.trim() ||
+      voiceNeeds.value.trim() === lastAnalyzedText ||
+      speechActive
+    )
+      return;
+    analysisTimer = setTimeout(() => {
+      analysisTimer = null;
+      void analyzeNeeds();
+    }, delay);
+  }
+
+  async function analyzeNeeds() {
+    if (!(voiceNeeds instanceof HTMLTextAreaElement)) return false;
+    const text = voiceNeeds.value.trim();
+    if (!text) return false;
+    if (text === lastAnalyzedText) return true;
+    if (analysisPromise) {
+      await analysisPromise;
+      if (voiceNeeds.value.trim() !== text) return analyzeNeeds();
+      if (text === lastAnalyzedText) return true;
+      return analyzeNeeds();
+    }
+
+    const revision = analysisRevision;
+    const frame = document.querySelector('[data-map-frame]');
+    const bridge = frame?.contentWindow?.accessrouteGenAI;
+    if (!bridge?.getWorkflowContext) {
+      if (voiceStatus) {
+        voiceStatus.textContent = '地圖仍在載入，稍後會再自動分析。';
+      }
+      scheduleAnalysis(1000);
+      return false;
+    }
+
+    if (voiceStatus) voiceStatus.textContent = '正在辨認行程地點及分析出行偏好…';
+    const task = (async () => {
+      try {
+        const currentTrip = selectedTrip();
+        const normalizedText = text.toLocaleLowerCase().replace(/\s+/g, '');
+        const hasLocationIntent =
+          /(去|到|前往|出發|由|從|目的地|起點|\bgo\s+to\b|\btravel\s+to\b|\bfrom\b|\bto\b)/i.test(
+            text,
+          ) ||
+          Object.values(tripPairs).some(({ origin }) =>
+            normalizedText.includes(origin.toLocaleLowerCase().replace(/\s+/g, '')),
+          );
+        const preferencesTask = (async () => {
+          const response = await apiFetch('/api/genai/workflows/preferences', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify({ context: bridge.getWorkflowContext(), text }),
+          });
+          const payload = await response.json().catch(() => null);
+          if (!response.ok)
+            throw new Error(payload?.error || `Qwen 服務暫時無法使用（HTTP ${response.status}）`);
+          const preferences = payload?.result?.payload;
+          if (
+            payload?.status !== 'ready' ||
+            payload?.result?.agent !== 'preferences' ||
+            !preferences
+          )
+            throw new Error(payload?.message || 'Qwen 未能產生可套用的出行設定');
+          return preferences;
+        })();
+        const locationTask = hasLocationIntent
+          ? (async () => {
+              const locations = Object.entries(tripPairs).map(([id, trip]) => ({
+                id,
+                name: trip.origin,
+              }));
+              const response = await apiFetch('/api/genai/location-resolution', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+                body: JSON.stringify({
+                  transcript: text,
+                  locations,
+                  current_origin_id: currentTrip.originKey,
+                  current_destination_id: currentTrip.destinationKey,
+                }),
+              });
+              const result = await response.json().catch(() => null);
+              if (!response.ok)
+                throw new Error(
+                  result?.error || result?.message || `地點辨認失敗（HTTP ${response.status}）`,
+                );
+              if (result?.status !== 'ready')
+                return {
+                  status: 'no_match',
+                  message: result?.message || '未能辨認新的地點，保留目前行程。',
+                };
+              const { origin_id: originId, destination_id: destinationId } = result;
+              if (!tripPairs[originId] || !tripPairs[destinationId] || originId === destinationId)
+                throw new Error('地點辨認結果不在可選清單中，保留目前行程。');
+              return {
+                status: 'ready',
+                originId,
+                destinationId,
+                message: result.message || '已辨認行程地點。',
+              };
+            })()
+          : Promise.resolve(null);
+        const [preferencesResult, locationResult] = await Promise.allSettled([
+          preferencesTask,
+          locationTask,
+        ]);
+        if (revision !== analysisRevision || voiceNeeds.value.trim() !== text) return false;
+
+        const locationUpdate =
+          locationResult.status === 'fulfilled' && locationResult.value?.status === 'ready'
+            ? locationResult.value
+            : null;
+        const locationMessage = !hasLocationIntent
+          ? ''
+          : locationResult.status === 'rejected'
+            ? `地點辨認失敗：${locationResult.reason instanceof Error ? locationResult.reason.message : String(locationResult.reason)}。`
+            : locationUpdate
+              ? `已更新行程：${tripPairs[locationUpdate.originId].origin} → ${tripPairs[locationUpdate.destinationId].origin}。`
+              : `${locationResult.value?.message || '未能辨認新的目的地，保留目前行程。'}`;
+        if (preferencesResult.status === 'rejected') {
+          if (locationUpdate) setTrip(locationUpdate.originId, locationUpdate.destinationId);
+          const preferenceError =
+            preferencesResult.reason instanceof Error
+              ? preferencesResult.reason.message
+              : String(preferencesResult.reason);
+          if (voiceStatus)
+            voiceStatus.textContent = `${locationMessage ? `${locationMessage} ` : ''}偏好分析失敗：${preferenceError}。`;
+          return false;
+        }
+        const preferences = preferencesResult.value;
+        const mobilityProfile =
+          {
+            wheelchair: 'wheelchair',
+            manual_wheelchair: 'wheelchair',
+            stroller: 'stroller',
+            heavy_luggage: 'heavy_luggage',
+            elderly: 'elderly',
+            walking: 'walking',
+            other: 'other',
+          }[preferences.mobility_type] || 'other';
+        const routingProfile = routeProfile(mobilityProfile);
+        const maxSlope =
+          typeof preferences.max_slope === 'number'
+            ? preferences.max_slope
+            : preferences.avoid_steep_slopes
+              ? 0.05
+              : 0.0833;
+        const slope = maxSlope <= 0.05 ? 'gentle' : maxSlope <= 0.0833 ? 'moderate' : 'any';
+        const current = getDemoState();
+        const needs = new Set(profileNeeds[routingProfile] || []);
+        if (preferences.avoid_stairs) needs.add('elevator');
+        if (preferences.allow_escalators === true) needs.add('escalators');
+        if (preferences.allow_escalators === false) needs.add('avoid_escalators');
+        if (preferences.avoid_lifts === true) needs.add('avoid_lifts');
+        const goal =
+          preferences.route_objective === 'shortest'
+            ? 'shortest'
+            : preferences.route_objective === 'sheltered' ||
+                preferences.route_objective === 'indoor' ||
+                preferences.prefer_covered_shelter
+              ? 'sheltered'
+              : current.preferences?.goal || 'sheltered';
+        setDemoState({
+          profile: routingProfile,
+          preferencesUpdatedAt: Math.max(
+            Date.now(),
+            (Number(current.preferencesUpdatedAt) || 0) + 1,
+          ),
+          preferences: {
+            ...(current.preferences || {}),
+            customMobility: mobilityProfile === 'other',
+            needs: [...needs],
+            goal,
+            slope,
+          },
+        });
+        updateProfileButtons(mobilityProfile);
+        if (locationUpdate) setTrip(locationUpdate.originId, locationUpdate.destinationId);
+        lastAnalyzedText = text;
+        if (voiceStatus)
+          voiceStatus.textContent = `${locationMessage ? `${locationMessage} ` : ''}已套用「${profileLabels[mobilityProfile]}」及辨識出的路線限制，並同步至出行設定。`;
+        return true;
+      } catch (error) {
+        if (revision === analysisRevision && voiceStatus)
+          voiceStatus.textContent = `Qwen 分析失敗：${error instanceof Error ? error.message : String(error)}。修改描述後會自動重試。`;
+        return false;
+      }
+    })();
+    analysisPromise = task;
+    try {
+      return await task;
+    } finally {
+      if (analysisPromise === task) analysisPromise = null;
+    }
+  }
+
+  voiceNeeds?.addEventListener('input', () => {
+    analysisRevision += 1;
+    if (!speechActive && voiceStatus)
+      voiceStatus.textContent = voiceNeeds.value.trim()
+        ? '輸入停止 1.5 秒後會自動辨認地點並分析偏好。'
+        : '可一次描述目的地和出行偏好；停頓後會自動分析，也可按「開始語音輸入」。';
+    if (!speechActive) scheduleAnalysis();
+  });
   bindSpeechToTextarea({
     button: voiceStart,
     textarea: voiceNeeds,
     statusNode: voiceStatus,
-    listeningText: '正在聆聽；請描述你的出行需要。',
-    readyText: '已完成語音轉文字；可交給 Qwen 分析或直接搜尋路線。',
+    listeningText: '正在聆聽；請描述目的地和出行需要。',
+    readyText: '語音輸入完成，停頓 2 秒後辨認地點並分析偏好。',
     unsupportedText: '此瀏覽器不支援語音輸入；你仍可直接輸入文字。',
+    onStart: () => {
+      speechActive = true;
+      analysisRevision += 1;
+      clearTimeout(analysisTimer);
+    },
+    onComplete: () => {
+      speechActive = false;
+      scheduleAnalysis(2000);
+    },
   });
-  voiceAnalyze?.addEventListener('click', async () => {
-    if (!(voiceNeeds instanceof HTMLTextAreaElement) || !voiceNeeds.value.trim()) return;
-    const frame = document.querySelector('[data-map-frame]');
-    const bridge = frame?.contentWindow?.accessrouteGenAI;
-    if (!bridge?.getWorkflowContext) {
-      if (voiceStatus) voiceStatus.textContent = '地圖仍在載入，請稍候再分析。';
-      return;
-    }
-    if (voiceAnalyze instanceof HTMLButtonElement) voiceAnalyze.disabled = true;
-    if (voiceStatus) voiceStatus.textContent = 'Qwen 正在分析你的出行需要…';
-    try {
-      const response = await fetch('/api/genai/workflows/preferences', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ context: bridge.getWorkflowContext(), text: voiceNeeds.value.trim() }),
-      });
-      const payload = await response.json().catch(() => null);
-      if (!response.ok) throw new Error(payload?.error || `Qwen 服務暫時無法使用（HTTP ${response.status}）`);
-      const preferences = payload?.result?.payload;
-      if (payload?.status !== 'ready' || payload?.result?.agent !== 'preferences' || !preferences)
-        throw new Error(payload?.message || 'Qwen 未能產生可套用的出行設定');
-      const mobilityProfile = {
-        wheelchair: 'wheelchair',
-        manual_wheelchair: 'wheelchair',
-        stroller: 'stroller',
-        heavy_luggage: 'heavy_luggage',
-        elderly: 'elderly',
-        walking: 'walking',
-      }[preferences.mobility_type];
-      const slope =
-        preferences.max_slope <= 0.05
-          ? 'gentle'
-          : preferences.max_slope <= 0.0833
-            ? 'moderate'
-            : 'any';
-      const current = getDemoState();
-      const needs = [
-        ...(mobilityProfile === 'wheelchair' ? ['wheelchair', 'elevator'] : []),
-        ...(mobilityProfile === 'stroller' ? ['stroller', 'elevator'] : []),
-        ...(mobilityProfile === 'heavy_luggage' ? ['heavy', 'elevator'] : []),
-        ...(mobilityProfile === 'elderly' ? ['elderly', 'elevator'] : []),
-        ...(preferences.allow_escalators ? ['escalators'] : []),
-        ...(preferences.avoid_lifts ? ['avoid_lifts'] : []),
-      ];
-      setDemoState({
-        profile: mobilityProfile || current.profile || 'wheelchair',
-        preferences: {
-          ...(current.preferences || {}),
-          needs,
-          goal: preferences.route_objective === 'shortest' ? 'shortest' : 'sheltered',
-          slope,
-        },
-      });
-      if (summary) summary.textContent = profileLabels[mobilityProfile] || profileLabels.wheelchair;
-      if (voiceStatus) voiceStatus.textContent = 'Qwen 已分析並套用出行需要；你可以搜尋路線。';
-    } catch (error) {
-      if (voiceStatus)
-        voiceStatus.textContent = `Qwen 分析失敗：${error instanceof Error ? error.message : String(error)}。你仍可直接搜尋路線。`;
-    } finally {
-      updateVoiceActions();
-    }
-  });
-  document.querySelector('[data-plan-form]')?.addEventListener('submit', (event) => {
+  document.querySelector('[data-plan-form]')?.addEventListener('submit', async (event) => {
     event.preventDefault();
+    clearTimeout(analysisTimer);
+    if (voiceNeeds instanceof HTMLTextAreaElement && voiceNeeds.value.trim()) await analyzeNeeds();
     const saved = getDemoState();
     const trip = selectedTrip(saved);
     const route = saved.preferences?.goal === 'shortest' ? 'short' : 'sheltered';
@@ -855,21 +1130,46 @@ function initializePreferences() {
   if (document.body.dataset.screen !== 'preferences') return;
   const state = getDemoState();
   const form = document.querySelector('[data-preferences-form]');
-  if (!form) return;
-  const preferences = state.preferences || {};
-  if (preferences.needs) {
-    form.querySelectorAll('input[name="need"]').forEach((input) => {
-      input.checked = preferences.needs.includes(input.value);
-    });
-  }
-  if (preferences.goal) form.querySelector('#goal').value = preferences.goal;
-  if (preferences.slope) form.querySelector('#slope').value = preferences.slope;
-  if (preferences.pace) form.querySelector('#pace').value = preferences.pace;
-  if (preferences.modes) {
-    form.querySelectorAll('input[name="mode"]').forEach((input) => {
-      input.checked = preferences.modes.includes(input.value);
-    });
-  }
+  if (!(form instanceof HTMLFormElement)) return;
+  const applySavedPreferences = (preferences) => {
+    if (preferences.needs) {
+      form.querySelectorAll('input[name="need"]').forEach((input) => {
+        input.checked = preferences.needs.includes(input.value);
+      });
+    }
+    if (preferences.goal) form.querySelector('#goal').value = preferences.goal;
+    if (preferences.slope) form.querySelector('#slope').value = preferences.slope;
+    if (preferences.pace) form.querySelector('#pace').value = preferences.pace;
+    if (preferences.modes) {
+      form.querySelectorAll('input[name="mode"]').forEach((input) => {
+        input.checked = preferences.modes.includes(input.value);
+      });
+    }
+    const autoVoiceInput = form.querySelector('input[name="mode"][value="voice"]');
+    if (autoVoiceInput instanceof HTMLInputElement) {
+      autoVoiceInput.checked =
+        typeof preferences.autoReadInstructions === 'boolean'
+          ? preferences.autoReadInstructions
+          : true;
+    }
+  };
+  let appliedPreferencesVersion = Number(state.preferencesUpdatedAt) || 0;
+  applySavedPreferences(state.preferences || {});
+  window.addEventListener('storage', (event) => {
+    if (event.key !== 'accessroute-map-demo' || !event.newValue) return;
+    let nextState;
+    try {
+      nextState = JSON.parse(event.newValue);
+    } catch {
+      return;
+    }
+    if (!nextState || typeof nextState !== 'object') return;
+    const nextVersion = Number(nextState.preferencesUpdatedAt) || 0;
+    if (nextVersion === appliedPreferencesVersion) return;
+    appliedPreferencesVersion = nextVersion;
+    applySavedPreferences(nextState.preferences || {});
+    updateStatus('出行設定已同步至此頁。');
+  });
   form?.addEventListener('submit', (event) => {
     event.preventDefault();
     const needs = Array.from(
@@ -880,6 +1180,7 @@ function initializePreferences() {
       form.querySelectorAll('input[name="mode"]:checked'),
       (input) => input.value,
     );
+    const autoReadInstructions = modes.includes('voice');
     const current = getDemoState();
     const profile = needs.includes('wheelchair')
       ? 'wheelchair'
@@ -894,9 +1195,11 @@ function initializePreferences() {
     setDemoState({
       profile,
       route,
+      preferencesUpdatedAt: Math.max(Date.now(), (Number(current.preferencesUpdatedAt) || 0) + 1),
       preferences: {
         needs,
         modes,
+        autoReadInstructions,
         goal: form.querySelector('#goal').value,
         slope: form.querySelector('#slope').value,
         pace: form.querySelector('#pace').value,
@@ -907,7 +1210,6 @@ function initializePreferences() {
     );
   });
 }
-
 function initializeRoutes() {
   if (document.body.dataset.screen !== 'routes') return;
   const trip = selectedTrip();
@@ -1113,30 +1415,156 @@ function initializeRoutes() {
 
 function initializeNavigation() {
   if (document.body.dataset.screen !== 'navigation') return;
-  let routeStatus = getDemoState().navigationRouteStatus;
-  let instructions = Array.isArray(getDemoState().navigationSteps)
-    ? getDemoState().navigationSteps
+  const initialState = getDemoState();
+  let routeStatus = initialState.navigationRouteStatus;
+  let instructions = Array.isArray(initialState.navigationSteps)
+    ? initialState.navigationSteps
     : [];
   let step = Math.min(
-    Number.isInteger(getDemoState().step) ? getDemoState().step : 0,
+    Number.isInteger(initialState.step) ? initialState.step : 0,
     Math.max(0, instructions.length - 1),
   );
+  let sessionId = initialState.sessionId || null;
+  let latestSessionRevision = Number(initialState.sessionRevision) || 0;
+  let eventStream;
   const titleNode = document.querySelector('[data-instruction]');
   const detailNode = document.querySelector('[data-instruction-detail]');
   const distanceNode = document.querySelector('[data-instruction-distance]');
   const countNode = document.querySelector('[data-step-count]');
   const progress = document.querySelector('[data-progress]');
   const next = document.querySelector('[data-next-step]');
-  const sessionStatus = document.querySelector('[data-session-status]');
   const narrationStatus = document.querySelector('[data-narration-status]');
   const speakButton = document.querySelector('[data-speak-step]');
-  const guidanceButton = document.querySelector('[data-guidance-step]');
   const guidanceText = document.querySelector('[data-guidance-text]');
+  const frame = document.querySelector('[data-map-frame]');
   let lastNarratedInstruction = '';
-  const speakInstruction = (instruction, overrideText) => {
+  let pendingAutoNarrationKey = '';
+  let autoNarrationTimer = null;
+  let speechModePromise;
+  let activeBrowserUtterance = null;
+  const getSpeechMode = () => {
+    if (!speechModePromise) {
+      speechModePromise = apiFetch('/api/genai/capabilities')
+        .then(async (response) => {
+          const payload = await response.json().catch(() => null);
+          if (!response.ok)
+            throw new Error(payload?.error || `語音服務設定讀取失敗（HTTP ${response.status}）`);
+          if (!['azure', 'browser', 'canto_tts'].includes(payload?.speech))
+            throw new Error('後端回傳了不支援的語音服務設定');
+          const speechNotice = document.querySelector('[data-speech-engine-notice]');
+          if (speechNotice) {
+            speechNotice.hidden = payload.speech !== 'canto_tts';
+            speechNotice.textContent =
+              payload.speech === 'canto_tts'
+                ? '目前自架粵語語音只有一把預設聲線；男聲／女聲偏好不會改變聲音。'
+                : '';
+          }
+          return payload.speech;
+        })
+        .catch((error) => {
+          speechModePromise = null;
+          throw error;
+        });
+    }
+    return speechModePromise;
+  };
+  const playBackendSpeech = async (text) => {
+    const response = await apiFetch('/api/genai/speech', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text }),
+    });
+    if (!response.ok) {
+      const payload = await response.json().catch(() => null);
+      throw new Error(payload?.error || `伺服器語音服務失敗（HTTP ${response.status}）`);
+    }
+    const audioUrl = URL.createObjectURL(await response.blob());
+    await new Promise((resolve, reject) => {
+      const audio = new Audio(audioUrl);
+      const cleanup = () => URL.revokeObjectURL(audioUrl);
+      audio.addEventListener(
+        'ended',
+        () => {
+          cleanup();
+          resolve();
+        },
+        { once: true },
+      );
+      audio.addEventListener(
+        'error',
+        () => {
+          cleanup();
+          reject(new Error('伺服器粵語語音播放失敗'));
+        },
+        { once: true },
+      );
+      void audio.play().catch((error) => {
+        cleanup();
+        reject(error);
+      });
+    });
+  };
+  const getCantoneseVoices = async (synth) => {
+    const voices = () => synth.getVoices().filter((voice) => /^yue-HK$/i.test(voice.lang));
+    const deadline = Date.now() + 5000;
+    while (Date.now() < deadline) {
+      const available = voices();
+      if (available.length) return available;
+      await new Promise((resolve) => window.setTimeout(resolve, 100));
+    }
+    return voices();
+  };
+  const speakInstruction = async (instruction, overrideText, isCurrent = () => true) => {
     const text = overrideText || (instruction ? `${instruction.title}。${instruction.detail}` : '');
     if (!text) {
       if (narrationStatus) narrationStatus.textContent = '目前沒有可朗讀的路線指示。';
+      return;
+    }
+    if (!isCurrent()) return;
+    if (window.Capacitor?.getPlatform?.() === 'android') {
+      try {
+        const nativeTts = window.Capacitor.registerPlugin('TextToSpeech');
+        let supported = false;
+        for (let attempt = 0; attempt < 4; attempt += 1) {
+          supported = (await nativeTts.isLanguageSupported({ lang: 'yue-HK' })).supported;
+          if (supported) break;
+          if (attempt < 3) await new Promise((resolve) => window.setTimeout(resolve, 250));
+        }
+        if (!supported)
+          throw new Error(
+            '手機沒有可用的 yue-HK 粵語聲線。請在 Android「文字轉語音輸出」選用 Google 語音服務並安裝香港粵語語音。',
+          );
+        if (!isCurrent()) return;
+        await nativeTts.stop();
+        await nativeTts.speak({
+          text,
+          lang: 'yue-HK',
+          rate: 0.9,
+          pitch: 1,
+          volume: 1,
+        });
+      } catch (error) {
+        if (narrationStatus)
+          narrationStatus.textContent = `Google 粵語語音失敗：${error instanceof Error ? error.message : String(error)}`;
+      }
+      return;
+    }
+    let speechMode;
+    try {
+      speechMode = await getSpeechMode();
+    } catch (error) {
+      if (narrationStatus)
+        narrationStatus.textContent = `無法連接語音服務：${error instanceof Error ? error.message : String(error)}`;
+      return;
+    }
+    if (!isCurrent()) return;
+    if (speechMode !== 'browser') {
+      try {
+        await playBackendSpeech(text);
+      } catch (error) {
+        if (narrationStatus)
+          narrationStatus.textContent = `${speechMode === 'canto_tts' ? '自架粵語語音' : 'Azure 粵語語音'}失敗：${error instanceof Error ? error.message : String(error)}`;
+      }
       return;
     }
     if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
@@ -1144,27 +1572,38 @@ function initializeNavigation() {
       return;
     }
     const synth = window.speechSynthesis;
-    const cantoneseVoices = synth.getVoices().filter((voice) => /^(zh-HK|yue)/i.test(voice.lang));
+    const cantoneseVoices = await getCantoneseVoices(synth);
+    if (!isCurrent()) return;
     if (!cantoneseVoices.length) {
       if (narrationStatus)
         narrationStatus.textContent =
-          '裝置未提供粵語語音；請在系統語音設定加入香港中文，或閱讀文字指示。';
+          '找不到 yue-HK 香港粵語聲線；請在系統語音設定安裝「粵語（香港）」語音。沒有改用英文，請閱讀文字指示。';
       return;
     }
+    if (activeBrowserUtterance) {
+      activeBrowserUtterance.onend = null;
+      activeBrowserUtterance.onerror = null;
+      activeBrowserUtterance = null;
+    }
+    synth.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = cantoneseVoices[0].lang;
-    utterance.voice = cantoneseVoices[0];
-    utterance.onstart = () => {
-      if (narrationStatus) narrationStatus.textContent = '正在朗讀目前的路線指示。';
-    };
+    utterance.lang = 'yue-HK';
+    utterance.voice =
+      cantoneseVoices.find((voice) => /^yue-HK$/i.test(voice.lang)) || cantoneseVoices[0];
+    activeBrowserUtterance = utterance;
+    if (narrationStatus) narrationStatus.textContent = '正在以香港粵語朗讀。';
     utterance.onend = () => {
-      if (narrationStatus) narrationStatus.textContent = '語音提示已完成。';
+      if (activeBrowserUtterance !== utterance) return;
+      activeBrowserUtterance = null;
+      if (narrationStatus) narrationStatus.textContent = '粵語朗讀完成。';
     };
     utterance.onerror = (event) => {
+      if (activeBrowserUtterance !== utterance) return;
+      activeBrowserUtterance = null;
+      if (event.error === 'interrupted' || event.error === 'canceled') return;
       if (narrationStatus)
         narrationStatus.textContent = `語音播報失敗（${event.error}）；請閱讀文字指示。`;
     };
-    synth.cancel();
     synth.speak(utterance);
   };
   const workflowContext = () => {
@@ -1175,53 +1614,156 @@ function initializeNavigation() {
     if (!bridge?.getWorkflowContext) return null;
     return bridge.getWorkflowContext(instruction.sceneId, instruction.fromNodeId);
   };
-  const requestGuidance = async ({ speak = false } = {}) => {
+  const isTransitInstruction = (instruction) =>
+    instruction?.distanceM === 0 && !instruction.fromNodeId && !instruction.toNodeId;
+  const transitGuidance = (instruction) =>
+    `${instruction.title}。${instruction.detail.replace(/。$/, '')}。`;
+  const guidanceCacheKey = (instruction, state = getDemoState()) => {
+    const trip = selectedTrip(state);
+    const preferences = state.preferences || {};
+    return JSON.stringify({
+      trip: [trip.originKey, trip.destinationKey],
+      route: state.route || 'sheltered',
+      profile: state.profile || 'wheelchair',
+      weather: state.weather || 'sunny',
+      preferences: {
+        needs: preferences.needs || [],
+        goal: preferences.goal,
+        slope: preferences.slope,
+        pace: preferences.pace,
+        customMobility: preferences.customMobility,
+      },
+      report: state.report || '',
+      facilityEvents: state.facilityEvents || [],
+      step,
+      instruction,
+    });
+  };
+  const getGuidanceCache = (state) => {
+    const cache = state.navigationGuidanceCache;
+    return cache && typeof cache === 'object' && !Array.isArray(cache) ? cache : {};
+  };
+  const saveGuidance = (key, text) => {
+    const state = getDemoState();
+    const entries = Object.entries(getGuidanceCache(state)).filter(
+      ([cachedKey]) => cachedKey !== key,
+    );
+    entries.push([key, text]);
+    const navigationGuidanceCache = Object.fromEntries(entries.slice(-50));
+    try {
+      localStorage.setItem(
+        'accessroute-map-demo',
+        JSON.stringify({ ...state, navigationGuidanceCache }),
+      );
+      return null;
+    } catch (error) {
+      return error;
+    }
+  };
+  const requestGuidance = async () => {
+    const requestStep = step;
     const instruction = instructions[step];
     if (!instruction) {
       if (narrationStatus) narrationStatus.textContent = '目前沒有可用的路線步驟。';
       return;
     }
+    const key = guidanceCacheKey(instruction);
+    const isCurrentRequest = () =>
+      step === requestStep && !!instructions[step] && guidanceCacheKey(instructions[step]) === key;
+    if (isTransitInstruction(instruction)) {
+      const text = transitGuidance(instruction);
+      if (guidanceText) guidanceText.textContent = text;
+      await speakInstruction(instruction, text, isCurrentRequest);
+      return text;
+    }
+    const cachedText = getGuidanceCache(getDemoState())[key];
+    if (typeof cachedText === 'string' && cachedText.trim()) {
+      if (guidanceText) guidanceText.textContent = cachedText;
+      await speakInstruction(instruction, cachedText, isCurrentRequest);
+      return cachedText;
+    }
     const context = workflowContext();
     if (!context) {
-      if (narrationStatus) narrationStatus.textContent = '地圖仍在載入，暫時無法取得 Qwen 指引。';
-      if (speak) speakInstruction(instruction);
+      if (lastNarratedInstruction === key) lastNarratedInstruction = '';
+      if (narrationStatus)
+        narrationStatus.textContent = '未能取得地圖資料，暫時無法生成 Qwen 導航提示；請稍後再試。';
       return;
     }
-    if (guidanceButton instanceof HTMLButtonElement) guidanceButton.disabled = true;
-    if (narrationStatus) narrationStatus.textContent = 'Qwen 正在生成目前步驟導航提示…';
+    if (speakButton instanceof HTMLButtonElement) speakButton.disabled = true;
+    if (narrationStatus) narrationStatus.textContent = '';
     try {
-      const response = await fetch('/api/genai/workflows/guidance', {
+      const response = await apiFetch('/api/genai/workflows/guidance', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({ context }),
       });
       const payload = await response.json().catch(() => null);
       if (!response.ok)
-        throw new Error(payload?.error || payload?.message || `導航助手暫不可用（HTTP ${response.status}）`);
+        throw new Error(
+          payload?.error || payload?.message || `導航助手暫不可用（HTTP ${response.status}）`,
+        );
       const result = payload?.result;
       if (payload?.status !== 'ready' || result?.agent !== 'guidance' || !result.payload?.text)
         throw new Error(payload?.message || 'Qwen 未提供可用的導航提示。');
       const text = result.payload.text;
-      if (guidanceText) guidanceText.textContent = `Qwen 提示：${text}`;
-      if (speak) speakInstruction(instruction, text);
-      if (narrationStatus) narrationStatus.textContent = '已取得 Qwen 導航提示。';
+      const cacheError = saveGuidance(key, text);
+      if (!isCurrentRequest()) return text;
+      if (guidanceText) guidanceText.textContent = text;
+      await speakInstruction(instruction, text, isCurrentRequest);
+      if (cacheError && narrationStatus)
+        narrationStatus.textContent = `深層提示無法儲存供再次朗讀：${cacheError instanceof Error ? cacheError.message : String(cacheError)}`;
       return text;
     } catch (error) {
+      if (!isCurrentRequest()) return null;
+      if (lastNarratedInstruction === key) lastNarratedInstruction = '';
       if (guidanceText) guidanceText.textContent = '';
       if (narrationStatus)
         narrationStatus.textContent = `Qwen 指引暫不可用：${error instanceof Error ? error.message : String(error)}`;
-      if (speak) speakInstruction(instruction);
       return null;
     } finally {
-      if (guidanceButton instanceof HTMLButtonElement)
-        guidanceButton.disabled = instructions.length === 0 || routeStatus === 'no_route';
+      if (speakButton instanceof HTMLButtonElement)
+        speakButton.disabled = instructions.length === 0 || routeStatus === 'no_route';
     }
   };
+  const cancelAutoNarration = () => {
+    clearTimeout(autoNarrationTimer);
+    autoNarrationTimer = null;
+    pendingAutoNarrationKey = '';
+  };
+  const tryAutoNarration = (key, attempt = 0) => {
+    const state = getDemoState();
+    const instruction = instructions[step];
+    if (
+      state.preferences?.autoReadInstructions === false ||
+      !instruction ||
+      guidanceCacheKey(instruction, state) !== key
+    ) {
+      cancelAutoNarration();
+      return;
+    }
+    const cachedText = getGuidanceCache(state)[key];
+    if ((typeof cachedText === 'string' && cachedText.trim()) || workflowContext()) {
+      cancelAutoNarration();
+      lastNarratedInstruction = key;
+      void requestGuidance();
+      return;
+    }
+    if (attempt >= 40) {
+      cancelAutoNarration();
+      if (narrationStatus)
+        narrationStatus.textContent = '等待地圖資料逾時，未能生成 Qwen 導航提示；請稍後再試。';
+      return;
+    }
+    autoNarrationTimer = window.setTimeout(() => tryAutoNarration(key, attempt + 1), 250);
+  };
+  const queueAutoNarration = (key) => {
+    if (key === lastNarratedInstruction || key === pendingAutoNarrationKey) return;
+    cancelAutoNarration();
+    pendingAutoNarrationKey = key;
+    tryAutoNarration(key);
+  };
   speakButton?.addEventListener('click', () => {
-    void requestGuidance({ speak: true });
-  });
-  guidanceButton?.addEventListener('click', () => {
-    void requestGuidance({ speak: false });
+    void requestGuidance();
   });
   const renderStep = () => {
     const state = getDemoState();
@@ -1265,18 +1807,58 @@ function initializeNavigation() {
         instructions.length === 0 ||
         state.sessionStatus === 'waiting' ||
         routeStatus === 'no_route';
-    if (guidanceButton instanceof HTMLButtonElement)
-      guidanceButton.disabled = instructions.length === 0 || routeStatus === 'no_route';
-    const instructionKey = instruction ? `${step}:${instruction.title}:${instruction.detail}` : '';
-    if (
-      instructionKey &&
-      instructionKey !== lastNarratedInstruction &&
-      state.preferences?.modes?.includes('voice')
-    ) {
-      lastNarratedInstruction = instructionKey;
-      void requestGuidance({ speak: true });
-    }
+    if (speakButton instanceof HTMLButtonElement)
+      speakButton.disabled = instructions.length === 0 || routeStatus === 'no_route';
+    const instructionKey = instruction ? guidanceCacheKey(instruction, state) : '';
+    const cachedGuidance =
+      instruction && isTransitInstruction(instruction)
+        ? transitGuidance(instruction)
+        : instructionKey
+          ? getGuidanceCache(state)[instructionKey]
+          : '';
+    if (guidanceText)
+      guidanceText.textContent =
+        typeof cachedGuidance === 'string' && cachedGuidance.trim() ? cachedGuidance : '';
+    if (instructionKey && state.preferences?.autoReadInstructions !== false)
+      queueAutoNarration(instructionKey);
+    else cancelAutoNarration();
   };
+  frame?.addEventListener('load', () => {
+    if (getDemoState().preferences?.autoReadInstructions !== false) renderStep();
+  });
+  const discardMismatchedSession = () => {
+    eventStream?.close();
+    sessionId = null;
+    latestSessionRevision = 0;
+    instructions = [];
+    routeStatus = null;
+    step = 0;
+    const trip = selectedTrip();
+    setDemoState({
+      sessionId: null,
+      sessionRevision: null,
+      navigationSteps: [],
+      navigationRouteStatus: null,
+      sessionStatus: null,
+      step,
+      mapSceneId: trip.originKey,
+      mapView: 'macro',
+      mapLevel: '',
+    });
+    updateStatus('配對行程與目前選擇的起訖點不符，已捨棄舊步驟並重新計算路線。');
+  };
+  const cachedOriginScene = instructions.find((instruction) => instruction.sceneId)?.sceneId;
+  const cachedDestinationScene = [...instructions]
+    .reverse()
+    .find((instruction) => instruction.sceneId)?.sceneId;
+  const trip = selectedTrip(initialState);
+  if (
+    sessionId &&
+    cachedOriginScene &&
+    cachedDestinationScene &&
+    (cachedOriginScene !== trip.originKey || cachedDestinationScene !== trip.destinationKey)
+  )
+    discardMismatchedSession();
   renderStep();
   window.addEventListener('accessroute-trip-updated', () => {
     instructions = [];
@@ -1284,22 +1866,21 @@ function initializeNavigation() {
     step = 0;
     renderStep();
   });
-  const frame = document.querySelector('[data-map-frame]');
-  const sessionId = getDemoState().sessionId;
-  let latestSessionRevision = Number(getDemoState().sessionRevision) || 0;
-  let eventStream;
-  if (sessionStatus) {
-    sessionStatus.textContent = sessionId
-      ? '正在連接配對行程…'
-      : '本機示範模式：尚未連接共享行程，另一裝置不會同步。';
-  }
   if (sessionId) {
-    eventStream = new EventSource(`/api/sessions/${encodeURIComponent(sessionId)}/stream`);
+    eventStream = apiEventSource(`/api/sessions/${encodeURIComponent(sessionId)}/stream`);
     eventStream.addEventListener('session', (event) => {
       const session = JSON.parse(event.data);
       if (session.id !== sessionId || session.revision < latestSessionRevision) return;
-      latestSessionRevision = session.revision;
       const serverState = session.state;
+      const trip = selectedTrip();
+      if (
+        serverState.originSceneId !== trip.originKey ||
+        serverState.destinationSceneId !== trip.destinationKey
+      ) {
+        discardMismatchedSession();
+        return;
+      }
+      latestSessionRevision = session.revision;
       instructions = serverState.steps;
       routeStatus = serverState.routeStatus || (instructions.length ? 'ok' : routeStatus);
       step = Math.min(serverState.currentStep, Math.max(0, instructions.length - 1));
@@ -1318,18 +1899,20 @@ function initializeNavigation() {
           instructions.length === 0 ||
           serverState.status === 'waiting' ||
           routeStatus === 'no_route';
-      if (sessionStatus)
-        sessionStatus.textContent = `配對行程已同步 · ${serverState.status} · 版本 ${session.revision}`;
       renderStep();
     });
     eventStream.onerror = () => {
-      if (sessionStatus)
-        sessionStatus.textContent = '配對連線中斷；本機步驟仍可操作，正在嘗試重新連線。';
+      updateStatus('配對連線中斷；本機步驟仍可操作，正在嘗試重新連線。');
     };
     window.addEventListener('storage', (event) => {
       if (event.key !== 'accessroute-map-demo' || !event.newValue) return;
       const shared = JSON.parse(event.newValue);
-      if (shared.sessionId !== sessionId || !Array.isArray(shared.navigationSteps)) return;
+      if (shared.sessionId !== sessionId) {
+        discardMismatchedSession();
+        renderStep();
+        return;
+      }
+      if (!Array.isArray(shared.navigationSteps)) return;
       instructions = shared.navigationSteps;
       step = Math.min(shared.step || 0, Math.max(0, instructions.length - 1));
       routeStatus = shared.navigationRouteStatus || routeStatus;
@@ -1394,20 +1977,16 @@ function initializeNavigation() {
         setDemoState({ step, mapSceneId: instructions[step].sceneId });
         renderStep();
         void sendSessionCommand({ type: 'advance' }).catch((error) => {
-          if (sessionStatus)
-            sessionStatus.textContent = `步驟已在本機前進，但共享更新失敗：${error.message}`;
+          updateStatus(`步驟已在本機前進，但共享更新失敗：${error.message}`);
         });
       } else {
-        void sendSessionCommand({ type: 'advance' }).catch(() => {});
+        void sendSessionCommand({ type: 'advance' }).catch((error) => {
+          updateStatus(`共享行程更新失敗：${error.message}`);
+        });
         setDemoState({ step: 0, report: '' });
         location.href = 'index.html';
       }
     });
-  }
-  const operatorLink = document.querySelector('[data-operator-link]');
-  if (operatorLink instanceof HTMLAnchorElement && sessionId) {
-    operatorLink.href = `./operator.html?session=${encodeURIComponent(sessionId)}`;
-    operatorLink.textContent = '開啟／分享配對控制頁';
   }
 }
 
@@ -1481,7 +2060,7 @@ function initializeOperator() {
   };
   const connect = async (id) => {
     if (!id) throw new Error('請輸入行程 session ID。');
-    const response = await fetch(`/api/sessions/${encodeURIComponent(id)}`);
+    const response = await apiFetch(`/api/sessions/${encodeURIComponent(id)}`);
     const session = await response.json().catch(() => null);
     if (!response.ok) throw new Error(session?.error || `無法讀取行程（HTTP ${response.status}）`);
     sessionId = id;
@@ -1489,7 +2068,9 @@ function initializeOperator() {
     stream?.close();
     display(session);
     if (facilityScene instanceof HTMLSelectElement && facilitySelect instanceof HTMLSelectElement) {
-      const facilitiesResponse = await fetch(`/api/sessions/${encodeURIComponent(id)}/facilities`);
+      const facilitiesResponse = await apiFetch(
+        `/api/sessions/${encodeURIComponent(id)}/facilities`,
+      );
       const sceneFacilities = await facilitiesResponse.json().catch(() => null);
       if (!facilitiesResponse.ok) throw new Error(sceneFacilities?.error || '無法讀取行程設施');
       facilityScene.replaceChildren(
@@ -1517,7 +2098,7 @@ function initializeOperator() {
     const input = new URLSearchParams(location.search);
     input.set('session', sessionId);
     history.replaceState(null, '', `${location.pathname}?${input.toString()}`);
-    stream = new EventSource(`/api/sessions/${encodeURIComponent(sessionId)}/stream`);
+    stream = apiEventSource(`/api/sessions/${encodeURIComponent(sessionId)}/stream`);
     stream.addEventListener('session', (event) => {
       try {
         display(JSON.parse(event.data));
@@ -1660,11 +2241,13 @@ function initializeHelp() {
   capabilityStatus.setAttribute('aria-live', 'polite');
   capabilityStatus.textContent = '正在檢查智能導航助手連線…';
   if (helpTitle) helpTitle.insertAdjacentElement('afterend', capabilityStatus);
-  void fetch('/api/genai/capabilities', { headers: { Accept: 'application/json' } })
+  void apiFetch('/api/genai/capabilities', { headers: { Accept: 'application/json' } })
     .then(async (response) => {
       const payload = await response.json().catch(() => null);
       if (!response.ok)
-        throw new Error(payload?.error || `智能導航助手服務暫時無法使用（HTTP ${response.status}）`);
+        throw new Error(
+          payload?.error || `智能導航助手服務暫時無法使用（HTTP ${response.status}）`,
+        );
       return payload;
     })
     .then((payload) => {
@@ -1704,7 +2287,7 @@ function initializeHelp() {
     return element;
   };
   const postWorkflow = async (path, body) => {
-    const result = await fetch(path, {
+    const result = await apiFetch(path, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
@@ -1972,7 +2555,7 @@ function initializeHelp() {
     void runBusy(async () => {
       results = reportResults;
       const { context, bridge } = workflowContext();
-      const capabilityResponse = await fetch('/api/genai/capabilities');
+      const capabilityResponse = await apiFetch('/api/genai/capabilities');
       const capability = await capabilityResponse.json().catch(() => null);
       if (!capabilityResponse.ok)
         throw new Error('未連接 Agent 後端。請啟動完整 demo 服務後再試。');
@@ -2068,7 +2651,7 @@ function initializeHelp() {
     void runBusy(async () => {
       results = lostResults;
       const { context, bridge } = workflowContext();
-      const capabilityResponse = await fetch('/api/genai/capabilities');
+      const capabilityResponse = await apiFetch('/api/genai/capabilities');
       const capability = await capabilityResponse.json().catch(() => null);
       if (!capabilityResponse.ok)
         throw new Error('未連接 Agent 後端。請啟動完整 demo 服務後再試。');
@@ -2125,12 +2708,24 @@ function initialize() {
     rain: '雨天，建議有蓋路線',
     heat: '高溫，建議室內路線',
   };
-  const updateWeatherSummary = (weather, source = 'manual') => {
+  const formatWeatherTime = (timestamp) => {
+    if (typeof timestamp !== 'string') return '';
+    const date = new Date(timestamp);
+    if (Number.isNaN(date.getTime())) return '';
+    return date.toLocaleTimeString('zh-HK', {
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: 'Asia/Hong_Kong',
+    });
+  };
+  const updateWeatherSummary = (weather, source = 'manual', fetchedAt = state.weatherFetchedAt) => {
     if (!weatherSummary) return;
+    const updatedAt = source === 'hko' ? formatWeatherTime(fetchedAt) : '';
+    const label = weatherLabels[weather] || weatherLabels.sunny;
     weatherSummary.textContent =
       source === 'hko'
-        ? `天文台天氣 · ${weatherLabels[weather] || weatherLabels.sunny}`
-        : `天氣偏好 · ${weatherLabels[weather] || weatherLabels.sunny}`;
+        ? `天文台天氣 · ${label}${updatedAt ? ` · 更新時間 ${updatedAt}` : ''}`
+        : `天氣偏好 · ${label}`;
   };
   updateWeatherSummary(state.weather || 'sunny', state.weatherSource || 'manual');
   const refreshWeatherButton = document.querySelector('[data-weather-refresh]');
@@ -2145,7 +2740,7 @@ function initialize() {
         query.set('latitude', String(location.latitude));
         query.set('longitude', String(location.longitude));
       }
-      const response = await fetch(`/api/weather${query.size ? `?${query}` : ''}`, {
+      const response = await apiFetch(`/api/weather${query.size ? `?${query}` : ''}`, {
         headers: { Accept: 'application/json' },
       });
       const data = await response.json().catch(() => null);
@@ -2164,9 +2759,12 @@ function initialize() {
         : data.signals.hotForecast
           ? 'heat'
           : 'sunny';
+      const fetchedAt = new Date(data.fetchedAt);
+      if (Number.isNaN(fetchedAt.getTime()))
+        throw new Error('香港天文台天氣回應的更新時間格式不正確');
       if (simulation instanceof HTMLSelectElement) simulation.value = weather;
       setDemoState({ weather, weatherSource: 'hko', weatherFetchedAt: data.fetchedAt });
-      updateWeatherSummary(weather, 'hko');
+      updateWeatherSummary(weather, 'hko', data.fetchedAt);
       const locationSummary =
         data.location?.scope === 'nearby'
           ? `附近天氣：${data.location.temperatureStation} 氣溫、${data.location.rainfallArea} 雨量（最近氣溫站約 ${data.location.distanceKm} 公里）`
@@ -2178,9 +2776,15 @@ function initialize() {
         minute: '2-digit',
         timeZone: 'Asia/Hong_Kong',
       });
-      if (weatherLocationStatus)
-        weatherLocationStatus.textContent = `${data.locationSource === 'ip' ? '依據伺服器 IP 約略位置（可能不準確；託管平台可能按其政策處理連線 IP）。' : data.locationSource === 'gps' ? '依據你允許使用的 GPS 位置。' : '目前使用全港觀測資料。'}${locationSummary ? ` ${locationSummary}` : ''} 天氣更新時間 ${observed}；氣溫 ${data.temperatureC}°C、過去一小時雨量 ${data.rainfallLastHourMm} mm。天氣建議只影響路線排序，仍受通行條件限制。`;
-      updateStatus(`天氣已更新：${weatherLabels[weather] || weatherLabels.sunny}。`);
+      if (weatherLocationStatus) {
+        const locationSource =
+          data.locationSource === 'ip'
+            ? '依據伺服器 IP 約略位置（可能不準確；託管平台可能按其政策處理連線 IP）。'
+            : data.locationSource === 'gps'
+              ? '依據你允許使用的 GPS 位置。'
+              : '目前使用全港觀測資料。';
+        weatherLocationStatus.textContent = `${locationSource}${locationSummary ? ` ${locationSummary}` : ''} 觀測資料時間 ${observed}；氣溫 ${data.temperatureC}°C、過去一小時雨量 ${data.rainfallLastHourMm} mm。天氣建議只影響路線排序，仍受通行條件限制。`;
+      }
     } catch (error) {
       if (weatherSummary) weatherSummary.textContent = '天氣資料暫不可用，自動建議暫停';
       if (weatherLocationStatus)

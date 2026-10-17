@@ -52,6 +52,7 @@ import { applyDemoOverlay } from '../../shared/demo/navigation';
 import type { DemoOverlay } from '../../shared/demo/types';
 import { DemoLibrary } from './components/DemoLibrary';
 import { saveEvent } from './api/genai';
+import { apiUrl } from './api/url';
 import type { RankedCandidate, WorkflowContext } from '../../shared/genai/workflows';
 import { GenAIConsole, type Receipt } from './components/GenAIConsole';
 import {
@@ -89,7 +90,6 @@ type AccessibilitySettings = {
   highContrast: boolean;
   reducedMotion: boolean;
   largeTargets: boolean;
-  textOnly: boolean;
 };
 
 function parseWeatherSnapshot(input: unknown): WeatherSnapshot {
@@ -180,7 +180,7 @@ function LegacyApp() {
   const applying = useRef(false);
   const liveContextId = useRef('');
   const [provider, setProvider] = useState<'static' | 'http'>(() => {
-    if (demoOnly || mapOnly) return 'static';
+    if (demoOnly || mapOnly || import.meta.env.VITE_ANDROID_APP === 'true') return 'static';
     try {
       const saved = localStorage.getItem('accessroute-provider');
       if (saved === 'http' || saved === 'static') return saved;
@@ -193,11 +193,14 @@ function LegacyApp() {
       highContrast: false,
       reducedMotion: false,
       largeTargets: false,
-      textOnly: false,
     };
     try {
       const saved = JSON.parse(localStorage.getItem('accessroute-accessibility') || '');
-      return { ...defaults, ...(saved && typeof saved === 'object' ? saved : {}) };
+      if (saved && typeof saved === 'object') {
+        delete saved.textOnly;
+        return { ...defaults, ...saved };
+      }
+      return defaults;
     } catch {
       return defaults;
     }
@@ -214,14 +217,12 @@ function LegacyApp() {
     root.classList.toggle('accessibility-high-contrast', accessibilitySettings.highContrast);
     root.classList.toggle('accessibility-reduced-motion', accessibilitySettings.reducedMotion);
     root.classList.toggle('accessibility-large-targets', accessibilitySettings.largeTargets);
-    root.classList.toggle('accessibility-text-only', accessibilitySettings.textOnly);
     return () => {
       root.classList.remove(
         'accessibility-large-text',
         'accessibility-high-contrast',
         'accessibility-reduced-motion',
         'accessibility-large-targets',
-        'accessibility-text-only',
       );
     };
   }, [accessibilitySettings]);
@@ -303,7 +304,7 @@ function LegacyApp() {
           setNotice('未能取得目前位置，改用香港全境天氣資料。');
         }
       }
-      const response = await fetch('/api/weather' + coordinates);
+      const response = await fetch(apiUrl('/api/weather' + coordinates));
       if (!response.ok) throw new Error('香港天文台資料暫時無法取得');
       const snapshot = parseWeatherSnapshot(await response.json());
       setWeather(snapshot);
@@ -345,7 +346,7 @@ function LegacyApp() {
 
         let ev: DynamicEvent[] = [];
         if (provider === 'http') {
-          const r = await fetch('/api/events');
+          const r = await fetch(apiUrl('/api/events'));
           if (!r.ok) throw new Error('無法讀取後端事件');
           ev = await r.json();
         }
@@ -606,11 +607,23 @@ function LegacyApp() {
             const hop = rail.hops[index];
             if (hop.lineCode === 'TRANSFER') {
               const nextHop = rail.hops[index + 1];
+              let nextLineEndIndex = index + 1;
+              while (
+                nextHop &&
+                nextLineEndIndex + 1 < rail.hops.length &&
+                rail.hops[nextLineEndIndex + 1].lineCode === nextHop.lineCode
+              )
+                nextLineEndIndex += 1;
+              const nextLineDestination = rail.hops[nextLineEndIndex]?.to;
+              const nextLineName = nextHop ? mtrLineName(nextHop.lineCode) : '';
+              const directionTerminus = nextHop?.directionTerminus?.nameZh;
               steps.push({
-                title: `在 ${hop.to.nameZh} 轉乘`,
+                title: nextHop
+                  ? `在${hop.to.nameZh}站轉乘${nextLineName}`
+                  : `在${hop.to.nameZh}站轉乘`,
                 detail: nextHop
-                  ? `接乘${mtrLineName(nextHop.lineCode)}；車站內轉乘指示及無障礙設施尚未核實。`
-                  : '車站內轉乘指示及無障礙設施尚未核實。',
+                  ? `跟隨「${nextLineName}・往${directionTerminus || nextLineDestination?.nameZh}」指示前往月台。`
+                  : `請依${hop.to.nameZh}站內指示前往所需月台。`,
                 distanceM: 0,
                 sceneId: mapRouteChoices.originSceneId,
               });
@@ -625,9 +638,14 @@ function LegacyApp() {
               endIndex += 1;
             const end = rail.hops[endIndex].to;
             const intermediateStops = endIndex - index;
+            const directionTerminus = hop.directionTerminus?.nameZh;
             steps.push({
-              title: `乘搭${mtrLineName(hop.lineCode)}：前往 ${end.nameZh}`,
-              detail: `${intermediateStops ? `由 ${hop.from.nameZh} 經 ${intermediateStops} 個中途站前往 ${end.nameZh}` : `由 ${hop.from.nameZh} 直接前往 ${end.nameZh}`}。班次、車程及車站無障礙設施未有即時核實。`,
+              title: `乘搭${mtrLineName(hop.lineCode)}${
+                directionTerminus ? `，往${directionTerminus}方向` : ''
+              }`,
+              detail: `由${hop.from.nameZh}站上車，${
+                intermediateStops ? `經${intermediateStops}個中途站` : '下一站'
+              }於${end.nameZh}站下車。`,
               distanceM: 0,
               sceneId: mapRouteChoices.originSceneId,
             });
@@ -916,7 +934,11 @@ function LegacyApp() {
         if (r.payload.route_objective !== undefined) setObjective(r.payload.route_objective);
         if (r.payload.max_slope !== undefined) setMaxSlope(r.payload.max_slope);
         setProfile(
-          r.payload.mobility_type === 'manual_wheelchair' ? 'wheelchair' : r.payload.mobility_type,
+          r.payload.mobility_type === 'manual_wheelchair'
+            ? 'wheelchair'
+            : r.payload.mobility_type === 'other'
+              ? 'walking'
+              : r.payload.mobility_type,
         );
       } else if (r.agent === 'obstacle') {
         anchor();
@@ -1212,18 +1234,25 @@ function LegacyApp() {
           </Suspense>
         ) : (
           <>
-            <div className="map-only-levels" role="group" aria-label="選擇樓層">
-              {[...mapScene.manifest.levels].reverse().map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  aria-pressed={mapLevel === item.id}
-                  onClick={() => updateMapView('floor', item.id)}
+            {mapScene.manifest.levels.length > 0 && (
+              <label className="map-only-levels">
+                <select
+                  aria-label="選擇樓層"
+                  value={
+                    mapScene.manifest.levels.some((item) => item.id === mapLevel)
+                      ? mapLevel
+                      : mapScene.manifest.levels[0].id
+                  }
+                  onChange={(event) => updateMapView('floor', event.currentTarget.value)}
                 >
-                  {item.label}
-                </button>
-              ))}
-            </div>
+                  {[...mapScene.manifest.levels].reverse().map((item) => (
+                    <option key={item.id} value={item.id}>
+                      {item.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
             <FloorMap
               scene={mapScene}
               segments={mapLeg.segments}
@@ -1272,7 +1301,6 @@ function LegacyApp() {
           </a>
           <nav>
             {debugMode && <span className="demo-badge">離線案例演示</span>}
-            <a href={import.meta.env.BASE_URL}>返回旅程規劃</a>
           </nav>
         </header>
         <section
@@ -1449,19 +1477,6 @@ function LegacyApp() {
               }
             />
             放大按鈕
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              checked={accessibilitySettings.textOnly}
-              onChange={(event) =>
-                setAccessibilitySettings((settings) => ({
-                  ...settings,
-                  textOnly: event.target.checked,
-                }))
-              }
-            />
-            文字導航模式
           </label>
         </section>
       )}
@@ -1864,15 +1879,19 @@ function LegacyApp() {
                   <p className="small">
                     包含有蓋繞路、緩坡、樓梯及扶梯；補充通道屬演示設定。關閉後使用原始地圖。
                   </p>
-                  <label htmlFor="provider">資料模式</label>
-                  <select
-                    id="provider"
-                    value={provider}
-                    onChange={(e) => setProvider(e.target.value as 'static' | 'http')}
-                  >
-                    <option value="static">本地離線場景</option>
-                    <option value="http">本機後端 API</option>
-                  </select>
+                  {import.meta.env.VITE_ANDROID_APP !== 'true' && (
+                    <>
+                      <label htmlFor="provider">資料模式</label>
+                      <select
+                        id="provider"
+                        value={provider}
+                        onChange={(e) => setProvider(e.target.value as 'static' | 'http')}
+                      >
+                        <option value="static">本地離線場景</option>
+                        <option value="http">本機後端 API</option>
+                      </select>
+                    </>
+                  )}
                 </div>
               </aside>
             )}
@@ -2067,18 +2086,20 @@ function LegacyApp() {
                     <>
                       <div className="floor-selector">
                         <span>樓層</span>
-                        {[...scene.manifest.levels].reverse().map((l) => (
-                          <button
-                            key={l.id}
-                            className={level === l.id ? 'active' : ''}
-                            onClick={() => {
-                              setInspectLevel(l.id);
-                              setZoom(1);
-                            }}
-                          >
-                            {l.label}
-                          </button>
-                        ))}
+                        <select
+                          aria-label="選擇樓層"
+                          value={level}
+                          onChange={(event) => {
+                            setInspectLevel(event.currentTarget.value);
+                            setZoom(1);
+                          }}
+                        >
+                          {[...scene.manifest.levels].reverse().map((l) => (
+                            <option key={l.id} value={l.id}>
+                              {l.label}
+                            </option>
+                          ))}
+                        </select>
                       </div>
                       <div className="zoom-controls">
                         <button

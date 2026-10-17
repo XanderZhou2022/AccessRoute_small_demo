@@ -18,6 +18,7 @@ export const preferenceSchema = z
       'elderly',
       'stroller',
       'heavy_luggage',
+      'other',
     ]),
     avoid_stairs: z.boolean(),
     allow_escalators: z.boolean().optional(),

@@ -72,6 +72,22 @@ it('normalizes official HKO data and caches successful responses for five minute
   expect(requests).toHaveLength(6);
 });
 
+it('normalizes HKO warningMessage arrays as displayable text', async () => {
+  const fetcher: typeof fetch = async (input) => {
+    const url = String(input);
+    const body = url.includes('rhrread')
+      ? { ...current, warningMessage: ['Fire Danger Warning is in force.', 'Take care.'] }
+      : url.includes('fnd')
+        ? forecast
+        : {};
+    return new Response(JSON.stringify(body), { status: 200 });
+  };
+
+  const snapshot = await new HkoWeatherProvider(fetcher).getSnapshot();
+
+  expect(snapshot.warningMessage).toBe('Fire Danger Warning is in force. Take care.');
+});
+
 it('returns an explicitly stale snapshot when a refresh fails after cache expiry', async () => {
   let now = new Date('2026-10-13T01:00:00.000Z');
   let available = true;

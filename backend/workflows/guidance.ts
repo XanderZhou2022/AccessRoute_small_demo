@@ -51,7 +51,14 @@ export async function guidanceWorkflow(deps: WorkflowDependencies): Promise<Work
         { step: 'guidance-agent', summary: '轉為粵語短句' },
         {
           step: 'speech-provider',
-          summary: selection === 'text_only' ? '文字模式' : '交由瀏覽器粵語語音服務播報',
+          summary:
+            selection === 'text_only'
+              ? '文字模式'
+              : speech.speech.mode === 'canto_tts'
+                ? '交由電腦自架香港粵語語音合成'
+                : speech.speech.mode === 'azure'
+                  ? '交由 Azure 香港粵語神經語音播報'
+                  : '交由瀏覽器粵語語音服務播報',
         },
       ],
       message: '已生成目前路段的導航指引。',

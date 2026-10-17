@@ -25,6 +25,7 @@ const mobilityNames: Record<
   elderly: '長者',
   stroller: '嬰兒車',
   heavy_luggage: '重行李',
+  other: '其他（按具體需要規劃）',
 };
 const objectiveNames: Record<NonNullable<Preferences['route_objective']>, string> = {
   balanced: '平衡',
@@ -369,6 +370,9 @@ export function AgentWorkflows({
                 </li>
                 <li>語音偏好：{narrationNames[response.result.payload.tts_selection]}</li>
               </ul>
+              {response.speech?.voice_selection === 'single_default' && (
+                <p role="status">自架粵語語音目前只有一把預設聲線；男聲／女聲偏好不會改變聲音。</p>
+              )}
             </section>
           )}
           {response.candidates.length > 0 && (

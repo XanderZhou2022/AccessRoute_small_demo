@@ -4,7 +4,12 @@ import type { Preferences } from '../genai/contracts';
 export function applyRoutingPreferences(context: RoutingContext, p: Preferences): RoutingContext {
   return {
     ...context,
-    profile: p.mobility_type === 'manual_wheelchair' ? 'wheelchair' : p.mobility_type,
+    profile:
+      p.mobility_type === 'manual_wheelchair'
+        ? 'wheelchair'
+        : p.mobility_type === 'other'
+          ? 'walking'
+          : p.mobility_type,
     avoidStairs: p.avoid_stairs,
     allowStairs: !p.avoid_stairs,
     allowEscalators: p.allow_escalators ?? !p.avoid_stairs,

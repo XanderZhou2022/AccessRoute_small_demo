@@ -38,20 +38,56 @@ export const preferenceRequestSchema = z.object({
   context: workflowContextSchema,
   text: z.string().trim().min(1).max(4000),
 });
-export const locationResolutionRequestSchema = z.object({
-  transcript: z.string().trim().min(1).max(1000),
-  locations: z
-    .array(
-      z
-        .object({
-          id: z.string().regex(/^[a-z0-9-]+$/),
-          name: z.string().trim().min(1).max(200),
-        })
-        .strict(),
-    )
-    .min(2)
-    .max(50),
-});
+export const locationResolutionRequestSchema = z
+  .object({
+    transcript: z.string().trim().min(1).max(1000),
+    locations: z
+      .array(
+        z
+          .object({
+            id: z.string().regex(/^[a-z0-9-]+$/),
+            name: z.string().trim().min(1).max(200),
+          })
+          .strict(),
+      )
+      .min(2)
+      .max(50),
+    current_origin_id: z
+      .string()
+      .regex(/^[a-z0-9-]+$/)
+      .optional(),
+    current_destination_id: z
+      .string()
+      .regex(/^[a-z0-9-]+$/)
+      .optional(),
+  })
+  .superRefine((request, context) => {
+    const currentOriginId = request.current_origin_id;
+    const currentDestinationId = request.current_destination_id;
+    const hasCurrentOrigin = Boolean(currentOriginId);
+    const hasCurrentDestination = Boolean(currentDestinationId);
+    if (hasCurrentOrigin !== hasCurrentDestination) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Current origin and destination must be supplied together',
+      });
+      return;
+    }
+    if (!hasCurrentOrigin) return;
+    const ids = new Set(request.locations.map((location) => location.id));
+    if (
+      !currentOriginId ||
+      !currentDestinationId ||
+      !ids.has(currentOriginId) ||
+      !ids.has(currentDestinationId) ||
+      currentOriginId === currentDestinationId
+    ) {
+      context.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: 'Current trip must use two different supplied locations',
+      });
+    }
+  });
 export type LocationResolutionRequest = z.infer<typeof locationResolutionRequestSchema>;
 export const photoRequestSchema = z.object({
   context: workflowContextSchema,
@@ -92,10 +128,16 @@ export type RankedCandidate = MapCandidate & {
 };
 export type WorkflowTrace = { step: string; summary: string };
 export type SpeechPlan = {
-  mode: 'browser';
+  mode: 'browser' | 'azure' | 'canto_tts';
   language: 'zh-HK';
   selection: 'cantonese_female' | 'cantonese_male' | 'text_only';
+  voice_selection?: 'single_default';
 };
+export const speechRequestSchema = z.object({
+  text: z.string().trim().min(1).max(2000),
+  selection: z.enum(['cantonese_female', 'cantonese_male']).default('cantonese_female'),
+});
+export type SpeechRequest = z.infer<typeof speechRequestSchema>;
 export type WorkflowResponse = {
   workflow: AgentResult['agent'];
   status: 'ready' | 'needs_confirmation' | 'no_match';

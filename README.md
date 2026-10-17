@@ -4,6 +4,22 @@
 
 **線上演示：[開啟 AccessRoute HK](https://xanderzhou2022.github.io/AccessRoute_small_demo/)**
 
+### Android 手機安裝
+
+AccessRoute 可從 Android Chrome 安裝成主畫面上的網頁應用程式：部署更新後，以 Chrome 開啟上方演示網址，從瀏覽器選單選「安裝應用程式」或「加到主畫面」。已載入的靜態頁面和資料可供離線重開；即時天氣、尚未載入的資料和後端 AI 功能仍需要網絡／後端。這是導航演示，不提供實地室內定位。詳見[前端 Android 安裝說明](frontend/README.md#android-安裝)。
+
+另有獨立 Android APK 專案：[Android app 說明](android-app/README.md)。核心路線計算、地圖和場景資料會打包在手機；Qwen AI、香港天文台即時天氣及地圖示範的配對行程需要連接公開 HTTPS 後端。現有演示後端尚未加上公開服務所需的鑑權與限流，請先按說明部署並保護後端。
+
+## 更新版產品手冊（2026-10-14）
+
+兩份新版手冊均包含界面圖片、相對舊版的變更摘要，以及舊手冊各項功能在目前程式中的可用狀態：
+
+- [English PDF](docs/product-manual-v2.en.pdf) · [繁體中文 PDF](docs/product-manual-v2.zh-Hant.pdf)
+- 可編輯網頁：[English](docs/product-manual-v2.en.html) · [繁體中文](docs/product-manual-v2.zh-Hant.html)
+- [最新功能現況與後續驗收計劃（繁體中文）](docs/acceptance.md)
+
+在 macOS 上可用 WebKit 重新匯出 PDF：`swiftc -parse-as-library scripts/export-product-manuals.swift -o /tmp/export-product-manuals && /tmp/export-product-manuals docs`。
+
 ## 12 地點資料擴充（2026-10-04）
 
 已註冊 12 個可選場景、132 個有方向起終點配對，包含又一城—九龍塘站天橋、長者服務設施、政府合署和街市。11 個場景有官方單元平面；又一城使用官方分層路網中心線。醫院完整室內圖仍待補充，候補資料已保存。
@@ -23,6 +39,17 @@ npm run dev
 ```
 
 開啟 **http://127.0.0.1:5173/**，預設進入地圖卡片式旅程流程（地點 → 出行設定 → 路線 → 導航／協助）；前端 5173，後端 8787，兩者只監聽本機。亦可直接開啟 **http://127.0.0.1:5173/map-demo/index.html**。原桌面規劃工作台可由 **http://127.0.0.1:5173/?legacy=1** 開啟，`?demo=1` 離線故事入口和 `?mapOnly=1` 純地圖模式亦保留。可雙擊 `啟動演示.command`。如端口已被本項目佔用，直接打開網址即可。
+
+### 用 Android 手機連接本機電腦
+
+手機不需安裝或執行伺服器；電腦可在可信任的私人 Wi-Fi 網絡上提供頁面：
+
+1. 電腦和手機連接同一個 Wi-Fi。
+2. 在電腦專案目錄執行 `npm run dev:lan`，並保持終端開啟。
+3. 在電腦查出私人網絡 IPv4 位址（macOS：系統設定 → Wi-Fi → 詳細資訊 → TCP/IP；Windows：執行 `ipconfig`）。
+4. 在 Android Chrome 開啟 `http://<電腦IPv4>:5173/map-demo/index.html`，例如 `http://192.168.1.23:5173/map-demo/index.html`。若要開啟主介面，移除 `/map-demo/index.html`。
+
+若無法連線，允許 Node.js／TCP 5173 通過電腦防火牆，確認兩台裝置在同一個非訪客 Wi-Fi，並檢查路由器沒有啟用用戶端隔離。使用完畢按 Ctrl+C。此 LAN 開發網址使用 HTTP：瀏覽器不會啟用需安全 HTTPS 的 PWA 離線安裝、GPS 定位等能力；要安裝 PWA 請用已部署的 HTTPS 網址。只在可信任私人網絡使用，不要在路由器設定公開端口轉發。
 
 新電腦需 Node.js 22.12+（建議 Node 22 LTS）：
 
@@ -83,7 +110,7 @@ docs/                  架構、API 發現、選址、可視化選擇、驗收�
 - [架構與匹配算法](docs/genai-architecture.md)、[HTTP 接入操作手冊](docs/genai-integration.md)。
 - `backend/api/` 為 HTTP 路由，`backend/providers/` 為模型與語音接口，`backend/agents/` 為單一角色，`backend/workflows/` 為流程組合，`backend/retrieval/` 為地圖檢索。
 - `data/landmarks/` 可補充已核對的店名和外觀；官方資料不足時不生成虛構店鋪。
-- 粵語播報使用裝置語音；語音適配器與指引生成分開。Python 程式已改為同一套後端的 HTTP 客戶端。
+- Android APK 使用裝置原生 `yue-HK` 語音；建議在 Android 設定選用 Google Speech Services 並安裝香港粵語語音資料。網頁可使用 `yue-HK` 瀏覽器語音、Azure Speech，或在電腦自架 `canto-tts` 香港粵語語音服務；自架模型只有一把預設聲線。詳見 [自架語音設定](docs/genai-integration.md#自架香港粵語-tts)及 [Android 語音與 APK 設定](android-app/README.md)。Python 程式已改為同一套後端的 HTTP 客戶端。
 - 原有 JSON 聯調面板、1.0 結果契約和 `/api/genai/validate` 保持相容。
 
 ## 已實現

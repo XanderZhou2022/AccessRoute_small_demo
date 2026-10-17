@@ -195,6 +195,28 @@ describe('capabilities and multiple routing objectives', () => {
       minWidthM: 1.2,
     });
   });
+  it('uses a walking baseline for other mobility needs while preserving explicit constraints', () => {
+    const parsed = applyRoutingPreferences(ctx, {
+      mobility_type: 'other',
+      avoid_stairs: true,
+      avoid_steep_slopes: true,
+      prefer_covered_shelter: true,
+      tts_selection: 'cantonese_female',
+      allow_escalators: false,
+      avoid_lifts: true,
+      max_slope: 0.05,
+    });
+    expect(parsed).toMatchObject({
+      profile: 'walking',
+      avoidStairs: true,
+      allowStairs: false,
+      allowEscalators: false,
+      avoidSteepSlopes: true,
+      preferCoveredShelter: true,
+      avoidLifts: true,
+      maxSlope: 0.05,
+    });
+  });
   it('indexes and closes a ramp facility even when its endpoints are shared with a lift', () => {
     const overlay = overlays.find((o) => o.scene_id === 'hysan-place')!;
     const s = applyDemoOverlay(scene('hysan-place'), overlay);

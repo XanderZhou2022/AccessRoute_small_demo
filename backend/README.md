@@ -10,6 +10,8 @@ npm run dev
 
 預設 `127.0.0.1:8787`。`HOST`、`PORT`、`EVENT_FILE`、`ALLOW_EVENT_WRITES` 由環境變數提供；`.env.example` 是模板，不會自動載入。
 
+Capacitor Android builds load scene data and route locally, and call this API for Qwen workflows and HKO weather. Set `ACCESSROUTE_CORS_ORIGINS=https://localhost` for the Android WebView origin. CORS only controls browser access; it is not authentication. Do not expose this demo backend publicly without authentication and rate limiting.
+
 | 方法 | 路徑                                          | 用途                                                                                                  |
 | ---- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | GET  | `/api/health`                                 | 健康狀態、版本、事件寫入狀態                                                                          |
@@ -82,3 +84,22 @@ GitHub Pages 只提供靜態前端，沒有 Express API 或平台座標標頭；
 四套 workflow 位於 `backend/workflows/`，HTTP 路由位於 `backend/api/genai.ts`，模型 transport 位於 `backend/providers/qwen.ts`。地圖 HTTP 路由位於 `backend/api/map.ts`，場景與事件讀寫位於 `backend/repositories/`。`app.ts` 只組裝依賴與中介層。
 
 詳見 [GenAI API 手冊](../docs/genai-integration.md)和 [架構](../docs/genai-architecture.md)。`createApp({model, speech, landmarkRoot})` 可注入測試或其他供應商適配器。
+
+### Azure 粵語語音
+
+設定後端環境變數 `AZURE_SPEECH_KEY` 和 `AZURE_SPEECH_REGION` 後，導航播報會使用 Azure Speech 的香港粵語神經語音；金鑰只存於後端。未設定時會使用裝置／瀏覽器語音。`POST /api/genai/speech` 只接受待朗讀文字及聲線選擇，回傳 MP3 音訊。
+
+### 自架香港粵語語音
+
+可用 `canto-tts` 在運行 AccessRoute 的電腦上本機合成粵語 WAV，不需要 TTS API key。需使用 Python 3.10 或以上；首次啟動會從 Hugging Face 下載模型權重：
+
+```bash
+python3 -m venv .venv-tts
+source .venv-tts/bin/activate
+python -m pip install -r services/requirements-tts.txt
+npm run dev:canto-tts
+```
+
+在 `.env` 設定 `CANTO_TTS_URL=http://127.0.0.1:8000/synthesize`，再啟動／重啟 AccessRoute 後端。Node 後端會代理音訊給手機；TTS 服務只綁定 `127.0.0.1`，手機不需要也不應直接連接 8000 port。若同時設定 Azure，`CANTO_TTS_URL` 優先。
+
+此模型目前只有一把預設聲線，所以男聲／女聲偏好不會改變聲音。沒有配置 `CANTO_TTS_URL` 時仍沿用 Azure 或瀏覽器語音。自架服務失敗會明確回報錯誤，不會偷偷切換成其他語言。

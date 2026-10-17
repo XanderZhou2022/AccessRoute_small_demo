@@ -8,6 +8,7 @@ export type MtrHop = {
   from: MtrStation;
   to: MtrStation;
   lineCode: string;
+  directionTerminus?: MtrStation;
 };
 
 export type MtrRoute = {
@@ -131,10 +132,16 @@ export function findMtrRoute(csv: string, fromName: string, toName: string): Mtr
   }
   for (const group of directionGroups.values()) {
     group.sort((a, b) => a.sequence - b.sequence);
+    const directionTerminus = stationByCode.get(group[group.length - 1].code)!;
     for (let i = 1; i < group.length; i += 1) {
       const fromStation = stationByCode.get(group[i - 1].code)!;
       const toStation = stationByCode.get(group[i].code)!;
-      addHop({ from: fromStation, to: toStation, lineCode: group[i].lineCode });
+      addHop({
+        from: fromStation,
+        to: toStation,
+        lineCode: group[i].lineCode,
+        directionTerminus,
+      });
     }
   }
   for (const codes of stationCodesById.values()) {

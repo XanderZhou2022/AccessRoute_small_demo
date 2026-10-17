@@ -217,12 +217,6 @@ button {
   height: 20px;
   accent-color: var(--teal);
 }
-.accessibility-text-only .map-canvas {
-  display: none;
-}
-.accessibility-text-only .map-panel {
-  background: #fff;
-}
 .accessibility-large-text {
   font-size: 112.5%;
 }
@@ -796,9 +790,10 @@ button {
 }
 .map-only-levels {
   top: calc(max(12px, env(safe-area-inset-top)) + 110px);
+  max-width: min(240px, calc(100% - 80px));
 }
 .map-only-toolbar button,
-.map-only-levels button {
+.map-only-levels select {
   min-height: 44px;
   padding: 8px 12px;
   border: 1px solid #c7d5d5;
@@ -809,16 +804,18 @@ button {
   font: inherit;
   font-weight: 650;
 }
-.map-only-toolbar button[aria-pressed='true'],
-.map-only-levels button[aria-pressed='true'] {
+.map-only-toolbar button[aria-pressed='true'] {
   border-color: #075b58;
   background: #e7f3ee;
   color: #0e4843;
 }
 .map-only-toolbar button:focus-visible,
-.map-only-levels button:focus-visible {
+.map-only-levels select:focus-visible {
   outline: 3px solid #135fce;
   outline-offset: 3px;
+}
+.map-only-levels select {
+  width: min(240px, calc(100vw - 100px));
 }
 .map-only-caption {
   position: absolute;
@@ -917,17 +914,16 @@ button {
   color: #53686e;
   margin: 3px 0 6px;
 }
-.floor-selector button {
+.floor-selector select {
   font-size: 12px;
   background: white;
   color: #53686e;
-  padding: 10px;
+  padding: 8px 24px 8px 9px;
+  min-height: 44px;
+  max-width: min(190px, 42vw);
   border-radius: 5px;
-  min-width: 42px;
-}
-.floor-selector button.active {
-  background: #e7f5ef;
-  color: #097c76;
+  border: 1px solid #d8e3e5;
+  font-family: inherit;
   font-weight: 650;
 }
 .zoom-controls {
@@ -1694,7 +1690,7 @@ button {
 .facility-row > span,
 .route-summary span,
 .view-tabs button,
-.floor-selector button,
+.floor-selector select,
 .journey-stop strong,
 .text-button,
 .facility-row button {
@@ -1787,7 +1783,7 @@ button {
 .floor-selector > span {
   font-size: 0.75rem;
 }
-.floor-selector button {
+.floor-selector select {
   min-height: 40px;
 }
 .zoom-controls button {
@@ -2185,7 +2181,7 @@ select,
 .profile,
 .facility-row button,
 .route-step,
-.floor-selector button,
+.floor-selector select,
 .zoom-controls button {
   min-height: 44px;
 }

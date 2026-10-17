@@ -13,6 +13,7 @@ import { QwenProvider } from '../../backend/providers/qwen';
 import type { ModelProvider, ModelRequest } from '../../backend/providers/model';
 import type { WorkflowContext, LandmarkRecord } from '../../shared/genai/workflows';
 import { photoInputSchema } from '../../shared/genai/workflows';
+import { preferenceSchema } from '../../shared/genai/contracts';
 import type { Observation } from '../../backend/agents/vision';
 const s = scene('hysan-place');
 const start = s.graph.nodes.find((n) => n.id === s.manifest.defaultStart)!;
@@ -43,20 +44,25 @@ const preferences = {
   prefer_covered_shelter: true,
   tts_selection: 'cantonese_female',
 };
+it('accepts an other mobility type for needs that do not match a preset', () => {
+  expect(preferenceSchema.parse({ ...preferences, mobility_type: 'other' })).toMatchObject({
+    mobility_type: 'other',
+  });
+});
 class FixtureModel implements ModelProvider {
   calls: ModelRequest[] = [];
   observation: Observation = visual;
   barrier = { has_obstacle: true, type: 'broken_lift', evidence: '維修中', confidence: 0.94 };
+  locationResponse: unknown = {
+    status: 'ready',
+    origin_id: 'hysan-place',
+    destination_id: 'popcorn-2',
+    message: '已辨認出發地和目的地。',
+  };
   async json(input: ModelRequest): Promise<unknown> {
     this.calls.push(input);
     if (input.task === 'preferences') return preferences;
-    if (input.task === 'location-resolution')
-      return {
-        status: 'ready',
-        origin_id: 'hysan-place',
-        destination_id: 'popcorn-2',
-        message: '已辨認出發地和目的地。',
-      };
+    if (input.task === 'location-resolution') return this.locationResponse;
     if (input.task === 'localization-observation') return this.observation;
     if (input.task === 'obstacle-observation')
       return { ...this.observation, barrier: this.barrier };
@@ -148,6 +154,42 @@ describe('four map-grounded workflows', () => {
           { id: 'hysan-place', name: '希慎廣場' },
           { id: 'popcorn-2', name: 'PopCorn 2' },
         ],
+      },
+    });
+  });
+  it('keeps the current origin when voice input only names a new destination', async () => {
+    model.locationResponse = {
+      status: 'ready',
+      destination_id: 'kowloon-city-market',
+      message: '已辨認目的地。',
+    };
+    const app = createApp({ model });
+    const response = await request(app)
+      .post('/api/genai/location-resolution')
+      .send({
+        transcript: '我想去九龍城，輪椅要避開樓梯',
+        current_origin_id: 'hysan-place',
+        current_destination_id: 'popcorn-2',
+        locations: [
+          { id: 'hysan-place', name: '希慎廣場' },
+          { id: 'popcorn-2', name: 'PopCorn 2' },
+          { id: 'kowloon-city-market', name: '九龍城市政大廈' },
+        ],
+      })
+      .expect(200);
+    expect(response.body).toEqual({
+      status: 'ready',
+      origin_id: 'hysan-place',
+      destination_id: 'kowloon-city-market',
+      message: '已辨認目的地。',
+    });
+    expect(model.calls.at(-1)).toMatchObject({
+      task: 'location-resolution',
+      input: {
+        current_trip: {
+          origin_id: 'hysan-place',
+          destination_id: 'popcorn-2',
+        },
       },
     });
   });

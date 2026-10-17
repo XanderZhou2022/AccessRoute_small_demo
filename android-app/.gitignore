@@ -1,0 +1,7 @@
+android/.gradle/
+android/.idea/
+android/app/build/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/public/
+android/build/
+android/local.properties
