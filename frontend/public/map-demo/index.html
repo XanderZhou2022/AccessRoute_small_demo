@@ -220,7 +220,7 @@
               ></textarea>
             </label>
             <p class="service-note">
-              只說目的地會保留目前出發地；辨認不到的地點可用頁面上方的搜尋按鈕選擇。
+              只說目的地會沿用出發地；地點不明可用上方搜尋。
             </p>
             <div class="voice-input-actions">
               <button class="secondary-action" type="button" data-voice-start>
@@ -228,7 +228,7 @@
               </button>
             </div>
             <p class="inline-status" data-voice-status role="status" aria-live="polite">
-              可一次描述目的地和出行偏好；停頓後會自動辨認地點並分析偏好。
+              說出目的地和需要，停頓後自動分析。
             </p>
           </section>
           <details class="option-group weather-options" data-weather-debug hidden>
@@ -306,18 +306,18 @@
                 語音輸入故障線索
               </button>
               <p class="inline-status" data-report-voice-status role="status" aria-live="polite">
-                可選：按下按鈕以語音轉文字描述設施問題。
+                可用語音輸入。
               </p>
               <img class="help-photo-preview" data-report-preview alt="待辨識的設施照片" hidden />
               <label class="consent-label">
                 <input type="checkbox" data-report-consent />
-                我同意將照片和 GPS 位置傳送至已設定的 AI 辨識服務，以確認附近故障設施。
+                同意將照片和 GPS 位置傳送至 AI 服務，以辨識附近故障設施。
               </label>
               <button class="secondary-action" type="button" data-report-location>
                 分享目前 GPS 位置
               </button>
               <p class="inline-status" data-report-location-status aria-live="polite">
-                尚未取得位置；按鈕會向瀏覽器要求定位權限。
+                尚未分享位置。
               </p>
               <button class="primary-action" type="submit" data-report-submit disabled>
                 以照片和 GPS 辨識
@@ -364,17 +364,17 @@
                 role="status"
                 aria-live="polite"
               >
-                可選：按下按鈕以語音轉文字描述地標。
+                可用語音輸入。
               </p>
               <label class="consent-label">
                 <input type="checkbox" data-localization-consent />
-                我同意將照片、已取得的 GPS 位置及上述線索（如有）傳送至已設定的 AI 辨識服務。
+                同意將照片、GPS 位置和線索傳送至 AI 服務，以辨識位置。
               </label>
               <button class="secondary-action" type="button" data-localization-location>
                 分享目前 GPS 位置（可選）
               </button>
               <p class="inline-status" data-localization-location-status aria-live="polite">
-                GPS 非必須；可先用照片和地標線索定位。
+                GPS 可略過；也可用照片和地標定位。
               </p>
               <button class="primary-action" type="submit" data-localization-submit disabled>
                 以照片定位
@@ -383,7 +383,7 @@
             </form>
           </details>
           <p class="inline-status" data-status role="status" aria-live="polite" aria-atomic="true">
-            照片、GPS 和線索只會在同意並提交後傳送；GPS 需要瀏覽器授權。
+            同意並提交後才會傳送資料；使用 GPS 須授權。
           </p>
         </section>
       </dialog>

@@ -138,7 +138,6 @@
               <option value="any">可接受較陡斜坡（最高 12%）</option>
             </select>
           </label>
-          <p class="service-note">坡度上限：平坦或緩坡 5%、一般斜坡 8.33%、較陡斜坡 12%。</p>
           <label class="field-label" for="pace">
             預計步行速度
             <select id="pace" name="pace">
@@ -149,9 +148,11 @@
               <option value="1.2">較快（1.2 米／秒）</option>
             </select>
           </label>
-          <p class="service-note">
-            此速度用於估算步行時間及調整指引分段，不代表系統正在追蹤你的即時速度。
-          </p>
+          <details class="option-group">
+            <summary class="secondary-action">了解坡度和步速設定</summary>
+            <p class="service-note">坡度上限：緩坡 5%、一般斜坡 8.33%、較陡斜坡 12%。</p>
+            <p class="service-note">步速只用於估算時間和分段，不會追蹤即時速度。</p>
+          </details>
           <fieldset class="preference-group">
             <legend>導航方式</legend>
             <label><input type="checkbox" name="mode" value="text" checked /> 顯示文字指示</label>

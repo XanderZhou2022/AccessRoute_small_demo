@@ -1086,7 +1086,7 @@ function initializePlan() {
     if (!speechActive && voiceStatus)
       voiceStatus.textContent = voiceNeeds.value.trim()
         ? '輸入停止 1.5 秒後會自動辨認地點並分析偏好。'
-        : '可一次描述目的地和出行偏好；停頓後會自動分析，也可按「開始語音輸入」。';
+        : '說出目的地和需要，停頓後自動分析。';
     if (!speechActive) scheduleAnalysis();
   });
   bindSpeechToTextarea({
@@ -1247,7 +1247,7 @@ function initializeRoutes() {
       }
       if (!route) {
         if (distance) distance.textContent = '正在計算';
-        if (description) description.textContent = '根據目前出行需要計算路線';
+        if (description) description.textContent = '';
         button.disabled = false;
         continue;
       }
@@ -1304,7 +1304,7 @@ function initializeRoutes() {
             ? '室內優先路線'
             : '有蓋路線';
       const minutes = Math.max(1, Math.round(result.durationS / 60));
-      summary.textContent = `已選${label} · 首末段步行 ${Math.round(result.distanceM)} 米 · 約 ${minutes} 分鐘；不含列車車程`;
+      summary.textContent = `${label} · 首末段步行 ${Math.round(result.distanceM)} 米 · 約 ${minutes} 分鐘（未計列車車程）`;
     }
   };
   const onRouteResult = (event) => {
@@ -1591,7 +1591,7 @@ function initializeNavigation() {
     utterance.voice =
       cantoneseVoices.find((voice) => /^yue-HK$/i.test(voice.lang)) || cantoneseVoices[0];
     activeBrowserUtterance = utterance;
-    if (narrationStatus) narrationStatus.textContent = '正在以香港粵語朗讀。';
+    if (narrationStatus) narrationStatus.textContent = '正在朗讀。';
     utterance.onend = () => {
       if (activeBrowserUtterance !== utterance) return;
       activeBrowserUtterance = null;
