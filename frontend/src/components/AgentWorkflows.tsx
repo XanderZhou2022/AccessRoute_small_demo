@@ -15,10 +15,7 @@ const labels = {
   localization: '拍照找位置',
   guidance: '語音導航',
 };
-const mobilityNames: Record<
-  Preferences['mobility_type'],
-  string
-> = {
+const mobilityNames: Record<Preferences['mobility_type'], string> = {
   walking: '步行',
   wheelchair: '輪椅',
   manual_wheelchair: '手動輪椅',
@@ -250,21 +247,21 @@ export function AgentWorkflows({
             <>
               <img className="agent-photo" src={photo.image} alt="待識別照片" />
               <label>
-              地標或故障線索（可選）
-              <textarea
-                rows={2}
-                maxLength={1000}
-                value={photoDescription}
-                disabled={busy}
-                onChange={(e) => {
-                  setPhotoDescription(e.target.value);
-                  setPhotoConsent(false);
-                  setResponse(null);
-                  setApplied(false);
-                }}
-              />
-            </label>
-            <label>
+                地標或故障線索（可選）
+                <textarea
+                  rows={2}
+                  maxLength={1000}
+                  value={photoDescription}
+                  disabled={busy}
+                  onChange={(e) => {
+                    setPhotoDescription(e.target.value);
+                    setPhotoConsent(false);
+                    setResponse(null);
+                    setApplied(false);
+                  }}
+                />
+              </label>
+              <label>
                 已知樓層
                 <select
                   value={photo.level_id || ''}
@@ -298,7 +295,8 @@ export function AgentWorkflows({
                   disabled={busy}
                   onChange={(e) => setPhotoConsent(e.target.checked)}
                 />
-                我同意將此照片、可選 GPS 位置及線索傳送至已設定的 AI 辨識服務。修改照片、線索或 GPS 後需重新同意。
+                我同意將此照片、可選 GPS 位置及線索傳送至已設定的 AI 辨識服務。修改照片、線索或 GPS
+                後需重新同意。
               </label>
             </>
           )}
@@ -362,17 +360,14 @@ export function AgentWorkflows({
                     ? '未指定'
                     : `${response.result.payload.min_width_m} 米`}
                 </li>
-                <li>
-                  避開陡坡：{response.result.payload.avoid_steep_slopes ? '是' : '否'}
-                </li>
+                <li>避開陡坡：{response.result.payload.avoid_steep_slopes ? '是' : '否'}</li>
                 <li>
                   偏好有蓋通道：{response.result.payload.prefer_covered_shelter ? '是' : '否'}
                 </li>
-                <li>語音偏好：{narrationNames[response.result.payload.tts_selection]}</li>
+                {response.speech?.voice_selection !== 'single_default' && (
+                  <li>語音偏好：{narrationNames[response.result.payload.tts_selection]}</li>
+                )}
               </ul>
-              {response.speech?.voice_selection === 'single_default' && (
-                <p role="status">自架粵語語音目前只有一把預設聲線；男聲／女聲偏好不會改變聲音。</p>
-              )}
             </section>
           )}
           {response.candidates.length > 0 && (
@@ -414,11 +409,11 @@ export function AgentWorkflows({
                   ? '已套用'
                   : response.result.agent === 'preferences'
                     ? '確認並套用出行要求'
-                  : response.result.agent === 'guidance'
-                    ? response.speech?.selection === 'text_only'
-                      ? '套用指引'
-                      : '套用並播報'
-                    : '套用到導航'}
+                    : response.result.agent === 'guidance'
+                      ? response.speech?.selection === 'text_only'
+                        ? '套用指引'
+                        : '套用並播報'
+                      : '套用到導航'}
               </button>
               {applied &&
                 response.speech &&

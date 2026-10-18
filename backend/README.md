@@ -87,7 +87,7 @@ GitHub Pages 只提供靜態前端，沒有 Express API 或平台座標標頭；
 
 ### Azure 粵語語音
 
-設定後端環境變數 `AZURE_SPEECH_KEY` 和 `AZURE_SPEECH_REGION` 後，導航播報會使用 Azure Speech 的香港粵語神經語音；金鑰只存於後端。未設定時會使用裝置／瀏覽器語音。`POST /api/genai/speech` 只接受待朗讀文字及聲線選擇，回傳 MP3 音訊。
+設定後端環境變數 `AZURE_SPEECH_KEY` 和 `AZURE_SPEECH_REGION` 後，可明確選用 Azure Speech 的香港粵語神經語音；金鑰只存於後端。預設使用本機 `canto-tts`，未提供 Azure 金鑰時不會退回裝置／瀏覽器語音。`POST /api/genai/speech` 只接受待朗讀文字及聲線選擇，回傳 MP3 或 WAV 音訊。
 
 ### 自架香港粵語語音
 
@@ -100,6 +100,6 @@ python -m pip install -r services/requirements-tts.txt
 npm run dev:canto-tts
 ```
 
-在 `.env` 設定 `CANTO_TTS_URL=http://127.0.0.1:8000/synthesize`，再啟動／重啟 AccessRoute 後端。Node 後端會代理音訊給手機；TTS 服務只綁定 `127.0.0.1`，手機不需要也不應直接連接 8000 port。若同時設定 Azure，`CANTO_TTS_URL` 優先。
+預設 TTS 位址為 `http://127.0.0.1:8000/synthesize`，只需啟動上方服務再啟動／重啟 AccessRoute 後端，不必設定 `CANTO_TTS_URL`。Node 後端會代理音訊給手機；TTS 服務只綁定 `127.0.0.1`，手機不需要也不應直接連接 8000 port。只有位址不同時才設定 `CANTO_TTS_URL`；明確設定的位址優先於 Azure。
 
-此模型目前只有一把預設聲線，所以男聲／女聲偏好不會改變聲音。沒有配置 `CANTO_TTS_URL` 時仍沿用 Azure 或瀏覽器語音。自架服務失敗會明確回報錯誤，不會偷偷切換成其他語言。
+此模型目前只有一把預設聲線，所以男聲／女聲偏好不會改變聲音。未設定 Azure 時，此自架服務是預設語音供應商；服務失敗會明確回報錯誤，不會偷偷切換成其他語言。要改用 Azure，需設定 `AZURE_SPEECH_KEY` 和 `AZURE_SPEECH_REGION`。

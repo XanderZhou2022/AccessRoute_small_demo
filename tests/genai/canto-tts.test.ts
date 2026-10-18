@@ -50,3 +50,23 @@ it('uses the configured self-hosted service and rejects non-local insecure URLs'
   vi.stubEnv('CANTO_TTS_URL', 'http://tts.example/synthesize');
   expect(() => configuredSpeechProvider()).toThrow('CANTO_TTS_URL must use HTTPS');
 });
+
+it('defaults to local Cantonese TTS when no speech provider is configured', async () => {
+  vi.stubEnv('CANTO_TTS_URL', '');
+  vi.stubEnv('AZURE_SPEECH_KEY', '');
+  vi.stubEnv('AZURE_SPEECH_REGION', '');
+
+  const provider = configuredSpeechProvider();
+  expect(provider).toBeInstanceOf(SelfHostedCantoneseSpeechProvider);
+  await expect(provider.prepare('請慢慢行', 'cantonese_female')).resolves.toMatchObject({
+    speech: { mode: 'canto_tts', voice_selection: 'single_default' },
+  });
+});
+
+it('uses Azure when explicitly configured and no self-hosted endpoint is set', () => {
+  vi.stubEnv('CANTO_TTS_URL', '');
+  vi.stubEnv('AZURE_SPEECH_KEY', 'test-key');
+  vi.stubEnv('AZURE_SPEECH_REGION', 'eastasia');
+
+  expect(configuredSpeechProvider().mode).toBe('azure');
+});

@@ -920,6 +920,11 @@ body[data-screen='navigation'] .route-submit-dock::before {
   padding: 0;
   background: transparent;
 }
+.inline-status.help-error {
+  background: #fdeceb;
+  color: #8a1f17 !important;
+  border: 1px solid #e3a8a3;
+}
 .service-note {
   font-size: 0.77rem;
 }

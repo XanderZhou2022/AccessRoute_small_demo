@@ -10,7 +10,7 @@
 DASHSCOPE_API_KEY=填入你的金鑰
 QWEN_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1
 QWEN_TEXT_MODEL=qwen-plus
-QWEN_VISION_MODEL=qwen-vl-max
+QWEN_VISION_MODEL=qwen3-vl-plus
 ```
 
 ```bash
@@ -33,9 +33,9 @@ python -m pip install -r services/requirements-tts.txt
 npm run dev:canto-tts
 ```
 
-首次啟動需連接網路下載模型權重；之後會使用本機快取。於專案根目錄 `.env` 加入 `CANTO_TTS_URL=http://127.0.0.1:8000/synthesize`，並在另一個終端執行／重啟 `npm run dev` 或 `npm start`。瀏覽器和手機仍只呼叫 AccessRoute 的 `/api/genai/speech`；Node 後端代為連接本機 TTS，8000 port 不需向手機或 LAN 開放。
+首次啟動需連接網路下載模型權重；之後會使用本機快取。安裝一次 `.venv-tts` 後，`npm run dev` 會一併啟動網頁、後端和本機粵語 TTS（8000 port 已被佔用、或已設定 `CANTO_TTS_URL`／Azure 時不會重複啟動）；`npm run dev:canto-tts` 仍可單獨啟動 TTS。預設語音供應商已是 `http://127.0.0.1:8000/synthesize`，一般情況不需設定 `CANTO_TTS_URL`；如服務位址不同，才在專案根目錄 `.env` 設定該變數。瀏覽器和手機仍只呼叫 AccessRoute 的 `/api/genai/speech`；Node 後端代為連接本機 TTS，8000 port 不需向手機或 LAN 開放。
 
-`canto-tts` 目前只有一把預設聲線，故男聲／女聲偏好不會改變實際聲音；導航頁會顯示此限制。若未設定 `CANTO_TTS_URL`，既有 Azure／瀏覽器語音選擇不變；如果自架服務已選中但無法連線，系統會報錯，不會自動改用英文語音。`CANTO_TTS_URL` 使用 loopback HTTP 或 HTTPS；若同時設定 Azure，自架服務優先。
+`canto-tts` 目前只有一把預設聲線，故男聲／女聲偏好不會改變實際聲音；介面不會顯示此限制。若本機服務未啟動或不可用，播報會明確報錯，不會改用瀏覽器的其他語言。設定 `AZURE_SPEECH_KEY` 和 `AZURE_SPEECH_REGION` 可明確改用 Azure；明確設定的 `CANTO_TTS_URL` 優先於 Azure。`CANTO_TTS_URL` 使用 loopback HTTP 或 HTTPS。Android 只有在語音計畫選用瀏覽器語音時才使用裝置 TTS；預設自架語音和 Azure 會透過 AccessRoute 後端播報。
 
 目前 Qwen provider 使用相容的 chat completions 和 JSON mode。[Qwen 官方結構化輸出文件](https://www.alibabacloud.com/help/en/model-studio/qwen-structured-output)列出可用模型與 JSON mode 要求；模型名稱和區域端點可用環境變數設定。
 
@@ -75,7 +75,7 @@ Keep the Qwen key in the backend-only `.env` file:
 DASHSCOPE_API_KEY=...
 QWEN_BASE_URL=https://dashscope-intl.aliyuncs.com/compatible-mode/v1
 QWEN_TEXT_MODEL=qwen-plus
-QWEN_VISION_MODEL=qwen-vl-max
+QWEN_VISION_MODEL=qwen3-vl-plus
 ```
 
 Do not put the key in `frontend/public/map-demo/`, React code, query strings, or

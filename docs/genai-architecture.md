@@ -56,7 +56,7 @@ flowchart TD
 
 後端重算的目前路段 → 確定距離 / 樓層 / 設施 / 下一步行動 → 指引 agent 轉成粵語短句 → speech provider → 前端套用與播報。每一步自動朗讀只使用 Qwen 已生成或快取的提示；無法取得 Qwen 提示時顯示錯誤，不會改讀地圖上的簡短步驟摘要。
 
-Android APK 優先使用裝置預設 TTS 引擎的 `yue-HK` 聲線（建議在系統選用 Google Speech Services 並安裝香港粵語語音資料）。Chrome 網頁只接受標籤為 `yue-HK` 的瀏覽器聲線；找不到時顯示安裝提示，不改用普通話或英文。也可選擇 Azure Speech，或設定 `CANTO_TTS_URL` 使用電腦上自架的 `canto-tts`。自架服務只綁定 loopback，前端透過 `/api/genai/speech` 取得 WAV；金鑰和模型服務都不會暴露給前端。此模型只有一把預設聲線，男女聲偏好不會改變它。`text_only` 不播放。
+預設使用執行 AccessRoute 後端電腦上的自架 `canto-tts`，需另外啟動本機服務；首次啟動需下載模型。服務只綁定 loopback，前端透過 `/api/genai/speech` 取得 WAV，手機無需直接連接 TTS port。明確設定 Azure 金鑰／區域可改用 Azure；設定 `CANTO_TTS_URL` 則優先使用該自架端點。Chrome／Android 裝置 TTS 只在 speech plan 指定 `browser` 時使用，並要求 `yue-HK` 聲線；找不到時不改用普通話或英文。自架模型只有一把預設聲線，男女聲偏好不會改變它。`text_only` 不播放。
 
 Azure 使用 `zh-HK-HiuMaanNeural` 或 `zh-HK-WanLungNeural`；Android 本機 TTS 與 Chrome 瀏覽器語音需支援 `yue-HK`。語音不受支援時會顯示原因並保留文字，不換成其他語言。
 

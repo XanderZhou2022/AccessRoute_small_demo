@@ -18,7 +18,7 @@ afterEach(() => {
   vi.clearAllMocks();
 });
 
-it('uses Android native yue-HK speech instead of Azure or browser speech', async () => {
+it('uses Android native yue-HK speech when browser TTS is selected', async () => {
   vi.spyOn(Capacitor, 'getPlatform').mockReturnValue('android');
   nativeTts.isLanguageSupported.mockResolvedValue({ supported: true });
   nativeTts.getSupportedVoices.mockResolvedValue({
@@ -28,7 +28,7 @@ it('uses Android native yue-HK speech instead of Azure or browser speech', async
   nativeTts.speak.mockResolvedValue(undefined);
 
   await speak('請慢慢行', {
-    mode: 'azure',
+    mode: 'browser',
     language: 'zh-HK',
     selection: 'cantonese_female',
   });
@@ -42,6 +42,41 @@ it('uses Android native yue-HK speech instead of Azure or browser speech', async
     volume: 1,
     voice: 0,
   });
+});
+
+it('uses the configured self-hosted Cantonese TTS on Android', async () => {
+  vi.spyOn(Capacitor, 'getPlatform').mockReturnValue('android');
+  const fetchMock = vi.fn().mockResolvedValue(new Response(Uint8Array.of(82, 73, 70, 70)));
+  const audioHandlers = new Map<string, () => void>();
+  class FakeAudio {
+    constructor(_url: string) {}
+    addEventListener(type: string, listener: () => void) {
+      audioHandlers.set(type, listener);
+    }
+    play() {
+      audioHandlers.get('ended')?.();
+      return Promise.resolve();
+    }
+  }
+  vi.stubGlobal('fetch', fetchMock);
+  vi.stubGlobal('Audio', FakeAudio);
+
+  await speak('請慢慢行', {
+    mode: 'canto_tts',
+    language: 'zh-HK',
+    selection: 'cantonese_female',
+    voice_selection: 'single_default',
+  });
+
+  expect(fetchMock).toHaveBeenCalledWith(
+    '/api/genai/speech',
+    expect.objectContaining({
+      method: 'POST',
+      body: JSON.stringify({ text: '請慢慢行', selection: 'cantonese_female' }),
+    }),
+  );
+  expect(nativeTts.speak).not.toHaveBeenCalled();
+  expect(audioHandlers.has('ended')).toBe(true);
 });
 
 it('never switches to an English voice when Android lacks yue-HK', async () => {

@@ -83,6 +83,6 @@ export function configuredQwen() {
     apiKey: process.env.DASHSCOPE_API_KEY || '',
     baseUrl: process.env.QWEN_BASE_URL || 'https://dashscope-intl.aliyuncs.com/compatible-mode/v1',
     textModel: process.env.QWEN_TEXT_MODEL || 'qwen-plus',
-    visionModel: process.env.QWEN_VISION_MODEL || 'qwen-vl-max',
+    visionModel: process.env.QWEN_VISION_MODEL || 'qwen3-vl-plus',
   });
 }

@@ -184,7 +184,8 @@ export function configuredSpeechProvider(): SpeechProvider {
 
   const key = process.env.AZURE_SPEECH_KEY?.trim() || '';
   const region = process.env.AZURE_SPEECH_REGION?.trim().toLowerCase() || '';
-  if (!key && !region) return new BrowserSpeechProvider();
+  if (!key && !region)
+    return new SelfHostedCantoneseSpeechProvider('http://127.0.0.1:8000/synthesize');
   if (!key || !region)
     throw new Error('AZURE_SPEECH_KEY and AZURE_SPEECH_REGION must both be configured');
   if (!/^[a-z0-9-]+$/.test(region))

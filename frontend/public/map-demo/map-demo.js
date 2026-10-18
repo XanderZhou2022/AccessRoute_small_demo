@@ -1413,6 +1413,115 @@ function initializeRoutes() {
   updateRoutePresentation();
 }
 
+function loadCantoneseVoices(synth, signal) {
+  return new Promise((resolve, reject) => {
+    let timeout;
+    let poll;
+    const cleanup = () => {
+      clearTimeout(timeout);
+      clearInterval(poll);
+      synth.removeEventListener?.('voiceschanged', check);
+      signal?.removeEventListener('abort', abort);
+    };
+    const finish = (voices) => {
+      cleanup();
+      resolve(voices);
+    };
+    const abort = () => {
+      cleanup();
+      reject(new DOMException('Speech request superseded', 'AbortError'));
+    };
+    const check = () => {
+      if (signal?.aborted) return abort();
+      try {
+        const voices = synth
+          .getVoices()
+          .filter((voice) => /^(?:zh-HK|yue)(?:-|$)/i.test(voice.lang.replace(/_/g, '-')));
+        if (voices.length) finish(voices);
+      } catch (error) {
+        cleanup();
+        reject(error);
+      }
+    };
+    synth.addEventListener?.('voiceschanged', check);
+    signal?.addEventListener('abort', abort, { once: true });
+    timeout = setTimeout(() => finish([]), 5000);
+    poll = setInterval(check, 100);
+    check();
+  });
+}
+
+// Mirrors frontend/src/genai/spoken.ts: written floor labels and digits become spoken Cantonese.
+const SPOKEN_DIGITS = '零一二三四五六七八九';
+function spokenTens(n) {
+  return `${n < 20 ? '一' : SPOKEN_DIGITS[Math.floor(n / 10)]}十${n % 10 ? SPOKEN_DIGITS[n % 10] : ''}`;
+}
+function spokenInteger(n) {
+  if (n < 10) return SPOKEN_DIGITS[n];
+  if (n < 100) return n < 20 ? spokenTens(n).slice(1) : spokenTens(n);
+  const unit = n < 1000 ? 100 : 1000;
+  const head = `${SPOKEN_DIGITS[Math.floor(n / unit)]}${unit === 100 ? '百' : '千'}`;
+  const rest = n % unit;
+  if (rest === 0) return head;
+  if (rest < unit / 10) return `${head}零${spokenInteger(rest)}`;
+  return `${head}${rest < 100 && rest >= 10 ? spokenTens(rest) : spokenInteger(rest)}`;
+}
+function toSpokenText(text) {
+  const edge = '(?<![A-Za-z0-9])';
+  return text
+    .replace(new RegExp(`${edge}UG\\/?F(?![A-Za-z])`, 'g'), '上地下')
+    .replace(new RegExp(`${edge}G\\/F(?![A-Za-z])`, 'g'), '地下')
+    .replace(new RegExp(`${edge}M\\/F(?![A-Za-z])`, 'g'), '閣樓')
+    .replace(
+      new RegExp(`${edge}LG(\\d)(?:\\/F)?(?![A-Za-z0-9])`, 'g'),
+      (_, n) => `低層${spokenInteger(Number(n))}樓`,
+    )
+    .replace(
+      new RegExp(`${edge}B(\\d)(?:\\/F)?(?![A-Za-z0-9]|\\s*出口)`, 'g'),
+      (_, n) => `地庫${spokenInteger(Number(n))}層`,
+    )
+    .replace(
+      new RegExp(`${edge}(\\d{1,2})\\/F(?![A-Za-z])`, 'g'),
+      (_, n) => `${spokenInteger(Number(n))}樓`,
+    )
+    .replace(
+      new RegExp(`${edge}Level\\s*(\\d{1,2})(?![A-Za-z0-9])`, 'gi'),
+      (_, n) => `${spokenInteger(Number(n))}樓`,
+    )
+    .replace(
+      new RegExp(`${edge}(\\d{1,4})\\.(\\d+)(?![A-Za-z0-9])`, 'g'),
+      (_, whole, fraction) =>
+        `${spokenInteger(Number(whole))}點${[...fraction].map((d) => SPOKEN_DIGITS[Number(d)]).join('')}`,
+    )
+    .replace(new RegExp(`${edge}(\\d{1,4})(?![A-Za-z0-9.])`, 'g'), (_, n) =>
+      spokenInteger(Number(n)),
+    );
+}
+
+// Transit steps are written Chinese for display; rewrite them as spoken Cantonese for TTS.
+function toSpokenCantonese(title, detail) {
+  const spokenTitle = title
+    .replace(/^乘搭/, '搭')
+    .replace(/，往(.+)方向$/, '，去$1方向')
+    .replace(/^在(.+)站轉乘(.*)$/, (_, station, line) =>
+      line ? `喺${station}站轉車搭${line}` : `喺${station}站轉車`,
+    )
+    .replace(/^前往目的地場景$/, '去目的地');
+  const spokenDetail = detail
+    .replace(/^由(.+)站上車，下一站於(.+)站下車。$/, '喺$1站上車，下一個站喺$2站落車。')
+    .replace(
+      /^由(.+)站上車，經(\d+)個中途站於(.+)站下車。$/,
+      '喺$1站上車，中途經過$2個站，喺$3站落車。',
+    )
+    .replace(/^跟隨(「.+」)指示前往月台。$/, '跟住$1嘅指示去月台。')
+    .replace(/^請依(.+)站內指示前往所需月台。$/, '請跟住$1站入面嘅指示，去搵要搭嘅月台。')
+    .replace(
+      /^起點和目的地使用同一車站；.*$/,
+      '起點同目的地喺同一個車站，站內同站外嘅步行路線暫時未有，請跟現場指示行。',
+    );
+  return `${spokenTitle}。${spokenDetail.replace(/。$/, '')}。`;
+}
+
 function initializeNavigation() {
   if (document.body.dataset.screen !== 'navigation') return;
   const initialState = getDemoState();
@@ -1440,8 +1549,31 @@ function initializeNavigation() {
   let lastNarratedInstruction = '';
   let pendingAutoNarrationKey = '';
   let autoNarrationTimer = null;
-  let speechModePromise;
+  let pendingVoiceLoad;
+  let narrationRequest = 0;
   let activeBrowserUtterance = null;
+  let speechModePromise;
+  let activeAudio = null;
+  let pendingFetch = null;
+  const stopNarration = () => {
+    narrationRequest += 1;
+    pendingFetch?.abort();
+    pendingFetch = null;
+    if (activeAudio) {
+      activeAudio.audio.pause();
+      activeAudio.finish();
+      activeAudio = null;
+    }
+    pendingVoiceLoad?.abort();
+    pendingVoiceLoad = undefined;
+    if (activeBrowserUtterance) {
+      activeBrowserUtterance.onend = null;
+      activeBrowserUtterance.onerror = null;
+      activeBrowserUtterance = null;
+    }
+    window.speechSynthesis?.cancel();
+  };
+  window.addEventListener('pagehide', stopNarration, { once: true });
   const getSpeechMode = () => {
     if (!speechModePromise) {
       speechModePromise = apiFetch('/api/genai/capabilities')
@@ -1451,14 +1583,6 @@ function initializeNavigation() {
             throw new Error(payload?.error || `語音服務設定讀取失敗（HTTP ${response.status}）`);
           if (!['azure', 'browser', 'canto_tts'].includes(payload?.speech))
             throw new Error('後端回傳了不支援的語音服務設定');
-          const speechNotice = document.querySelector('[data-speech-engine-notice]');
-          if (speechNotice) {
-            speechNotice.hidden = payload.speech !== 'canto_tts';
-            speechNotice.textContent =
-              payload.speech === 'canto_tts'
-                ? '目前自架粵語語音只有一把預設聲線；男聲／女聲偏好不會改變聲音。'
-                : '';
-          }
           return payload.speech;
         })
         .catch((error) => {
@@ -1468,25 +1592,46 @@ function initializeNavigation() {
     }
     return speechModePromise;
   };
-  const playBackendSpeech = async (text) => {
-    const response = await apiFetch('/api/genai/speech', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text }),
-    });
-    if (!response.ok) {
-      const payload = await response.json().catch(() => null);
-      throw new Error(payload?.error || `伺服器語音服務失敗（HTTP ${response.status}）`);
+  const playBackendSpeech = async (text, request) => {
+    const controller = new AbortController();
+    pendingFetch = controller;
+    let blob;
+    try {
+      const response = await apiFetch('/api/genai/speech', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text }),
+        signal: controller.signal,
+      });
+      if (!response.ok) {
+        const payload = await response.json().catch(() => null);
+        throw new Error(payload?.error || `伺服器語音服務失敗（HTTP ${response.status}）`);
+      }
+      blob = await response.blob();
+    } catch (error) {
+      if (request !== narrationRequest) return;
+      throw error;
+    } finally {
+      if (pendingFetch === controller) pendingFetch = null;
     }
-    const audioUrl = URL.createObjectURL(await response.blob());
+    if (request !== narrationRequest) return;
+    const audioUrl = URL.createObjectURL(blob);
     await new Promise((resolve, reject) => {
       const audio = new Audio(audioUrl);
       const cleanup = () => URL.revokeObjectURL(audioUrl);
+      const finish = () => {
+        cleanup();
+        resolve();
+      };
+      const release = () => {
+        if (activeAudio?.audio === audio) activeAudio = null;
+      };
+      activeAudio = { audio, finish };
       audio.addEventListener(
         'ended',
         () => {
-          cleanup();
-          resolve();
+          release();
+          finish();
         },
         { once: true },
       );
@@ -1494,34 +1639,40 @@ function initializeNavigation() {
         'error',
         () => {
           cleanup();
+          release();
           reject(new Error('伺服器粵語語音播放失敗'));
         },
         { once: true },
       );
       void audio.play().catch((error) => {
         cleanup();
-        reject(error);
+        release();
+        if (request === narrationRequest) reject(error);
+        else resolve();
       });
     });
   };
-  const getCantoneseVoices = async (synth) => {
-    const voices = () => synth.getVoices().filter((voice) => /^yue-HK$/i.test(voice.lang));
-    const deadline = Date.now() + 5000;
-    while (Date.now() < deadline) {
-      const available = voices();
-      if (available.length) return available;
-      await new Promise((resolve) => window.setTimeout(resolve, 100));
-    }
-    return voices();
-  };
   const speakInstruction = async (instruction, overrideText, isCurrent = () => true) => {
-    const text = overrideText || (instruction ? `${instruction.title}。${instruction.detail}` : '');
+    stopNarration();
+    const request = narrationRequest;
+    const isLatest = () => request === narrationRequest && isCurrent();
+    // Only supplied spoken Cantonese is read; never fall back to written step text.
+    const text = toSpokenText(overrideText || '');
     if (!text) {
       if (narrationStatus) narrationStatus.textContent = '目前沒有可朗讀的路線指示。';
       return;
     }
-    if (!isCurrent()) return;
-    if (window.Capacitor?.getPlatform?.() === 'android') {
+    if (!isLatest()) return;
+    let speechMode;
+    try {
+      speechMode = await getSpeechMode();
+    } catch (error) {
+      if (isLatest() && narrationStatus)
+        narrationStatus.textContent = `無法連接語音服務：${error instanceof Error ? error.message : String(error)}`;
+      return;
+    }
+    if (!isLatest()) return;
+    if (window.Capacitor?.getPlatform?.() === 'android' && speechMode === 'browser') {
       try {
         const nativeTts = window.Capacitor.registerPlugin('TextToSpeech');
         let supported = false;
@@ -1534,7 +1685,7 @@ function initializeNavigation() {
           throw new Error(
             '手機沒有可用的 yue-HK 粵語聲線。請在 Android「文字轉語音輸出」選用 Google 語音服務並安裝香港粵語語音。',
           );
-        if (!isCurrent()) return;
+        if (!isLatest()) return;
         await nativeTts.stop();
         await nativeTts.speak({
           text,
@@ -1549,18 +1700,9 @@ function initializeNavigation() {
       }
       return;
     }
-    let speechMode;
-    try {
-      speechMode = await getSpeechMode();
-    } catch (error) {
-      if (narrationStatus)
-        narrationStatus.textContent = `無法連接語音服務：${error instanceof Error ? error.message : String(error)}`;
-      return;
-    }
-    if (!isCurrent()) return;
     if (speechMode !== 'browser') {
       try {
-        await playBackendSpeech(text);
+        await playBackendSpeech(text, request);
       } catch (error) {
         if (narrationStatus)
           narrationStatus.textContent = `${speechMode === 'canto_tts' ? '自架粵語語音' : 'Azure 粵語語音'}失敗：${error instanceof Error ? error.message : String(error)}`;
@@ -1572,33 +1714,39 @@ function initializeNavigation() {
       return;
     }
     const synth = window.speechSynthesis;
-    const cantoneseVoices = await getCantoneseVoices(synth);
-    if (!isCurrent()) return;
+    const controller = new AbortController();
+    pendingVoiceLoad = controller;
+    if (narrationStatus) narrationStatus.textContent = '正在載入粵語聲音…';
+    let cantoneseVoices;
+    try {
+      cantoneseVoices = await loadCantoneseVoices(synth, controller.signal);
+    } catch (error) {
+      if (isLatest() && narrationStatus)
+        narrationStatus.textContent = `粵語聲音載入失敗：${error instanceof Error ? error.message : String(error)}；請重試或閱讀文字指示。`;
+      return;
+    } finally {
+      if (pendingVoiceLoad === controller) pendingVoiceLoad = undefined;
+    }
+    if (!isLatest()) return;
     if (!cantoneseVoices.length) {
       if (narrationStatus)
         narrationStatus.textContent =
-          '找不到 yue-HK 香港粵語聲線；請在系統語音設定安裝「粵語（香港）」語音。沒有改用英文，請閱讀文字指示。';
+          '等候後瀏覽器仍未提供粵語聲音；請檢查系統語音設定，或閱讀文字指示。';
       return;
     }
-    if (activeBrowserUtterance) {
-      activeBrowserUtterance.onend = null;
-      activeBrowserUtterance.onerror = null;
-      activeBrowserUtterance = null;
-    }
-    synth.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'yue-HK';
+    utterance.lang = cantoneseVoices[0].lang;
     utterance.voice =
       cantoneseVoices.find((voice) => /^yue-HK$/i.test(voice.lang)) || cantoneseVoices[0];
     activeBrowserUtterance = utterance;
     if (narrationStatus) narrationStatus.textContent = '正在朗讀。';
     utterance.onend = () => {
-      if (activeBrowserUtterance !== utterance) return;
+      if (request !== narrationRequest || activeBrowserUtterance !== utterance) return;
       activeBrowserUtterance = null;
       if (narrationStatus) narrationStatus.textContent = '粵語朗讀完成。';
     };
     utterance.onerror = (event) => {
-      if (activeBrowserUtterance !== utterance) return;
+      if (request !== narrationRequest || activeBrowserUtterance !== utterance) return;
       activeBrowserUtterance = null;
       if (event.error === 'interrupted' || event.error === 'canceled') return;
       if (narrationStatus)
@@ -1673,7 +1821,11 @@ function initializeNavigation() {
     if (isTransitInstruction(instruction)) {
       const text = transitGuidance(instruction);
       if (guidanceText) guidanceText.textContent = text;
-      await speakInstruction(instruction, text, isCurrentRequest);
+      await speakInstruction(
+        instruction,
+        toSpokenCantonese(instruction.title, instruction.detail),
+        isCurrentRequest,
+      );
       return text;
     }
     const cachedText = getGuidanceCache(getDemoState())[key];
@@ -2375,6 +2527,19 @@ function initializeHelp() {
         choices.append(choice);
       }
       results.append(choices);
+      const noMatch = document.createElement('button');
+      noMatch.type = 'button';
+      noMatch.className = 'secondary-action';
+      noMatch.textContent = '以上都不是';
+      noMatch.addEventListener('click', () => {
+        clearResults();
+        appendText(
+          results,
+          'p',
+          '路線沒有被更改。請補充地標或店名線索、換一張更清楚的照片後再試。',
+          'inline-status',
+        );
+      });
       const confirm = document.createElement('button');
       confirm.type = 'button';
       confirm.className = 'primary-action';
@@ -2400,7 +2565,7 @@ function initializeHelp() {
           workflow === 'localization' ? lostSubmit : submit,
         );
       });
-      results.append(confirm);
+      results.append(confirm, noMatch);
       return;
     }
 
@@ -2445,14 +2610,37 @@ function initializeHelp() {
     });
     results.append(apply);
   };
+  const friendlyError = (error) => {
+    const message = error instanceof Error ? error.message : String(error);
+    if (/連接失敗|逾時|timeout|Failed to fetch|NetworkError/i.test(message))
+      return '智能助手暫時連不上，可能是網絡不穩或服務繁忙。你的照片不會被保存，請稍後重試。';
+    return message;
+  };
+  const showInlineError = (activeButton, error) => {
+    const container = activeButton === submit ? reportResults : lostResults;
+    const message = friendlyError(error);
+    updateStatus(message);
+    if (!container) return;
+    container.replaceChildren();
+    const alert = appendText(container, 'p', message, 'inline-status help-error');
+    alert.setAttribute('role', 'alert');
+    const retry = document.createElement('button');
+    retry.type = 'button';
+    retry.className = 'secondary-action';
+    retry.textContent = '重試';
+    retry.addEventListener('click', () => activeButton?.form?.requestSubmit());
+    container.append(retry);
+    appendText(container, 'p', '也可以修改地標／故障線索、換一張照片，或關閉協助卡繼續導航。');
+  };
   const runBusy = async (action, activeButton = submit) => {
     busy = true;
     refreshSubmit();
-    if (activeButton instanceof HTMLButtonElement) activeButton.textContent = '正在辨識…';
+    if (activeButton instanceof HTMLButtonElement)
+      activeButton.textContent = '正在辨識…（最多約 1 分鐘）';
     try {
       await action();
     } catch (error) {
-      updateStatus(error instanceof Error ? error.message : String(error));
+      showInlineError(activeButton, error);
     } finally {
       busy = false;
       if (activeButton instanceof HTMLButtonElement)
@@ -2461,6 +2649,14 @@ function initializeHelp() {
     }
   };
 
+  // Keep one task open at a time so the dialog stays short.
+  const sections = [...(dialog?.querySelectorAll(':scope details') ?? [])];
+  for (const section of sections)
+    section.addEventListener('toggle', () => {
+      if (!section.open) return;
+      for (const other of sections) if (other !== section) other.open = false;
+      section.scrollIntoView({ block: 'nearest' });
+    });
   open?.addEventListener('click', () => {
     if (dialog instanceof HTMLDialogElement && !dialog.open) dialog.showModal();
   });
