@@ -1,156 +1,160 @@
 # AccessRoute HK
 
-香港首末段無障礙導航研究演示。包含獨立前端、可運行後端、可追溯官方原始資料及可插拔路由核心。
+A research demo for accessible first- and last-mile navigation in Hong Kong, with a standalone frontend, a runnable backend, traceable official source data, and a pluggable routing core.
 
-**線上演示：[開啟 AccessRoute HK](https://xanderzhou2022.github.io/AccessRoute_small_demo/)**
+**Live demo: [Open AccessRoute HK](https://xanderzhou2022.github.io/AccessRoute_small_demo/)**
 
-### Android 手機安裝
+### Install on Android
 
-AccessRoute 可從 Android Chrome 安裝成主畫面上的網頁應用程式：部署更新後，以 Chrome 開啟上方演示網址，從瀏覽器選單選「安裝應用程式」或「加到主畫面」。已載入的靜態頁面和資料可供離線重開；即時天氣、尚未載入的資料和後端 AI 功能仍需要網絡／後端。這是導航演示，不提供實地室內定位。詳見[前端 Android 安裝說明](frontend/README.md#android-安裝)。
+AccessRoute can be installed from Android Chrome as a web app on your home screen. After deployment, open the demo link above in Chrome and choose **Install app** or **Add to Home screen** from the browser menu. Previously loaded static pages and data can be reopened offline; live weather, data that has not yet been loaded, and backend AI features still require a network connection or backend access. This navigation demo does not provide on-site indoor positioning. See the [frontend Android installation guide](frontend/README.md#android-安裝).
 
-另有獨立 Android APK 專案：[Android app 說明](android-app/README.md)。核心路線計算、地圖和場景資料會打包在手機；Qwen AI、香港天文台即時天氣及地圖示範的配對行程需要連接公開 HTTPS 後端。現有演示後端尚未加上公開服務所需的鑑權與限流，請先按說明部署並保護後端。
+A separate Android APK project is also available: [Android app guide](android-app/README.md). Core routing, maps, and scene data are bundled on the phone. Qwen AI, live Hong Kong Observatory weather, and paired journeys in the map demo require a public HTTPS backend. The current demo backend does not yet include the authentication and rate limiting required for a public service; follow the guide to deploy and secure it first.
 
-## 更新版產品手冊（2026-10-14）
+## Updated product manuals (2026-10-14)
 
-兩份新版手冊均包含界面圖片、相對舊版的變更摘要，以及舊手冊各項功能在目前程式中的可用狀態：
+Both updated manuals include screenshots, a summary of changes from the previous version, and the current availability of each feature described in the old manual:
 
-- [English PDF](docs/product-manual-v2.en.pdf) · [繁體中文 PDF](docs/product-manual-v2.zh-Hant.pdf)
-- 可編輯網頁：[English](docs/product-manual-v2.en.html) · [繁體中文](docs/product-manual-v2.zh-Hant.html)
-- [最新功能現況與後續驗收計劃（繁體中文）](docs/acceptance.md)
+- [English PDF](docs/product-manual-v2.en.pdf) · [Traditional Chinese PDF](docs/product-manual-v2.zh-Hant.pdf)
+- Editable web versions: [English](docs/product-manual-v2.en.html) · [Traditional Chinese](docs/product-manual-v2.zh-Hant.html)
+- [Current feature status and follow-up acceptance plan (Traditional Chinese)](docs/acceptance.md)
 
-在 macOS 上可用 WebKit 重新匯出 PDF：`swiftc -parse-as-library scripts/export-product-manuals.swift -o /tmp/export-product-manuals && /tmp/export-product-manuals docs`。
+On macOS, regenerate the PDFs with WebKit:
 
-## 12 地點資料擴充（2026-10-04）
+```bash
+swiftc -parse-as-library scripts/export-product-manuals.swift -o /tmp/export-product-manuals && /tmp/export-product-manuals docs
+```
 
-已註冊 12 個可選場景、132 個有方向起終點配對，包含又一城—九龍塘站天橋、長者服務設施、政府合署和街市。11 個場景有官方單元平面；又一城使用官方分層路網中心線。醫院完整室內圖仍待補充，候補資料已保存。
+## Data expansion to 12 locations (2026-10-04)
 
-選址、資料完整度、下游入口與重建方式見 [12 地點說明](docs/location-expansion.md)，機器可讀目錄見 `data/location-catalog.json`。下文兩地示例仍可用。
+The project includes 12 selectable scenes and 132 ordered origin–destination pairs, covering the Festival Walk–Kowloon Tong Station footbridge, elderly service facilities, government offices, and markets. Eleven scenes have official unit floor plans; Festival Walk uses official road-network centerlines organized by level. Complete hospital indoor maps are still pending, with candidate data retained.
 
-## 本機啟動與驗收
+See the [12-location guide](docs/location-expansion.md) for site selection, data completeness, integration entry points, and reconstruction steps. The machine-readable catalog is `data/location-catalog.json`. The two-location example below remains available.
+
+## Local setup and validation
 
 For a non-technical Windows/macOS setup guide, see the [user manual](docs/user-manual.md).
 
-離線案例入口：**http://127.0.0.1:8787/?demo=1**。已準備 48 個人物故事、384 個階段、496 條尋路知識、14 張有授權的實景歷史參考照片；可完整展示需求、雨天、故障、定位與到達。除非加入 `&debug=1`，案例庫及技術示範標籤不會顯示給一般使用者。`npm run demo:preview` 提供沒有模型及 workflow 後端的 8788 靜態演示。完整素材、情境假設與講解見 [Demo 手冊](docs/demo-playbook.md) 和 [例子庫](data/demo/README.md)。
+Offline scenario entry point: **http://127.0.0.1:8787/?demo=1**. The demo library contains 48 persona stories, 384 stages, 496 wayfinding knowledge entries, and 14 licensed historical site-reference photos, covering travel needs, rain, outages, positioning, and arrival. The scenario library and technical demo labels are hidden from regular users unless `&debug=1` is added. `npm run demo:preview` serves a static demo on port 8788 without the model or workflow backend. See the [demo playbook](docs/demo-playbook.md) and [scenario library](data/demo/README.md) for assets, scenario assumptions, and walkthroughs.
 
-已安裝依賴的這台電腦，在本目錄執行：
+If dependencies are already installed, run the following from the project root:
 
 ```bash
 npm run dev
 ```
 
-開啟 **http://127.0.0.1:5173/**，預設進入地圖卡片式旅程流程（地點 → 出行設定 → 路線 → 導航／協助）；前端 5173，後端 8787，兩者只監聽本機。亦可直接開啟 **http://127.0.0.1:5173/map-demo/index.html**。原桌面規劃工作台可由 **http://127.0.0.1:5173/?legacy=1** 開啟，`?demo=1` 離線故事入口和 `?mapOnly=1` 純地圖模式亦保留。可雙擊 `啟動演示.command`。如端口已被本項目佔用，直接打開網址即可。
+Open **http://127.0.0.1:5173/**. The default interface uses a map-card journey flow: location → travel settings → route → navigation/assistance. The frontend runs on port 5173 and the backend on port 8787, both bound to localhost. You can also open **http://127.0.0.1:5173/map-demo/index.html** directly. The original desktop planning workspace is available at **http://127.0.0.1:5173/?legacy=1**; the `?demo=1` offline story entry point and `?mapOnly=1` map-only mode remain available. On macOS, you can also double-click `啟動演示.command`. If the project is already using these ports, open the URL directly.
 
-### 用 Android 手機連接本機電腦
+### Connect an Android phone to your computer
 
-手機不需安裝或執行伺服器；電腦可在可信任的私人 Wi-Fi 網絡上提供頁面：
+The phone does not need to install or run a server. Your computer can serve the app over a trusted private Wi-Fi network:
 
-1. 電腦和手機連接同一個 Wi-Fi。
-2. 在電腦專案目錄執行 `npm run dev:lan`，並保持終端開啟。
-3. 在電腦查出私人網絡 IPv4 位址（macOS：系統設定 → Wi-Fi → 詳細資訊 → TCP/IP；Windows：執行 `ipconfig`）。
-4. 在 Android Chrome 開啟 `http://<電腦IPv4>:5173/map-demo/index.html`，例如 `http://192.168.1.23:5173/map-demo/index.html`。若要開啟主介面，移除 `/map-demo/index.html`。
+1. Connect the computer and phone to the same Wi-Fi network.
+2. Run `npm run dev:lan` from the project directory on the computer and keep the terminal open.
+3. Find the computer's private IPv4 address. On macOS, open System Settings → Wi-Fi → Details → TCP/IP. On Windows, run `ipconfig`.
+4. In Android Chrome, open `http://<computer-IPv4>:5173/map-demo/index.html`, for example `http://192.168.1.23:5173/map-demo/index.html`. Remove `/map-demo/index.html` to open the main interface.
 
-若無法連線，允許 Node.js／TCP 5173 通過電腦防火牆，確認兩台裝置在同一個非訪客 Wi-Fi，並檢查路由器沒有啟用用戶端隔離。使用完畢按 Ctrl+C。此 LAN 開發網址使用 HTTP：瀏覽器不會啟用需安全 HTTPS 的 PWA 離線安裝、GPS 定位等能力；要安裝 PWA 請用已部署的 HTTPS 網址。只在可信任私人網絡使用，不要在路由器設定公開端口轉發。
+If the connection fails, allow Node.js/TCP port 5173 through the computer's firewall, confirm that both devices are on the same non-guest Wi-Fi network, and check that client isolation is disabled on the router. Press Ctrl+C when finished. This LAN development URL uses HTTP, so browser features requiring a secure HTTPS context, such as PWA offline installation and GPS positioning, are unavailable. Use the deployed HTTPS URL to install the PWA. Use LAN development mode only on a trusted private network, and do not configure public port forwarding on the router.
 
-新電腦需 Node.js 22.12+（建議 Node 22 LTS）：
+On a new computer, install Node.js 22.12+ (Node 22 LTS recommended), then run:
 
 ```bash
 npm ci
 npm run dev
 ```
 
-正式構建與本機完整服務：
+To build and serve the complete app locally:
 
 ```bash
 npm run build
 npm start
 ```
 
-此時前端與 API 都在 **http://127.0.0.1:8787/**。靜態前端無需後端亦可運行；切換「本機後端 API」會使用場景 API 並持久保存演示電梯事件。
+The frontend and API are then both available at **http://127.0.0.1:8787/**. The static frontend also works without a backend. Selecting **Local backend API** uses the scene API and persists demo lift events.
 
-## 建議驗收流程
+## Suggested validation walkthrough
 
-1. 保持「輪椅」，查看希慎廣場 → 銅鑼灣站 → 公共交通示意 → 將軍澳站 → PopCorn 2。
-2. 點「開始導航演示」，查看 1/F 官方平面圖；點「已到達」推進至 Lift A。
-3. 在乘電梯前，點 Lift A 的「模擬停用」。路線從目前路段起點重算，改走 Lift B。
-4. 同時停用 Lift B，確認改走「演示緩坡通道」。再停用所有可用跨層設施，才會出現無可行路線。
-5. 恢復兩部電梯，重設旅程，按提示完成 G/F、交通接駁、PopCorn 2 G/F → 1/F，直到「已完成旅程演示」。
-6. 開啟「僅使用已核實通道」：因通行属性未知，應顯示無可行路線，不能偷偷放行。
-7. 切換長者、嬰兒車、雨天情境，交換起終點，查看不同樓層。
-8. 切換「本機後端 API」，停用電梯後刷新；事件應仍保留。點「恢復服務」清除演示影響。靜態模式的事件只保存在當次頁面記憶體。
-9. 查看「資料與說明」。完整測試及限制在 `docs/acceptance.md`。
+1. Keep the **Wheelchair** profile selected and inspect the journey: Hysan Place → Causeway Bay Station → illustrative public transport segment → Tseung Kwan O Station → PopCorn 2.
+2. Click **Start navigation demo** to view the official 1/F floor plan, then click **Arrived** to advance to Lift A.
+3. Before taking the lift, click **Simulate outage** for Lift A. The route is recalculated from the start of the current segment and switches to Lift B.
+4. Disable Lift B as well and confirm that the route switches to the **Demo gentle ramp**. Only after all available connections between floors are disabled should the app report no feasible route.
+5. Restore both lifts, reset the journey, and follow the prompts through G/F, the transport connection, and PopCorn 2 G/F → 1/F until **Journey demo completed** appears.
+6. Enable **Use verified paths only**. Because accessibility attributes are unknown, the app should report no feasible route rather than allow passage without verification.
+7. Try the elderly, stroller, and rainy-weather profiles, swap the origin and destination, and inspect different floors.
+8. Switch to **Local backend API**, disable a lift, and refresh the page. The event should persist. Click **Restore service** to clear the demo impact. In static mode, events are stored only in the current page's memory.
+9. Open **Data and notes**. See `docs/acceptance.md` for the full test report and limitations.
 
-## 目錄
+## Project structure
 
 ```text
-frontend/              React + Vite + TypeScript UI、樓層 SVG、MapLibre 地圖
-backend/               Express API、事件持久化、本機生產靜態服務
-shared/                不依賴 React 的 domain / routing / journey / providers
-  domain/              Zod schemas、canonical types、場景驗證
-  routing/             純 Dijkstra、策略插件、不可變事件 overlay
-  journey/             路由 → floor / transition / outdoor / bridge 分段
-  providers/           Static / HTTP 同一場景契約
+frontend/              React + Vite + TypeScript UI, floor SVGs, MapLibre maps
+backend/               Express API, event persistence, local production static server
+shared/                React-independent domain / routing / journey / providers
+  domain/              Zod schemas, canonical types, scene validation
+  routing/             Pure Dijkstra routing, policy plugins, immutable event overlays
+  journey/             Route segmentation into floor / transition / outdoor / bridge legs
+  providers/           Shared scene contract for static and HTTP providers
 data/
-  raw/                 官方資料原文、請求 URL、SHA-256（headers 僅本機保存）
-  scenes/              12 個正式 Scene Package，規範化資料來源
-  candidates.json/csv  候選場景的量化比較
-  runtime/             本機後端事件（運行時建立，不提交版本庫）
-scripts/               資料下載、候選掃描、圖生成、啟動及靜態資料同步
-tests/                 路由、策略、事件、場景契約、後端 API 測試
-docs/                  架構、API 發現、選址、可視化選擇、驗收報告
-.github/workflows/     測試與手動 GitHub Pages 部署流程
+  raw/                 Official source data, request URLs, SHA-256 hashes (headers kept locally)
+  scenes/              12 scene packages serving as the canonical normalized data source
+  candidates.json/csv  Quantitative comparison of candidate scenes
+  runtime/             Local backend events (created at runtime, excluded from version control)
+scripts/               Data download, candidate scanning, graph generation, startup, static data sync
+tests/                 Routing, policies, events, scene contracts, backend API tests
+docs/                  Architecture, API discovery, site selection, visualization choices, validation
+.github/workflows/     Tests and manual GitHub Pages deployment
 ```
 
-`frontend/public/data/` 是 `data/scenes/` 的構建副本，請勿手工修改。`npm run dev` 和 `npm run build` 會自動同步。任務書 PDF 不包含在版本庫內。
+`frontend/public/data/` is a build copy of `data/scenes/`; do not edit it manually. `npm run dev` and `npm run build` synchronize it automatically. The project specification PDF is not included in the repository.
 
-## GenAI 智能導航助手
+## GenAI navigation assistant
 
-頁面已接上四套独立 workflow：出行意圖、照片路障、照片定位和粵語指引。定位與路障由 VLM 觀察照片，再檢索目前位置和路線附近的地圖，交由地圖匹配 agent 比較證據。匹配不明確時提供候選確認，保留原始匹配分數。
+The interface integrates four independent workflows: travel intent, photo-based obstacle reporting, photo-based positioning, and Cantonese guidance. For positioning and obstacle reporting, a vision-language model observes the photo, retrieves map information near the current position and route, and passes the evidence to a map-matching agent. Ambiguous matches are presented as candidates for confirmation, with the original matching scores retained.
 
-- 在根目錄 `.env` 配置 `DASHSCOPE_API_KEY` 後啟動 `npm run dev`，後端自動讀取設定。
-- [架構與匹配算法](docs/genai-architecture.md)、[HTTP 接入操作手冊](docs/genai-integration.md)。
-- `backend/api/` 為 HTTP 路由，`backend/providers/` 為模型與語音接口，`backend/agents/` 為單一角色，`backend/workflows/` 為流程組合，`backend/retrieval/` 為地圖檢索。
-- `data/landmarks/` 可補充已核對的店名和外觀；官方資料不足時不生成虛構店鋪。
-- Android APK 使用裝置原生 `yue-HK` 語音；建議在 Android 設定選用 Google Speech Services 並安裝香港粵語語音資料。網頁可使用 `yue-HK` 瀏覽器語音、Azure Speech，或在電腦自架 `canto-tts` 香港粵語語音服務；自架模型只有一把預設聲線。詳見 [自架語音設定](docs/genai-integration.md#自架香港粵語-tts)及 [Android 語音與 APK 設定](android-app/README.md)。Python 程式已改為同一套後端的 HTTP 客戶端。
-- 原有 JSON 聯調面板、1.0 結果契約和 `/api/genai/validate` 保持相容。
+- Set `DASHSCOPE_API_KEY` in the root `.env` file and run `npm run dev`. The backend loads the configuration automatically.
+- See [architecture and matching algorithms](docs/genai-architecture.md) and the [HTTP integration guide](docs/genai-integration.md).
+- `backend/api/` contains HTTP routes, `backend/providers/` model and speech interfaces, `backend/agents/` individual agent roles, `backend/workflows/` workflow composition, and `backend/retrieval/` map retrieval.
+- Add verified shop names and appearance information to `data/landmarks/`. The system does not invent shops when official data is insufficient.
+- The Android APK uses native device speech with the `yue-HK` locale. Google Speech Services with the Hong Kong Cantonese voice data installed is recommended in Android settings. The web app supports `yue-HK` browser speech, Azure Speech, or a self-hosted `canto-tts` Hong Kong Cantonese service running on a computer. The self-hosted model provides one default voice. See [self-hosted speech setup](docs/genai-integration.md#自架香港粵語-tts) and [Android speech and APK setup](android-app/README.md). The Python programs now act as HTTP clients of the same backend.
+- The original JSON integration panel, version 1.0 result contract, and `/api/genai/validate` remain compatible.
 
-## 已實現
+## Implemented features
 
-- 12 個正式場景：11 個官方樓層平面場景、1 個官方分層路網場景；map-demo 可從兩個獨立選點計算本地首末段路線，並以保存的 MTR 車站序列資料產生站間路線指引。MTR 車程、班次、票價和無障礙設施未即時核實。
-- 512 節點 / 1523 邊的希慎廣場圖；2081 節點 / 6308 邊的 PopCorn 2 圖。
-- 各場景電梯停用模擬、樓層切換、剩餘路線重算和 no_route。
-- 輪椅 / 長者 / 嬰兒車策略、最少露天／室內／距離／體力／時間選線、嚴格通行属性模式。
-- 本地 GeoJSON 3D 建築擠出；WebGL 失敗時自動退回 SVG 宏觀圖。地圖、字體和資料不依賴第三方 CDN。
-- 後端健康、場景、路由、事件 API；事件按來源和有效時間處理，原始圖不變。
-- 可離線使用的靜態產物、手機佈局、可讀資料說明、官方地圖署名。
+- Twelve scene packages: eleven official floor-plan scenes and one official road-network scene organized by level. The map demo calculates local first- and last-mile routes between two independently selected locations and generates inter-station directions from stored MTR station sequences. MTR journey times, schedules, fares, and accessibility facilities are not verified in real time.
+- A Hysan Place graph with 512 nodes and 1,523 edges, and a PopCorn 2 graph with 2,081 nodes and 6,308 edges.
+- Lift outage simulation, floor switching, recalculation of the remaining route, and `no_route` results for each scene.
+- Wheelchair, elderly, and stroller policies; route preferences for outdoor exposure, indoor travel, distance, effort, and time; and a strict accessibility-attribute mode.
+- Local GeoJSON building extrusions in 3D, with an automatic fallback to an SVG overview map if WebGL fails. Maps, fonts, and data do not depend on third-party CDNs.
+- Backend health, scene, routing, and event APIs. Events are applied according to their source and validity period without changing the original graph.
+- Static builds usable offline, mobile layouts, readable data notes, and official map attribution.
 
-## 明確限制
+## Known limitations
 
-**這是演示，不是已認證的實地無障礙導航。** 所有 graph edges 的 `wheelchair` 均如實設為 `unknown`。官方幾何不等於門寬、坡度、公共通行權或電梯服務已核實。
+**This is a demo, not a certified accessibility navigation service for on-site use.** The `wheelchair` attribute on every graph edge is explicitly set to `unknown`. Official geometry does not establish verified door widths, slopes, public access rights, or lift availability.
 
-- 11 個平面圖場景的室內連線從官方公共走廊 / 大堂 / 電梯幾何推導，採 1.6m 網格及 0.25m 精度容差；跨層電梯配對和短距離吸附明確標為演示補充。又一城使用官方三維路網；新增 9 個建築的室外接駁使用官方路網，詳見 [擴展說明](docs/location-expansion.md)。
-- 建築端點為公共走廊演示點。當所選連通分量沒有可附接的官方入口點時，G/F 交接點亦明確標記為待核實；並非宣稱建築入口已驗證。
-- PopCorn 2 室外線使用已保存的官方 Barrier Free Path 幾何作 baseline，兩端吸附連接仍待核實。希慎廣場至所選站口的官方請求返回 no solution，已保存失敗證據；其銜接保留明示的演示補充。
-- 地圖只包括官方已下載建築輪廓，不是完整街道底圖或 photorealistic 3D Tiles。
-- 照片定位提供地標附近粗略位置，尚未完成實景精度評估；沒有持續即時定位、即時官方電梯狀態、天氣、眾包、帳號或完整公共交通換乘算法。
-- 後端事件寫入限本機 demo；公開後端前須加入正式身份驗證。GitHub Pages 只部署靜態前端。
+- Indoor connections in the eleven floor-plan scenes are derived from official corridor, lobby, and lift geometry using a 1.6 m grid and a 0.25 m geometric tolerance. Lift pairings between floors and short-distance snapping connections are explicitly marked as demo additions. Festival Walk uses the official 3D road network; outdoor connections for the nine additional buildings use the official road network. See the [expansion guide](docs/location-expansion.md).
+- Building endpoints are demo points in public corridors. If the selected connected component has no attachable official entrance point, the G/F handoff point is also marked as requiring verification; building entrances are not claimed to be verified.
+- The PopCorn 2 outdoor route uses saved official Barrier Free Path geometry as its baseline, with snapped connections at both ends still requiring verification. The official request between Hysan Place and the selected station entrance returned no solution, and the failure evidence is retained. That connection remains an explicitly labeled demo addition.
+- Maps include only downloaded official building footprints, rather than a complete street basemap or photorealistic 3D Tiles.
+- Photo-based positioning estimates a coarse location near a landmark and has not undergone on-site accuracy evaluation. Continuous real-time positioning, live official lift status, crowdsourcing, user accounts, and a complete public transport transfer algorithm are not available. Live weather requires backend connectivity, as described in the Android setup above.
+- Backend event writes are intended for a local demo. Add production authentication before exposing the backend publicly. GitHub Pages deploys only the static frontend.
 
-## 測試及開發
+## Testing and development
 
 ```bash
-npm test              # 路由 / 策略 / 事件 / 場景契約 / API
-npm run build         # 類型檢查、資料同步、前端正式構建
-npm run check         # test + build
-npm run format        # 源碼格式化，不改 raw data
+npm test              # Routing / policies / events / scene contracts / API
+npm run build         # Type checking, data synchronization, production frontend build
+npm run check         # Tests + build
+npm run format        # Format source code without modifying raw data
 ```
 
-原始資料已凍結，不需要重新下載便可驗收。重建資料的方法見 `data/README.md`。API 契約見 `backend/README.md`。新增場景的方法見 `docs/architecture.md`。
+The source data is frozen, so validation does not require downloading it again. See `data/README.md` for data reconstruction, `backend/README.md` for API contracts, and `docs/architecture.md` for adding scenes.
 
-## 部署
+## Deployment
 
-目標倉庫：[XanderZhou2022/AccessRoute_small_demo](https://github.com/XanderZhou2022/AccessRoute_small_demo)。
+Repository: [XanderZhou2022/AccessRoute_small_demo](https://github.com/XanderZhou2022/AccessRoute_small_demo).
 
-GitHub Pages 已發布，Source 已設為 GitHub Actions。後續更新時，先推送代碼，再在 Actions 手動運行 `Deploy static demo to GitHub Pages`。workflow 會運行測試、構建並只發布 `frontend/dist/`；只上傳源碼不會自動發布網站。Pages 使用靜態資料，Express 後端需另外運行。
+GitHub Pages is published with GitHub Actions configured as its source. For subsequent updates, push the code and manually run **Deploy static demo to GitHub Pages** in Actions. The workflow runs tests, builds the app, and publishes only `frontend/dist/`. Pushing source code alone does not automatically update the website. Pages uses static data; the Express backend must run separately.
 
-提交範圍與上傳步驟見 [docs/upload.md](docs/upload.md)。
+See [docs/upload.md](docs/upload.md) for commit scope and upload steps.
 
-資料與署名見 [DATA_SOURCES.md](DATA_SOURCES.md)。
+See [DATA_SOURCES.md](DATA_SOURCES.md) for data sources and attribution.
