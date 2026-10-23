@@ -1,46 +1,46 @@
 # Backend
 
-Express + TypeScript。與瀏覽器共用 `shared/` 的 schemas、路由核心、策略和 segmenter，避免前後端算法分叉。
+Express + TypeScript. The backend shares schemas, the routing core, policies, and the route segmenter in `shared/` with the browser to keep frontend and backend algorithms consistent.
 
 ```bash
 npm start
-# 或開發時同時啟動前後端
+# Or start both the frontend and backend during development
 npm run dev
 ```
 
-預設 `127.0.0.1:8787`。`HOST`、`PORT`、`EVENT_FILE`、`ALLOW_EVENT_WRITES` 由環境變數提供；`.env.example` 是模板，不會自動載入。
+The default address is `127.0.0.1:8787`. Configure `HOST`, `PORT`, `EVENT_FILE`, and `ALLOW_EVENT_WRITES` through environment variables. `.env.example` is a template and is not loaded automatically.
 
 Capacitor Android builds load scene data and route locally, and call this API for Qwen workflows and HKO weather. Set `ACCESSROUTE_CORS_ORIGINS=https://localhost` for the Android WebView origin. CORS only controls browser access; it is not authentication. Do not expose this demo backend publicly without authentication and rate limiting.
 
-| 方法 | 路徑                                          | 用途                                                                                                  |
-| ---- | --------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| GET  | `/api/health`                                 | 健康狀態、版本、事件寫入狀態                                                                          |
-| GET  | `/api/scenes`                                 | SceneManifest 陣列                                                                                    |
-| GET  | `/api/scenes/:id`                             | 完整且驗證後的 Scene                                                                                  |
-| GET  | `/api/knowledge/:sceneId?q=名稱&level=樓層ID` | 尋路知識庫與文字候選，不呼叫模型                                                                      |
-| POST | `/api/route`                                  | 規劃路線及分段                                                                                        |
-| GET  | `/api/events`                                 | 讀取所有演示事件，包含已解除事件                                                                      |
-| POST | `/api/events`                                 | 依事件 ID 新增 / 取代；`status=resolved` 解除                                                         |
-| POST | `/api/sessions`                               | 建立持久化行程 session 並回傳 session ID                                                              |
-| GET  | `/api/sessions/:id`                           | 讀取 session 狀態及 revision                                                                          |
-| GET  | `/api/sessions/:id/facilities`                | 讀取此行程兩端場景的設施清單                                                                          |
-| POST | `/api/sessions/:id/commands`                  | 以 operation ID 和 expected revision 提交行程命令                                                     |
-| GET  | `/api/sessions/:id/stream`                    | 以 SSE 傳送初始及後續 session 狀態                                                                    |
-| GET  | `/api/weather`                                | 讀取香港天文台目前天氣、天氣預測及警告；成功回應快取五分鐘。可選 `latitude`、`longitude` 查詢附近觀測 |
+| Method | Path                                           | Purpose                                                                                                                                                                                     |
+| ------ | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/api/health`                                  | Health, version, and event-write status                                                                                                                                                     |
+| GET    | `/api/scenes`                                  | Array of `SceneManifest` objects                                                                                                                                                            |
+| GET    | `/api/scenes/:id`                              | Complete, validated `Scene`                                                                                                                                                                 |
+| GET    | `/api/knowledge/:sceneId?q=name&level=levelId` | Wayfinding knowledge and text candidates, without calling a model                                                                                                                           |
+| POST   | `/api/route`                                   | Route planning and segmentation                                                                                                                                                             |
+| GET    | `/api/events`                                  | Read all demo events, including resolved events                                                                                                                                             |
+| POST   | `/api/events`                                  | Create or replace an event by ID; resolve it with `status=resolved`                                                                                                                         |
+| POST   | `/api/sessions`                                | Create a persistent journey session and return its ID                                                                                                                                       |
+| GET    | `/api/sessions/:id`                            | Read session state and revision                                                                                                                                                             |
+| GET    | `/api/sessions/:id/facilities`                 | Read facilities in the scenes at both ends of the journey                                                                                                                                   |
+| POST   | `/api/sessions/:id/commands`                   | Submit a journey command with an operation ID and expected revision                                                                                                                         |
+| GET    | `/api/sessions/:id/stream`                     | Stream initial and subsequent session states through SSE                                                                                                                                    |
+| GET    | `/api/weather`                                 | Read current Hong Kong Observatory weather, forecasts, and warnings; cache successful responses for five minutes. Optional `latitude` and `longitude` parameters select nearby observations |
 
-`set_facility_event` session 命令只影響該行程，會重算目前場景的剩餘路段；若沒有可行路線，回應會保留原有步驟並標記 `routeStatus: "no_route"`，且不接受後續 `advance`。恢復設施會以剩餘路段再次計算。
+The `set_facility_event` session command affects only that journey and recalculates the remaining route in the current scene. If no feasible route exists, the response retains the original steps, sets `routeStatus: "no_route"`, and rejects subsequent `advance` commands. Restoring the facility triggers another calculation of the remaining route.
 
-`/api/weather` 預設使用全港觀測。部署在 Vercel 並由平台設定 `VERCEL=1` 時，無 GPS 座標的請求會讀取平台產生的 `x-vercel-ip-country`、`x-vercel-ip-latitude` 和 `x-vercel-ip-longitude` 標頭；只有國家為 HK 且座標在香港範圍內才用於選擇附近觀測，否則回退全港資料。不要在其他部署環境啟用此設定，除非該平台會覆寫／清除客戶端同名標頭。IP 推算位置可能不準確；應用程式不保存原始 IP 或位置座標，託管平台仍可能按其政策處理連線 IP。使用者亦可主動允許瀏覽器 GPS 查詢附近觀測；座標只用於該次請求、不持久化。附近站點以近似座標作選擇錨點，並非精確感測覆蓋邊界；附近 HKO 觀測缺少時回退全港數值並標示 scope。
+`/api/weather` uses territory-wide observations by default. When deployed on Vercel with the platform setting `VERCEL=1`, requests without GPS coordinates read the platform-generated `x-vercel-ip-country`, `x-vercel-ip-latitude`, and `x-vercel-ip-longitude` headers. These coordinates select nearby observations only when the country is HK and the coordinates fall within Hong Kong; otherwise, the API falls back to territory-wide data. Do not enable this setting on another deployment platform unless it overwrites or strips client-supplied headers with these names. IP-derived locations may be inaccurate. The app does not store raw IP addresses or location coordinates, although the hosting platform may process connection IPs under its own policies. Users may also explicitly allow browser GPS to request nearby observations; coordinates are used only for that request and are not persisted. Nearby stations use approximate coordinates as lookup anchors, not precise sensor coverage boundaries. If nearby HKO observations are unavailable, the API falls back to territory-wide values and indicates the scope.
 
-GitHub Pages 只提供靜態前端，沒有 Express API 或平台座標標頭；IP 附近天氣須在提供上述可信標頭的動態後端部署後才可使用。沒有可用位置資訊時仍使用全港天氣。
+GitHub Pages serves only the static frontend, without the Express API or platform coordinate headers. IP-based nearby weather requires a dynamic backend deployed on a platform that supplies the trusted headers described above. Territory-wide weather is used when location information is unavailable.
 
-路由輸入：
+Route request:
 
 ```json
 {
   "sceneId": "hysan-place",
-  "from": "請使用 manifest.defaultStart",
-  "to": "請使用 manifest.defaultEnd",
+  "from": "Use manifest.defaultStart",
+  "to": "Use manifest.defaultEnd",
   "context": {
     "profile": "wheelchair",
     "rain": false,
@@ -51,9 +51,9 @@ GitHub Pages 只提供靜態前端，沒有 Express API 或平台座標標頭；
 }
 ```
 
-回應 `{ "route": RouteResult, "segments": RouteSegment[] }`。無路是成功計算結果 `route.status = "no_route"`，不是 HTTP 500。非法 schema / endpoint 回 400；不存在場景回 404。
+The response is `{ "route": RouteResult, "segments": RouteSegment[] }`. A route with `route.status = "no_route"` is a successful calculation result, not an HTTP 500 error. Invalid schemas or endpoints return 400; a missing scene returns 404.
 
-事件輸入示例：
+Example event request:
 
 ```json
 {
@@ -67,31 +67,31 @@ GitHub Pages 只提供靜態前端，沒有 Express API 或平台座標標頭；
 }
 ```
 
-本機 server 啟用事件写入；非 loopback HOST 自動禁止。`createApp()` 的默认值也是只讀。事件只接受 `source=demo`，限制 JSON body 大小及瀏覽器 Origin；透過序列化寫入與 temp-file rename，避免同一進程中並行寫入丟失資料。未設置 eventFile 的測試实例用記憶體，正式本機 server 用 `data/runtime/events.json`。
+The local server enables event writes; a non-loopback `HOST` automatically disables them. `createApp()` also defaults to read-only mode. Events accept only `source=demo`, with limits on JSON body size and browser Origin. Serialized writes and temporary-file renaming prevent data loss from concurrent writes within one process. Test instances without an `eventFile` use memory; the regular local server uses `data/runtime/events.json`.
 
-行程 session 同樣用序列化更新和原子檔案替換，正式本機 server 儲存於 `data/runtime/sessions.json`（可用 `SESSIONS_FILE` 改路徑）。命令有 revision 衝突檢查及 operation ID 冪等保護；`allowWrites` 關閉時建立和修改 session 均會拒絕。SSE 僅在單一 Node 程序內推送，並非多實例部署方案。公開前仍必須加入身分驗證、授權、流量限制，以及可跨程序共用的持久化與 pub/sub。
+Journey sessions also use serialized updates and atomic file replacement. The regular local server stores them in `data/runtime/sessions.json`; override the path with `SESSIONS_FILE`. Commands check revision conflicts and use operation IDs for idempotency. Creating or modifying sessions is rejected when `allowWrites` is disabled. SSE broadcasts only within a single Node process and does not support deployment across multiple instances. Before public deployment, add authentication, authorization, rate limiting, and persistence and pub/sub shared across processes.
 
-前端 HTTP 模式通過 API 加載場景和存取事件；路由仍使用共用核心在瀏覽器即時計算。`POST /api/route` 提供相同服務供外部客戶端或未來遠程路由 provider 使用。此版本不輪詢其他客戶端的事件；外部更改後刷新可讀取。
+In HTTP mode, the frontend loads scenes and accesses events through the API, while routes are still calculated in the browser using the shared core. `POST /api/route` exposes the same functionality to external clients or a future remote routing provider. This version does not poll for events from other clients; refresh to read external changes.
 
-不包含生產鑑權、多人同步或公開寫入；如需公開完整後端，可在可信 Node 主機運行只讀服務，將前端 `/api` 反向代理到該服務，再增設正式事件寫入鑑權。
+Production authentication, multi-user synchronization, and public writes are not included. To expose the full backend, run a read-only service on a trusted Node host, reverse-proxy the frontend's `/api` requests to it, and add production authentication for event writes.
 
-## GenAI 結果校驗
+## GenAI result validation
 
-新增 `POST /api/genai/validate`，驗證四個 Agent JSON 及場景引用，返回 `{status:"validated",applied:false,result}`。不儲存、不控制瀏覽器；上下文與路段時效由前端 bridge 校驗。詳見 [接入手冊](../docs/genai-integration.md)。
+`POST /api/genai/validate` validates JSON results from the four agents and their scene references, returning `{status:"validated",applied:false,result}`. It does not persist results or control the browser. The frontend bridge validates context and route-segment freshness. See the [integration guide](../docs/genai-integration.md).
 
-## GenAI workflow 與分層
+## GenAI workflows and layers
 
-四套 workflow 位於 `backend/workflows/`，HTTP 路由位於 `backend/api/genai.ts`，模型 transport 位於 `backend/providers/qwen.ts`。地圖 HTTP 路由位於 `backend/api/map.ts`，場景與事件讀寫位於 `backend/repositories/`。`app.ts` 只組裝依賴與中介層。
+The four workflows are in `backend/workflows/`, HTTP routes in `backend/api/genai.ts`, and model transport in `backend/providers/qwen.ts`. Map HTTP routes are in `backend/api/map.ts`, and scene/event access is in `backend/repositories/`. `app.ts` only assembles dependencies and middleware.
 
-詳見 [GenAI API 手冊](../docs/genai-integration.md)和 [架構](../docs/genai-architecture.md)。`createApp({model, speech, landmarkRoot})` 可注入測試或其他供應商適配器。
+See the [GenAI API guide](../docs/genai-integration.md) and [architecture guide](../docs/genai-architecture.md). Use `createApp({model, speech, landmarkRoot})` to inject test adapters or adapters for other providers.
 
-### Azure 粵語語音
+### Azure Cantonese speech
 
-設定後端環境變數 `AZURE_SPEECH_KEY` 和 `AZURE_SPEECH_REGION` 後，可明確選用 Azure Speech 的香港粵語神經語音；金鑰只存於後端。預設使用本機 `canto-tts`，未提供 Azure 金鑰時不會退回裝置／瀏覽器語音。`POST /api/genai/speech` 只接受待朗讀文字及聲線選擇，回傳 MP3 或 WAV 音訊。
+Set the backend environment variables `AZURE_SPEECH_KEY` and `AZURE_SPEECH_REGION` to explicitly select Azure Speech's Hong Kong Cantonese neural voices. Keys remain on the backend. The default provider is local `canto-tts`; without Azure credentials, the service does not fall back to device/browser speech. `POST /api/genai/speech` accepts only the text to read and a voice selection, and returns MP3 or WAV audio.
 
-### 自架香港粵語語音
+### Self-hosted Hong Kong Cantonese speech
 
-可用 `canto-tts` 在運行 AccessRoute 的電腦上本機合成粵語 WAV，不需要 TTS API key。需使用 Python 3.10 或以上；首次啟動會從 Hugging Face 下載模型權重：
+Use `canto-tts` to synthesize Cantonese WAV audio locally on the computer running AccessRoute, without a TTS API key. Python 3.10 or later is required. The first startup downloads model weights from Hugging Face:
 
 ```bash
 python3 -m venv .venv-tts
@@ -100,6 +100,6 @@ python -m pip install -r services/requirements-tts.txt
 npm run dev:canto-tts
 ```
 
-預設 TTS 位址為 `http://127.0.0.1:8000/synthesize`，只需啟動上方服務再啟動／重啟 AccessRoute 後端，不必設定 `CANTO_TTS_URL`。Node 後端會代理音訊給手機；TTS 服務只綁定 `127.0.0.1`，手機不需要也不應直接連接 8000 port。只有位址不同時才設定 `CANTO_TTS_URL`；明確設定的位址優先於 Azure。
+The default TTS endpoint is `http://127.0.0.1:8000/synthesize`. Start the service above, then start or restart the AccessRoute backend; no `CANTO_TTS_URL` setting is required. The Node backend proxies audio to the phone. The TTS service binds only to `127.0.0.1`; the phone neither needs nor should have direct access to port 8000. Set `CANTO_TTS_URL` only when using a different endpoint. An explicitly configured endpoint takes priority over Azure.
 
-此模型目前只有一把預設聲線，所以男聲／女聲偏好不會改變聲音。未設定 Azure 時，此自架服務是預設語音供應商；服務失敗會明確回報錯誤，不會偷偷切換成其他語言。要改用 Azure，需設定 `AZURE_SPEECH_KEY` 和 `AZURE_SPEECH_REGION`。
+The model currently provides one default voice, so male/female voice preferences do not change its output. Without Azure configuration, this self-hosted service is the default speech provider. Service failures return explicit errors rather than silently switching to another language. To use Azure instead, set `AZURE_SPEECH_KEY` and `AZURE_SPEECH_REGION`.

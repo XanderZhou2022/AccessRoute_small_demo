@@ -6,7 +6,7 @@ A research demo for accessible first- and last-mile navigation in Hong Kong, wit
 
 ### Install on Android
 
-AccessRoute can be installed from Android Chrome as a web app on your home screen. After deployment, open the demo link above in Chrome and choose **Install app** or **Add to Home screen** from the browser menu. Previously loaded static pages and data can be reopened offline; live weather, data that has not yet been loaded, and backend AI features still require a network connection or backend access. This navigation demo does not provide on-site indoor positioning. See the [frontend Android installation guide](frontend/README.md#android-安裝).
+AccessRoute can be installed from Android Chrome as a web app on your home screen. After deployment, open the demo link above in Chrome and choose **Install app** or **Add to Home screen** from the browser menu. Previously loaded static pages and data can be reopened offline; live weather, data that has not yet been loaded, and backend AI features still require a network connection or backend access. This navigation demo does not provide on-site indoor positioning. See the [frontend Android installation guide](frontend/README.md#android-installation).
 
 A separate Android APK project is also available: [Android app guide](android-app/README.md). Core routing, maps, and scene data are bundled on the phone. Qwen AI, live Hong Kong Observatory weather, and paired journeys in the map demo require a public HTTPS backend. The current demo backend does not yet include the authentication and rate limiting required for a public service; follow the guide to deploy and secure it first.
 

@@ -1,22 +1,22 @@
 # Frontend
 
-React / TypeScript / Vite。從根目錄 `npm run dev`，打開 `http://127.0.0.1:5173/`。
+React / TypeScript / Vite. Run `npm run dev` from the project root and open `http://127.0.0.1:5173/`.
 
-- `src/App.tsx`：Journey orchestration、用戶偏好、模擬步進、故障操作。
-- `src/renderers/FloorMap.tsx`：官方 GeoJSON SVG 樓層圖、路線、開口、設施及層切換。
-- `src/renderers/MacroMap.tsx`：動態載入 MapLibre；僅使用本地建築 GeoJSON，包含 SVG fallback。
-- `src/styles.css`：桌面 / 手機 / 鍵盤焦點 / reduced-motion 樣式。
-- `public/data/scenes/`：構建生成的資料副本，源文件在根目錄 `data/scenes/`。
+- `src/App.tsx`: journey orchestration, user preferences, simulated step progression, and outage actions.
+- `src/renderers/FloorMap.tsx`: official GeoJSON rendered as SVG floor plans, with routes, openings, facilities, and floor switching.
+- `src/renderers/MacroMap.tsx`: dynamically loaded MapLibre using only local building GeoJSON, with an SVG fallback.
+- `src/styles.css`: desktop, mobile, keyboard-focus, and reduced-motion styles.
+- `public/data/scenes/`: generated data copies; source files are in `data/scenes/` at the project root.
 
-不向官方 API 發出即時請求，也不需要 map token。選擇「本機後端 API」後，開發環境由 Vite `/api` proxy 接到 8787；正式本機 server 同源提供兩者。
+The frontend does not make live requests to official APIs and does not require a map token. When **Local backend API** is selected, Vite proxies `/api` to port 8787 during development; the local production server serves both from the same origin.
 
-`BASE_PATH=/repo/ npm run build` 可構建子路徑 Pages 產物；預設相對 base，首頁刷新和資源載入不依賴 SPA 伺服器重寫。
+Use `BASE_PATH=/repo/ npm run build` to build a Pages deployment under a subpath. The default base is relative, so homepage refreshes and asset loading do not depend on SPA server rewrites.
 
-## Android 安裝
+## Android installation
 
-正式構建會輸出 PWA manifest 和 service worker。部署到 HTTPS 網址後，在 Android Chrome 開啟網站，選擇瀏覽器選單中的「安裝應用程式」或「加到主畫面」。啟動後會以獨立視窗開啟；已載入的靜態頁面和資料會快取供離線重開。尚未載入的資料、即時天氣及需要後端的功能仍須網絡和可用後端。PWA 不會新增室內定位或把演示導航變成實地導航。
+Production builds include a PWA manifest and service worker. After deploying to an HTTPS URL, open the site in Android Chrome and choose **Install app** or **Add to Home screen** from the browser menu. The installed app opens in a standalone window. Previously loaded static pages and data are cached for offline reopening. Data that has not yet been loaded, live weather, and backend-dependent features still require a network connection and an available backend. The PWA does not add indoor positioning or turn demo navigation into on-site navigation.
 
-本機 `npm run dev` 不會註冊 service worker；請使用已部署的 HTTPS 網站測試安裝和離線行為。若更新靜態內容後仍看到舊版，可關閉並重新開啟已安裝的應用程式，讓 service worker 更新快取。
+Local `npm run dev` does not register a service worker. Use the deployed HTTPS site to test installation and offline behavior. If old content remains after a static update, close and reopen the installed app to allow the service worker to update its cache.
 
 ## Journey-first mobile interface
 
@@ -25,7 +25,7 @@ React / TypeScript / Vite。從根目錄 `npm run dev`，打開 `http://127.0.0.
 - The map-first planner reads HKO current weather, forecast, and warnings through the backend, caches successful results for five minutes, and recommends covered/indoor preferences for observed rain or an explicit HKO hot forecast; users can override it. By default it uses territory-wide observations. Users may explicitly request nearby weather with the phone's location permission; the backend selects the nearest mapped HKO temperature station and rainfall area, reports when nearby observations are unavailable, and never saves the coordinates. These station coordinates are approximate lookup anchors, not precise sensor coverage boundaries. The rest of the app's static demo simulator is still simulated; there is no indoor positioning, and GPS is requested only after a user action.
 - Touch targets are at least 44 CSS px where practical, form controls expose visible focus, and the active navigation bar accounts for mobile safe-area insets. These changes are not a substitute for testing with VoiceOver, TalkBack, keyboard-only users, or physical devices.
 - The dedicated `?demo=1` page includes an isolated services simulator for sunny/rain/heat route changes, confirmed landmark-node updates, and simulated facility reports/reroutes, plus large-text/high-contrast previews. Those simulator observations are labeled simulated and do not contact an operator. The map-demo help card separately supports user-authorized photo/GPS submission to the configured obstacle agent; this requires the backend/model service.
-- From `?demo=1`, open **地圖優先・分步旅程** for a map-first screen set under `public/map-demo/`: the original local 3D building map fills the background, with floating search/back/help controls and a compact bottom sheet for trip setup, route comparison, navigation, or help. The origin and destination are independently selectable from all 12 scene locations. Cross-scene plans route through each location's local building-to-station graph, a station-by-station MTR path from the saved `mtr_lines_and_stations.csv`, and the destination station-to-building graph; navigation switches the 3D scene between the two local endpoints. MTR steps name the transfer line, train direction, and alighting station from the saved station sequence. The static data does not provide train times, fares, live service, platform numbers or transfer-walkway geometry, or verified barrier-free access; estimated minutes cover only the two local walking legs. The map runs in a minimal `?mapOnly=1` app view and follows the selected demo profile, route objective, and weather preference. It uses local scene geometry, not Google Maps tiles, live movement tracking, camera, or facility services; device location is requested only for the opt-in nearby-weather lookup.
+- From `?demo=1`, open **Map-first, step-by-step journey** for a map-first screen set under `public/map-demo/`: the original local 3D building map fills the background, with floating search/back/help controls and a compact bottom sheet for trip setup, route comparison, navigation, or help. The origin and destination are independently selectable from all 12 scene locations. Cross-scene plans route through each location's local building-to-station graph, a station-by-station MTR path from the saved `mtr_lines_and_stations.csv`, and the destination station-to-building graph; navigation switches the 3D scene between the two local endpoints. MTR steps name the transfer line, train direction, and alighting station from the saved station sequence. The static data does not provide train times, fares, live service, platform numbers or transfer-walkway geometry, or verified barrier-free access; estimated minutes cover only the two local walking legs. The map runs in a minimal `?mapOnly=1` app view and follows the selected demo profile, route objective, and weather preference. It uses local scene geometry, not Google Maps tiles, live movement tracking, camera, or facility services; device location is requested only for the opt-in nearby-weather lookup.
 - The map demo's bottom sheet can be dragged to any vertical position within its expanded-to-collapsed range, adjusted with the handle's arrow keys, or toggled between endpoints with Enter/Space; only fully collapsed content is removed from keyboard and screen-reader navigation. Caregiver settings persist in this browser and pass mobility profile, elevator/stair constraints, route goal, 5%/8.33%/12% slope caps, and estimated walking pace into route calculation; they are not account-backed or synchronized across devices. Walking instructions are split into roughly 90-second chunks based on the selected/default pace. The app does not track live walking speed.
 - The floating `?` opens an accessible help card in place, with facility-report and lost-location demo actions. Opening or dismissing the card keeps the current page, navigation step and 3D map iframe mounted, so the map is not reloaded.
 - Map-demo route choices now use the app's local routing engine and current accessibility profile/weather constraints. Distances and estimated times come from the computed graph routes, unavailable routes cannot be started, and navigation instructions are generated from the selected route segments rather than a fixed sample sequence. Weather may cause the covered option to use an indoor objective; an explicitly selected shorter route remains shorter-route optimized.

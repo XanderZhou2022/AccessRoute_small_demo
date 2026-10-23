@@ -1,10 +1,10 @@
 # Data
 
-`raw/` 保存官方響應原文，`scenes/` 是規範化場景包，`runtime/` 為本機演示事件。不要用 runtime 狀態改写 raw 或 scene graph。
+`raw/` stores original official responses, `scenes/` contains normalized scene packages, and `runtime/` holds local demo events. Do not use runtime state to overwrite raw data or scene graphs.
 
-## 重建
+## Reconstruction
 
-已凍結所有演示所需資料，預設不需聯網。Python 3.12、Shapely 2.1.2（見 requirements.txt）。
+All data required for the demo is frozen; no network access is needed by default. Requirements: Python 3.12 and Shapely 2.1.2 (see `scripts/requirements.txt`). Run these commands from the project root:
 
 ```bash
 python3 -m venv .venv
@@ -14,19 +14,19 @@ python3 scripts/find_demo_venues.py
 npm run data:sync
 ```
 
-聯網刷新流程：先備份或移走擬更新的 raw 文件（下載器預設保留現有快照），執行 `python3 scripts/bootstrap_data.py`、`python3 scripts/fetch_data.py`、`python3 scripts/download_scene.py`、`python3 scripts/test_route_api.py`。生成場景後，`python3 scripts/enrich_outdoor.py` 可保存兩端室外 baseline，再重建場景。請求是低頻順序執行，保留原始響應及 URL / hash / headers；不大批並發請求官方服務。
+To refresh data online, first back up or move the raw files you intend to update; downloaders preserve existing snapshots by default. Run `python3 scripts/bootstrap_data.py`, `python3 scripts/fetch_data.py`, `python3 scripts/download_scene.py`, and `python3 scripts/test_route_api.py`. After generating scenes, run `python3 scripts/enrich_outdoor.py` to save outdoor baselines at both ends, then rebuild the scenes. Requests run sequentially at a low frequency, preserving original responses and their URLs, hashes, and headers. Do not send large batches of concurrent requests to official services.
 
-## 語義
+## Data semantics
 
-- 座標：EPSG:4326，lon / lat / 可選 Z；本地距離計算使用場景中心的近似米制投影。
-- 樓層：用官方 UUID 作 ID，G/F、1/F 僅作標籤，避免以字串排序推斷樓層。
-- `provenance=derived`：網格節點和水平連線從官方公共走廊幾何生成；不代表無障礙通行已核實。
-- `provenance=manual/demo augmentation`：電梯跨層配對、室外交接及站口連接。逐邊記錄 sourceRef，scene 的 source-metadata.json 彙總。
-- `wheelchair=unknown`：本期所有邊均未知；沒有把官方缺失值填成 yes。
-- Lift A / B 是演示標籤；元資料記錄兩層官方 amenity IDs，不是官方設備編號。
+- Coordinates: EPSG:4326, with longitude / latitude / optional Z. Local distance calculations use an approximate metric projection centered on the scene.
+- Floors: official UUIDs serve as IDs; G/F and 1/F are labels only. Do not infer floor order by sorting strings.
+- `provenance=derived`: grid nodes and horizontal connections generated from official public-corridor geometry. This does not establish verified accessibility.
+- `provenance=manual/demo augmentation`: lift pairings between floors, outdoor handoffs, and station-entrance connections. Each edge records a `sourceRef`; the scene's `source-metadata.json` provides a summary.
+- `wheelchair=unknown`: all edges in this version have unknown accessibility. Missing official values are not filled in as `yes`.
+- Lift A / B are demo labels. Metadata records official amenity IDs for both floors, not official equipment identifiers.
 
-兩個場景包原始 JSON / GeoJSON 使用緊湊格式以減少體積；schema、來源及 manifest 可直接讀取。每次構建由根目錄資料複製到前端，沒有兩份互相獨立的資料源。
+The original JSON / GeoJSON files for the two scene packages use compact formatting to reduce size; schemas, source metadata, and manifests remain directly readable. Each build copies data from the project root to the frontend, keeping a single source of truth.
 
-## 2026-10-04 擴充
+## Expansion on 2026-10-04
 
-正式註冊表現有 12 個場景。新增官方三維行人路網位於 `pedestrian/`，全樓層 POI 索引位於 `poi/`，完整度與缺口見 `location-catalog.json`。不要將 POI 候選索引視作已核實視覺地標。詳見 `../docs/location-expansion.md`。
+The scene registry now contains 12 scenes. Additional official 3D pedestrian-network data is in `pedestrian/`, and the POI index covering all floors is in `poi/`. See `location-catalog.json` for completeness and gaps. Do not treat the candidate POI index as verified visual landmarks. See `../docs/location-expansion.md` for details.
