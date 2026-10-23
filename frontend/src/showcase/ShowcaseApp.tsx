@@ -29,15 +29,14 @@ import {
   showcaseState,
 } from '../../../shared/demo/showcase';
 import { FloorMap } from '../renderers/FloorMap';
+import { readBundledShowcaseJson } from './bundledData';
 const MacroMap = lazy(() => import('../renderers/MacroMap'));
 
 const appRoot = new URL('../', window.location.href);
 const asset = (path: string) => new URL(path, appRoot).href;
 const sceneCache = new Map<string, Promise<Scene>>();
 async function readJson<T>(path: string): Promise<T> {
-  const response = await fetch(asset(path));
-  if (!response.ok) throw new Error(`展示資料未能載入（${response.status}）`);
-  return response.json() as Promise<T>;
+  return readBundledShowcaseJson<T>(path);
 }
 function loadScene(id: string) {
   if (!sceneCache.has(id)) {
@@ -592,6 +591,9 @@ export function ShowcaseApp() {
           {error && (
             <p className="showcase-error" role="alert">
               {error}
+              <button className="text-button" onClick={() => location.reload()}>
+                重新載入展示
+              </button>
             </p>
           )}
           <section className="presenter-controls" aria-label="展示操作">
