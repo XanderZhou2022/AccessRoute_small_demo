@@ -15,7 +15,7 @@ Choose a wheelchair, stroller, or elderly journey. Each has eight chapters: base
 5. Play **播放本段廣東話**. The bundled recording works without an installed Cantonese browser voice. Playback requires a user click.
 6. Show the transfer and arrival chapters, or choose another journey. **重新開始** resets the chapter, confirmations, and weather comparison.
 
-The case JSON and all four scene packages are bundled into the presentation JavaScript. Changing chapters does not fetch separate JSON or GeoJSON files, so a temporary 503 on a scene-data URL cannot leave the rendered presentation stuck loading. Photos and prerecorded audio remain ordinary static assets.
+The case JSON and all four scene packages are bundled into the presentation JavaScript. Changing chapters does not fetch separate JSON or GeoJSON files, so a temporary 503 on a scene-data URL cannot leave the rendered presentation stuck loading. Photos remain ordinary static assets. All 24 chapters use inline PCM WAV audio, deduplicated into 14 recordings, so playback requires no media URL or AAC decoder. The play button reloads a failed player before retrying, and canceled playback from an old chapter cannot report an error on a new one.
 
 Opening the source `frontend/showcase/index.html` directly as a local file redirects to the published showcase. Use the local Vite HTTP address above when developing changes.
 
@@ -33,3 +33,9 @@ BASE_PATH=/AccessRoute_small_demo/ npm run check:showcase
 Serve `frontend/dist` through any static web server under the same base path to preview. There is no API server requirement. The Vite multipage build emits both `index.html` and `showcase/index.html`; all scene JSON, photos, and 24 M4A recordings are copied into the build.
 
 The GitHub Pages workflow runs tests, builds with the repository base path, audits showcase resources, and publishes `frontend/dist`. It runs on pushes to `main` and through manual workflow dispatch. The audit checks the showcase HTML asset paths, all three stories, scene files, referenced media, and 24 audio containers. Routing tests verify all eight chapters against the recorded case routes and exercise confirmation/reset behavior.
+
+## Regenerate the voice assets
+
+The original Sinji M4A recordings and transcripts remain in `frontend/public/showcase/audio`. Run `python3 scripts/prepare-showcase-audio.py` with ffmpeg installed to produce the checked-in mono, 16 kHz, 16-bit PCM recordings and their chapter catalog. ffmpeg is not required by the normal build or presentation. The production audit verifies that every recording is present as a data URL in the built showcase JavaScript.
+
+Bundling the maps and recordings makes the first showcase JavaScript download about 5.5 MB compressed. The HTML shows a preparation message during this initial load; once the presentation appears, map changes and audio playback use the bundled data. The full application's download remains unchanged.
