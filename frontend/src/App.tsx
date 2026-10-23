@@ -2441,10 +2441,9 @@ function LegacyApp() {
 
 function MapDemoRedirect() {
   useEffect(() => {
-    const target = new URL(
-      `${import.meta.env.BASE_URL}map-demo/index.html`,
-      window.location.href,
-    );
+    const entry =
+      import.meta.env.VITE_SHOWCASE_HOME === 'true' ? 'showcase/index.html' : 'map-demo/index.html';
+    const target = new URL(`${import.meta.env.BASE_URL}${entry}`, window.location.href);
     window.location.replace(target);
   }, []);
   return (

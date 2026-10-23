@@ -1,0 +1,150 @@
+{
+  "voice": "macOS Sinji / zh_HK",
+  "kind": "prerecorded Cantonese narration, not model recordings",
+  "clips": [
+    {
+      "case": "popcorn-2-wang",
+      "step": "start",
+      "text": "呢段旅程由將軍澳 PopCorn 商場去又一城。我哋會先比較未加入個人需要嘅距離基準，再套用輪椅出行需要。",
+      "file": "popcorn-2-wang-start.m4a"
+    },
+    {
+      "case": "popcorn-2-wang",
+      "step": "preferences",
+      "text": "已套用輪椅出行需要，避開樓梯同陡坡，使用合適嘅跨層設施。",
+      "file": "popcorn-2-wang-preferences.m4a"
+    },
+    {
+      "case": "popcorn-2-wang",
+      "step": "rain",
+      "text": "而家設定落雨，路線優先選擇室內或者有蓋地方。你可以切換晴天，比較露天路段嘅距離。",
+      "file": "popcorn-2-wang-rain.m4a"
+    },
+    {
+      "case": "popcorn-2-wang",
+      "step": "fault",
+      "text": "呢個係升降機停用嘅預設例子。確認之後，系統會封閉指定設施，再用本地路網重新計劃路線。",
+      "file": "popcorn-2-wang-fault.m4a"
+    },
+    {
+      "case": "popcorn-2-wang",
+      "step": "localization",
+      "text": "照片幫我哋搵到地標附近嘅位置候選。核對並確認之後，先更新起點同剩低路線。",
+      "file": "popcorn-2-wang-localization.m4a"
+    },
+    {
+      "case": "popcorn-2-wang",
+      "step": "guidance",
+      "text": "請沿畫面路線行147米去下一個位置。",
+      "file": "popcorn-2-wang-guidance.m4a"
+    },
+    {
+      "case": "popcorn-2-wang",
+      "step": "transfer",
+      "text": "接住展示目的地車站去建築物嘅步行段。鐵路只作接駁敘事，唔包括即時班次同車程。",
+      "file": "popcorn-2-wang-transfer.m4a"
+    },
+    {
+      "case": "popcorn-2-wang",
+      "step": "arrival",
+      "text": "已經到達公共走廊會合點。你可以切換案例，或者由頭再演示一次。",
+      "file": "popcorn-2-wang-arrival.m4a"
+    },
+    {
+      "case": "hysan-place-lam",
+      "step": "start",
+      "text": "呢段旅程由希慎廣場去 PopCorn 商場。我哋會先比較未加入個人需要嘅距離基準，再套用嬰兒車出行需要。",
+      "file": "hysan-place-lam-start.m4a"
+    },
+    {
+      "case": "hysan-place-lam",
+      "step": "preferences",
+      "text": "已套用嬰兒車出行需要，避開樓梯同陡坡，使用合適嘅跨層設施。",
+      "file": "hysan-place-lam-preferences.m4a"
+    },
+    {
+      "case": "hysan-place-lam",
+      "step": "rain",
+      "text": "而家設定落雨，路線優先選擇室內或者有蓋地方。你可以切換晴天，比較露天路段嘅距離。",
+      "file": "hysan-place-lam-rain.m4a"
+    },
+    {
+      "case": "hysan-place-lam",
+      "step": "fault",
+      "text": "呢個係升降機停用嘅預設例子。確認之後，系統會封閉指定設施，再用本地路網重新計劃路線。",
+      "file": "hysan-place-lam-fault.m4a"
+    },
+    {
+      "case": "hysan-place-lam",
+      "step": "localization",
+      "text": "照片幫我哋搵到地標附近嘅位置候選。核對並確認之後，先更新起點同剩低路線。",
+      "file": "hysan-place-lam-localization.m4a"
+    },
+    {
+      "case": "hysan-place-lam",
+      "step": "guidance",
+      "text": "請沿畫面路線行2米去下一個位置。",
+      "file": "hysan-place-lam-guidance.m4a"
+    },
+    {
+      "case": "hysan-place-lam",
+      "step": "transfer",
+      "text": "接住展示目的地車站去建築物嘅步行段。鐵路只作接駁敘事，唔包括即時班次同車程。",
+      "file": "hysan-place-lam-transfer.m4a"
+    },
+    {
+      "case": "hysan-place-lam",
+      "step": "arrival",
+      "text": "已經到達公共走廊會合點。你可以切換案例，或者由頭再演示一次。",
+      "file": "hysan-place-lam-arrival.m4a"
+    },
+    {
+      "case": "kowloon-tong-festival-walk-lee",
+      "step": "start",
+      "text": "呢段旅程由又一城去石硤尾邨服務設施大樓。我哋會先比較未加入個人需要嘅距離基準，再套用長者出行需要。",
+      "file": "kowloon-tong-festival-walk-lee-start.m4a"
+    },
+    {
+      "case": "kowloon-tong-festival-walk-lee",
+      "step": "preferences",
+      "text": "已套用長者出行需要，避開樓梯同陡坡，使用合適嘅跨層設施。",
+      "file": "kowloon-tong-festival-walk-lee-preferences.m4a"
+    },
+    {
+      "case": "kowloon-tong-festival-walk-lee",
+      "step": "rain",
+      "text": "而家設定落雨，路線優先選擇室內或者有蓋地方。你可以切換晴天，比較露天路段嘅距離。",
+      "file": "kowloon-tong-festival-walk-lee-rain.m4a"
+    },
+    {
+      "case": "kowloon-tong-festival-walk-lee",
+      "step": "fault",
+      "text": "呢個係升降機停用嘅預設例子。確認之後，系統會封閉指定設施，再用本地路網重新計劃路線。",
+      "file": "kowloon-tong-festival-walk-lee-fault.m4a"
+    },
+    {
+      "case": "kowloon-tong-festival-walk-lee",
+      "step": "localization",
+      "text": "照片幫我哋搵到地標附近嘅位置候選。核對並確認之後，先更新起點同剩低路線。",
+      "file": "kowloon-tong-festival-walk-lee-localization.m4a"
+    },
+    {
+      "case": "kowloon-tong-festival-walk-lee",
+      "step": "guidance",
+      "text": "請搭升降機去又一城低層地下一樓。",
+      "file": "kowloon-tong-festival-walk-lee-guidance.m4a"
+    },
+    {
+      "case": "kowloon-tong-festival-walk-lee",
+      "step": "transfer",
+      "text": "接住展示目的地車站去建築物嘅步行段。鐵路只作接駁敘事，唔包括即時班次同車程。",
+      "file": "kowloon-tong-festival-walk-lee-transfer.m4a"
+    },
+    {
+      "case": "kowloon-tong-festival-walk-lee",
+      "step": "arrival",
+      "text": "已經到達公共走廊會合點。你可以切換案例，或者由頭再演示一次。",
+      "file": "kowloon-tong-festival-walk-lee-arrival.m4a"
+    }
+  ]
+}

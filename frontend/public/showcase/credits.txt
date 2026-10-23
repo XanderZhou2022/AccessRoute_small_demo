@@ -1,0 +1,17 @@
+AccessRoute 展示素材与来源
+
+展示页为静态案例回放：模型结果、天氣與故障情境均已預設；路線仍由本地引擎按案例圖層計算。沒有模型請求、實時天氣或真實設施回報。
+
+粵語音訊
+24 段旁白使用本機 macOS Sinji 香港粵語聲音產生並編碼為 M4A，文字見 audio/transcripts.json。這些是預錄解說，不是模型實際推理錄音。點擊播放才開始發聲。
+
+lift-demo.png
+由內建 ImageGen 生成的通用商場升降機演示照片，含明示「演示情境」告示。不是 PopCorn 2 實景，也不代表真實設施故障；本案例明確預設確認到演示 Lift A。
+
+kfc-localization.png
+AI 改編自 PopCorn 2 KFC 07-06-2023.jpg，作者 LN9267，CC BY-SA 4.0。
+來源：https://commons.wikimedia.org/wiki/File:PopCorn_2_KFC_07-06-2023.jpg
+許可：https://creativecommons.org/licenses/by-sa/4.0/
+改動：以 ImageGen 移除人物並重新生成視角，加入「AI 測試圖」標記。改編圖同樣以 CC BY-SA 4.0 提供。精確拍攝位置未核實；案例只確認地標附近公共節點。
+
+其餘歷史照片與腳本告示沿用 data/demo/media.json 的原始署名、許可和來源。原始官方圖署名保留於地圖本身。

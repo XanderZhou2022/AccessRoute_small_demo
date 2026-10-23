@@ -4,6 +4,12 @@ A research demo for accessible first- and last-mile navigation in Hong Kong, wit
 
 **Live demo: [Open AccessRoute HK](https://xanderzhou2022.github.io/AccessRoute_small_demo/)**
 
+## Presentation showcase
+
+**[Open the guided showcase](https://xanderzhou2022.github.io/AccessRoute_small_demo/showcase/)** — three preset journeys for wheelchair, stroller, and elderly travel, with eight chapters, interactive route recalculation, rain comparison, confirmable fault/location examples, and prerecorded Cantonese audio. The GitHub Pages home link opens this showcase; the [full application](https://xanderzhou2022.github.io/AccessRoute_small_demo/map-demo/index.html) and existing offline case library remain available.
+
+The showcase runs entirely from static frontend assets. AI observations, weather, and incidents are explicitly preset; route changes run through the local routing engine. Audio does not require a browser Cantonese voice pack, microphone, API key, or backend. See the [presentation guide](docs/showcase.md) for the walkthrough and publishing checks.
+
 ### Install on Android
 
 AccessRoute can be installed from Android Chrome as a web app on your home screen. After deployment, open the demo link above in Chrome and choose **Install app** or **Add to Home screen** from the browser menu. Previously loaded static pages and data can be reopened offline; live weather, data that has not yet been loaded, and backend AI features still require a network connection or backend access. This navigation demo does not provide on-site indoor positioning. See the [frontend Android installation guide](frontend/README.md#android-installation).
