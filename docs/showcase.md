@@ -15,6 +15,10 @@ Choose a wheelchair, stroller, or elderly journey. Each has eight chapters: base
 5. Play **播放本段廣東話**. The bundled recording works without an installed Cantonese browser voice. Playback requires a user click.
 6. Show the transfer and arrival chapters, or choose another journey. **重新開始** resets the chapter, confirmations, and weather comparison.
 
+The case JSON and all four scene packages are bundled into the presentation JavaScript. Changing chapters does not fetch separate JSON or GeoJSON files, so a temporary 503 on a scene-data URL cannot leave the rendered presentation stuck loading. Photos and prerecorded audio remain ordinary static assets.
+
+Opening the source `frontend/showcase/index.html` directly as a local file redirects to the published showcase. Use the local Vite HTTP address above when developing changes.
+
 The showcase uses fixture data rather than live model results, weather, lift reports, GPS, or arbitrary photo analysis. Route geometry is derived from the existing scene graph and explicit demo overlays; accessibility attributes are not field verified. Rail transfer is narrative context, not live rail routing. Photo and voice credits are available from the result details and `frontend/public/showcase/credits.txt`.
 
 ## Build and publish

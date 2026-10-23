@@ -10,6 +10,17 @@
     />
     <link rel="icon" href="../favicon.svg" />
     <title>AccessRoute · 互動展示</title>
+    <script>
+      // The source entry needs Vite compilation and an HTTP origin. Double-clicking
+      // it should open the published presentation instead of an unusable file URL.
+      if (window.location.protocol === 'file:') {
+        window.location.replace(
+          'https://xanderzhou2022.github.io/AccessRoute_small_demo/showcase/' +
+            window.location.search +
+            window.location.hash,
+        );
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
