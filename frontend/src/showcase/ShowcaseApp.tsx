@@ -30,6 +30,7 @@ import {
 } from '../../../shared/demo/showcase';
 import { FloorMap } from '../renderers/FloorMap';
 import { readBundledShowcaseJson } from './bundledData';
+import { playRecordedAudio, recordedAudioSource } from './recordedAudio';
 const MacroMap = lazy(() => import('../renderers/MacroMap'));
 
 const appRoot = new URL('../', window.location.href);
@@ -71,10 +72,14 @@ export function ShowcaseApp() {
   const [level, setLevel] = useState('');
   const [error, setError] = useState('');
   const [audioStatus, setAudioStatus] = useState('');
+  const [audioFailed, setAudioFailed] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const audio = useRef<HTMLAudioElement>(null);
+  const audioAttempt = useRef(0);
   const stopAudio = () => {
+    audioAttempt.current += 1;
     audio.current?.pause();
+    setAudioFailed(false);
     setAudioStatus('');
   };
 
@@ -234,10 +239,18 @@ export function ShowcaseApp() {
   const advance = () =>
     pending ? confirm() : jump(chapterIndex === showcaseChapters.length - 1 ? 0 : chapterIndex + 1);
   const playAudio = () => {
-    setAudioStatus('正在播放預錄廣東話指引…');
-    void audio.current
-      ?.play()
-      .catch(() => setAudioStatus('音訊未能播放，可使用下方播放器重試；文字指引仍可閱讀。'));
+    const player = audio.current;
+    if (!player) return;
+    const attempt = ++audioAttempt.current;
+    setAudioStatus('正在準備預錄廣東話…');
+    setAudioFailed(false);
+    void playRecordedAudio(player).catch(() => {
+      // Switching chapters can abort the previous play promise; keep its error
+      // from appearing on the new chapter's recording.
+      if (audio.current !== player || audioAttempt.current !== attempt) return;
+      setAudioFailed(true);
+      setAudioStatus('播放未能開始，請按「重新載入並播放廣東話」重試。');
+    });
   };
 
   if (!bundle || !step || !state)
@@ -558,17 +571,24 @@ export function ShowcaseApp() {
               <div className="audio-block">
                 <button className="audio-button" onClick={playAudio}>
                   <Volume2 size={17} />
-                  播放本段廣東話
+                  {audioFailed ? '重新載入並播放廣東話' : '播放本段廣東話'}
                 </button>
                 <span className="audio-note">預錄音訊，不需要語音包</span>
                 <audio
                   key={`${caseId}:${step.id}`}
                   ref={audio}
                   controls
-                  preload="none"
-                  src={asset(`showcase/audio/${caseId}-${step.id}.m4a`)}
+                  preload="metadata"
+                  src={recordedAudioSource(caseId, step.id)}
+                  onPlaying={() => {
+                    setAudioFailed(false);
+                    setAudioStatus('正在播放預錄廣東話指引…');
+                  }}
                   onEnded={() => setAudioStatus('本段廣東話已播放完成。')}
-                  onError={() => setAudioStatus('音訊載入失敗；請重試，或繼續閱讀文字。')}
+                  onError={() => {
+                    setAudioFailed(true);
+                    setAudioStatus('播放器未能開啟本段錄音，請按上方按鈕重新載入。');
+                  }}
                 />
                 <p className="audio-status" role="status">
                   {audioStatus}
