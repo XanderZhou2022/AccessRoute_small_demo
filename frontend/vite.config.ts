@@ -12,5 +12,15 @@ export default defineConfig({
     fs: { allow: ['..'] },
     proxy: { '/api': 'http://127.0.0.1:8787' },
   },
-  build: { outDir: 'dist', emptyOutDir: true, chunkSizeWarningLimit: 1200 },
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    chunkSizeWarningLimit: 1200,
+    rollupOptions: {
+      input: {
+        app: fileURLToPath(new URL('./index.html', import.meta.url)),
+        showcase: fileURLToPath(new URL('./showcase/index.html', import.meta.url)),
+      },
+    },
+  },
 });
